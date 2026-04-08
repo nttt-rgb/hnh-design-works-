@@ -100,11 +100,24 @@ function csvEscape(val) {
 
 async function run(options = {}) {
   console.log(`\n=== Scout Agent — ${TODAY} ===`);
+  console.log(`  ハードリミット: 日次${config.DAILY_API_LIMIT}回, 1実行${config.PER_RUN_API_LIMIT}回`);
 
   const existingNames = loadExistingNames();
   const unsubscribed = loadUnsubscribed();
   const slots = getTodaySlots();
   let newLeads = 0;
+  let runCount = 0;
+
+  // Load today's usage (auto-resets on new day)
+  const usage = config.loadApiUsage();
+
+  // Pre-flight check
+  if (usage.requests >= 50) {
+    console.log(`  API制限に達しました。本日の実行を停止します。(${usage.requests}/50)`);
+    return 0;
+  }
+
+  console.log(`  本日のAPI使用量: ${usage.requests}/50 (残り${50 - usage.requests}回)`);
 
   // Ensure CSV exists with header
   if (!fs.existsSync(config.TARGET_CSV)) {
@@ -113,21 +126,42 @@ async function run(options = {}) {
     );
   }
 
+  let stopped = false;
+
   for (const slot of slots) {
+    if (stopped) break;
+
+    // --- Guard: Text Search request ---
+    const searchCheck = config.recordApiRequest(usage, runCount);
+    if (!searchCheck.ok) {
+      console.log(`  ${searchCheck.stopped}`);
+      stopped = true;
+      break;
+    }
+    if (searchCheck.warning) console.log(`  ${searchCheck.warning}`);
+    runCount++;
+
     console.log(`  Searching: ${slot.area} × ${config.TYPE_LABELS[slot.type] || slot.type}`);
     const places = await searchPlaces(slot.area, slot.type);
-    console.log(`  Found ${places.length} results`);
+    console.log(`  Found ${places.length} results (API: ${usage.requests}/50, run: ${runCount}/30)`);
 
     for (const place of places) {
       if (existingNames.has(place.name)) continue;
+
+      // --- Guard: Place Details request ---
+      const detailCheck = config.recordApiRequest(usage, runCount);
+      if (!detailCheck.ok) {
+        console.log(`  ${detailCheck.stopped}`);
+        stopped = true;
+        break;
+      }
+      if (detailCheck.warning) console.log(`  ${detailCheck.warning}`);
+      runCount++;
 
       const details = await getPlaceDetails(place.place_id);
 
       // Skip if has a website
       if (details.website) continue;
-
-      // Skip unsubscribed
-      // (no email from Places API typically, but check just in case)
 
       const row = [
         csvEscape(details.name || place.name),
@@ -156,6 +190,10 @@ async function run(options = {}) {
 
   console.log(`  New leads added: ${newLeads}`);
   console.log(`  Total leads: ${existingNames.size}`);
+  console.log(`  API: 今回${runCount}回 / 本日合計${usage.requests}回 / 上限50回`);
+  if (stopped) {
+    console.log(`  Scout stopped early due to API rate limit.`);
+  }
   return newLeads;
 }
 

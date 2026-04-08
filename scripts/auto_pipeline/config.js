@@ -1,5 +1,6 @@
-require('dotenv').config({ path: require('path').resolve(__dirname, '../../.env') });
+require('dotenv').config({ path: require('path').join(require('os').homedir(), 'Desktop/.env') });
 
+const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '../..');
 
@@ -27,6 +28,17 @@ module.exports = {
   SEND_INTERVAL_MS: parseInt(process.env.SEND_INTERVAL_MS || '120000', 10),
   FOLLOWUP_DAYS: parseInt(process.env.FOLLOWUP_DAYS || '7', 10),
   MAX_CONSECUTIVE_FAILURES: 5,
+
+  // ============================================================
+  // Places API ハードリミット（変更厳禁）
+  // .env や環境変数からの上書き不可。コスト上限: 月$75以下
+  // Text Search: $32/1000req, Place Details: $17/1000req
+  // 50req/日 → 最大 $2.5/日, $75/月
+  // ============================================================
+  DAILY_API_LIMIT: 50,            // 1日の絶対上限（ハードコード）
+  PER_RUN_API_LIMIT: 30,          // 1実行あたりの上限（ハードコード）
+  API_WARNING_THRESHOLD: 40,      // 警告を出す閾値（日次上限の80%）
+  API_USAGE_FILE: path.join(ROOT, 'logs/api_usage.json'),
 
   // Owner
   OWNER_NAME: process.env.OWNER_NAME || '豊川 直也',
@@ -84,4 +96,49 @@ module.exports = {
 
   // Portfolio URL
   PORTFOLIO_URL: 'https://hnh-design-works.vercel.app',
+
+  // --- Places API usage tracker ---
+
+  loadApiUsage() {
+    const today = new Date().toISOString().slice(0, 10);
+    try {
+      const data = JSON.parse(fs.readFileSync(this.API_USAGE_FILE, 'utf-8'));
+      if (data.date === today) return data;
+    } catch {}
+    return { date: today, requests: 0 };
+  },
+
+  saveApiUsage(usage) {
+    const dir = path.dirname(this.API_USAGE_FILE);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(this.API_USAGE_FILE, JSON.stringify(usage, null, 2));
+  },
+
+  /**
+   * Record one API request. Returns false if limit reached (request should NOT be made).
+   * @param {object} usage - current usage object
+   * @param {number} runCount - requests made in this run so far
+   * @returns {{ ok: boolean, usage: object, warning?: string, stopped?: string }}
+   */
+  recordApiRequest(usage, runCount) {
+    // Hard stop: daily
+    if (usage.requests >= 50) {
+      return { ok: false, usage, stopped: 'API制限に達しました。本日の実行を停止します。' };
+    }
+    // Hard stop: per-run
+    if (runCount >= 30) {
+      return { ok: false, usage, stopped: '1回の実行上限（30リクエスト）に達しました。停止します。' };
+    }
+
+    usage.requests++;
+    this.saveApiUsage(usage);
+
+    // Warning at 80%
+    let warning;
+    if (usage.requests === 40) {
+      warning = `[WARN] 日次API上限の80%に到達しました（${usage.requests}/50）。残り${50 - usage.requests}リクエスト。`;
+    }
+
+    return { ok: true, usage, warning };
+  },
 };
