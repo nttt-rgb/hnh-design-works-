@@ -4,11 +4,11 @@
 
 ## タイトル案（40文字以内）
 
-1. **【先着5社¥20万】Premiumプラン特別価格でHP制作します**
-   （30文字）
+1. **【先着5社】Premiumプラン¥20万｜店舗HP制作**
+   （25文字）
 
-2. **スマホ対応＋SEO込み｜お店のホームページ¥10万〜制作**
-   （28文字）
+2. **スマホ対応＋SEO込み｜お店のホームページ¥100,000〜制作**
+   （31文字）
 
 3. **【実績公開中】飲食店・サロン・クリニック向けHP制作**
    （28文字）
@@ -118,13 +118,13 @@ https://hnh-design-works.vercel.app
 
 ### デモサイト（実際にご覧いただけます）
 
-▼ 高級寿司店向け（Premium相当）
+▼ 高級寿司店向け（Light相当）
 https://hnh-design-works.vercel.app/demo_sushi_kuromasa.html
 
 ▼ ヘアサロン向け（Standard相当）
 https://hnh-design-works.vercel.app/demo_noel_hair.html
 
-▼ ヨガスタジオ向け（Light相当）
+▼ ヨガスタジオ向け（Premium相当）
 https://hnh-design-works.vercel.app/demo_yoga_lumiere.html
 
 ---
