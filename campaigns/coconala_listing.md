@@ -57,13 +57,13 @@ https://hnh-design-works.vercel.app
 🔹 **Standard — ¥150,000（税込¥165,000）**
 　5〜8ページ構成 / スマホ完全対応 / お問い合わせフォーム / Googleマップ埋め込み
 　ギャラリー（写真掲載）/ FAQ / SNS連携（Instagram埋め込み）/ YouTube動画埋め込み
-　日本語・英語切り替え対応 / SEO基本設定
+　日本語・英語切り替え対応 / SEO基本設定 / 簡易オンライン決済（Stripe連携）
 　納期：約2週間
 
 🔹 **Premium — 通常¥250,000のところ、先着5社に限り¥200,000（税込¥220,000）**
 　10ページ以上フル制作 / スマホ完全対応 / お問い合わせフォーム / Googleマップ埋め込み
 　ギャラリー / FAQ / SNS連携 / 動画埋め込み（複数箇所）
-　Google Analytics + Search Console設置 / 簡易決済機能（Stripe連携）
+　Google Analytics + Search Console設置 / オンライン決済・定期課金対応（Stripe連携）
 　メルマガ登録フォーム / LINEチャット連携 / 日本語・英語切り替え対応
 　SEOフル対応 / 納品後1ヶ月サポート付き
 　納期：約3週間
@@ -117,6 +117,9 @@ https://hnh-design-works.vercel.app
 **⑤ 打ち合わせ不要・フォームだけで完結**
 お忙しいオーナー様のために、簡単なヒアリングフォームをご用意。3分で回答するだけで制作をスタートできます。対面・電話での打ち合わせは一切不要です。
 https://hnh-design-works.vercel.app/intake.html
+
+**⑥ オンライン決済にも対応**
+Stripe連携でクレジットカード決済をサイトに導入。予約金の事前決済や月額課金にも対応可能です。
 
 ---
 
