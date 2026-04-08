@@ -4,210 +4,135 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ヒアリングフォーム — HNH Design Works</title>
-<meta name="description" content="打ち合わせ不要。簡単なフォームに答えるだけでホームページ制作をスタートできます。3分で完了。">
+<meta name="description" content="打ち合わせ不要。簡単なフォームに答えるだけでホームページ制作をスタートできます。約5分で完了。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&family=Noto+Serif+JP:wght@400;700&family=Zen+Maru+Gothic:wght@400;500&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { font-size: 16px; }
-body {
-  font-family: 'Inter', -apple-system, sans-serif;
-  color: #000; background: #fff;
-  line-height: 1.7; font-weight: 300;
-}
+body { font-family: 'Inter', -apple-system, sans-serif; color: #000; background: #fff; line-height: 1.7; font-weight: 300; }
 a { color: inherit; text-decoration: none; }
 ::selection { background: #000; color: #fff; }
 
-/* NAV */
-.nav {
-  position: fixed; top: 0; left: 0; width: 100%; height: 64px; z-index: 100;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 0 clamp(24px, 5vw, 64px);
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid #e8e8e8;
-}
+.nav { position: fixed; top: 0; left: 0; width: 100%; height: 64px; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(24px,5vw,64px); background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid #e8e8e8; }
 .nav-logo { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
-.nav-back {
-  font-size: 0.75rem; font-weight: 400; letter-spacing: 0.12em;
-  text-transform: uppercase; color: #555;
-  display: flex; align-items: center; gap: 8px; transition: color 0.2s;
-}
+.nav-back { font-size: 0.75rem; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; color: #555; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
 .nav-back:hover { color: #000; }
 .nav-back::before { content: '←'; font-size: 0.85rem; }
 
-/* MAIN */
-.main {
-  max-width: 620px; margin: 0 auto;
-  padding: 120px clamp(24px, 5vw, 48px) 80px;
-}
-.page-label {
-  font-size: 0.65rem; font-weight: 500; letter-spacing: 0.35em;
-  text-transform: uppercase; color: #999; margin-bottom: 12px;
-}
-.page-title {
-  font-size: clamp(1.4rem, 3vw, 1.8rem); font-weight: 700;
-  letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 8px;
-}
-.page-sub {
-  font-size: 0.85rem; color: #777; margin-bottom: 40px;
-  padding-bottom: 24px; border-bottom: 1px solid #e8e8e8;
-}
+.main { max-width: 620px; margin: 0 auto; padding: 120px clamp(24px,5vw,48px) 80px; }
+.page-label { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.35em; text-transform: uppercase; color: #999; margin-bottom: 12px; }
+.page-title { font-size: clamp(1.4rem,3vw,1.8rem); font-weight: 700; letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 8px; }
+.page-sub { font-size: 0.85rem; color: #777; margin-bottom: 40px; padding-bottom: 24px; border-bottom: 1px solid #e8e8e8; }
 
-/* PROGRESS */
-.progress {
-  display: flex; gap: 4px; margin-bottom: 40px;
-}
-.progress-bar {
-  flex: 1; height: 3px; background: #e8e8e8; border-radius: 2px;
-  transition: background 0.4s;
-}
+.progress { display: flex; gap: 4px; margin-bottom: 40px; }
+.progress-bar { flex: 1; height: 3px; background: #e8e8e8; border-radius: 2px; transition: background 0.4s; }
 .progress-bar.active { background: #000; }
 
-/* STEP */
-.step {
-  display: none; opacity: 0;
-  transition: opacity 0.35s;
-}
+.step { display: none; opacity: 0; transition: opacity 0.35s; }
 .step.active { display: block; opacity: 1; }
-.step-num {
-  font-size: 0.65rem; font-weight: 500; letter-spacing: 0.3em;
-  text-transform: uppercase; color: #999; margin-bottom: 8px;
-}
-.step-title {
-  font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em;
-  margin-bottom: 32px;
-}
+.step-num { font-size: 0.65rem; font-weight: 500; letter-spacing: 0.3em; text-transform: uppercase; color: #999; margin-bottom: 8px; }
+.step-title { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 32px; }
 
-/* FORM ELEMENTS */
 .fg { margin-bottom: 24px; }
-.fg label {
-  display: block; font-size: 0.72rem; font-weight: 500;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  color: #555; margin-bottom: 8px;
-}
+.fg label { display: block; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #555; margin-bottom: 8px; }
 .fg label .req { color: #c00; margin-left: 4px; text-transform: none; letter-spacing: 0; }
-.fg input, .fg select, .fg textarea {
-  width: 100%; padding: 12px 0; border: none;
-  border-bottom: 1px solid #ddd; font-size: 0.9rem;
-  font-weight: 300; transition: border-color 0.2s;
-  background: transparent; border-radius: 0;
-}
-.fg input:focus, .fg select:focus, .fg textarea:focus {
-  border-bottom-color: #000;
-}
+.fg input, .fg select, .fg textarea { width: 100%; padding: 12px 0; border: none; border-bottom: 1px solid #ddd; font-size: 0.9rem; font-weight: 300; transition: border-color 0.2s; background: transparent; border-radius: 0; }
+.fg input:focus, .fg select:focus, .fg textarea:focus { border-bottom-color: #000; }
 .fg textarea { resize: vertical; min-height: 100px; }
 .fg select { appearance: none; -webkit-appearance: none; cursor: pointer; }
-.fg .hint { font-size: 0.75rem; color: #999; margin-top: 6px; }
+.hint { font-size: 0.75rem; color: #999; margin-top: 6px; }
+.why { font-size: 0.7rem; color: #bbb; margin-top: 4px; font-style: italic; }
+.sel-count { font-size: 0.7rem; font-weight: 500; color: #999; margin-left: 8px; }
 
-/* CARD SELECT */
 .card-group { display: flex; flex-wrap: wrap; gap: 10px; }
-.card-option {
-  padding: 10px 16px; border: 1px solid #ddd; border-radius: 6px;
-  font-size: 0.82rem; font-weight: 400; cursor: pointer;
-  transition: all 0.2s; user-select: none;
-}
+.card-option { padding: 10px 16px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.82rem; font-weight: 400; cursor: pointer; transition: all 0.2s; user-select: none; }
 .card-option:hover { border-color: #999; }
 .card-option.selected { background: #000; color: #fff; border-color: #000; }
+.card-option.disabled { opacity: 0.3; pointer-events: none; }
 
-/* CHECKBOX GROUP */
 .check-group { display: flex; flex-wrap: wrap; gap: 10px; }
-.check-item {
-  padding: 10px 16px; border: 1px solid #ddd; border-radius: 6px;
-  font-size: 0.82rem; cursor: pointer; transition: all 0.2s; user-select: none;
-}
+.check-item { padding: 10px 16px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.82rem; cursor: pointer; transition: all 0.2s; user-select: none; }
 .check-item:hover { border-color: #999; }
 .check-item.checked { background: #000; color: #fff; border-color: #000; }
+.check-item.disabled { opacity: 0.3; pointer-events: none; }
+
+/* COLOR PALETTE */
+.color-cards { display: flex; flex-wrap: wrap; gap: 10px; }
+.color-card { width: calc(50% - 5px); padding: 14px; border: 2px solid #e8e8e8; border-radius: 8px; cursor: pointer; transition: all 0.2s; user-select: none; display: flex; align-items: center; gap: 12px; }
+.color-card:hover { border-color: #999; }
+.color-card.selected { border-color: #000; background: #fafafa; }
+.color-card.disabled { opacity: 0.3; pointer-events: none; }
+.color-swatch { width: 36px; height: 36px; border-radius: 50%; flex-shrink: 0; display: flex; }
+.color-swatch-half { width: 18px; height: 36px; }
+.color-swatch-half:first-child { border-radius: 36px 0 0 36px; }
+.color-swatch-half:last-child { border-radius: 0 36px 36px 0; }
+.color-card-name { font-size: 0.78rem; font-weight: 500; }
+.color-card-desc { font-size: 0.68rem; color: #999; }
+
+/* FONT CARDS */
+.font-cards { display: flex; flex-direction: column; gap: 10px; }
+.font-card { padding: 16px 20px; border: 2px solid #e8e8e8; border-radius: 8px; cursor: pointer; transition: all 0.2s; user-select: none; }
+.font-card:hover { border-color: #999; }
+.font-card.selected { border-color: #000; background: #fafafa; }
+.font-card-sample { font-size: 1.2rem; margin-bottom: 4px; }
+.font-card-name { font-size: 0.72rem; color: #999; }
 
 /* PLAN CARD */
 .plan-cards { display: flex; flex-direction: column; gap: 12px; }
-.plan-card {
-  padding: 20px; border: 2px solid #e8e8e8; border-radius: 8px;
-  cursor: pointer; transition: all 0.2s;
-}
+.plan-card { padding: 20px; border: 2px solid #e8e8e8; border-radius: 8px; cursor: pointer; transition: all 0.2s; }
 .plan-card:hover { border-color: #999; }
 .plan-card.selected { border-color: #000; background: #f8f8f8; }
 .plan-card-name { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
 .plan-card-price { font-size: 0.85rem; color: #555; }
 .plan-card-desc { font-size: 0.78rem; color: #999; margin-top: 4px; }
-.plan-card-campaign {
-  display: inline-block; font-size: 0.7rem; font-weight: 500;
-  background: #000; color: #fff; padding: 2px 8px; border-radius: 3px;
-  margin-top: 6px;
-}
+.plan-card-campaign { display: inline-block; font-size: 0.7rem; font-weight: 500; background: #000; color: #fff; padding: 2px 8px; border-radius: 3px; margin-top: 6px; }
 
-/* CONDITIONAL */
+.radio-group { display: flex; flex-direction: column; gap: 10px; }
+.radio-option { padding: 12px 16px; border: 1px solid #ddd; border-radius: 6px; font-size: 0.85rem; cursor: pointer; transition: all 0.2s; user-select: none; }
+.radio-option:hover { border-color: #999; }
+.radio-option.selected { background: #000; color: #fff; border-color: #000; }
+
 .conditional { display: none; margin-top: 16px; }
 .conditional.show { display: block; }
 
-/* BUTTONS */
-.btn-row {
-  display: flex; justify-content: space-between; align-items: center;
-  margin-top: 40px; padding-top: 24px; border-top: 1px solid #e8e8e8;
-}
-.btn {
-  padding: 14px 32px; font-size: 0.8rem; font-weight: 500;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  border-radius: 4px; cursor: pointer; transition: all 0.2s;
-}
+.section-divider { margin: 32px 0 24px; padding-top: 24px; border-top: 1px solid #e8e8e8; }
+
+.btn-row { display: flex; justify-content: space-between; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid #e8e8e8; }
+.btn { padding: 14px 32px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; border-radius: 4px; cursor: pointer; transition: all 0.2s; }
 .btn-next { background: #000; color: #fff; }
 .btn-next:hover { background: #333; }
 .btn-back { background: none; color: #555; }
 .btn-back:hover { color: #000; }
 .btn-submit { background: #000; color: #fff; padding: 16px 48px; font-size: 0.85rem; }
 .btn-submit:hover { background: #333; }
-.btn:disabled { opacity: 0.3; cursor: not-allowed; }
 
-/* CONFIRM TABLE */
 .confirm-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
 .confirm-table tr { border-bottom: 1px solid #eee; }
-.confirm-table th {
-  text-align: left; padding: 12px 8px 12px 0; font-size: 0.72rem;
-  font-weight: 500; letter-spacing: 0.06em; color: #777;
-  width: 140px; vertical-align: top;
-}
-.confirm-table td {
-  padding: 12px 0; font-size: 0.85rem; color: #111;
-}
+.confirm-table th { text-align: left; padding: 12px 8px 12px 0; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.06em; color: #777; width: 140px; vertical-align: top; }
+.confirm-table td { padding: 12px 0; font-size: 0.85rem; color: #111; }
 
-/* COMPLETE */
-.complete {
-  text-align: center; padding: 60px 0;
-}
+.complete { text-align: center; padding: 60px 0; }
 .complete-icon { font-size: 3rem; margin-bottom: 24px; }
 .complete-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; }
 .complete-desc { font-size: 0.9rem; color: #555; margin-bottom: 32px; }
-.complete-link {
-  display: inline-block; padding: 14px 32px; font-size: 0.8rem;
-  font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
-  border: 1px solid #000; transition: all 0.2s;
-}
+.complete-link { display: inline-block; padding: 14px 32px; font-size: 0.8rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; border: 1px solid #000; transition: all 0.2s; }
 .complete-link:hover { background: #000; color: #fff; }
 
-/* ERROR */
 .field-error { border-bottom-color: #c00 !important; }
 .error-msg { font-size: 0.72rem; color: #c00; margin-top: 4px; display: none; }
 .error-msg.show { display: block; }
+.group-error { font-size: 0.72rem; color: #c00; margin-top: 8px; display: none; }
+.group-error.show { display: block; }
 
-/* FOOTER */
-.footer {
-  border-top: 1px solid #e8e8e8;
-  padding: 32px clamp(24px, 5vw, 64px);
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 16px;
-}
+.footer { border-top: 1px solid #e8e8e8; padding: 32px clamp(24px,5vw,64px); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
 .footer-copy { font-size: 0.72rem; font-weight: 300; letter-spacing: 0.06em; color: #aaa; }
-.footer-link {
-  font-size: 0.72rem; font-weight: 300; letter-spacing: 0.1em;
-  text-transform: uppercase; color: #aaa;
-  border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s;
-}
+.footer-link { font-size: 0.72rem; font-weight: 300; letter-spacing: 0.1em; text-transform: uppercase; color: #aaa; border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s; }
 .footer-link:hover { color: #000; border-color: #000; }
 
 @media (max-width: 600px) {
-  .plan-cards { gap: 10px; }
-  .card-group, .check-group { gap: 8px; }
+  .color-card { width: 100%; }
   .card-option, .check-item { font-size: 0.78rem; padding: 8px 12px; }
   .confirm-table th { width: 110px; font-size: 0.68rem; }
   .confirm-table td { font-size: 0.8rem; }
@@ -224,10 +149,12 @@ a { color: inherit; text-decoration: none; }
 <main class="main">
   <p class="page-label">Intake Form</p>
   <h1 class="page-title">ヒアリングフォーム</h1>
-  <p class="page-sub">打ち合わせ不要。フォームに答えるだけで制作スタート。約3分で完了します。</p>
+  <p class="page-sub">打ち合わせ不要。フォームに答えるだけで制作スタート。約5分で完了します。</p>
 
   <div class="progress" id="progress">
     <div class="progress-bar active"></div>
+    <div class="progress-bar"></div>
+    <div class="progress-bar"></div>
     <div class="progress-bar"></div>
     <div class="progress-bar"></div>
     <div class="progress-bar"></div>
@@ -239,7 +166,7 @@ a { color: inherit; text-decoration: none; }
 
     <!-- ===== STEP 1: 基本情報 ===== -->
     <div class="step active" data-step="1">
-      <p class="step-num">Step 1 / 6</p>
+      <p class="step-num">Step 1 / 8</p>
       <h2 class="step-title">基本情報</h2>
       <div class="fg">
         <label>お名前<span class="req">*</span></label>
@@ -294,30 +221,108 @@ a { color: inherit; text-decoration: none; }
           <input type="url" name="current_website" placeholder="https://...">
         </div>
       </div>
-      <div class="btn-row">
-        <div></div>
-        <button type="button" class="btn btn-next" onclick="nextStep()">次へ</button>
-      </div>
+      <div class="btn-row"><div></div><button type="button" class="btn btn-next" onclick="nextStep()">次へ</button></div>
     </div>
 
-    <!-- ===== STEP 2: お店の雰囲気 ===== -->
+    <!-- ===== STEP 2: お店の理想像 ===== -->
     <div class="step" data-step="2">
-      <p class="step-num">Step 2 / 6</p>
-      <h2 class="step-title">お店の雰囲気</h2>
+      <p class="step-num">Step 2 / 8</p>
+      <h2 class="step-title">お店の理想像</h2>
+
       <div class="fg">
-        <label>お店の雰囲気を一言で（複数可）</label>
-        <div class="check-group" data-name="atmosphere">
-          <div class="check-item" data-value="高級感">高級感</div>
-          <div class="check-item" data-value="カジュアル">カジュアル</div>
-          <div class="check-item" data-value="ナチュラル">ナチュラル</div>
-          <div class="check-item" data-value="モダン">モダン</div>
-          <div class="check-item" data-value="和風">和風</div>
-          <div class="check-item" data-value="ポップ">ポップ</div>
-          <div class="check-item" data-value="クール">クール</div>
-          <div class="check-item" data-value="温かみ">温かみ</div>
-        </div>
-        <input type="hidden" name="atmosphere" value="">
+        <label>お店のコンセプトを一言で<span class="req">*</span></label>
+        <input type="text" name="concept" required placeholder="例：地元の食材にこだわった隠れ家イタリアン">
+        <p class="error-msg">コンセプトを入力してください</p>
+        <p class="why">→ デザインの世界観を決める土台になります</p>
       </div>
+
+      <div class="fg">
+        <label>ホームページを見たお客様にどう感じてほしいですか？<span class="req">*</span><span class="sel-count" id="impressionCount">0/3</span></label>
+        <div class="check-group" data-name="impression" data-max="3">
+          <div class="check-item" data-value="高級感・特別感を感じてほしい">高級感・特別感</div>
+          <div class="check-item" data-value="安心・信頼できると思ってほしい">安心・信頼感</div>
+          <div class="check-item" data-value="おしゃれ・センスがいいと思ってほしい">おしゃれ・センス</div>
+          <div class="check-item" data-value="温かみ・親しみやすさを感じてほしい">温かみ・親しみ</div>
+          <div class="check-item" data-value="プロフェッショナルだと思ってほしい">プロフェッショナル</div>
+          <div class="check-item" data-value="楽しそう・ワクワクすると思ってほしい">楽しい・ワクワク</div>
+          <div class="check-item" data-value="落ち着き・癒しを感じてほしい">落ち着き・癒し</div>
+          <div class="check-item" data-value="他と違う・個性的だと思ってほしい">個性的・ユニーク</div>
+        </div>
+        <input type="hidden" name="impression" value="">
+        <p class="group-error" id="impressionError">最大3つまで選択できます。1つ以上選んでください。</p>
+        <p class="why">→ デザインの方向性を決める最も重要な情報です</p>
+      </div>
+
+      <div class="fg">
+        <label>お店の雰囲気に近い色のイメージは？<span class="req">*</span><span class="sel-count" id="colorCount">0/2</span></label>
+        <div class="color-cards" data-name="color_image" data-max="2">
+          <div class="color-card" data-value="ブラック×ゴールド">
+            <div class="color-swatch"><div class="color-swatch-half" style="background:#111"></div><div class="color-swatch-half" style="background:#c8a87c"></div></div>
+            <div><div class="color-card-name">ブラック × ゴールド</div><div class="color-card-desc">高級・重厚</div></div>
+          </div>
+          <div class="color-card" data-value="ホワイト×グレー">
+            <div class="color-swatch"><div class="color-swatch-half" style="background:#fff;border:1px solid #ddd;border-right:none;border-radius:36px 0 0 36px"></div><div class="color-swatch-half" style="background:#888;border-radius:0 36px 36px 0"></div></div>
+            <div><div class="color-card-name">ホワイト × グレー</div><div class="color-card-desc">ミニマル・洗練</div></div>
+          </div>
+          <div class="color-card" data-value="ベージュ×ブラウン">
+            <div class="color-swatch"><div class="color-swatch-half" style="background:#e8d5b7"></div><div class="color-swatch-half" style="background:#8b6f47"></div></div>
+            <div><div class="color-card-name">ベージュ × ブラウン</div><div class="color-card-desc">ナチュラル・温かみ</div></div>
+          </div>
+          <div class="color-card" data-value="ネイビー×シルバー">
+            <div class="color-swatch"><div class="color-swatch-half" style="background:#1a2744"></div><div class="color-swatch-half" style="background:#b0b8c8"></div></div>
+            <div><div class="color-card-name">ネイビー × シルバー</div><div class="color-card-desc">信頼・知的</div></div>
+          </div>
+          <div class="color-card" data-value="パステル系">
+            <div class="color-swatch"><div class="color-swatch-half" style="background:#f4c2c2"></div><div class="color-swatch-half" style="background:#c2d9f4"></div></div>
+            <div><div class="color-card-name">パステル系</div><div class="color-card-desc">柔らかい・女性的</div></div>
+          </div>
+          <div class="color-card" data-value="ビビッド・カラフル">
+            <div class="color-swatch"><div class="color-swatch-half" style="background:#ff5252"></div><div class="color-swatch-half" style="background:#ffc107"></div></div>
+            <div><div class="color-card-name">ビビッド・カラフル</div><div class="color-card-desc">元気・ポップ</div></div>
+          </div>
+          <div class="color-card" data-value="グリーン×アイボリー">
+            <div class="color-swatch"><div class="color-swatch-half" style="background:#5a8a6a"></div><div class="color-swatch-half" style="background:#f5f0e1"></div></div>
+            <div><div class="color-card-name">グリーン × アイボリー</div><div class="color-card-desc">癒し・オーガニック</div></div>
+          </div>
+          <div class="color-card" data-value="おまかせ">
+            <div class="color-swatch" style="background:conic-gradient(#eee 0deg,#ccc 360deg);border-radius:50%"></div>
+            <div><div class="color-card-name">おまかせ</div><div class="color-card-desc">業種に合わせてご提案します</div></div>
+          </div>
+        </div>
+        <input type="hidden" name="color_image" value="">
+        <p class="group-error" id="colorError">最大2つまで選択できます。1つ以上選んでください。</p>
+        <p class="why">→ サイト全体の配色を決定します</p>
+      </div>
+
+      <div class="fg">
+        <label>フォントの好みは？<span class="req">*</span></label>
+        <div class="font-cards" data-name="font_pref">
+          <div class="font-card" data-value="明朝体系">
+            <div class="font-card-sample" style="font-family:'Noto Serif JP',serif;font-weight:700">鮨 黒政 — 匠の技を、一貫に。</div>
+            <div class="font-card-name">明朝体系 — 和風・上品・伝統的</div>
+          </div>
+          <div class="font-card" data-value="ゴシック体系">
+            <div class="font-card-sample" style="font-family:'Inter',sans-serif;font-weight:500;letter-spacing:0.02em">NOEL HAIR — Style starts here.</div>
+            <div class="font-card-name">ゴシック体系 — モダン・すっきり・読みやすい</div>
+          </div>
+          <div class="font-card" data-value="丸ゴシック系">
+            <div class="font-card-sample" style="font-family:'Zen Maru Gothic',sans-serif;font-weight:500">Yoga Lumière — 心と身体に、光を。</div>
+            <div class="font-card-name">丸ゴシック系 — 柔らかい・親しみやすい</div>
+          </div>
+          <div class="font-card" data-value="手書き・筆文字系">
+            <div class="font-card-sample" style="font-family:'Noto Serif JP',serif;font-style:italic">季節の恵みを、食卓へ。</div>
+            <div class="font-card-name">手書き・筆文字系 — 個性的・温かみ</div>
+          </div>
+          <div class="font-card" data-value="おまかせ">
+            <div class="font-card-sample" style="color:#999">おまかせ</div>
+            <div class="font-card-name">業種・雰囲気に合わせてご提案します</div>
+          </div>
+        </div>
+        <input type="hidden" name="font_pref" value="">
+        <p class="group-error" id="fontError">フォントを選択してください</p>
+        <p class="why">→ サイトの「声」を決める要素です</p>
+      </div>
+
       <div class="fg">
         <label>ターゲット層（複数可）</label>
         <div class="check-group" data-name="target">
@@ -332,6 +337,7 @@ a { color: inherit; text-decoration: none; }
         </div>
         <input type="hidden" name="target" value="">
       </div>
+
       <div class="fg">
         <label>お店のカラーやロゴはありますか？</label>
         <div class="card-group" data-name="has_logo" data-single="true">
@@ -341,80 +347,150 @@ a { color: inherit; text-decoration: none; }
         <input type="hidden" name="has_logo" value="">
         <p class="hint">ロゴデータをお持ちの場合は、後ほどメールでお送りください。</p>
       </div>
-      <div style="margin-top:8px;margin-bottom:32px;padding-top:24px;border-top:1px solid #e8e8e8;">
-        <label style="display:block;font-size:0.85rem;font-weight:700;margin-bottom:4px;">参考サイト</label>
-        <p class="hint" style="margin-bottom:20px;">理想に近いと感じるサイトを2つ教えてください。デザインの方向性を正確に把握するために必ずご記入をお願いします。</p>
 
-        <div class="fg">
-          <label>参考サイト 1<span class="req">*</span></label>
-          <input type="url" name="ref_url_1" required placeholder="https://..." class="ref-url-required">
-          <p class="error-msg">参考サイトのURLを入力してください（https://で始まるURL）</p>
-        </div>
-        <div class="fg">
-          <label>このサイトのどこが好きですか？（複数可）</label>
-          <div class="check-group" data-name="ref_like_1">
-            <div class="check-item" data-value="全体の色使い">全体の色使い</div>
-            <div class="check-item" data-value="フォント・文字の雰囲気">フォント・文字の雰囲気</div>
-            <div class="check-item" data-value="写真の使い方">写真の使い方</div>
-            <div class="check-item" data-value="レイアウト・配置">レイアウト・配置</div>
-            <div class="check-item" data-value="アニメーション・動き">アニメーション・動き</div>
-            <div class="check-item" data-value="全体の雰囲気">全体の雰囲気</div>
-          </div>
-          <input type="hidden" name="ref_like_1" value="">
-          <input type="text" name="ref_like_1_other" placeholder="その他（自由記入）" style="margin-top:8px">
-        </div>
-
-        <div class="fg" style="margin-top:24px;">
-          <label>参考サイト 2<span class="req">*</span></label>
-          <input type="url" name="ref_url_2" required placeholder="https://..." class="ref-url-required">
-          <p class="error-msg">参考サイトのURLを入力してください（https://で始まるURL）</p>
-        </div>
-        <div class="fg">
-          <label>このサイトのどこが好きですか？（複数可）</label>
-          <div class="check-group" data-name="ref_like_2">
-            <div class="check-item" data-value="全体の色使い">全体の色使い</div>
-            <div class="check-item" data-value="フォント・文字の雰囲気">フォント・文字の雰囲気</div>
-            <div class="check-item" data-value="写真の使い方">写真の使い方</div>
-            <div class="check-item" data-value="レイアウト・配置">レイアウト・配置</div>
-            <div class="check-item" data-value="アニメーション・動き">アニメーション・動き</div>
-            <div class="check-item" data-value="全体の雰囲気">全体の雰囲気</div>
-          </div>
-          <input type="hidden" name="ref_like_2" value="">
-          <input type="text" name="ref_like_2_other" placeholder="その他（自由記入）" style="margin-top:8px">
-        </div>
-
-        <div class="fg" style="margin-top:24px;">
-          <label>参考サイト 3 <span style="opacity:0.4;text-transform:none;letter-spacing:0">(任意)</span></label>
-          <input type="url" name="ref_url_3" placeholder="https://...">
-        </div>
-        <div class="fg">
-          <label>このサイトのどこが好きですか？（複数可）</label>
-          <div class="check-group" data-name="ref_like_3">
-            <div class="check-item" data-value="全体の色使い">全体の色使い</div>
-            <div class="check-item" data-value="フォント・文字の雰囲気">フォント・文字の雰囲気</div>
-            <div class="check-item" data-value="写真の使い方">写真の使い方</div>
-            <div class="check-item" data-value="レイアウト・配置">レイアウト・配置</div>
-            <div class="check-item" data-value="アニメーション・動き">アニメーション・動き</div>
-            <div class="check-item" data-value="全体の雰囲気">全体の雰囲気</div>
-          </div>
-          <input type="hidden" name="ref_like_3" value="">
-          <input type="text" name="ref_like_3_other" placeholder="その他（自由記入）" style="margin-top:8px">
-        </div>
-
-        <div class="fg" style="margin-top:24px;">
-          <label>逆にこういうデザインは避けたいというイメージはありますか？ <span style="opacity:0.4;text-transform:none;letter-spacing:0">(任意)</span></label>
-          <textarea name="design_avoid" rows="3" placeholder="例：ごちゃごちゃした感じ、派手すぎる色使い、など"></textarea>
-        </div>
-      </div>
       <div class="btn-row">
         <button type="button" class="btn btn-back" onclick="prevStep()">戻る</button>
         <button type="button" class="btn btn-next" onclick="nextStep()">次へ</button>
       </div>
     </div>
 
-    <!-- ===== STEP 3: 載せたい情報 ===== -->
+    <!-- ===== STEP 3: 参考サイト ===== -->
     <div class="step" data-step="3">
-      <p class="step-num">Step 3 / 6</p>
+      <p class="step-num">Step 3 / 8</p>
+      <h2 class="step-title">参考サイト</h2>
+      <p class="hint" style="margin-bottom:24px;">理想に近いと感じるサイトを2つ教えてください。いただいたサイトのテイストに近づけて制作します。</p>
+
+      <div class="fg">
+        <label>参考サイト 1<span class="req">*</span></label>
+        <input type="url" name="ref_url_1" required placeholder="https://..." class="ref-url-required">
+        <p class="error-msg">URLを入力してください（https://で始まるURL）</p>
+      </div>
+      <div class="fg">
+        <label>このサイトのどこが好きですか？（複数可）</label>
+        <div class="check-group" data-name="ref_like_1">
+          <div class="check-item" data-value="全体の色使い">色使い</div>
+          <div class="check-item" data-value="フォント・文字">フォント</div>
+          <div class="check-item" data-value="写真の使い方">写真</div>
+          <div class="check-item" data-value="レイアウト">レイアウト</div>
+          <div class="check-item" data-value="アニメーション">アニメーション</div>
+          <div class="check-item" data-value="全体の雰囲気">全体の雰囲気</div>
+        </div>
+        <input type="hidden" name="ref_like_1" value="">
+        <input type="text" name="ref_like_1_other" placeholder="その他（自由記入）" style="margin-top:8px">
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="fg">
+        <label>参考サイト 2<span class="req">*</span></label>
+        <input type="url" name="ref_url_2" required placeholder="https://..." class="ref-url-required">
+        <p class="error-msg">URLを入力してください（https://で始まるURL）</p>
+      </div>
+      <div class="fg">
+        <label>このサイトのどこが好きですか？（複数可）</label>
+        <div class="check-group" data-name="ref_like_2">
+          <div class="check-item" data-value="全体の色使い">色使い</div>
+          <div class="check-item" data-value="フォント・文字">フォント</div>
+          <div class="check-item" data-value="写真の使い方">写真</div>
+          <div class="check-item" data-value="レイアウト">レイアウト</div>
+          <div class="check-item" data-value="アニメーション">アニメーション</div>
+          <div class="check-item" data-value="全体の雰囲気">全体の雰囲気</div>
+        </div>
+        <input type="hidden" name="ref_like_2" value="">
+        <input type="text" name="ref_like_2_other" placeholder="その他（自由記入）" style="margin-top:8px">
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="fg">
+        <label>参考サイト 3 <span style="opacity:0.4;text-transform:none;letter-spacing:0">(任意)</span></label>
+        <input type="url" name="ref_url_3" placeholder="https://...">
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="fg">
+        <label>競合店のサイト <span style="opacity:0.4;text-transform:none;letter-spacing:0">(任意)</span></label>
+        <input type="url" name="competitor_url" placeholder="https://...">
+        <p class="why">→ 差別化ポイントを明確にし、より効果的なデザインに仕上げます</p>
+      </div>
+      <div class="fg">
+        <label>このサイトより優れていたい点は？</label>
+        <input type="text" name="competitor_beat" placeholder="例：写真のクオリティ、予約の導線、スマホでの見やすさ">
+      </div>
+
+      <div class="section-divider"></div>
+
+      <div class="fg">
+        <label>避けたいデザインのイメージ <span style="opacity:0.4;text-transform:none;letter-spacing:0">(任意)</span></label>
+        <textarea name="design_avoid" rows="3" placeholder="例：ごちゃごちゃした感じ、派手すぎる色使い、文字が多すぎる"></textarea>
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-back" onclick="prevStep()">戻る</button>
+        <button type="button" class="btn btn-next" onclick="nextStep()">次へ</button>
+      </div>
+    </div>
+
+    <!-- ===== STEP 4: ホームページの目的 ===== -->
+    <div class="step" data-step="4">
+      <p class="step-num">Step 4 / 8</p>
+      <h2 class="step-title">ホームページの目的</h2>
+
+      <div class="fg">
+        <label>一番達成したいことは？<span class="req">*</span></label>
+        <div class="radio-group" data-name="primary_goal">
+          <div class="radio-option" data-value="新規のお客様を増やしたい">新規のお客様を増やしたい</div>
+          <div class="radio-option" data-value="予約・問い合わせを増やしたい">予約・問い合わせを増やしたい</div>
+          <div class="radio-option" data-value="信頼感・ブランドイメージを上げたい">信頼感・ブランドイメージを上げたい</div>
+          <div class="radio-option" data-value="既存のお客様に情報を伝えたい">既存のお客様に情報を伝えたい</div>
+          <div class="radio-option" data-value="求人・採用に活用したい">求人・採用に活用したい</div>
+          <div class="radio-option" data-value="とりあえず公式サイトが欲しい">とりあえず公式サイトが欲しい</div>
+        </div>
+        <input type="hidden" name="primary_goal" value="">
+        <p class="group-error" id="goalError">1つ選択してください</p>
+        <p class="why">→ ゴールに合わせてページ構成と導線を最適化します</p>
+      </div>
+
+      <div class="fg">
+        <label>来店前にお客様が一番知りたい情報は？<span class="req">*</span><span class="sel-count" id="infoCount">0/3</span></label>
+        <div class="check-group" data-name="customer_wants" data-max="3">
+          <div class="check-item" data-value="料金・メニュー">料金・メニュー</div>
+          <div class="check-item" data-value="お店の雰囲気・内装">雰囲気・内装</div>
+          <div class="check-item" data-value="スタッフの人柄・技術">スタッフ</div>
+          <div class="check-item" data-value="アクセス・営業時間">アクセス・時間</div>
+          <div class="check-item" data-value="口コミ・評判">口コミ・評判</div>
+          <div class="check-item" data-value="予約方法">予約方法</div>
+          <div class="check-item" data-value="こだわり・コンセプト">こだわり</div>
+        </div>
+        <input type="hidden" name="customer_wants" value="">
+        <p class="group-error" id="wantsError">最大3つまで。1つ以上選んでください。</p>
+        <p class="why">→ 最も重要な情報をファーストビューに配置します</p>
+      </div>
+
+      <div class="fg">
+        <label>お客様はどうやってお店を見つけていますか？（複数可）</label>
+        <div class="check-group" data-name="discovery">
+          <div class="check-item" data-value="Google検索">Google検索</div>
+          <div class="check-item" data-value="Googleマップ">Googleマップ</div>
+          <div class="check-item" data-value="Instagram">Instagram</div>
+          <div class="check-item" data-value="ポータルサイト">食べログ等</div>
+          <div class="check-item" data-value="口コミ・紹介">口コミ・紹介</div>
+          <div class="check-item" data-value="通りがかり">通りがかり</div>
+          <div class="check-item" data-value="わからない">わからない</div>
+        </div>
+        <input type="hidden" name="discovery" value="">
+      </div>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-back" onclick="prevStep()">戻る</button>
+        <button type="button" class="btn btn-next" onclick="nextStep()">次へ</button>
+      </div>
+    </div>
+
+    <!-- ===== STEP 5: 載せたい情報 ===== -->
+    <div class="step" data-step="5">
+      <p class="step-num">Step 5 / 8</p>
       <h2 class="step-title">載せたい情報</h2>
       <div class="fg">
         <label>ホームページに載せたい情報（複数可）</label>
@@ -423,13 +499,13 @@ a { color: inherit; text-decoration: none; }
           <div class="check-item" data-value="営業時間・定休日">営業時間・定休日</div>
           <div class="check-item" data-value="アクセス・地図">アクセス・地図</div>
           <div class="check-item" data-value="予約フォーム">予約フォーム</div>
-          <div class="check-item" data-value="お問い合わせフォーム">お問い合わせフォーム</div>
+          <div class="check-item" data-value="お問い合わせフォーム">お問い合わせ</div>
           <div class="check-item" data-value="スタッフ紹介">スタッフ紹介</div>
-          <div class="check-item" data-value="お客様の声・口コミ">お客様の声・口コミ</div>
-          <div class="check-item" data-value="ギャラリー（写真集）">ギャラリー（写真集）</div>
-          <div class="check-item" data-value="SNSリンク">SNSリンク（Instagram等）</div>
+          <div class="check-item" data-value="お客様の声・口コミ">お客様の声</div>
+          <div class="check-item" data-value="ギャラリー（写真集）">ギャラリー</div>
+          <div class="check-item" data-value="SNSリンク">SNSリンク</div>
           <div class="check-item" data-value="ブログ・お知らせ">ブログ・お知らせ</div>
-          <div class="check-item" data-value="日本語・英語切り替え">日本語・英語切り替え</div>
+          <div class="check-item" data-value="日本語・英語切り替え">日英切り替え</div>
           <div class="check-item" data-value="LINE連携">LINE連携</div>
         </div>
         <input type="hidden" name="features" value="">
@@ -444,9 +520,9 @@ a { color: inherit; text-decoration: none; }
       </div>
     </div>
 
-    <!-- ===== STEP 4: 写真・素材 ===== -->
-    <div class="step" data-step="4">
-      <p class="step-num">Step 4 / 6</p>
+    <!-- ===== STEP 6: 写真・素材 ===== -->
+    <div class="step" data-step="6">
+      <p class="step-num">Step 6 / 8</p>
       <h2 class="step-title">写真・素材</h2>
       <div class="fg">
         <label>お店の写真はご用意できますか？</label>
@@ -484,9 +560,9 @@ a { color: inherit; text-decoration: none; }
       </div>
     </div>
 
-    <!-- ===== STEP 5: ご希望 ===== -->
-    <div class="step" data-step="5">
-      <p class="step-num">Step 5 / 6</p>
+    <!-- ===== STEP 7: ご希望 ===== -->
+    <div class="step" data-step="7">
+      <p class="step-num">Step 7 / 8</p>
       <h2 class="step-title">ご希望</h2>
       <div class="fg">
         <label>ご希望のプラン</label>
@@ -499,7 +575,7 @@ a { color: inherit; text-decoration: none; }
           <div class="plan-card" data-value="Standard">
             <div class="plan-card-name">Standard</div>
             <div class="plan-card-price">¥150,000（税込¥165,000）</div>
-            <div class="plan-card-desc">5〜8ページ構成 / ギャラリー / SNS連携 / 日英対応 / 納期約2週間</div>
+            <div class="plan-card-desc">5〜8ページ / ギャラリー / SNS連携 / 日英対応 / 納期約2週間</div>
           </div>
           <div class="plan-card" data-value="Premium">
             <div class="plan-card-name">Premium</div>
@@ -520,9 +596,21 @@ a { color: inherit; text-decoration: none; }
           <div class="card-option" data-value="1週間以内">1週間以内</div>
           <div class="card-option" data-value="2週間以内">2週間以内</div>
           <div class="card-option" data-value="1ヶ月以内">1ヶ月以内</div>
-          <div class="card-option" data-value="特に急いでいない">特に急いでいない</div>
+          <div class="card-option" data-value="特に急いでいない">急いでいない</div>
         </div>
         <input type="hidden" name="timeline" value="">
+      </div>
+      <div class="fg">
+        <label>制作後の更新頻度はどのくらいを想定していますか？</label>
+        <div class="card-group" data-name="update_freq" data-single="true">
+          <div class="card-option" data-value="毎週">毎週</div>
+          <div class="card-option" data-value="月1〜2回">月1〜2回</div>
+          <div class="card-option" data-value="数ヶ月に1回">数ヶ月に1回</div>
+          <div class="card-option" data-value="ほぼ更新しない">ほぼ更新しない</div>
+          <div class="card-option" data-value="わからない">わからない</div>
+        </div>
+        <input type="hidden" name="update_freq" value="">
+        <p class="why">→ 更新しやすい構成にするかどうかの判断材料になります</p>
       </div>
       <div class="fg">
         <label>その他ご要望</label>
@@ -534,9 +622,9 @@ a { color: inherit; text-decoration: none; }
       </div>
     </div>
 
-    <!-- ===== STEP 6: 確認・送信 ===== -->
-    <div class="step" data-step="6">
-      <p class="step-num">Step 6 / 6</p>
+    <!-- ===== STEP 8: 確認・送信 ===== -->
+    <div class="step" data-step="8">
+      <p class="step-num">Step 8 / 8</p>
       <h2 class="step-title">入力内容の確認</h2>
       <table class="confirm-table" id="confirmTable"></table>
       <div class="btn-row">
@@ -545,7 +633,6 @@ a { color: inherit; text-decoration: none; }
       </div>
     </div>
 
-    <!-- ===== COMPLETE ===== -->
     <div class="step" data-step="complete" style="display:none;">
       <div class="complete">
         <div class="complete-icon">&#10003;</div>
@@ -565,139 +652,209 @@ a { color: inherit; text-decoration: none; }
 
 <script>
 let currentStep = 1;
-const totalSteps = 6;
+const totalSteps = 8;
 
 // URL param: auto-select plan
 const params = new URLSearchParams(location.search);
 const presetPlan = params.get('plan');
-if (presetPlan) {
-  window.addEventListener('DOMContentLoaded', () => {
-    const planMap = { light: 'Light', standard: 'Standard', premium: 'Premium' };
-    const val = planMap[presetPlan.toLowerCase()];
-    if (val) {
-      document.querySelector(`[data-name="plan"] [data-value="${val}"]`)?.classList.add('selected');
-      const hidden = document.querySelector('input[name="plan"]');
-      if (hidden) hidden.value = val;
+
+document.addEventListener('DOMContentLoaded', () => {
+  if (presetPlan) {
+    const map = { light: 'Light', standard: 'Standard', premium: 'Premium' };
+    const v = map[presetPlan.toLowerCase()];
+    if (v) {
+      document.querySelector(`[data-name="plan"] [data-value="${v}"]`)?.classList.add('selected');
+      const h = document.querySelector('input[name="plan"]');
+      if (h) h.value = v;
     }
+  }
+
+  // Card select (single)
+  document.querySelectorAll('.card-group[data-single="true"]').forEach(g => {
+    g.querySelectorAll('.card-option').forEach(c => {
+      c.addEventListener('click', () => {
+        g.querySelectorAll('.card-option').forEach(x => x.classList.remove('selected'));
+        c.classList.add('selected');
+        const n = g.dataset.name;
+        const h = document.querySelector(`input[name="${n}"]`);
+        if (h) h.value = c.dataset.value;
+        if (n === 'has_website') document.getElementById('websiteUrl').classList.toggle('show', c.dataset.value === 'はい');
+        if (n === 'photos') document.getElementById('noPhotosHint').classList.toggle('show', c.dataset.value === 'ほとんどない');
+      });
+    });
   });
+
+  // Check group (multi-select with optional max)
+  document.querySelectorAll('.check-group').forEach(g => {
+    const max = parseInt(g.dataset.max) || 999;
+    g.querySelectorAll('.check-item').forEach(item => {
+      item.addEventListener('click', () => {
+        if (item.classList.contains('checked')) {
+          item.classList.remove('checked');
+        } else {
+          const count = g.querySelectorAll('.check-item.checked').length;
+          if (count >= max) return;
+          item.classList.add('checked');
+        }
+        const vals = [...g.querySelectorAll('.check-item.checked')].map(i => i.dataset.value);
+        const h = document.querySelector(`input[name="${g.dataset.name}"]`);
+        if (h) h.value = vals.join(', ');
+        // Update counter
+        updateCounter(g.dataset.name, vals.length, max);
+        // Enable/disable
+        if (max < 999) {
+          const atMax = vals.length >= max;
+          g.querySelectorAll('.check-item:not(.checked)').forEach(i => i.classList.toggle('disabled', atMax));
+        }
+      });
+    });
+  });
+
+  // Color cards (multi-select, max 2)
+  document.querySelectorAll('.color-cards').forEach(g => {
+    const max = parseInt(g.dataset.max) || 2;
+    g.querySelectorAll('.color-card').forEach(c => {
+      c.addEventListener('click', () => {
+        if (c.classList.contains('selected')) {
+          c.classList.remove('selected');
+        } else {
+          const count = g.querySelectorAll('.color-card.selected').length;
+          if (count >= max) return;
+          c.classList.add('selected');
+        }
+        const vals = [...g.querySelectorAll('.color-card.selected')].map(i => i.dataset.value);
+        const h = document.querySelector(`input[name="${g.dataset.name}"]`);
+        if (h) h.value = vals.join(', ');
+        updateCounter(g.dataset.name, vals.length, max);
+        const atMax = vals.length >= max;
+        g.querySelectorAll('.color-card:not(.selected)').forEach(i => i.classList.toggle('disabled', atMax));
+      });
+    });
+  });
+
+  // Font cards (single select)
+  document.querySelectorAll('.font-cards').forEach(g => {
+    g.querySelectorAll('.font-card').forEach(c => {
+      c.addEventListener('click', () => {
+        g.querySelectorAll('.font-card').forEach(x => x.classList.remove('selected'));
+        c.classList.add('selected');
+        const h = document.querySelector(`input[name="${g.dataset.name}"]`);
+        if (h) h.value = c.dataset.value;
+      });
+    });
+  });
+
+  // Radio group (single select)
+  document.querySelectorAll('.radio-group').forEach(g => {
+    g.querySelectorAll('.radio-option').forEach(c => {
+      c.addEventListener('click', () => {
+        g.querySelectorAll('.radio-option').forEach(x => x.classList.remove('selected'));
+        c.classList.add('selected');
+        const h = document.querySelector(`input[name="${g.dataset.name}"]`);
+        if (h) h.value = c.dataset.value;
+      });
+    });
+  });
+
+  // Plan cards
+  document.querySelectorAll('.plan-cards .plan-card').forEach(c => {
+    c.addEventListener('click', () => {
+      document.querySelectorAll('.plan-cards .plan-card').forEach(x => x.classList.remove('selected'));
+      c.classList.add('selected');
+      const h = document.querySelector('input[name="plan"]');
+      if (h) h.value = c.dataset.value;
+    });
+  });
+});
+
+function updateCounter(name, count, max) {
+  const idMap = { impression: 'impressionCount', color_image: 'colorCount', customer_wants: 'infoCount' };
+  const el = document.getElementById(idMap[name]);
+  if (el) el.textContent = `${count}/${max}`;
 }
 
-// Card select (single)
-document.querySelectorAll('.card-group[data-single="true"]').forEach(group => {
-  group.querySelectorAll('.card-option').forEach(card => {
-    card.addEventListener('click', () => {
-      group.querySelectorAll('.card-option').forEach(c => c.classList.remove('selected'));
-      card.classList.add('selected');
-      const name = group.dataset.name;
-      const hidden = document.querySelector(`input[name="${name}"]`);
-      if (hidden) hidden.value = card.dataset.value;
-      // Conditional: website URL
-      if (name === 'has_website') {
-        document.getElementById('websiteUrl').classList.toggle('show', card.dataset.value === 'はい');
-      }
-      // Conditional: no photos hint
-      if (name === 'photos') {
-        document.getElementById('noPhotosHint').classList.toggle('show', card.dataset.value === 'ほとんどない');
-      }
-    });
-  });
-});
-
-// Check group (multi-select)
-document.querySelectorAll('.check-group').forEach(group => {
-  group.querySelectorAll('.check-item').forEach(item => {
-    item.addEventListener('click', () => {
-      item.classList.toggle('checked');
-      const name = group.dataset.name;
-      const vals = [...group.querySelectorAll('.check-item.checked')].map(i => i.dataset.value);
-      const hidden = document.querySelector(`input[name="${name}"]`);
-      if (hidden) hidden.value = vals.join(', ');
-    });
-  });
-});
-
-// Plan cards (single select)
-document.querySelectorAll('.plan-cards .plan-card').forEach(card => {
-  card.addEventListener('click', () => {
-    document.querySelectorAll('.plan-cards .plan-card').forEach(c => c.classList.remove('selected'));
-    card.classList.add('selected');
-    const hidden = document.querySelector('input[name="plan"]');
-    if (hidden) hidden.value = card.dataset.value;
-  });
-});
-
-// Validation
 function validateStep(step) {
-  const stepEl = document.querySelector(`[data-step="${step}"]`);
+  const el = document.querySelector(`[data-step="${step}"]`);
   let valid = true;
-  stepEl.querySelectorAll('input[required], select[required]').forEach(field => {
-    const err = field.parentElement.querySelector('.error-msg');
-    if (!field.value.trim()) {
-      field.classList.add('field-error');
-      if (err) err.classList.add('show');
-      valid = false;
-    } else if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
-      field.classList.add('field-error');
-      if (err) err.classList.add('show');
-      valid = false;
-    } else if (field.type === 'url' && field.classList.contains('ref-url-required') && !/^https?:\/\/.+/.test(field.value)) {
-      field.classList.add('field-error');
-      if (err) err.classList.add('show');
-      valid = false;
+
+  // Input/select required
+  el.querySelectorAll('input[required], select[required]').forEach(f => {
+    const err = f.parentElement.querySelector('.error-msg');
+    if (!f.value.trim()) {
+      f.classList.add('field-error'); if (err) err.classList.add('show'); valid = false;
+    } else if (f.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.value)) {
+      f.classList.add('field-error'); if (err) err.classList.add('show'); valid = false;
+    } else if (f.type === 'url' && f.classList.contains('ref-url-required') && !/^https?:\/\/.+/.test(f.value)) {
+      f.classList.add('field-error'); if (err) err.classList.add('show'); valid = false;
     } else {
-      field.classList.remove('field-error');
-      if (err) err.classList.remove('show');
+      f.classList.remove('field-error'); if (err) err.classList.remove('show');
     }
   });
+
+  // Step 2: required groups
+  if (step === 2) {
+    const imp = document.querySelector('input[name="impression"]');
+    if (!imp.value) { document.getElementById('impressionError').classList.add('show'); valid = false; }
+    else document.getElementById('impressionError').classList.remove('show');
+
+    const col = document.querySelector('input[name="color_image"]');
+    if (!col.value) { document.getElementById('colorError').classList.add('show'); valid = false; }
+    else document.getElementById('colorError').classList.remove('show');
+
+    const font = document.querySelector('input[name="font_pref"]');
+    if (!font.value) { document.getElementById('fontError').classList.add('show'); valid = false; }
+    else document.getElementById('fontError').classList.remove('show');
+  }
+
+  // Step 4: required groups
+  if (step === 4) {
+    const goal = document.querySelector('input[name="primary_goal"]');
+    if (!goal.value) { document.getElementById('goalError').classList.add('show'); valid = false; }
+    else document.getElementById('goalError').classList.remove('show');
+
+    const wants = document.querySelector('input[name="customer_wants"]');
+    if (!wants.value) { document.getElementById('wantsError').classList.add('show'); valid = false; }
+    else document.getElementById('wantsError').classList.remove('show');
+  }
+
   return valid;
 }
 
 function nextStep() {
   if (!validateStep(currentStep)) return;
-  if (currentStep === 5) buildConfirm();
+  if (currentStep === 7) buildConfirm();
   currentStep++;
   showStep(currentStep);
 }
-
-function prevStep() {
-  currentStep--;
-  showStep(currentStep);
-}
+function prevStep() { currentStep--; showStep(currentStep); }
 
 function showStep(n) {
-  document.querySelectorAll('.step').forEach(s => {
-    s.classList.remove('active');
-    s.style.display = 'none';
-  });
-  const target = document.querySelector(`[data-step="${n}"]`);
-  if (target) {
-    target.style.display = 'block';
-    setTimeout(() => target.classList.add('active'), 20);
-  }
-  // Progress
-  document.querySelectorAll('.progress-bar').forEach((bar, i) => {
-    bar.classList.toggle('active', i < n);
-  });
+  document.querySelectorAll('.step').forEach(s => { s.classList.remove('active'); s.style.display = 'none'; });
+  const t = document.querySelector(`[data-step="${n}"]`);
+  if (t) { t.style.display = 'block'; setTimeout(() => t.classList.add('active'), 20); }
+  document.querySelectorAll('.progress-bar').forEach((b, i) => b.classList.toggle('active', i < n));
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// Build confirmation
 function buildConfirm() {
   const fields = [
-    ['お名前', 'name'], ['メールアドレス', 'email'], ['お電話番号', 'phone'],
-    ['お店の名前', 'shop_name'], ['業種', 'category'], ['エリア', 'area'],
-    ['HP有無', 'has_website'], ['現在のサイトURL', 'current_website'],
-    ['雰囲気', 'atmosphere'], ['ターゲット層', 'target'],
-    ['ロゴ有無', 'has_logo'],
-    ['参考サイト1', 'ref_url_1'], ['好きなポイント1', 'ref_like_1'], ['その他1', 'ref_like_1_other'],
-    ['参考サイト2', 'ref_url_2'], ['好きなポイント2', 'ref_like_2'], ['その他2', 'ref_like_2_other'],
-    ['参考サイト3', 'ref_url_3'], ['好きなポイント3', 'ref_like_3'], ['その他3', 'ref_like_3_other'],
-    ['避けたいデザイン', 'design_avoid'],
-    ['載せたい情報', 'features'], ['その他情報', 'features_other'],
-    ['写真', 'photos'], ['ロゴデータ', 'logo_data'],
-    ['テキスト用意', 'text_ready'],
-    ['プラン', 'plan'], ['公開時期', 'timeline'],
-    ['その他ご要望', 'message']
+    ['お名前','name'],['メールアドレス','email'],['お電話番号','phone'],
+    ['お店の名前','shop_name'],['業種','category'],['エリア','area'],
+    ['HP有無','has_website'],['現在のURL','current_website'],
+    ['コンセプト','concept'],['与えたい印象','impression'],
+    ['カラーイメージ','color_image'],['フォント','font_pref'],
+    ['ターゲット層','target'],['ロゴ有無','has_logo'],
+    ['参考サイト1','ref_url_1'],['好きな点1','ref_like_1'],
+    ['参考サイト2','ref_url_2'],['好きな点2','ref_like_2'],
+    ['参考サイト3','ref_url_3'],
+    ['競合サイト','competitor_url'],['競合に勝ちたい点','competitor_beat'],
+    ['避けたいデザイン','design_avoid'],
+    ['一番の目的','primary_goal'],['顧客が知りたい情報','customer_wants'],
+    ['集客チャネル','discovery'],
+    ['載せたい情報','features'],['その他情報','features_other'],
+    ['写真','photos'],['ロゴデータ','logo_data'],['テキスト用意','text_ready'],
+    ['プラン','plan'],['公開時期','timeline'],['更新頻度','update_freq'],
+    ['その他ご要望','message']
   ];
   const table = document.getElementById('confirmTable');
   table.innerHTML = '';
@@ -706,34 +863,23 @@ function buildConfirm() {
     const val = input ? input.value : '';
     if (!val) return;
     const tr = document.createElement('tr');
-    tr.innerHTML = `<th>${label}</th><td>${val.replace(/</g, '&lt;')}</td>`;
+    tr.innerHTML = `<th>${label}</th><td>${val.replace(/</g,'&lt;')}</td>`;
     table.appendChild(tr);
   });
 }
 
-// Form submit
 document.getElementById('intakeForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  const form = this;
-  fetch(form.action, {
-    method: 'POST',
-    body: new FormData(form),
-    headers: { 'Accept': 'application/json' }
-  }).then(res => {
-    if (res.ok) {
-      document.querySelectorAll('.step').forEach(s => { s.classList.remove('active'); s.style.display = 'none'; });
-      document.getElementById('progress').style.display = 'none';
-      const complete = document.querySelector('[data-step="complete"]');
-      complete.style.display = 'block';
-      setTimeout(() => complete.classList.add('active'), 20);
-    } else {
-      alert('送信に失敗しました。お手数ですがメールでお問い合わせください。');
-    }
-  }).catch(() => {
-    alert('送信に失敗しました。ネットワーク接続を確認してください。');
-  });
+  fetch(this.action, { method: 'POST', body: new FormData(this), headers: { 'Accept': 'application/json' } })
+    .then(r => {
+      if (r.ok) {
+        document.querySelectorAll('.step').forEach(s => { s.classList.remove('active'); s.style.display = 'none'; });
+        document.getElementById('progress').style.display = 'none';
+        const c = document.querySelector('[data-step="complete"]');
+        c.style.display = 'block'; setTimeout(() => c.classList.add('active'), 20);
+      } else alert('送信に失敗しました。お手数ですがメールでお問い合わせください。');
+    }).catch(() => alert('送信に失敗しました。ネットワーク接続を確認してください。'));
 });
 </script>
-
 </body>
 </html>
