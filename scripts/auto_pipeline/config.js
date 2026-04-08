@@ -30,15 +30,19 @@ module.exports = {
   MAX_CONSECUTIVE_FAILURES: 5,
 
   // ============================================================
-  // Places API リミット
-  // Google Maps 月$200無料クレジット内で運用
-  // Text Search: $32/1000req, Place Details: $17/1000req
-  // 500req/日 → 最大 $16/日, $200無料枠内
+  // Places API コスト管理（月間$200無料クレジット内で運用）
+  // Text Search: $0.032/req ($32/1000)
+  // Place Details: $0.017/req ($17/1000)
+  // 1コンボ（1検索+20詳細）= $0.032 + $0.017×20 = $0.372
   // ============================================================
-  DAILY_API_LIMIT: 500,           // 1日の上限
-  PER_RUN_API_LIMIT: 300,         // 1実行あたりの上限
-  API_WARNING_THRESHOLD: 400,     // 警告を出す閾値（日次上限の80%）
+  COST_TEXT_SEARCH: 0.032,
+  COST_PLACE_DETAILS: 0.017,
+  MONTHLY_BUDGET: 200,            // 月間無料枠 $200
+  MONTHLY_WARNING_THRESHOLD: 180, // 警告閾値 $180（無料枠の90%）
+  ALLOW_PAID: false,              // trueにすると$200超えても続行（課金発生）
+  PER_RUN_API_LIMIT: 30,           // 1実行あたりの上限
   API_USAGE_FILE: path.join(ROOT, 'logs/api_usage.json'),
+  MONTHLY_USAGE_FILE: path.join(ROOT, 'logs/api_usage_monthly.json'),
 
   // Owner
   OWNER_NAME: process.env.OWNER_NAME || '豊川 直也',
@@ -53,21 +57,35 @@ module.exports = {
   ],
   TYPES: [
     'restaurant', 'cafe', 'bar', 'bakery',
-    'hair_care', 'beauty_salon', 'spa',
-    'gym', 'yoga_studio', 'physiotherapist',
+    'hair_care', 'beauty_salon', 'nail_salon', 'lash_salon', 'hair_removal', 'spa',
+    'gym', 'yoga_studio', 'pilates_studio', 'dance_studio',
+    'physiotherapist', 'massage',
     'dentist', 'doctor', 'veterinary_care',
     'pet_store', 'real_estate_agency',
-    'accounting', 'lawyer',
-    'school', 'florist', 'photographer'
+    'accounting', 'administrative_scrivener', 'labor_consultant', 'lawyer',
+    'school', 'english_school', 'music_school', 'programming_school',
+    'florist', 'photographer', 'laundry',
+    'car_repair', 'general_contractor', 'insurance_agency',
+    'marriage_agency', 'psychic', 'coworking'
   ],
   TYPE_LABELS: {
     restaurant: '飲食店', cafe: 'カフェ', bar: 'バー', bakery: 'ベーカリー',
-    hair_care: '美容室', beauty_salon: 'エステサロン', spa: 'マッサージ・スパ',
-    gym: 'パーソナルジム', yoga_studio: 'ヨガスタジオ', physiotherapist: '整体院・鍼灸院',
+    hair_care: '美容室', beauty_salon: 'エステサロン', nail_salon: 'ネイルサロン',
+    lash_salon: 'まつげサロン', hair_removal: '脱毛サロン', spa: 'マッサージ・スパ',
+    gym: 'パーソナルジム', yoga_studio: 'ヨガスタジオ', pilates_studio: 'ピラティススタジオ',
+    dance_studio: 'ダンススタジオ',
+    physiotherapist: '整体院・鍼灸院', massage: 'マッサージ',
     dentist: '歯科医院', doctor: 'クリニック', veterinary_care: '動物病院',
     pet_store: 'ペットサロン', real_estate_agency: '不動産',
-    accounting: '士業', lawyer: '弁護士事務所',
-    school: 'スクール', florist: '花屋', photographer: '写真スタジオ'
+    accounting: '税理士事務所', administrative_scrivener: '行政書士事務所',
+    labor_consultant: '社労士事務所', lawyer: '弁護士事務所',
+    school: '学習塾', english_school: '英会話教室', music_school: '音楽教室',
+    programming_school: 'プログラミングスクール',
+    florist: '花屋', photographer: '写真スタジオ', laundry: 'クリーニング店',
+    car_repair: '自動車整備工場', general_contractor: 'リフォーム・工務店',
+    insurance_agency: '保険代理店',
+    marriage_agency: '結婚相談所', psychic: '占い・カウンセリング',
+    coworking: 'コワーキングスペース'
   },
 
   // Industry-specific pitch lines
@@ -92,13 +110,49 @@ module.exports = {
     'スクール': 'カリキュラムや講師紹介、生徒の声を掲載して入会促進につなげます。',
     '花屋': '季節の花やアレンジメントの魅力を、美しいビジュアルでお届けします。',
     '写真スタジオ': 'ポートフォリオやプラン紹介を、作品の魅力が伝わるデザインで。',
+    'ネイルサロン': 'デザインギャラリーやメニュー・料金を、トレンド感のあるサイトで発信できます。',
+    'まつげサロン': '施術メニューやデザインカタログを、上品なビジュアルでお届けします。',
+    '脱毛サロン': '施術プランや料金体系を、わかりやすく安心感のあるサイトでご紹介します。',
+    'ピラティススタジオ': 'レッスン内容やスタジオの雰囲気を、健康的なイメージで発信できます。',
+    'ダンススタジオ': 'レッスンスケジュールやインストラクター紹介を、躍動感のあるデザインで。',
+    'マッサージ': '施術メニューやアクセス情報を、リラックス感のあるサイトでお伝えします。',
+    '税理士事務所': '専門分野や実績を、信頼感のあるプロフェッショナルなサイトで発信します。',
+    '行政書士事務所': '取扱業務や相談の流れを、わかりやすくご案内できるサイトを制作します。',
+    '社労士事務所': '顧問サービスや対応業務を、企業向けに信頼感のあるデザインで。',
+    '学習塾': 'コース紹介や合格実績、講師紹介を掲載して入塾促進につなげます。',
+    '英会話教室': 'レッスンプランや講師紹介を、グローバルな雰囲気で発信できます。',
+    '音楽教室': 'レッスン内容や講師プロフィールを、音楽の魅力が伝わるサイトで。',
+    'プログラミングスクール': 'カリキュラムや受講生の声を、モダンなデザインでアピールできます。',
+    'クリーニング店': 'サービス内容や料金を、清潔感のあるシンプルなサイトでご紹介します。',
+    '自動車整備工場': '対応車種やサービス内容を、安心感のあるプロフェッショナルなサイトで。',
+    'リフォーム・工務店': '施工事例やサービス内容を、ビフォーアフター写真で効果的にアピール。',
+    '保険代理店': '取扱商品や相談の流れを、信頼感のあるデザインでご案内します。',
+    '結婚相談所': 'サービス内容や成婚実績を、温かみのあるデザインでお届けします。',
+    '占い・カウンセリング': 'メニューや鑑定師紹介を、神秘的で信頼感のあるサイトで発信。',
+    'コワーキングスペース': '設備や料金プランを、モダンで洗練されたデザインでご紹介します。',
   },
 
   // Portfolio URL
   PORTFOLIO_URL: 'https://hnh-design-works.vercel.app',
 
-  // --- Places API usage tracker ---
+  // --- Places API usage tracker (月間コスト管理) ---
 
+  loadMonthlyUsage() {
+    const month = new Date().toISOString().slice(0, 7); // "YYYY-MM"
+    try {
+      const data = JSON.parse(fs.readFileSync(this.MONTHLY_USAGE_FILE, 'utf-8'));
+      if (data.month === month) return data;
+    } catch {}
+    return { month, total_requests: 0, text_search_count: 0, details_count: 0, estimated_cost: 0 };
+  },
+
+  saveMonthlyUsage(usage) {
+    const dir = path.dirname(this.MONTHLY_USAGE_FILE);
+    if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(this.MONTHLY_USAGE_FILE, JSON.stringify(usage, null, 2));
+  },
+
+  // Daily usage (累積、リセット禁止)
   loadApiUsage() {
     const today = new Date().toISOString().slice(0, 10);
     try {
@@ -115,28 +169,40 @@ module.exports = {
   },
 
   /**
-   * Record one API request. Returns false if limit reached (request should NOT be made).
-   * @param {object} usage - current usage object
-   * @param {number} runCount - requests made in this run so far
+   * Record one API request with cost tracking.
+   * @param {object} usage - daily usage
+   * @param {number} runCount - requests in this run
+   * @param {'text_search'|'details'} requestType - type of API call
    * @returns {{ ok: boolean, usage: object, warning?: string, stopped?: string }}
    */
-  recordApiRequest(usage, runCount) {
-    // Hard stop: daily
-    if (usage.requests >= this.DAILY_API_LIMIT) {
-      return { ok: false, usage, stopped: `API制限に達しました。本日の実行を停止します。(${usage.requests}/${this.DAILY_API_LIMIT})` };
-    }
-    // Hard stop: per-run
+  recordApiRequest(usage, runCount, requestType = 'details') {
+    // Per-run limit
     if (runCount >= this.PER_RUN_API_LIMIT) {
       return { ok: false, usage, stopped: `1回の実行上限（${this.PER_RUN_API_LIMIT}リクエスト）に達しました。停止します。` };
     }
 
+    // Monthly cost check
+    const monthly = this.loadMonthlyUsage();
+    if (monthly.estimated_cost >= this.MONTHLY_BUDGET && !this.ALLOW_PAID) {
+      return { ok: false, usage, stopped: `無料枠の上限に達しました（$${monthly.estimated_cost.toFixed(2)}/$${this.MONTHLY_BUDGET}）。これ以上のリクエストは課金されます。続行する場合はconfig.jsのALLOW_PAID=trueに変更してください。` };
+    }
+
+    // Update daily
     usage.requests++;
     this.saveApiUsage(usage);
 
-    // Warning at 80%
+    // Update monthly with cost
+    const cost = requestType === 'text_search' ? this.COST_TEXT_SEARCH : this.COST_PLACE_DETAILS;
+    monthly.total_requests++;
+    if (requestType === 'text_search') monthly.text_search_count++;
+    else monthly.details_count++;
+    monthly.estimated_cost = parseFloat((monthly.estimated_cost + cost).toFixed(4));
+    this.saveMonthlyUsage(monthly);
+
+    // Warnings
     let warning;
-    if (usage.requests === this.API_WARNING_THRESHOLD) {
-      warning = `[WARN] 日次API上限の80%に到達しました（${usage.requests}/${this.DAILY_API_LIMIT}）。残り${this.DAILY_API_LIMIT - usage.requests}リクエスト。`;
+    if (monthly.estimated_cost >= this.MONTHLY_WARNING_THRESHOLD && monthly.estimated_cost - cost < this.MONTHLY_WARNING_THRESHOLD) {
+      warning = `[WARN] 無料枠の90%に達しました（$${monthly.estimated_cost.toFixed(2)}/$${this.MONTHLY_BUDGET}）。続行しますか？`;
     }
 
     return { ok: true, usage, warning };

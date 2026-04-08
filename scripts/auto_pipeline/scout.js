@@ -98,26 +98,48 @@ function csvEscape(val) {
   return s;
 }
 
+// Full scan: all area × type combos (for --full mode)
+function getAllSlots() {
+  const pairs = [];
+  for (const area of config.AREAS) {
+    for (const type of config.TYPES) {
+      pairs.push({ area, type });
+    }
+  }
+  // Shuffle for better coverage if we hit API limits
+  for (let i = pairs.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pairs[i], pairs[j]] = [pairs[j], pairs[i]];
+  }
+  return pairs;
+}
+
 async function run(options = {}) {
-  console.log(`\n=== Scout Agent — ${TODAY} ===`);
-  console.log(`  ハードリミット: 日次${config.DAILY_API_LIMIT}回, 1実行${config.PER_RUN_API_LIMIT}回`);
+  const fullMode = options.full || process.argv.includes('--full');
+  console.log(`\n=== Scout Agent — ${TODAY} ${fullMode ? '(FULL SCAN)' : ''} ===`);
+  console.log(`  1実行上限: ${config.PER_RUN_API_LIMIT}リクエスト`);
 
-  const existingNames = loadExistingNames();
-  const unsubscribed = loadUnsubscribed();
-  const slots = getTodaySlots();
-  let newLeads = 0;
-  let runCount = 0;
+  // Monthly cost pre-flight check
+  const monthlyPre = config.loadMonthlyUsage();
+  console.log(`  月間コスト: $${monthlyPre.estimated_cost.toFixed(2)} / $${config.MONTHLY_BUDGET} (${(monthlyPre.estimated_cost / config.MONTHLY_BUDGET * 100).toFixed(1)}%)`);
+  console.log(`  月間リクエスト: ${monthlyPre.total_requests} (Text Search: ${monthlyPre.text_search_count}, Details: ${monthlyPre.details_count})`);
 
-  // Load today's usage (auto-resets on new day)
-  const usage = config.loadApiUsage();
-
-  // Pre-flight check
-  if (usage.requests >= config.DAILY_API_LIMIT) {
-    console.log(`  API制限に達しました。本日の実行を停止します。(${usage.requests}/${config.DAILY_API_LIMIT})`);
+  if (monthlyPre.estimated_cost >= config.MONTHLY_BUDGET && !config.ALLOW_PAID) {
+    console.log(`  無料枠の上限に達しました。これ以上のリクエストは課金されます。`);
+    console.log(`  続行する場合はconfig.jsのALLOW_PAID=trueに変更してください。`);
     return 0;
   }
 
-  console.log(`  本日のAPI使用量: ${usage.requests}/${config.DAILY_API_LIMIT} (残り${config.DAILY_API_LIMIT - usage.requests}回)`);
+  const existingNames = loadExistingNames();
+  const unsubscribed = loadUnsubscribed();
+  const slots = fullMode ? getAllSlots() : getTodaySlots();
+  console.log(`  検索コンボ数: ${slots.length} (${fullMode ? '全エリア×全業種' : 'ローテーション15枠'})`);
+  let newLeads = 0;
+  let runCount = 0;
+
+  // Load today's usage (累積、リセット禁止)
+  const usage = config.loadApiUsage();
+  console.log(`  本日のAPI使用量: ${usage.requests}回`);
 
   // Ensure CSV exists with header
   if (!fs.existsSync(config.TARGET_CSV)) {
@@ -132,7 +154,7 @@ async function run(options = {}) {
     if (stopped) break;
 
     // --- Guard: Text Search request ---
-    const searchCheck = config.recordApiRequest(usage, runCount);
+    const searchCheck = config.recordApiRequest(usage, runCount, 'text_search');
     if (!searchCheck.ok) {
       console.log(`  ${searchCheck.stopped}`);
       stopped = true;
@@ -143,13 +165,14 @@ async function run(options = {}) {
 
     console.log(`  Searching: ${slot.area} × ${config.TYPE_LABELS[slot.type] || slot.type}`);
     const places = await searchPlaces(slot.area, slot.type);
-    console.log(`  Found ${places.length} results (API: ${usage.requests}/${config.DAILY_API_LIMIT}, run: ${runCount}/${config.PER_RUN_API_LIMIT})`);
+    const monthly = config.loadMonthlyUsage();
+    console.log(`  Found ${places.length} results (run: ${runCount}/${config.PER_RUN_API_LIMIT}, 月間$${monthly.estimated_cost.toFixed(2)})`);
 
     for (const place of places) {
       if (existingNames.has(place.name)) continue;
 
       // --- Guard: Place Details request ---
-      const detailCheck = config.recordApiRequest(usage, runCount);
+      const detailCheck = config.recordApiRequest(usage, runCount, 'details');
       if (!detailCheck.ok) {
         console.log(`  ${detailCheck.stopped}`);
         stopped = true;
@@ -188,11 +211,16 @@ async function run(options = {}) {
     }
   }
 
+  // Final summary
+  const monthlyFinal = config.loadMonthlyUsage();
+  console.log(`\n  === Summary ===`);
   console.log(`  New leads added: ${newLeads}`);
   console.log(`  Total leads: ${existingNames.size}`);
-  console.log(`  API: 今回${runCount}回 / 本日合計${usage.requests}回 / 上限${config.DAILY_API_LIMIT}回`);
+  console.log(`  今回のリクエスト: ${runCount}回`);
+  console.log(`  月間累計: ${monthlyFinal.total_requests}リクエスト`);
+  console.log(`  月間推定コスト: $${monthlyFinal.estimated_cost.toFixed(2)} / $${config.MONTHLY_BUDGET}`);
   if (stopped) {
-    console.log(`  Scout stopped early due to API rate limit.`);
+    console.log(`  Scout stopped early due to limit.`);
   }
   return newLeads;
 }
