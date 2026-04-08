@@ -516,8 +516,20 @@ a { color: inherit; text-decoration: none; }
           <div class="check-item" data-value="ブログ・お知らせ">ブログ・お知らせ</div>
           <div class="check-item" data-value="日本語・英語切り替え">日英切り替え</div>
           <div class="check-item" data-value="LINE連携">LINE連携</div>
+          <div class="check-item" data-value="ロゴ制作（+¥70,000）" id="logoCheckItem">ロゴ制作（+¥70,000）</div>
         </div>
         <input type="hidden" name="features" value="">
+      </div>
+      <div class="conditional" id="logoQuestion">
+        <div class="fg">
+          <label>現在ロゴはお持ちですか？</label>
+          <div class="card-group" data-name="logo_status" data-single="true">
+            <div class="card-option" data-value="ある（画像をメールで送ります）">ある（メールで送ります）</div>
+            <div class="card-option" data-value="ないので作ってほしい">ないので作ってほしい</div>
+            <div class="card-option" data-value="あるがリニューアルしたい">あるがリニューアルしたい</div>
+          </div>
+          <input type="hidden" name="logo_status" value="">
+        </div>
       </div>
       <div class="fg">
         <label>その他載せたい情報</label>
@@ -715,6 +727,16 @@ document.addEventListener('DOMContentLoaded', () => {
           const atMax = vals.length >= max;
           g.querySelectorAll('.check-item:not(.checked)').forEach(i => i.classList.toggle('disabled', atMax));
         }
+        // Conditional: logo question
+        if (g.dataset.name === 'features') {
+          const logoChecked = document.getElementById('logoCheckItem').classList.contains('checked');
+          document.getElementById('logoQuestion').classList.toggle('show', logoChecked);
+          if (!logoChecked) {
+            const lh = document.querySelector('input[name="logo_status"]');
+            if (lh) lh.value = '';
+            document.querySelectorAll('[data-name="logo_status"] .card-option').forEach(c => c.classList.remove('selected'));
+          }
+        }
       });
     });
   });
@@ -867,7 +889,7 @@ function buildConfirm() {
     ['避けたいデザイン','design_avoid'],
     ['一番の目的','primary_goal'],['顧客が知りたい情報','customer_wants'],
     ['集客チャネル','discovery'],
-    ['載せたい情報','features'],['その他情報','features_other'],
+    ['載せたい情報','features'],['ロゴ','logo_status'],['その他情報','features_other'],
     ['写真','photos'],['ロゴデータ','logo_data'],['テキスト用意','text_ready'],
     ['プラン','plan'],['公開時期','timeline'],['更新頻度','update_freq'],
     ['その他ご要望','message']
