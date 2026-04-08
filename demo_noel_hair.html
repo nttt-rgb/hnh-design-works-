@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOEL HAIR TOKYO | BE YOUR OWN ICON.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ==============================================
+       0. RESET & CUSTOM PROPERTIES
+    ============================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white:       #ffffff;
+      --offwhite:    #f8f7f5;
+      --lightgray:   #f5f5f5;
+      --text:        #111111;
+      --text-sub:    #555555;
+      --text-light:  #888888;
+      --border:      #e0e0e0;
+      --neon-pink:   #FF2D7B;
+      --electric-blue: #2D7BFF;
+      --lime-green:  #7BFF2D;
+      --purple:      #9B2DFF;
+      --cyan:        #2DFFFF;
+      --orange:      #FF7B2D;
+      --font:        'Space Grotesk', sans-serif;
+      --nav-h:       72px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--white);
+      line-height: 1.7;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
+    ul { list-style: none; }
+    input, select, textarea, button { font-family: inherit; }
+
+    /* ==============================================
+       1. BUBBLES - AGAR.IO CELL ANIMATION
+    ============================================== */
+    .bubble {
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 10;
+      filter: blur(1px);
+      animation: float ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(20px, -30px) scale(1.05); }
+      50% { transform: translate(-15px, 15px) scale(0.95); }
+      75% { transform: translate(25px, 10px) scale(1.02); }
+    }
+
+    @keyframes float2 {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      20% { transform: translate(-25px, 20px) scale(1.08); }
+      40% { transform: translate(18px, -15px) scale(0.93); }
+      60% { transform: translate(-10px, -25px) scale(1.04); }
+      80% { transform: translate(22px, 12px) scale(0.97); }
+    }
+
+    @keyframes float3 {
+      0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+      33% { transform: translate(15px, -20px) scale(1.06) rotate(3deg); }
+      66% { transform: translate(-20px, 10px) scale(0.94) rotate(-2deg); }
+    }
+
+    /* Bubble 1 - Neon Pink, large */
+    .bubble:nth-child(1) {
+      width: 180px; height: 180px;
+      top: 8%; left: 5%;
+      background: radial-gradient(circle, rgba(255,45,123,0.22) 0%, rgba(255,45,123,0.04) 70%);
+      animation-duration: 8s; animation-delay: 0s;
+    }
+    /* Bubble 2 - Electric Blue */
+    .bubble:nth-child(2) {
+      width: 120px; height: 120px;
+      top: 15%; right: 10%;
+      background: radial-gradient(circle, rgba(45,123,255,0.20) 0%, rgba(45,123,255,0.03) 70%);
+      animation-duration: 10s; animation-delay: -2s;
+      animation-name: float2;
+    }
+    /* Bubble 3 - Lime Green, small */
+    .bubble:nth-child(3) {
+      width: 60px; height: 60px;
+      top: 30%; left: 20%;
+      background: radial-gradient(circle, rgba(123,255,45,0.25) 0%, rgba(123,255,45,0.05) 70%);
+      animation-duration: 7s; animation-delay: -1s;
+      animation-name: float3;
+    }
+    /* Bubble 4 - Purple, large */
+    .bubble:nth-child(4) {
+      width: 200px; height: 200px;
+      top: 40%; right: 5%;
+      background: radial-gradient(circle, rgba(155,45,255,0.15) 0%, rgba(155,45,255,0.03) 70%);
+      animation-duration: 12s; animation-delay: -3s;
+    }
+    /* Bubble 5 - Cyan */
+    .bubble:nth-child(5) {
+      width: 90px; height: 90px;
+      top: 55%; left: 8%;
+      background: radial-gradient(circle, rgba(45,255,255,0.20) 0%, rgba(45,255,255,0.04) 70%);
+      animation-duration: 9s; animation-delay: -4s;
+      animation-name: float2;
+    }
+    /* Bubble 6 - Orange */
+    .bubble:nth-child(6) {
+      width: 140px; height: 140px;
+      top: 65%; right: 15%;
+      background: radial-gradient(circle, rgba(255,123,45,0.18) 0%, rgba(255,123,45,0.03) 70%);
+      animation-duration: 11s; animation-delay: -1.5s;
+    }
+    /* Bubble 7 - Neon Pink, small */
+    .bubble:nth-child(7) {
+      width: 50px; height: 50px;
+      top: 75%; left: 30%;
+      background: radial-gradient(circle, rgba(255,45,123,0.25) 0%, rgba(255,45,123,0.05) 70%);
+      animation-duration: 6s; animation-delay: -2.5s;
+      animation-name: float3;
+    }
+    /* Bubble 8 - Electric Blue, large */
+    .bubble:nth-child(8) {
+      width: 160px; height: 160px;
+      top: 85%; left: 60%;
+      background: radial-gradient(circle, rgba(45,123,255,0.16) 0%, rgba(45,123,255,0.03) 70%);
+      animation-duration: 13s; animation-delay: -5s;
+    }
+    /* Bubble 9 - Purple, small */
+    .bubble:nth-child(9) {
+      width: 45px; height: 45px;
+      top: 20%; left: 50%;
+      background: radial-gradient(circle, rgba(155,45,255,0.22) 0%, rgba(155,45,255,0.04) 70%);
+      animation-duration: 7.5s; animation-delay: -0.5s;
+    }
+    /* Bubble 10 - Lime Green, medium */
+    .bubble:nth-child(10) {
+      width: 100px; height: 100px;
+      top: 45%; left: 40%;
+      background: radial-gradient(circle, rgba(123,255,45,0.18) 0%, rgba(123,255,45,0.04) 70%);
+      animation-duration: 10.5s; animation-delay: -3.5s;
+      animation-name: float2;
+    }
+    /* Bubble 11 - Cyan, large */
+    .bubble:nth-child(11) {
+      width: 170px; height: 170px;
+      top: 10%; left: 70%;
+      background: radial-gradient(circle, rgba(45,255,255,0.12) 0%, rgba(45,255,255,0.02) 70%);
+      animation-duration: 14s; animation-delay: -6s;
+      animation-name: float3;
+    }
+    /* Bubble 12 - Orange, small */
+    .bubble:nth-child(12) {
+      width: 55px; height: 55px;
+      top: 60%; left: 75%;
+      background: radial-gradient(circle, rgba(255,123,45,0.25) 0%, rgba(255,123,45,0.05) 70%);
+      animation-duration: 6.5s; animation-delay: -1s;
+    }
+    /* Bubble 13 - Neon Pink, medium */
+    .bubble:nth-child(13) {
+      width: 110px; height: 110px;
+      top: 35%; left: 85%;
+      background: radial-gradient(circle, rgba(255,45,123,0.14) 0%, rgba(255,45,123,0.03) 70%);
+      animation-duration: 9.5s; animation-delay: -4.5s;
+      animation-name: float2;
+    }
+    /* Bubble 14 - Electric Blue, small */
+    .bubble:nth-child(14) {
+      width: 40px; height: 40px;
+      top: 80%; left: 15%;
+      background: radial-gradient(circle, rgba(45,123,255,0.25) 0%, rgba(45,123,255,0.05) 70%);
+      animation-duration: 5.5s; animation-delay: -2s;
+    }
+    /* Bubble 15 - Purple, medium */
+    .bubble:nth-child(15) {
+      width: 130px; height: 130px;
+      top: 50%; left: 55%;
+      background: radial-gradient(circle, rgba(155,45,255,0.13) 0%, rgba(155,45,255,0.02) 70%);
+      animation-duration: 11.5s; animation-delay: -7s;
+    }
+    /* Bubble 16 - Lime Green, tiny */
+    .bubble:nth-child(16) {
+      width: 40px; height: 40px;
+      top: 92%; left: 40%;
+      background: radial-gradient(circle, rgba(123,255,45,0.25) 0%, rgba(123,255,45,0.06) 70%);
+      animation-duration: 6s; animation-delay: -0.8s;
+    }
+    /* Bubble 17 - Cyan, small */
+    .bubble:nth-child(17) {
+      width: 70px; height: 70px;
+      top: 5%; left: 40%;
+      background: radial-gradient(circle, rgba(45,255,255,0.20) 0%, rgba(45,255,255,0.04) 70%);
+      animation-duration: 8.5s; animation-delay: -3s;
+    }
+    /* Bubble 18 - Orange, large */
+    .bubble:nth-child(18) {
+      width: 190px; height: 190px;
+      top: 70%; right: 3%;
+      background: radial-gradient(circle, rgba(255,123,45,0.10) 0%, rgba(255,123,45,0.02) 70%);
+      animation-duration: 15s; animation-delay: -8s;
+      animation-name: float3;
+    }
+
+    /* ==============================================
+       2. NAVIGATION
+    ============================================== */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 48px;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .nav__logo {
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      color: var(--text);
+    }
+
+    .nav__links {
+      display: flex;
+      gap: 36px;
+    }
+
+    .nav__links a {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text);
+      transition: color 0.3s ease;
+    }
+
+    .nav__links a:hover {
+      color: var(--neon-pink);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 8px;
+      z-index: 1100;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--text);
+      transition: all 0.3s ease;
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Mobile menu overlay */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(255,255,255,0.97);
+      backdrop-filter: blur(30px);
+      -webkit-backdrop-filter: blur(30px);
+      z-index: 1050;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .mobile-menu.active {
+      display: flex;
+    }
+
+    .mobile-menu a {
+      font-size: 24px;
+      font-weight: 500;
+      letter-spacing: 6px;
+      text-transform: uppercase;
+      color: var(--text);
+      transition: color 0.3s ease;
+    }
+
+    .mobile-menu a:hover {
+      color: var(--neon-pink);
+    }
+
+    /* ==============================================
+       3. SECTIONS - COMMON
+    ============================================== */
+    section {
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 48px;
+      line-height: 1.2;
+    }
+
+    /* ==============================================
+       4. HERO
+    ============================================== */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: rgba(255,255,255,0.85);
+      padding: var(--nav-h) 32px 0;
+    }
+
+    .hero__content {
+      max-width: 900px;
+    }
+
+    .hero__copy {
+      font-size: clamp(48px, 8vw, 96px);
+      font-weight: 700;
+      letter-spacing: 6px;
+      line-height: 1.05;
+      text-transform: uppercase;
+      color: var(--text);
+      margin-bottom: 24px;
+    }
+
+    .hero__sub {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--text-sub);
+      letter-spacing: 2px;
+      margin-bottom: 48px;
+    }
+
+    .hero__cta {
+      display: inline-block;
+      padding: 16px 48px;
+      background: var(--neon-pink);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      border-radius: 50px;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .hero__cta:hover {
+      background: var(--electric-blue);
+      transform: translateY(-2px);
+    }
+
+    /* ==============================================
+       5. STYLIST
+    ============================================== */
+    .stylist {
+      background: rgba(245,245,245,0.8);
+      padding: 120px 0;
+    }
+
+    .stylist__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .stylist__card {
+      background: rgba(255,255,255,0.9);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 16px;
+      padding: 48px 32px;
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .stylist__card:hover {
+      box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+    }
+
+    .stylist__avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .stylist__card:nth-child(1) .stylist__avatar {
+      background: linear-gradient(135deg, var(--neon-pink), var(--purple));
+    }
+    .stylist__card:nth-child(2) .stylist__avatar {
+      background: linear-gradient(135deg, var(--electric-blue), var(--cyan));
+    }
+    .stylist__card:nth-child(3) .stylist__avatar {
+      background: linear-gradient(135deg, var(--lime-green), var(--orange));
+    }
+
+    .stylist__name {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 4px;
+    }
+
+    .stylist__role {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 4px;
+      color: var(--text-light);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .stylist__desc {
+      font-size: 14px;
+      color: var(--text-sub);
+      line-height: 1.8;
+    }
+
+    /* ==============================================
+       6. MENU
+    ============================================== */
+    .menu {
+      background: rgba(255,255,255,0.82);
+      padding: 120px 0;
+    }
+
+    .menu__category {
+      margin-bottom: 48px;
+    }
+
+    .menu__category:last-child {
+      margin-bottom: 0;
+    }
+
+    .menu__cat-title {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .menu__dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .menu__dot--pink { background: var(--neon-pink); }
+    .menu__dot--blue { background: var(--electric-blue); }
+    .menu__dot--green { background: var(--lime-green); }
+    .menu__dot--purple { background: var(--purple); }
+
+    .menu__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .menu__item:last-child {
+      border-bottom: none;
+    }
+
+    .menu__item-name {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .menu__item-price {
+      font-size: 14px;
+      font-weight: 300;
+      color: var(--text-light);
+      white-space: nowrap;
+      margin-left: 16px;
+    }
+
+    /* ==============================================
+       7. BOOKING FORM
+    ============================================== */
+    .booking {
+      background: rgba(245,245,245,0.78);
+      padding: 120px 0;
+    }
+
+    .booking__wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .booking__form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .booking__field label {
+      display: block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-light);
+      margin-bottom: 8px;
+    }
+
+    .booking__field input,
+    .booking__field select,
+    .booking__field textarea {
+      width: 100%;
+      padding: 14px 16px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 300;
+      color: var(--text);
+      outline: none;
+      transition: border-color 0.3s ease;
+    }
+
+    .booking__field input:focus,
+    .booking__field select:focus,
+    .booking__field textarea:focus {
+      border-color: var(--neon-pink);
+    }
+
+    .booking__field textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .booking__submit {
+      display: inline-block;
+      padding: 16px 48px;
+      background: var(--neon-pink);
+      color: var(--white);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      align-self: flex-start;
+    }
+
+    .booking__submit:hover {
+      background: var(--purple);
+      transform: translateY(-2px);
+    }
+
+    .booking__info {
+      padding-top: 16px;
+    }
+
+    .booking__info-title {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 32px;
+    }
+
+    .booking__info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+      font-size: 15px;
+      color: var(--text-sub);
+    }
+
+    .booking__info-icon {
+      width: 20px;
+      flex-shrink: 0;
+      text-align: center;
+      font-size: 16px;
+      padding-top: 2px;
+    }
+
+    .booking__info-text strong {
+      display: block;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+
+    /* ==============================================
+       8. ACCESS
+    ============================================== */
+    .access {
+      background: rgba(255,255,255,0.85);
+      padding: 120px 0;
+    }
+
+    .access__wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .access__details h3 {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .access__address {
+      font-size: 15px;
+      color: var(--text-sub);
+      line-height: 2;
+      margin-bottom: 28px;
+    }
+
+    .access__station {
+      font-size: 14px;
+      color: var(--text-sub);
+      line-height: 2;
+    }
+
+    .access__station span {
+      display: block;
+    }
+
+    .access__map {
+      width: 100%;
+      aspect-ratio: 4/3;
+      background: var(--offwhite);
+      border-radius: 16px;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    /* Grid pattern on map placeholder */
+    .access__map::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Pin */
+    .access__pin {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      transform: translate(-50%, -100%);
+      width: 32px;
+      height: 42px;
+    }
+
+    .access__pin-head {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--neon-pink), var(--purple));
+      box-shadow: 0 4px 16px rgba(255,45,123,0.3);
+    }
+
+    .access__pin-tail {
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-top: 12px solid var(--purple);
+      margin: -2px auto 0;
+    }
+
+    .access__map-label {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      color: var(--text-light);
+      text-transform: uppercase;
+      background: rgba(255,255,255,0.9);
+      padding: 6px 16px;
+      border-radius: 20px;
+    }
+
+    /* ==============================================
+       9. FOOTER
+    ============================================== */
+    .footer {
+      background: rgba(245,245,245,0.75);
+      padding: 64px 0;
+      text-align: center;
+    }
+
+    .footer__logo {
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: 6px;
+      margin-bottom: 20px;
+    }
+
+    .footer__social {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .footer__social a {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-sub);
+      transition: color 0.3s ease;
+    }
+
+    .footer__social a:hover {
+      color: var(--neon-pink);
+    }
+
+    .footer__copy {
+      font-size: 12px;
+      color: var(--text-light);
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+
+    .footer__credit {
+      font-size: 11px;
+      color: var(--text-light);
+      letter-spacing: 1px;
+    }
+
+    /* ==============================================
+       10. RESPONSIVE - TABLET (768px)
+    ============================================== */
+    @media (max-width: 768px) {
+      .nav { padding: 0 24px; }
+
+      .nav__links { display: none; }
+
+      .hamburger { display: flex; }
+
+      .hero__copy {
+        font-size: clamp(36px, 7vw, 60px);
+        letter-spacing: 4px;
+      }
+
+      .hero__sub { font-size: 14px; }
+
+      .section-title { font-size: 28px; }
+
+      .stylist__grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+
+      .booking__wrapper {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .access__wrapper {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      /* Reduce bubble sizes on tablet */
+      .bubble:nth-child(4) { width: 140px; height: 140px; }
+      .bubble:nth-child(8) { width: 120px; height: 120px; }
+      .bubble:nth-child(11) { width: 120px; height: 120px; }
+      .bubble:nth-child(18) { width: 130px; height: 130px; }
+    }
+
+    /* ==============================================
+       11. RESPONSIVE - MOBILE (480px)
+    ============================================== */
+    @media (max-width: 480px) {
+      :root { --nav-h: 60px; }
+
+      .nav { padding: 0 16px; }
+      .nav__logo { font-size: 22px; letter-spacing: 4px; }
+
+      .section-inner { padding: 0 20px; }
+
+      .hero { padding-top: var(--nav-h); }
+
+      .hero__copy {
+        font-size: clamp(32px, 10vw, 48px);
+        letter-spacing: 2px;
+      }
+
+      .hero__sub {
+        font-size: 13px;
+        letter-spacing: 1px;
+      }
+
+      .hero__cta {
+        padding: 14px 36px;
+        font-size: 12px;
+      }
+
+      .section-title {
+        font-size: 24px;
+        letter-spacing: 2px;
+        margin-bottom: 36px;
+      }
+
+      .stylist, .menu, .booking, .access {
+        padding: 80px 0;
+      }
+
+      .stylist__card { padding: 36px 24px; }
+
+      .menu__item { padding: 12px 0; }
+      .menu__item-name { font-size: 14px; }
+      .menu__item-price { font-size: 13px; }
+
+      .booking__submit {
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Further reduce bubbles on mobile */
+      .bubble:nth-child(1) { width: 100px; height: 100px; }
+      .bubble:nth-child(4) { width: 100px; height: 100px; }
+      .bubble:nth-child(8) { width: 80px; height: 80px; }
+      .bubble:nth-child(11) { width: 80px; height: 80px; }
+      .bubble:nth-child(15) { width: 70px; height: 70px; }
+      .bubble:nth-child(18) { width: 80px; height: 80px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       BUBBLES (Agar.io-style floating cells)
+  ============================================= -->
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+
+  <!-- ============================================
+       NAVIGATION
+  ============================================= -->
+  <nav class="nav">
+    <a href="#" class="nav__logo">NOEL</a>
+    <div class="nav__links">
+      <a href="#stylist">Stylist</a>
+      <a href="#menu">Menu</a>
+      <a href="#booking">Book</a>
+      <a href="#access">Access</a>
+    </div>
+    <button class="hamburger" aria-label="Menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu">
+    <a href="#stylist">Stylist</a>
+    <a href="#menu">Menu</a>
+    <a href="#booking">Book</a>
+    <a href="#access">Access</a>
+  </div>
+
+  <!-- ============================================
+       HERO
+  ============================================= -->
+  <section class="hero">
+    <div class="hero__content">
+      <h1 class="hero__copy">BE YOUR OWN<br>ICON.</h1>
+      <p class="hero__sub">原宿から発信する、あなただけのスタイル。</p>
+      <a href="#booking" class="hero__cta">BOOK NOW</a>
+    </div>
+  </section>
+
+  <!-- ============================================
+       STYLIST
+  ============================================= -->
+  <section class="stylist" id="stylist">
+    <div class="section-inner">
+      <p class="section-label">Stylist</p>
+      <h2 class="section-title">OUR TEAM</h2>
+      <div class="stylist__grid">
+
+        <div class="stylist__card">
+          <div class="stylist__avatar">N</div>
+          <h3 class="stylist__name">NOEL</h3>
+          <p class="stylist__role">Founder</p>
+          <p class="stylist__desc">
+            キャリア18年。パリ・ロンドンでの経験を経て原宿にサロンをオープン。Vogue、POPEYEなど数々のメディアでヘアディレクションを担当。トレンドを超えた、その人だけのスタイルを追求。
+          </p>
+        </div>
+
+        <div class="stylist__card">
+          <div class="stylist__avatar">M</div>
+          <h3 class="stylist__name">MAKO</h3>
+          <p class="stylist__role">Color Artist</p>
+          <p class="stylist__desc">
+            カラーリスト歴10年。ハイトーンカラーとデザインカラーのスペシャリスト。SNSフォロワー5万人超。ダメージを最小限に抑えながら理想の色味を実現する独自の技術が評判。
+          </p>
+        </div>
+
+        <div class="stylist__card">
+          <div class="stylist__avatar">K</div>
+          <h3 class="stylist__name">KEN</h3>
+          <p class="stylist__role">Barber</p>
+          <p class="stylist__desc">
+            バーバー歴6年。フェードカット・スキンフェードを極めたメンズ特化スタイリスト。トレンドと骨格補正を融合させた再現性の高いスタイルが得意。
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       MENU
+  ============================================= -->
+  <section class="menu" id="menu">
+    <div class="section-inner">
+      <p class="section-label">Menu</p>
+      <h2 class="section-title">PRICE LIST</h2>
+
+      <!-- CUT -->
+      <div class="menu__category">
+        <h3 class="menu__cat-title">
+          <span class="menu__dot menu__dot--pink"></span>
+          CUT
+        </h3>
+        <div class="menu__item">
+          <span class="menu__item-name">カット</span>
+          <span class="menu__item-price">&yen;7,700</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">カット + シャンプー &amp; ブロー</span>
+          <span class="menu__item-price">&yen;8,800</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">メンズカット（フェード込み）</span>
+          <span class="menu__item-price">&yen;7,700</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">前髪カット</span>
+          <span class="menu__item-price">&yen;1,650</span>
+        </div>
+      </div>
+
+      <!-- COLOR -->
+      <div class="menu__category">
+        <h3 class="menu__cat-title">
+          <span class="menu__dot menu__dot--blue"></span>
+          COLOR
+        </h3>
+        <div class="menu__item">
+          <span class="menu__item-name">ワンカラー</span>
+          <span class="menu__item-price">&yen;8,800〜</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">ハイライト / バレイヤージュ</span>
+          <span class="menu__item-price">&yen;13,200〜</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">ダブルカラー（ブリーチ + オンカラー）</span>
+          <span class="menu__item-price">&yen;17,600〜</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">デザインカラー</span>
+          <span class="menu__item-price">&yen;15,400〜</span>
+        </div>
+      </div>
+
+      <!-- PERM -->
+      <div class="menu__category">
+        <h3 class="menu__cat-title">
+          <span class="menu__dot menu__dot--green"></span>
+          PERM
+        </h3>
+        <div class="menu__item">
+          <span class="menu__item-name">コールドパーマ</span>
+          <span class="menu__item-price">&yen;11,000〜</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">デジタルパーマ</span>
+          <span class="menu__item-price">&yen;14,300〜</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">ツイストスパイラル</span>
+          <span class="menu__item-price">&yen;13,200〜</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">ストレートパーマ</span>
+          <span class="menu__item-price">&yen;15,400〜</span>
+        </div>
+      </div>
+
+      <!-- TREATMENT -->
+      <div class="menu__category">
+        <h3 class="menu__cat-title">
+          <span class="menu__dot menu__dot--purple"></span>
+          TREATMENT
+        </h3>
+        <div class="menu__item">
+          <span class="menu__item-name">トリートメント</span>
+          <span class="menu__item-price">&yen;3,300〜</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">プレミアムトリートメント（TOKIOなど）</span>
+          <span class="menu__item-price">&yen;6,600〜</span>
+        </div>
+        <div class="menu__item">
+          <span class="menu__item-name">ヘッドスパ</span>
+          <span class="menu__item-price">&yen;4,400〜</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       BOOKING
+  ============================================= -->
+  <section class="booking" id="booking">
+    <div class="section-inner">
+      <p class="section-label">Reservation</p>
+      <h2 class="section-title">BOOK NOW</h2>
+      <div class="booking__wrapper">
+
+        <form class="booking__form" id="bookingForm">
+          <div class="booking__field">
+            <label for="name">お名前</label>
+            <input type="text" id="name" name="name" required placeholder="山田 太郎">
+          </div>
+          <div class="booking__field">
+            <label for="tel">電話番号</label>
+            <input type="tel" id="tel" name="tel" required placeholder="090-XXXX-XXXX">
+          </div>
+          <div class="booking__field">
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+          <div class="booking__field">
+            <label for="date">ご希望日時</label>
+            <input type="datetime-local" id="date" name="date" required>
+          </div>
+          <div class="booking__field">
+            <label for="stylist-select">指名スタイリスト</label>
+            <select id="stylist-select" name="stylist">
+              <option value="">選択してください</option>
+              <option value="NOEL">NOEL</option>
+              <option value="MAKO">MAKO</option>
+              <option value="KEN">KEN</option>
+              <option value="おまかせ">おまかせ</option>
+            </select>
+          </div>
+          <div class="booking__field">
+            <label for="menu-select">メニュー</label>
+            <select id="menu-select" name="menu">
+              <option value="">選択してください</option>
+              <option value="カット">カット</option>
+              <option value="カラー">カラー</option>
+              <option value="パーマ">パーマ</option>
+              <option value="トリートメント">トリートメント</option>
+              <option value="カット+カラー">カット + カラー</option>
+              <option value="カット+パーマ">カット + パーマ</option>
+              <option value="その他">その他（備考欄にご記入ください）</option>
+            </select>
+          </div>
+          <div class="booking__field">
+            <label for="note">備考</label>
+            <textarea id="note" name="note" placeholder="ご要望やご質問があればお書きください。"></textarea>
+          </div>
+          <button type="submit" class="booking__submit">BOOK NOW</button>
+        </form>
+
+        <div class="booking__info">
+          <h3 class="booking__info-title">SALON INFO</h3>
+          <div class="booking__info-item">
+            <span class="booking__info-icon">&#9200;</span>
+            <div class="booking__info-text">
+              <strong>営業時間</strong>
+              11:00 - 21:00
+            </div>
+          </div>
+          <div class="booking__info-item">
+            <span class="booking__info-icon">&#10006;</span>
+            <div class="booking__info-text">
+              <strong>定休日</strong>
+              毎週火曜日
+            </div>
+          </div>
+          <div class="booking__info-item">
+            <span class="booking__info-icon">&#9742;</span>
+            <div class="booking__info-text">
+              <strong>お電話</strong>
+              03-XXXX-XXXX
+            </div>
+          </div>
+          <div class="booking__info-item">
+            <span class="booking__info-icon">&#9993;</span>
+            <div class="booking__info-text">
+              <strong>メール</strong>
+              info@noel-hair.tokyo
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ACCESS
+  ============================================= -->
+  <section class="access" id="access">
+    <div class="section-inner">
+      <p class="section-label">Access</p>
+      <h2 class="section-title">FIND US</h2>
+      <div class="access__wrapper">
+
+        <div class="access__details">
+          <h3>NOEL HAIR TOKYO</h3>
+          <p class="access__address">
+            〒150-0001<br>
+            東京都渋谷区神宮前1-X-X<br>
+            ○○ビル 2F
+          </p>
+          <div class="access__station">
+            <span>JR山手線 原宿駅 竹下口 徒歩3分</span>
+            <span>東京メトロ 明治神宮前駅 5番出口 徒歩2分</span>
+          </div>
+        </div>
+
+        <div class="access__map">
+          <div class="access__pin">
+            <div class="access__pin-head"></div>
+            <div class="access__pin-tail"></div>
+          </div>
+          <span class="access__map-label">Harajuku, Tokyo</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+  ============================================= -->
+  <footer class="footer">
+    <div class="section-inner">
+      <p class="footer__logo">NOEL HAIR TOKYO</p>
+      <div class="footer__social">
+        <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+      </div>
+      <p class="footer__copy">&copy; 2026 NOEL HAIR TOKYO. All rights reserved.</p>
+      <p class="footer__credit">Produced by HNH Design Works</p>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       JAVASCRIPT (Hamburger + Form)
+  ============================================= -->
+  <script>
+    /* --- Hamburger Menu --- */
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+
+    hamburger.addEventListener('click', function() {
+      this.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+    });
+
+    mobileLinks.forEach(function(link) {
+      link.addEventListener('click', function() {
+        hamburger.classList.remove('active');
+        mobileMenu.classList.remove('active');
+        document.body.style.overflow = '';
+      });
+    });
+
+    /* --- Booking Form (mailto) --- */
+    document.getElementById('bookingForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      var name = document.getElementById('name').value;
+      var tel = document.getElementById('tel').value;
+      var email = document.getElementById('email').value;
+      var date = document.getElementById('date').value;
+      var stylist = document.getElementById('stylist-select').value;
+      var menu = document.getElementById('menu-select').value;
+      var note = document.getElementById('note').value;
+
+      var subject = encodeURIComponent('【予約】' + name + ' 様 - NOEL HAIR TOKYO');
+      var body = encodeURIComponent(
+        '■ お名前: ' + name + '\n' +
+        '■ 電話番号: ' + tel + '\n' +
+        '■ メール: ' + email + '\n' +
+        '■ 希望日時: ' + date + '\n' +
+        '■ 指名: ' + (stylist || '未選択') + '\n' +
+        '■ メニュー: ' + (menu || '未選択') + '\n' +
+        '■ 備考: ' + (note || 'なし')
+      );
+
+      window.location.href = 'mailto:info@noel-hair.tokyo?subject=' + subject + '&body=' + body;
+    });
+  </script>
+
+</body>
+</html>

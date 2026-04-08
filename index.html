@@ -1,0 +1,1334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HNH Design Works — Design that drives business.</title>
+<meta name="description" content="ビジネスを動かすプロフェッショナルなWeb制作 — HNH Design Works">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════
+   RESET & BASE
+   ══════════════════════════════════════ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; }
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #000; background: #fff;
+  overflow-x: hidden; line-height: 1.6; font-weight: 300;
+  cursor: none;
+}
+a { color: inherit; text-decoration: none; cursor: none; }
+ul, ol { list-style: none; }
+button, input, textarea, select {
+  font-family: inherit; font-size: inherit;
+  border: none; outline: none; background: none; color: inherit;
+  cursor: none;
+}
+::selection { background: #000; color: #fff; }
+
+/* ══════════════════════════════════════
+   CUSTOM CURSOR
+   ══════════════════════════════════════ */
+.cursor-dot {
+  position: fixed; top: 0; left: 0; z-index: 99999;
+  width: 8px; height: 8px; background: #000;
+  border-radius: 50%; pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.2s, height 0.2s, background 0.2s;
+  mix-blend-mode: difference;
+}
+.cursor-ring {
+  position: fixed; top: 0; left: 0; z-index: 99998;
+  width: 40px; height: 40px;
+  border: 1px solid rgba(0,0,0,0.4);
+  border-radius: 50%; pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: width 0.35s cubic-bezier(0.23,1,0.32,1),
+              height 0.35s cubic-bezier(0.23,1,0.32,1),
+              border-color 0.3s, background 0.3s;
+  mix-blend-mode: difference;
+}
+.cursor-dot.on-dark { background: #fff; }
+.cursor-ring.on-dark { border-color: rgba(255,255,255,0.4); }
+.cursor-ring.hover {
+  width: 64px; height: 64px;
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.6);
+}
+.cursor-ring.magnetic {
+  width: 80px; height: 80px;
+  background: rgba(255,255,255,0.06);
+  border-color: #fff;
+}
+
+/* ══════════════════════════════════════
+   LOADING SCREEN
+   ══════════════════════════════════════ */
+.loader {
+  position: fixed; inset: 0; z-index: 10000;
+  background: #fff;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 0;
+}
+.loader-letters {
+  display: flex; gap: 4px; overflow: hidden;
+}
+.loader-letter {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900; letter-spacing: 0.15em;
+  opacity: 0; transform: translateY(100%);
+}
+.loader-line {
+  width: 0; height: 1px; background: #000;
+  margin-top: 20px;
+}
+.loader-sub {
+  font-size: 0.7rem; font-weight: 300;
+  letter-spacing: 0.4em; text-transform: uppercase;
+  margin-top: 16px; opacity: 0;
+}
+.loader.exit {
+  transform: translateY(-100%);
+  transition: transform 0.9s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+/* ══════════════════════════════════════
+   NOISE TEXTURE OVERLAY
+   ══════════════════════════════════════ */
+.noise {
+  position: fixed; inset: 0; z-index: 9000;
+  pointer-events: none; opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ══════════════════════════════════════
+   NAVIGATION
+   ══════════════════════════════════════ */
+.nav {
+  position: fixed; top: 0; left: 0; width: 100%; height: 72px;
+  z-index: 8000; display: flex; align-items: center;
+  justify-content: space-between; padding: 0 clamp(24px, 4vw, 60px);
+  background: transparent;
+  transition: background 0.4s, backdrop-filter 0.4s;
+}
+.nav.scrolled {
+  background: rgba(255,255,255,0.85);
+  backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.08);
+}
+.nav-logo a { display: flex; align-items: baseline; gap: 6px; }
+.nav-logo-bold { font-weight: 900; font-size: 1.2rem; letter-spacing: 0.06em; }
+.nav-logo-thin { font-weight: 200; font-size: 0.8rem; letter-spacing: 0.1em; }
+.nav-links { display: flex; gap: 40px; align-items: center; }
+
+/* Language Toggle */
+.lang-toggle{font-size:0.65rem;letter-spacing:0.18em;text-transform:uppercase;cursor:pointer;padding:5px 14px;border:1px solid rgba(0,0,0,0.15);border-radius:2px;transition:all 0.3s ease;user-select:none;margin-left:8px;white-space:nowrap}
+.lang-toggle:hover{background:#000;color:#fff}
+.nav-links a {
+  font-size: 0.75rem; font-weight: 400; letter-spacing: 0.14em;
+  text-transform: uppercase; position: relative;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.nav-links a .n { font-weight: 200; font-size: 0.6rem; opacity: 0.35; }
+.nav-links a::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 1px; background: #000;
+  transition: width 0.4s cubic-bezier(0.23,1,0.32,1);
+}
+.nav-links a:hover::after { width: 100%; }
+
+/* Hamburger */
+.hamburger {
+  display: none; width: 32px; height: 24px; cursor: none;
+  flex-direction: column; justify-content: center; gap: 6px;
+  z-index: 8200; position: relative;
+}
+.hamburger span {
+  display: block; width: 100%; height: 1px; background: #000;
+  transition: all 0.4s cubic-bezier(0.23,1,0.32,1);
+  transform-origin: center;
+}
+.hamburger.open span { background: #fff; }
+.hamburger.open span:nth-child(1) { transform: translateY(3.5px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { transform: translateY(-3.5px) rotate(-45deg); }
+
+/* Mobile Overlay Menu */
+.mobile-menu {
+  position: fixed; inset: 0; z-index: 8100;
+  background: #000; display: flex;
+  flex-direction: column; align-items: center; justify-content: center;
+  gap: 0; opacity: 0; visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+.mobile-menu.open { opacity: 1; visibility: visible; }
+.mobile-menu a {
+  color: #fff; font-size: clamp(1.8rem, 5vw, 2.5rem);
+  font-weight: 200; letter-spacing: 0.15em; padding: 20px 0;
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.4s, transform 0.5s cubic-bezier(0.23,1,0.32,1);
+}
+.mobile-menu.open a { opacity: 1; transform: translateY(0); }
+.mobile-menu.open a:nth-child(1) { transition-delay: 0.1s; }
+.mobile-menu.open a:nth-child(2) { transition-delay: 0.2s; }
+.mobile-menu.open a:nth-child(3) { transition-delay: 0.3s; }
+.mobile-menu.open a:nth-child(4) { transition-delay: 0.4s; }
+
+/* ══════════════════════════════════════
+   SCROLL REVEAL SYSTEM
+   ══════════════════════════════════════ */
+.r { opacity: 0; transform: translateY(60px); transition: opacity 0.9s cubic-bezier(0.23,1,0.32,1), transform 0.9s cubic-bezier(0.23,1,0.32,1); }
+.r.v { opacity: 1; transform: translateY(0); }
+.r-mask { overflow: hidden; display: inline-block; }
+.r-mask .r-inner { display: inline-block; transform: translateY(110%); transition: transform 0.9s cubic-bezier(0.23,1,0.32,1); }
+.r-mask.v .r-inner { transform: translateY(0); }
+.r-left { opacity: 0; transform: translateX(-100px); transition: opacity 0.9s, transform 0.9s cubic-bezier(0.23,1,0.32,1); }
+.r-right { opacity: 0; transform: translateX(100px); transition: opacity 0.9s, transform 0.9s cubic-bezier(0.23,1,0.32,1); }
+.r-left.v, .r-right.v { opacity: 1; transform: translateX(0); }
+.r-scale { opacity: 0; transform: scale(0.9); transition: opacity 0.9s, transform 0.9s cubic-bezier(0.23,1,0.32,1); }
+.r-scale.v { opacity: 1; transform: scale(1); }
+
+/* stagger delays */
+[data-delay="1"] { transition-delay: 0.1s !important; }
+[data-delay="2"] { transition-delay: 0.2s !important; }
+[data-delay="3"] { transition-delay: 0.3s !important; }
+[data-delay="4"] { transition-delay: 0.4s !important; }
+
+/* ══════════════════════════════════════
+   SECTION NUMBERS
+   ══════════════════════════════════════ */
+.sec-n {
+  position: absolute; top: 80px;
+  left: clamp(20px, 3vw, 40px);
+  font-size: clamp(3rem, 6vw, 6rem);
+  font-weight: 100; opacity: 0.06;
+  line-height: 1; letter-spacing: 0.05em;
+  will-change: transform;
+}
+
+/* ══════════════════════════════════════
+   MAGNETIC BUTTON
+   ══════════════════════════════════════ */
+.mag-btn {
+  position: relative; display: inline-flex;
+  align-items: center; justify-content: center;
+  padding: 18px 52px; border: 1px solid #000;
+  font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  overflow: hidden; transition: color 0.4s;
+  will-change: transform;
+}
+.mag-btn .btn-bg {
+  position: absolute; inset: 0;
+  background: #000; transform: translateY(101%);
+  transition: transform 0.45s cubic-bezier(0.23,1,0.32,1);
+}
+.mag-btn:hover .btn-bg { transform: translateY(0); }
+.mag-btn:hover { color: #fff; }
+.mag-btn .btn-text { position: relative; z-index: 1; }
+
+.mag-btn.inv { border-color: #fff; color: #fff; }
+.mag-btn.inv .btn-bg { background: #fff; }
+.mag-btn.inv:hover { color: #000; }
+
+/* ══════════════════════════════════════
+   HERO
+   ══════════════════════════════════════ */
+.hero {
+  position: relative; width: 100%; min-height: 100vh;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 120px clamp(24px, 6vw, 80px) 80px;
+  text-align: center; overflow: hidden;
+}
+.hero-label {
+  font-size: 0.65rem; font-weight: 400;
+  letter-spacing: 0.35em; text-transform: uppercase;
+  opacity: 0.5; margin-bottom: 40px;
+}
+.hero-main {
+  font-size: clamp(2.8rem, 7.5vw, 7rem);
+  font-weight: 900; letter-spacing: 0.04em;
+  line-height: 1.05; text-transform: uppercase;
+}
+.hero-main .line { display: block; overflow: hidden; }
+.hero-main .line span {
+  display: inline-block; transform: translateY(110%);
+  transition: transform 1s cubic-bezier(0.23,1,0.32,1);
+}
+.hero-main.animate .line span { transform: translateY(0); }
+.hero-main .line:nth-child(2) span { transition-delay: 0.12s; }
+.hero-main .line:nth-child(3) span { transition-delay: 0.24s; }
+.hero-sub {
+  font-size: clamp(0.85rem, 1.4vw, 1.15rem);
+  font-weight: 200; letter-spacing: 0.25em;
+  margin-top: 32px; opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s 0.5s, transform 0.8s 0.5s cubic-bezier(0.23,1,0.32,1);
+}
+.hero.animate .hero-sub { opacity: 0.6; transform: translateY(0); }
+.hero-cta {
+  margin-top: 56px; opacity: 0; transform: translateY(20px);
+  transition: opacity 0.8s 0.7s, transform 0.8s 0.7s cubic-bezier(0.23,1,0.32,1);
+}
+.hero.animate .hero-cta { opacity: 1; transform: translateY(0); }
+.hero-scroll {
+  position: absolute; bottom: 40px; left: 50%;
+  transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+}
+.hero-scroll .scroll-line {
+  width: 1px; height: 48px; position: relative; overflow: hidden;
+}
+.hero-scroll .scroll-line::after {
+  content: ''; position: absolute; top: -100%; left: 0;
+  width: 1px; height: 100%; background: #000;
+  animation: scrollLine 2s ease-in-out infinite;
+}
+@keyframes scrollLine {
+  0% { top: -100%; } 50% { top: 0; } 100% { top: 100%; }
+}
+.hero-scroll .scroll-text {
+  font-size: 0.6rem; font-weight: 400;
+  letter-spacing: 0.25em; text-transform: uppercase;
+}
+
+/* ══════════════════════════════════════
+   STATEMENT
+   ══════════════════════════════════════ */
+.statement {
+  position: relative; background: #000; color: #fff;
+  padding: clamp(100px, 15vw, 200px) clamp(24px, 6vw, 80px);
+  min-height: 60vh; display: flex; align-items: center;
+  overflow: hidden;
+}
+.statement-text {
+  font-size: clamp(1.4rem, 3.5vw, 3rem);
+  font-weight: 200; line-height: 1.7;
+  letter-spacing: 0.06em; max-width: 850px;
+  position: relative; z-index: 2;
+}
+.statement-text .word {
+  display: inline-block; opacity: 0.15;
+  transition: opacity 0.5s;
+}
+.statement-text .word.lit { opacity: 1; }
+
+/* ══════════════════════════════════════
+   SERVICES
+   ══════════════════════════════════════ */
+.services {
+  position: relative; background: #fff;
+  padding: clamp(100px, 12vw, 180px) clamp(24px, 6vw, 80px);
+}
+.sh {
+  font-size: 0.7rem; font-weight: 400;
+  letter-spacing: 0.35em; text-transform: uppercase;
+  margin-bottom: 80px;
+}
+.svc-list { max-width: 900px; }
+.svc-item {
+  border-top: 1px solid rgba(0,0,0,0.12); padding: 48px 0;
+  display: grid; grid-template-columns: 50px 1fr 30px;
+  align-items: start; gap: 24px;
+  transition: padding-left 0.4s cubic-bezier(0.23,1,0.32,1);
+}
+.svc-item:last-child { border-bottom: 1px solid rgba(0,0,0,0.12); }
+.svc-item:hover { padding-left: 16px; }
+.svc-item:hover .svc-title { letter-spacing: 0.06em; }
+.svc-num {
+  font-size: 0.7rem; font-weight: 200; opacity: 0.3;
+  padding-top: 6px;
+}
+.svc-title {
+  font-size: 1.4rem; font-weight: 700;
+  letter-spacing: 0.03em; margin-bottom: 14px;
+  transition: letter-spacing 0.4s cubic-bezier(0.23,1,0.32,1);
+}
+.svc-desc {
+  font-size: 0.88rem; font-weight: 300;
+  opacity: 0.55; line-height: 1.9;
+}
+.svc-arrow {
+  font-size: 1.1rem; font-weight: 200;
+  opacity: 0; transform: translateX(-12px);
+  transition: opacity 0.4s, transform 0.4s cubic-bezier(0.23,1,0.32,1);
+  align-self: center;
+}
+.svc-item:hover .svc-arrow { opacity: 0.6; transform: translateX(0); }
+
+/* ══════════════════════════════════════
+   PRICING
+   ══════════════════════════════════════ */
+.pricing {
+  position: relative; background: #000; color: #fff;
+  padding: clamp(100px, 12vw, 180px) clamp(24px, 6vw, 80px);
+}
+.pricing .sh { color: #fff; }
+.p-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px; max-width: 1100px;
+}
+.p-card {
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 52px 36px; position: relative;
+  display: flex; flex-direction: column;
+  transition: border-color 0.4s, transform 0.4s cubic-bezier(0.23,1,0.32,1);
+}
+.p-card:hover { border-color: rgba(255,255,255,0.6); transform: translateY(-6px); }
+.p-card.rec { border-color: rgba(255,255,255,0.4); }
+.p-badge {
+  position: absolute; top: -9px; left: 36px;
+  font-size: 0.58rem; font-weight: 500;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  background: #000; padding: 0 12px; color: rgba(255,255,255,0.7);
+}
+.p-name {
+  font-size: 1rem; font-weight: 700;
+  letter-spacing: 0.08em; margin-bottom: 10px;
+}
+.p-price {
+  font-size: 2.4rem; font-weight: 200;
+  letter-spacing: 0.01em; margin-bottom: 8px;
+}
+.p-price small { font-size: 0.75rem; font-weight: 300; opacity: 0.5; }
+.p-tax {
+  font-size: 0.7rem; font-weight: 300;
+  opacity: 0.35; margin-bottom: 36px;
+}
+.p-features { flex: 1; margin-bottom: 40px; }
+.p-features li {
+  font-size: 0.82rem; font-weight: 300;
+  padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex; align-items: center; gap: 12px;
+}
+.p-features li::before {
+  content: ''; width: 12px; height: 1px;
+  background: rgba(255,255,255,0.25); flex-shrink: 0;
+}
+.p-delivery {
+  font-size: 0.72rem; font-weight: 300;
+  opacity: 0.4; margin-bottom: 28px; letter-spacing: 0.05em;
+}
+
+/* ══════════════════════════════════════
+   WORKS
+   ══════════════════════════════════════ */
+/* ══════════════════════════════════════
+   WORKS — redesigned
+   ══════════════════════════════════════ */
+.works {
+  position: relative; background: #fff;
+  padding: clamp(100px, 12vw, 180px) clamp(24px, 6vw, 80px);
+}
+.works-header {
+  display: flex; align-items: flex-end;
+  justify-content: space-between;
+  max-width: 1100px; margin: 0 auto 100px;
+  border-bottom: 1px solid rgba(0,0,0,0.1); padding-bottom: 32px;
+}
+.works-header h2 { font-size: clamp(0.7rem,1vw,0.85rem); font-weight:400; letter-spacing:0.3em; text-transform:uppercase; opacity:0.4; }
+.works-count { font-size: clamp(0.6rem,0.9vw,0.75rem); font-weight:300; letter-spacing:0.15em; opacity:0.3; }
+
+/* ── Works Plan Includes ── */
+.w-plan-includes{font-size:0.7rem;letter-spacing:0.1em;opacity:0.35;margin:12px 0 20px;line-height:1.8}
+
+/* ── Works Campaign Tag ── */
+.w-campaign{display:inline-block;font-size:0.55rem;letter-spacing:0.15em;opacity:0.5;margin-left:12px;vertical-align:middle}
+
+/* ── Works Screenshot ── */
+.w-ss{flex:1.2;position:relative;overflow:hidden}
+.w-ss-link{display:block;position:relative;overflow:hidden}
+.w-ss-wrap{position:relative;overflow:hidden;border-radius:2px}
+.w-ss-img{width:100%;display:block;transition:transform 0.8s cubic-bezier(0.16,1,0.3,1);will-change:transform}
+.w-ss-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.08);transition:opacity 0.6s ease;pointer-events:none}
+.w-ss-link:hover .w-ss-img{transform:scale(1.03)}
+.w-ss-link:hover .w-ss-overlay{opacity:0}
+.w-ss-wrap::after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(255,255,255,0.06);border-radius:2px;pointer-events:none}
+
+.work-item {
+  display: grid; grid-template-columns: 1.4fr 1fr;
+  gap: clamp(40px,6vw,100px); align-items: center;
+  margin-bottom: clamp(120px, 16vw, 200px); max-width: 1100px;
+  margin-left: auto; margin-right: auto;
+}
+.work-item:last-child { margin-bottom: 0; }
+.work-item.rev { grid-template-columns: 1fr 1.4fr; }
+.work-item.rev .w-mock { order: 2; }
+.work-item.rev .w-info { order: 1; }
+
+/* ── Mock card base ── */
+.w-mock {
+  aspect-ratio: 16 / 10; position: relative;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  padding: 40px; overflow: hidden;
+  transition: transform 0.7s cubic-bezier(0.23,1,0.32,1),
+              box-shadow 0.7s cubic-bezier(0.23,1,0.32,1);
+  will-change: transform;
+}
+.w-mock:hover {
+  transform: scale(1.025) translateY(-6px);
+  box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+}
+
+/* ── KUROMASA mock (dark × gold) ── */
+.w-mock.dark {
+  background: #0a0a0a; color: #fff;
+}
+.w-mock.dark::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 70% 60%, rgba(184,150,90,0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+/* ink splotch */
+.w-mock.dark .mock-ink {
+  position: absolute; bottom: -20px; right: -10px;
+  width: 140px; height: 140px; border-radius: 50% 40% 60% 30% / 50% 60% 40% 55%;
+  background: radial-gradient(circle, rgba(184,150,90,0.06) 0%, transparent 70%);
+}
+/* gold bottom line */
+.w-mock.dark .mock-line-gold {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(184,150,90,0.4) 50%, transparent 100%);
+}
+/* brush stroke SVG */
+.w-mock.dark .mock-brush {
+  position: absolute; bottom: 48px; left: 50%;
+  transform: translateX(-50%);
+  width: 80px; height: 6px; opacity: 0.3;
+}
+/* corner accent */
+.w-mock.dark .mock-corner {
+  position: absolute; top: 44px; right: 24px;
+  width: 24px; height: 24px;
+  border-top: 1px solid rgba(184,150,90,0.2);
+  border-right: 1px solid rgba(184,150,90,0.2);
+}
+
+/* ── NOEL mock (white × NEO TOKYO bubbles) ── */
+.w-mock.noel {
+  background: #fff; color: #111;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+/* floating color bubbles */
+.w-mock.noel .nb {
+  position: absolute; border-radius: 50%;
+  pointer-events: none;
+}
+.nb-1 { width:80px;height:80px; background:radial-gradient(circle,rgba(255,45,180,0.22),rgba(255,45,180,0.04) 70%); top:10%;left:5%; animation:nb-float 7s ease-in-out infinite; }
+.nb-2 { width:55px;height:55px; background:radial-gradient(circle,rgba(45,123,255,0.25),rgba(45,123,255,0.04) 70%); top:15%;right:8%; animation:nb-float 9s ease-in-out -2s infinite; }
+.nb-3 { width:45px;height:45px; background:radial-gradient(circle,rgba(123,255,45,0.28),rgba(123,255,45,0.05) 70%); bottom:18%;left:12%; animation:nb-float 8s ease-in-out -4s infinite; }
+.nb-4 { width:65px;height:65px; background:radial-gradient(circle,rgba(168,45,255,0.20),rgba(168,45,255,0.04) 70%); bottom:10%;right:10%; animation:nb-float 10s ease-in-out -1s infinite; }
+.nb-5 { width:35px;height:35px; background:radial-gradient(circle,rgba(45,230,255,0.25),rgba(45,230,255,0.05) 70%); top:50%;left:55%; animation:nb-float 6s ease-in-out -3s infinite; }
+.nb-6 { width:50px;height:50px; background:radial-gradient(circle,rgba(255,180,45,0.18),rgba(255,180,45,0.04) 70%); top:65%;left:25%; animation:nb-float 11s ease-in-out -5s infinite; }
+@keyframes nb-float {
+  0%,100% { transform: translate(0,0) scale(1); }
+  33%      { transform: translate(12px,-10px) scale(1.06); }
+  66%      { transform: translate(-8px,8px) scale(0.94); }
+}
+.w-mock.noel .mock-neo-tag {
+  position: absolute; bottom: 14px; right: 18px;
+  font-size: 0.45rem; font-weight: 700; letter-spacing: 0.2em;
+  text-transform: uppercase; color: rgba(168,45,255,0.5);
+}
+
+/* ── LUMIERE mock (natural × organic) ── */
+.w-mock.light {
+  background: #f2f0ed; color: #1a1512;
+}
+.w-mock.light .mock-circle-lg {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 120px; height: 120px;
+  border: 1px solid rgba(0,0,0,0.06); border-radius: 50%;
+  animation: lumiere-pulse 4s ease-in-out infinite;
+}
+.w-mock.light .mock-circle-sm {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 70px; height: 70px;
+  border: 1px solid rgba(0,0,0,0.04); border-radius: 50%;
+  animation: lumiere-pulse 4s ease-in-out -2s infinite;
+}
+.w-mock.light .mock-leaf {
+  position: absolute; bottom: 18px; right: 22px;
+  width: 28px; height: 28px; opacity: 0.15;
+  border-radius: 0 80% 0 80%;
+  border: 1px solid #5a7247;
+}
+@keyframes lumiere-pulse {
+  0%,100% { transform: translate(-50%,-50%) scale(1); opacity:1; }
+  50%      { transform: translate(-50%,-50%) scale(1.04); opacity:0.7; }
+}
+
+/* ── Shared mock parts ── */
+.w-mock-bar {
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 30px; display: flex; align-items: center;
+  padding: 0 12px; gap: 5px;
+  background: rgba(0,0,0,0.04);
+}
+.w-mock.dark .w-mock-bar { background: rgba(255,255,255,0.03); }
+.w-mock.noel .w-mock-bar { background: rgba(0,0,0,0.03); }
+.w-mock-bar i {
+  width: 7px; height: 7px; border-radius: 50%;
+  display: block; font-style: normal;
+}
+.w-mock.dark .w-mock-bar i { background: rgba(255,255,255,0.12); }
+.w-mock.light .w-mock-bar i { background: rgba(0,0,0,0.1); }
+.w-mock.noel .w-mock-bar i:nth-child(1){background:rgba(255,45,180,0.3);} .w-mock.noel .w-mock-bar i:nth-child(2){background:rgba(45,123,255,0.3);} .w-mock.noel .w-mock-bar i:nth-child(3){background:rgba(123,255,45,0.3);}
+.w-mock-bar .bar-url {
+  font-size: 0.52rem; font-weight: 300; opacity: 0.25;
+  margin-left: 10px; letter-spacing: 0.02em;
+}
+.w-mock.dark .w-mock-bar .bar-url { color: #fff; }
+.w-mock.noel .w-mock-bar .bar-url { color: #111; }
+
+.w-mock-inner {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 4px; text-align: center; position: relative; z-index: 1;
+}
+.w-mock-label {
+  font-size: 0.48rem; font-weight: 400;
+  letter-spacing: 0.35em; text-transform: uppercase;
+  opacity: 0.3; margin-bottom: 10px;
+}
+.w-mock.noel .w-mock-label { color: #111; }
+.w-mock-divider {
+  width: 24px; height: 1px; opacity: 0.2; margin: 6px 0;
+}
+.w-mock.dark .w-mock-divider { background: #B8965A; }
+.w-mock.light .w-mock-divider { background: #1a1512; }
+.w-mock.noel .w-mock-divider { background: linear-gradient(90deg, #FF2DB4, #2D7BFF, #7BFF2D); opacity: 0.5; }
+.w-mock-title {
+  font-size: clamp(1.2rem, 2vw, 1.8rem); font-weight: 700;
+  letter-spacing: 0.08em;
+}
+.w-mock.noel .w-mock-title { color: #111; font-weight: 900; }
+.w-mock-tagline {
+  font-size: 0.72rem; font-weight: 200;
+  letter-spacing: 0.14em; opacity: 0.5; margin-top: 6px;
+}
+.w-mock.noel .w-mock-tagline { color: #111; opacity: 0.45; }
+.w-mock-nav {
+  display: flex; gap: 16px; margin-top: 16px;
+}
+.w-mock-nav span {
+  font-size: 0.48rem; letter-spacing: 0.15em;
+  text-transform: uppercase; opacity: 0.2;
+}
+.w-mock.noel .w-mock-nav span { color: #111; }
+
+/* ── Info panel ── */
+.w-num {
+  font-size: clamp(3.5rem, 7vw, 6rem); font-weight: 100;
+  line-height: 1; opacity: 0.06; letter-spacing: 0.02em;
+  margin-bottom: -10px;
+}
+.w-info-label {
+  font-size: 0.6rem; font-weight: 400;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  opacity: 0.3; margin-bottom: 18px;
+}
+.w-info-name {
+  font-size: clamp(1.2rem,2vw,1.6rem); font-weight: 700;
+  letter-spacing: 0.04em; margin-bottom: 8px; line-height: 1.2;
+}
+.w-info-cat {
+  font-size: 0.78rem; font-weight: 300;
+  opacity: 0.45; margin-bottom: 22px;
+  letter-spacing: 0.05em;
+}
+.w-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.w-tag {
+  font-size: 0.55rem; font-weight: 400; letter-spacing: 0.12em;
+  text-transform: uppercase; padding: 5px 12px;
+  border: 1px solid rgba(0,0,0,0.12); opacity: 0.7;
+}
+.w-info-desc {
+  font-size: 0.86rem; font-weight: 300;
+  line-height: 1.95; opacity: 0.65; margin-bottom: 36px;
+}
+.w-link {
+  font-size: 0.75rem; font-weight: 500;
+  letter-spacing: 0.12em; display: inline-flex;
+  align-items: center; gap: 10px; position: relative;
+  text-transform: uppercase;
+}
+.w-link::after {
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 100%; height: 1px; background: #000;
+  transform: scaleX(0); transform-origin: right;
+  transition: transform 0.4s cubic-bezier(0.23,1,0.32,1);
+}
+.w-link:hover::after { transform: scaleX(1); transform-origin: left; }
+.w-link .arr {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.23,1,0.32,1);
+}
+.w-link:hover .arr { transform: translateX(6px); }
+
+/* ══════════════════════════════════════
+   CONTACT
+   ══════════════════════════════════════ */
+.contact {
+  position: relative; background: #000; color: #fff;
+  padding: clamp(100px, 12vw, 180px) clamp(24px, 6vw, 80px);
+}
+.contact .sh { color: #fff; }
+.c-grid {
+  display: grid; grid-template-columns: 1fr 1.1fr;
+  gap: 100px; max-width: 1000px;
+}
+.c-name {
+  font-size: 1.3rem; font-weight: 700;
+  letter-spacing: 0.05em; margin-bottom: 24px;
+}
+.c-desc {
+  font-size: 0.88rem; font-weight: 300;
+  line-height: 1.9; opacity: 0.6; margin-bottom: 40px;
+}
+.c-email a {
+  font-size: 0.88rem; font-weight: 300;
+  letter-spacing: 0.04em; position: relative;
+  padding-bottom: 4px;
+}
+.c-email a::after {
+  content: ''; position: absolute; bottom: 0; left: 0;
+  width: 100%; height: 1px; background: rgba(255,255,255,0.3);
+  transition: background 0.3s;
+}
+.c-email a:hover::after { background: #fff; }
+.c-note {
+  font-size: 0.72rem; font-weight: 300;
+  opacity: 0.35; margin-top: 14px; letter-spacing: 0.04em;
+}
+.c-form { display: flex; flex-direction: column; gap: 40px; }
+.fg { position: relative; }
+.fg label {
+  display: block; font-size: 0.6rem; font-weight: 400;
+  letter-spacing: 0.18em; text-transform: uppercase;
+  opacity: 0.45; margin-bottom: 12px;
+}
+.fg input, .fg textarea, .fg select {
+  width: 100%; padding: 12px 0; font-size: 0.88rem;
+  font-weight: 300; color: #fff; background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.18);
+  transition: border-color 0.4s;
+}
+.fg input:focus, .fg textarea:focus, .fg select:focus {
+  border-bottom-color: #fff;
+}
+.fg input::placeholder, .fg textarea::placeholder { color: rgba(255,255,255,0.2); }
+.fg textarea { resize: vertical; min-height: 90px; }
+.fg select { cursor: none; -webkit-appearance: none; appearance: none; }
+.fg select option { background: #000; color: #fff; }
+.fg .focus-line {
+  position: absolute; bottom: 0; left: 0;
+  width: 0; height: 1px; background: #fff;
+  transition: width 0.5s cubic-bezier(0.23,1,0.32,1);
+}
+.fg:focus-within .focus-line { width: 100%; }
+
+/* ══════════════════════════════════════
+   FOOTER
+   ══════════════════════════════════════ */
+.footer {
+  background: #fff; border-top: 1px solid rgba(0,0,0,0.08);
+  padding: 60px clamp(24px, 4vw, 60px) 40px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.footer-logo { display: flex; align-items: baseline; gap: 6px; }
+.footer-logo-b { font-size: 1.4rem; font-weight: 900; letter-spacing: 0.05em; }
+.footer-logo-t { font-size: 0.8rem; font-weight: 200; letter-spacing: 0.08em; }
+.footer-copy {
+  font-size: 0.65rem; font-weight: 300;
+  opacity: 0.35; letter-spacing: 0.06em;
+}
+
+/* ══════════════════════════════════════
+   RESPONSIVE
+   ══════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .p-grid { grid-template-columns: 1fr; max-width: 440px; }
+  .work-item, .work-item.rev {
+    grid-template-columns: 1fr; gap: 40px;
+  }
+  .work-item.rev .w-mock { order: 0; }
+  .work-item.rev .w-info { order: 0; }
+  .c-grid { grid-template-columns: 1fr; gap: 60px; }
+}
+@media (max-width: 768px) {
+  body { cursor: auto; }
+  .cursor-dot, .cursor-ring { display: none; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  a, button, input, textarea, select { cursor: auto; }
+  .work-item { margin-bottom: 100px; }
+  .footer { flex-direction: column; gap: 16px; text-align: center; }
+  .works-header { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .w-num { font-size: 3rem; }
+  .w-tags { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Noise Texture -->
+<div class="noise"></div>
+
+<!-- Custom Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ═══════ LOADER ═══════ -->
+<div class="loader" id="loader">
+  <div class="loader-letters">
+    <span class="loader-letter">H</span>
+    <span class="loader-letter">N</span>
+    <span class="loader-letter">H</span>
+  </div>
+  <div class="loader-line" id="loaderLine"></div>
+  <div class="loader-sub" id="loaderSub">Design Works</div>
+</div>
+
+<!-- ═══════ NAVIGATION ═══════ -->
+<nav class="nav" id="nav">
+  <div class="nav-logo">
+    <a href="#hero">
+      <span class="nav-logo-bold">HNH</span>
+      <span class="nav-logo-thin">Design Works</span>
+    </a>
+  </div>
+  <div class="nav-links">
+    <a href="#services" data-magnetic><span class="n">01.</span> Services</a>
+    <a href="#pricing" data-magnetic><span class="n">02.</span> Pricing</a>
+    <a href="#works" data-magnetic><span class="n">03.</span> Works</a>
+    <a href="#contact" data-magnetic><span class="n">04.</span> Contact</a>
+    <span class="lang-toggle" id="langToggle" data-magnetic>EN</span>
+  </div>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services">Services</a>
+  <a href="#pricing">Pricing</a>
+  <a href="#works">Works</a>
+  <a href="#contact">Contact</a>
+</div>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero" id="hero">
+  <div class="hero-label r">Web Design & Development</div>
+  <h1 class="hero-main" id="heroMain">
+    <span class="line"><span>Design that</span></span>
+    <span class="line"><span>drives</span></span>
+    <span class="line"><span>business.</span></span>
+  </h1>
+  <p class="hero-sub" data-ja="ビジネスを動かすデザインを。" data-en="Design that moves your business forward.">ビジネスを動かすデザインを。</p>
+  <div class="hero-cta">
+    <a href="#contact" class="mag-btn" data-magnetic>
+      <span class="btn-bg"></span>
+      <span class="btn-text" data-ja="Start Your Project" data-en="Start Your Project">Start Your Project</span>
+    </a>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span class="scroll-text">Scroll</span>
+  </div>
+</section>
+
+<!-- ═══════ STATEMENT ═══════ -->
+<section class="statement" id="statement">
+  <div class="sec-n" style="color:#fff;" data-parallax="0.12">01</div>
+  <p class="statement-text" id="stmtText" data-ja="あなたのビジネスの可能性をWebで拡張します。ホームページがあるだけで、お客様との出会いは何倍にも広がります。" data-en="We amplify your business potential through the web. A website multiplies every opportunity to reach new customers.">あなたのビジネスの可能性をWebで拡張します。ホームページがあるだけで、お客様との出会いは何倍にも広がります。</p>
+</section>
+
+<!-- ═══════ SERVICES ═══════ -->
+<section class="services" id="services">
+  <div class="sec-n" data-parallax="0.15">02</div>
+  <h2 class="sh r">Services</h2>
+  <div class="svc-list">
+    <div class="svc-item r" data-delay="1">
+      <span class="svc-num">01</span>
+      <div>
+        <h3 class="svc-title">Responsive Design</h3>
+        <p class="svc-desc" data-ja="スマホ・タブレット・PC、あらゆるデバイスで美しく表示。Googleの検索評価にも直結する必須要素を標準装備します。" data-en="Beautiful on every device — mobile, tablet, and desktop. Fully responsive as standard, directly boosting your Google ranking.">スマホ・タブレット・PC、あらゆるデバイスで美しく表示。Googleの検索評価にも直結する必須要素を標準装備します。</p>
+      </div>
+      <span class="svc-arrow">→</span>
+    </div>
+    <div class="svc-item r" data-delay="2">
+      <span class="svc-num">02</span>
+      <div>
+        <h3 class="svc-title">SEO</h3>
+        <p class="svc-desc" data-ja="「エリア名+業種」で検索上位を獲得。Google Maps連携で近隣からの集客を最大化します。" data-en="Rank high for &quot;area + industry&quot; searches. Google Maps integration maximizes local customer acquisition.">「エリア名+業種」で検索上位を獲得。Google Maps連携で近隣からの集客を最大化します。</p>
+      </div>
+      <span class="svc-arrow">→</span>
+    </div>
+    <div class="svc-item r" data-delay="3">
+      <span class="svc-num">03</span>
+      <div>
+        <h3 class="svc-title">Fast Delivery</h3>
+        <p class="svc-desc" data-ja="最短1週間で公開。ヒアリングからデザイン・コーディング・公開まで、ワンストップで対応します。" data-en="Live in as fast as one week. From consultation to design, coding, and launch — all handled in one place.">最短1週間で公開。ヒアリングからデザイン・コーディング・公開まで、ワンストップで対応します。</p>
+      </div>
+      <span class="svc-arrow">→</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PRICING ═══════ -->
+<section class="pricing" id="pricing">
+  <div class="sec-n" style="color:#fff;" data-parallax="0.12">03</div>
+  <h2 class="sh r">Pricing</h2>
+  <div class="p-grid">
+    <div class="p-card r" data-delay="1">
+      <h3 class="p-name">Light</h3>
+      <p class="p-price">¥70,000</p>
+      <p class="p-tax" data-ja="税込 ¥77,000 — 先着5社キャンペーン価格" data-en="¥77,000 incl. tax — Limited to first 5 clients">税込 ¥77,000 — 先着5社キャンペーン価格</p>
+      <ul class="p-features">
+        <li data-ja="トップページ1枚構成" data-en="Single-page layout">トップページ1枚構成</li>
+        <li data-ja="店舗情報・営業時間" data-en="Store info & hours">店舗情報・営業時間</li>
+        <li data-ja="アクセスマップ埋め込み" data-en="Embedded map">アクセスマップ埋め込み</li>
+        <li data-ja="スマホ完全対応" data-en="Fully mobile-responsive">スマホ完全対応</li>
+        <li data-ja="お問い合わせボタン" data-en="Contact button">お問い合わせボタン</li>
+      </ul>
+      <p class="p-delivery" data-ja="納期：約1週間" data-en="Delivery: ~1 week">納期：約1週間</p>
+      <a href="#contact" class="mag-btn inv" data-magnetic>
+        <span class="btn-bg"></span>
+        <span class="btn-text">Select</span>
+      </a>
+    </div>
+    <div class="p-card rec r" data-delay="2">
+      <span class="p-badge">Recommended</span>
+      <h3 class="p-name">Standard</h3>
+      <p class="p-price">¥120,000</p>
+      <p class="p-tax" data-ja="税込 ¥132,000" data-en="¥132,000 incl. tax">税込 ¥132,000</p>
+      <ul class="p-features">
+        <li data-ja="5〜8ページ構成" data-en="5–8 page structure">5〜8ページ構成</li>
+        <li data-ja="お問い合わせフォーム" data-en="Contact form">お問い合わせフォーム</li>
+        <li data-ja="日本語／英語 切り替え対応" data-en="Japanese / English switch built-in">日本語／英語 切り替え対応</li>
+        <li data-ja="SEO基本設定" data-en="Basic SEO setup">SEO基本設定</li>
+        <li data-ja="Google Analytics設置" data-en="Google Analytics integration">Google Analytics設置</li>
+        <li data-ja="スマホ完全対応" data-en="Fully mobile-responsive">スマホ完全対応</li>
+      </ul>
+      <p class="p-delivery" data-ja="納期：約2週間" data-en="Delivery: ~2 weeks">納期：約2週間</p>
+      <a href="#contact" class="mag-btn inv" data-magnetic>
+        <span class="btn-bg"></span>
+        <span class="btn-text">Select</span>
+      </a>
+    </div>
+    <div class="p-card r" data-delay="3">
+      <h3 class="p-name">Premium</h3>
+      <p class="p-price">¥180,000</p>
+      <p class="p-tax" data-ja="税込 ¥198,000" data-en="¥198,000 incl. tax">税込 ¥198,000</p>
+      <ul class="p-features">
+        <li data-ja="10ページ以上フル制作" data-en="10+ pages, fully custom">10ページ以上フル制作</li>
+        <li data-ja="予約フォーム・メニュー管理" data-en="Booking form & menu management">予約フォーム・メニュー管理</li>
+        <li data-ja="日本語／英語 切り替え対応" data-en="Japanese / English switch built-in">日本語／英語 切り替え対応</li>
+        <li data-ja="SEOフル対応" data-en="Full SEO optimization">SEOフル対応</li>
+        <li data-ja="Analytics + Search Console" data-en="Analytics + Search Console">Analytics + Search Console</li>
+        <li data-ja="1ヶ月サポート付き" data-en="1 month post-launch support">1ヶ月サポート付き</li>
+      </ul>
+      <p class="p-delivery" data-ja="納期：約3週間" data-en="Delivery: ~3 weeks">納期：約3週間</p>
+      <a href="#contact" class="mag-btn inv" data-magnetic>
+        <span class="btn-bg"></span>
+        <span class="btn-text">Select</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ WORKS ═══════ -->
+<section class="works" id="works">
+  <div class="sec-n" data-parallax="0.15">04</div>
+
+  <div class="works-header r">
+    <h2>Selected Works</h2>
+    <span class="works-count">3 Projects — 2026</span>
+  </div>
+
+  <!-- ─── Case 01: 鮨 黒政 — Premium ─── -->
+  <div class="work-item">
+    <div class="w-ss r-left">
+      <a href="demo_sushi_kuromasa.html" class="w-ss-link">
+        <div class="w-ss-wrap">
+          <img src="screenshots/ss_kuromasa.png" alt="鮨 黒政 - Premium Plan" class="w-ss-img" loading="lazy"/>
+          <div class="w-ss-overlay"></div>
+        </div>
+      </a>
+    </div>
+    <div class="w-info r-right">
+      <div class="w-num">01</div>
+      <p class="w-info-label">Premium — ¥180,000</p>
+      <h3 class="w-info-name">鮨 黒政<br>SUSHI KUROMASA</h3>
+      <p class="w-info-cat" data-ja="高級江戸前寿司 / 銀座" data-en="Premium Edomae Sushi / Ginza">高級江戸前寿司 / 銀座</p>
+      <div class="w-tags">
+        <span class="w-tag" data-ja="筆文字フォント" data-en="Brush Font">筆文字フォント</span>
+        <span class="w-tag" data-ja="墨にじみ演出" data-en="Ink Blur FX">墨にじみ演出</span>
+        <span class="w-tag" data-ja="パララックス" data-en="Parallax">パララックス</span>
+        <span class="w-tag" data-ja="カスタムカーソル" data-en="Custom Cursor">カスタムカーソル</span>
+      </div>
+      <p class="w-info-desc" data-ja="筆文字フォントによる看板ロゴ、墨のにじみフィルタ、和紙テクスチャの背景、カスタムカーソル。スクロールに連動するパララックスと、ローディングアニメーション付き。完全予約制の世界観をデジタルで完全再現。" data-en="Brush calligraphy logo, ink blur filter, washi paper textures, custom cursor. Scroll-linked parallax and loading animation. The fully-reserved dining experience, digitally recreated.">筆文字フォントによる看板ロゴ、墨のにじみフィルタ、和紙テクスチャの背景、カスタムカーソル。スクロールに連動するパララックスと、ローディングアニメーション付き。完全予約制の世界観をデジタルで完全再現。</p>
+      <p class="w-plan-includes" data-ja="完全オリジナル / ローディング演出 / 日英対応 / おまかせメニュー・予約導線" data-en="Fully original / Loading animation / JA+EN / Omakase menu & reservation flow">完全オリジナル / ローディング演出 / 日英対応 / おまかせメニュー・予約導線</p>
+      <a href="demo_sushi_kuromasa.html" class="w-link" data-magnetic>View Project <span class="arr">→</span></a>
+    </div>
+  </div>
+
+  <!-- ─── Case 02: NOEL HAIR TOKYO — Standard ─── -->
+  <div class="work-item rev">
+    <div class="w-info r-left">
+      <div class="w-num">02</div>
+      <p class="w-info-label">Standard — ¥120,000</p>
+      <h3 class="w-info-name">NOEL HAIR TOKYO</h3>
+      <p class="w-info-cat" data-ja="ヘアサロン / 原宿" data-en="Hair Salon / Harajuku">ヘアサロン / 原宿</p>
+      <div class="w-tags">
+        <span class="w-tag" data-ja="フローティングバブル" data-en="Floating Bubbles">フローティングバブル</span>
+        <span class="w-tag" data-ja="予約フォーム" data-en="Booking Form">予約フォーム</span>
+        <span class="w-tag" data-ja="料金表" data-en="Price List">料金表</span>
+        <span class="w-tag" data-ja="日英切り替え" data-en="JA / EN Switch">日英切り替え</span>
+      </div>
+      <p class="w-info-desc" data-ja="画面全体を漂うカラフルなバブルアニメーション。スタイリスト紹介、カット・カラー・パーマの料金表、日時選択付き予約フォームを搭載。日本語／英語のワンクリック切り替えで、インバウンド客にも対応。" data-en="Colorful floating bubble animation across the entire page. Stylist profiles, full price list for cut/color/perm, and a booking form with date picker. One-click Japanese/English switch for international visitors.">画面全体を漂うカラフルなバブルアニメーション。スタイリスト紹介、カット・カラー・パーマの料金表、日時選択付き予約フォームを搭載。日本語／英語のワンクリック切り替えで、インバウンド客にも対応。</p>
+      <p class="w-plan-includes" data-ja="テーマカスタマイズ / CSSアニメーション / 予約フォーム / 日英対応" data-en="Theme customization / CSS animation / Booking form / JA+EN">テーマカスタマイズ / CSSアニメーション / 予約フォーム / 日英対応</p>
+      <a href="demo_noel_hair.html" class="w-link" data-magnetic>View Project <span class="arr">→</span></a>
+    </div>
+    <div class="w-ss r-right">
+      <a href="demo_noel_hair.html" class="w-ss-link">
+        <div class="w-ss-wrap">
+          <img src="screenshots/ss_noel.png" alt="NOEL HAIR TOKYO - Standard Plan" class="w-ss-img" loading="lazy"/>
+          <div class="w-ss-overlay"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ─── Case 03: Yoga Studio Lumière — Light ─── -->
+  <div class="work-item">
+    <div class="w-ss r-left">
+      <a href="demo_yoga_lumiere.html" class="w-ss-link">
+        <div class="w-ss-wrap">
+          <img src="screenshots/ss_yoga.png" alt="Yoga Studio Lumière - Light Plan" class="w-ss-img" loading="lazy"/>
+          <div class="w-ss-overlay"></div>
+        </div>
+      </a>
+    </div>
+    <div class="w-info r-right">
+      <div class="w-num">03</div>
+      <p class="w-info-label">Light — ¥70,000<span class="w-campaign">先着5社</span></p>
+      <h3 class="w-info-name">Yoga Studio Lumière</h3>
+      <p class="w-info-cat" data-ja="ヨガスタジオ / 代官山" data-en="Yoga Studio / Daikanyama">ヨガスタジオ / 代官山</p>
+      <div class="w-tags">
+        <span class="w-tag" data-ja="ナチュラルトーン" data-en="Natural Tones">ナチュラルトーン</span>
+        <span class="w-tag" data-ja="呼吸アニメーション" data-en="Breathing Animation">呼吸アニメーション</span>
+        <span class="w-tag" data-ja="レスポンシブ" data-en="Responsive">レスポンシブ</span>
+      </div>
+      <p class="w-info-desc" data-ja="オフホワイト×深緑のナチュラル配色。クラス紹介・料金・インストラクター情報をミニマルに掲載。円が静かに膨らむ呼吸アニメーションが、ヨガスタジオの穏やかな空気感を演出。スマホ対応で予約ボタンも完備。" data-en="Off-white and deep green color palette. Class info, pricing, and instructor profiles in a minimal layout. A gentle breathing circle animation evokes the calm atmosphere of the studio. Mobile-ready with a booking button.">オフホワイト×深緑のナチュラル配色。クラス紹介・料金・インストラクター情報をミニマルに掲載。円が静かに膨らむ呼吸アニメーションが、ヨガスタジオの穏やかな空気感を演出。スマホ対応で予約ボタンも完備。</p>
+      <p class="w-plan-includes" data-ja="レスポンシブ対応 / 基本セクション完備 / 予約ボタン" data-en="Responsive / Essential sections / Booking button">レスポンシブ対応 / 基本セクション完備 / 予約ボタン</p>
+      <a href="demo_yoga_lumiere.html" class="w-link" data-magnetic>View Project <span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ CONTACT ═══════ -->
+<section class="contact" id="contact">
+  <div class="sec-n" style="color:#fff;" data-parallax="0.12">05</div>
+  <h2 class="sh r">Contact</h2>
+  <div class="c-grid">
+    <div class="r">
+      <h3 class="c-name">HNH Design Works</h3>
+      <p class="c-desc" data-ja="ビジネスの魅力を最大限に引き出すプロフェッショナルなWeb制作を行っています。あなたのビジョンに最適なWebサイトをご提案いたします。まずはお気軽にご相談ください。" data-en="We create professional websites that bring out the full potential of your business. Let us craft the perfect site for your vision. Feel free to reach out.">ビジネスの魅力を最大限に引き出すプロフェッショナルなWeb制作を行っています。あなたのビジョンに最適なWebサイトをご提案いたします。まずはお気軽にご相談ください。</p>
+      <p class="c-email"><a href="mailto:hnh.designworks@gmail.com">hnh.designworks@gmail.com</a></p>
+      <p class="c-note" data-ja="24時間以内にご返信いたします" data-en="We'll respond within 24 hours">24時間以内にご返信いたします</p>
+    </div>
+    <form class="c-form r" id="contactForm">
+      <div class="fg">
+        <label>Name</label>
+        <input type="text" name="name" required placeholder="お名前" data-ja-ph="お名前" data-en-ph="Your name">
+        <div class="focus-line"></div>
+      </div>
+      <div class="fg">
+        <label>Email</label>
+        <input type="email" name="email" required placeholder="メールアドレス" data-ja-ph="メールアドレス" data-en-ph="Email address">
+        <div class="focus-line"></div>
+      </div>
+      <div class="fg">
+        <label>Business</label>
+        <input type="text" name="business" placeholder="ビジネス名・店舗名" data-ja-ph="ビジネス名・店舗名" data-en-ph="Business / Store name">
+        <div class="focus-line"></div>
+      </div>
+      <div class="fg">
+        <label>Plan</label>
+        <select name="plan">
+          <option value="" disabled selected data-ja="プランを選択" data-en="Select a plan">プランを選択</option>
+          <option value="Light">Light — ¥70,000</option>
+          <option value="Standard">Standard — ¥120,000</option>
+          <option value="Premium">Premium — ¥180,000</option>
+        </select>
+        <div class="focus-line"></div>
+      </div>
+      <div class="fg">
+        <label>Message</label>
+        <textarea name="message" rows="4" placeholder="ご相談内容をお書きください" data-ja-ph="ご相談内容をお書きください" data-en-ph="Tell us about your project"></textarea>
+        <div class="focus-line"></div>
+      </div>
+      <button type="submit" class="mag-btn inv" data-magnetic>
+        <span class="btn-bg"></span>
+        <span class="btn-text">Submit</span>
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- ═══════ FOOTER ═══════ -->
+<footer class="footer">
+  <div class="footer-logo">
+    <span class="footer-logo-b">HNH</span>
+    <span class="footer-logo-t">Design Works</span>
+  </div>
+  <p class="footer-copy">&copy; 2026 HNH Design Works. All rights reserved.</p>
+</footer>
+
+<!-- ═══════ JAVASCRIPT ═══════ -->
+<script>
+(function(){
+'use strict';
+
+/* ── CUSTOM CURSOR ── */
+const dot = document.getElementById('cursorDot');
+const ring = document.getElementById('cursorRing');
+let mx = 0, my = 0, dx = 0, dy = 0;
+const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+if (!isMobile) {
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+
+  (function animateCursor() {
+    dx += (mx - dx) * 0.15;
+    dy += (my - dy) * 0.15;
+    dot.style.left = mx + 'px';
+    dot.style.top = my + 'px';
+    ring.style.left = dx + 'px';
+    ring.style.top = dy + 'px';
+    requestAnimationFrame(animateCursor);
+  })();
+
+  // Detect dark sections for cursor color
+  const darkSections = document.querySelectorAll('.statement, .pricing, .contact, .mobile-menu');
+  function checkCursorSection() {
+    let onDark = false;
+    darkSections.forEach(s => {
+      const r = s.getBoundingClientRect();
+      if (my >= r.top && my <= r.bottom) onDark = true;
+    });
+    dot.classList.toggle('on-dark', onDark);
+    ring.classList.toggle('on-dark', onDark);
+  }
+  document.addEventListener('mousemove', checkCursorSection);
+
+  // Hover effects on interactive elements
+  document.querySelectorAll('a, button, .svc-item, .p-card').forEach(el => {
+    el.addEventListener('mouseenter', () => ring.classList.add('hover'));
+    el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
+  });
+}
+
+/* ── MAGNETIC BUTTONS ── */
+document.querySelectorAll('[data-magnetic]').forEach(btn => {
+  if (isMobile) return;
+  btn.addEventListener('mousemove', e => {
+    const rect = btn.getBoundingClientRect();
+    const cx = rect.left + rect.width / 2;
+    const cy = rect.top + rect.height / 2;
+    const dx = (e.clientX - cx) * 0.3;
+    const dy = (e.clientY - cy) * 0.3;
+    btn.style.transform = `translate(${dx}px, ${dy}px)`;
+    ring.classList.add('magnetic');
+  });
+  btn.addEventListener('mouseleave', () => {
+    btn.style.transform = '';
+    ring.classList.remove('magnetic');
+  });
+});
+
+/* ── LOADING SCREEN ── */
+const loader = document.getElementById('loader');
+const letters = document.querySelectorAll('.loader-letter');
+const loaderLine = document.getElementById('loaderLine');
+const loaderSub = document.getElementById('loaderSub');
+
+// Animate letters in
+letters.forEach((l, i) => {
+  setTimeout(() => {
+    l.style.transition = 'opacity 0.5s, transform 0.7s cubic-bezier(0.23,1,0.32,1)';
+    l.style.opacity = '1';
+    l.style.transform = 'translateY(0)';
+  }, 200 + i * 120);
+});
+
+// Line expand
+setTimeout(() => {
+  loaderLine.style.transition = 'width 0.8s cubic-bezier(0.23,1,0.32,1)';
+  loaderLine.style.width = '120px';
+}, 800);
+
+// Sub text
+setTimeout(() => {
+  loaderSub.style.transition = 'opacity 0.5s';
+  loaderSub.style.opacity = '1';
+}, 1200);
+
+// Exit
+setTimeout(() => {
+  loader.classList.add('exit');
+  setTimeout(() => {
+    loader.style.display = 'none';
+    document.getElementById('heroMain').classList.add('animate');
+    document.querySelector('.hero').classList.add('animate');
+  }, 900);
+}, 2200);
+
+/* ── NAV SCROLL ── */
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+/* ── MOBILE MENU ── */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+  document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+});
+
+mobileMenu.querySelectorAll('a').forEach(a => {
+  a.addEventListener('click', () => {
+    hamburger.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+
+/* ── SCROLL REVEAL ── */
+const revealEls = document.querySelectorAll('.r, .r-mask, .r-left, .r-right, .r-scale');
+const revealObs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('v');
+      revealObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+revealEls.forEach(el => revealObs.observe(el));
+
+/* ── STATEMENT WORD-BY-WORD REVEAL ── */
+const stmtText = document.getElementById('stmtText');
+const stmtRaw = stmtText.textContent.trim();
+stmtText.innerHTML = '';
+stmtRaw.split('').forEach(char => {
+  const span = document.createElement('span');
+  span.className = 'word';
+  span.textContent = char === ' ' ? '\u00A0' : char;
+  stmtText.appendChild(span);
+});
+const stmtWords = stmtText.querySelectorAll('.word');
+
+function updateStatementReveal() {
+  const rect = stmtText.parentElement.getBoundingClientRect();
+  const vh = window.innerHeight;
+  const start = vh * 0.85;
+  const end = vh * 0.15;
+  const progress = Math.min(1, Math.max(0, (start - rect.top) / (start - end)));
+  const litCount = Math.floor(progress * stmtWords.length);
+  stmtWords.forEach((w, i) => w.classList.toggle('lit', i < litCount));
+}
+
+/* ── PARALLAX ── */
+const parallaxEls = document.querySelectorAll('[data-parallax]');
+
+function handleScroll() {
+  const sy = window.scrollY;
+
+  parallaxEls.forEach(el => {
+    const speed = parseFloat(el.dataset.parallax);
+    const parent = el.parentElement;
+    const rect = parent.getBoundingClientRect();
+    const offset = (sy - (sy + rect.top - window.innerHeight)) * speed;
+    el.style.transform = `translateY(${offset * 0.3}px)`;
+  });
+
+  updateStatementReveal();
+}
+
+let ticking = false;
+window.addEventListener('scroll', () => {
+  if (!ticking) {
+    requestAnimationFrame(() => { handleScroll(); ticking = false; });
+    ticking = true;
+  }
+}, { passive: true });
+
+/* ── SMOOTH SCROLL ── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      const top = target.getBoundingClientRect().top + window.scrollY - 72;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  });
+});
+
+/* ── CONTACT FORM ── */
+document.getElementById('contactForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const fd = new FormData(e.target);
+  const subj = encodeURIComponent('【お問い合わせ】' + (fd.get('business') || fd.get('name')) + ' 様');
+  const body = encodeURIComponent(
+    'お名前: ' + fd.get('name') + '\nメール: ' + fd.get('email') +
+    '\nビジネス名: ' + fd.get('business') + '\nプラン: ' + fd.get('plan') +
+    '\n\nメッセージ:\n' + fd.get('message')
+  );
+  window.location.href = 'mailto:hnh.designworks@gmail.com?subject=' + subj + '&body=' + body;
+});
+
+})();
+
+/* ── Language Toggle ── */
+(function(){
+  var lang = 'ja';
+  var btn = document.getElementById('langToggle');
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    lang = lang === 'ja' ? 'en' : 'ja';
+    btn.textContent = lang === 'ja' ? 'EN' : 'JA';
+
+    // Switch text content
+    document.querySelectorAll('[data-ja][data-en]').forEach(function(el){
+      if(el.tagName === 'OPTION') {
+        el.textContent = el.getAttribute('data-' + lang);
+      } else {
+        el.textContent = el.getAttribute('data-' + lang);
+      }
+    });
+
+    // Switch placeholders
+    document.querySelectorAll('[data-ja-ph][data-en-ph]').forEach(function(el){
+      el.placeholder = el.getAttribute('data-' + lang + '-ph');
+    });
+  });
+})();
+</script>
+</body>
+</html>

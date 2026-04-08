@@ -1,0 +1,1883 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>鮨 黒政 | SUSHI KUROMASA — 銀座</title>
+<meta name="description" content="銀座の隠れ家、完全予約制の江戸前鮨。一貫に命を込める、鮨 黒政。">
+<meta name="theme-color" content="#0A0A0A">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:title" content="鮨 黒政 | SUSHI KUROMASA">
+<meta property="og:description" content="銀座の隠れ家、完全予約制の江戸前鮨。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@400;700&family=Zen+Old+Mincho:wght@400;500;600;700&family=Yuji+Syuku&family=Yuji+Boku&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   鮨 黒政 — SUSHI KUROMASA
+   Complete Rewrite  |  Produced by HNH Design Works
+   All CSS / JS inline — Single File Architecture
+   ========================================================================== */
+
+/* ===== Reset & Base ===== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #0A0A0A;
+  --white: #FFFFFF;
+  --gold: #B8965A;
+  --gold-light: #D4B07A;
+  --gold-dark: #8C6D3F;
+  --washi: #f5f0e6;
+  --washi-text: #1a1512;
+  --font-heading: 'Kaisei Decol', serif;
+  --font-body: 'Zen Old Mincho', serif;
+  --font-quote: 'Yuji Syuku', serif;
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  cursor: default;
+  font-size: 16px;
+}
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.9;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: opacity 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.75;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: rgba(184, 150, 90, 0.2);
+  color: var(--white);
+}
+
+/* ===== Custom Cursor (Desktop Only) ===== */
+.custom-cursor {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: var(--white);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 100000;
+  transition: transform 0.12s ease, opacity 0.2s ease;
+  mix-blend-mode: difference;
+  display: none;
+  will-change: transform;
+  top: 0;
+  left: 0;
+}
+
+.custom-cursor.cursor-hover {
+  transform: scale(2.2);
+}
+
+@media (pointer: fine) {
+  .custom-cursor {
+    display: block;
+  }
+  html,
+  a,
+  button {
+    cursor: none !important;
+  }
+}
+
+/* ===== Loading Screen ===== */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--black);
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.8s var(--ease-out-expo);
+  will-change: opacity;
+}
+
+.loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-svg {
+  width: 220px;
+  height: 130px;
+}
+
+.loading-stroke {
+  fill: none;
+  stroke: var(--white);
+  stroke-linecap: round;
+  stroke-dasharray: var(--dash-len);
+  stroke-dashoffset: var(--dash-len);
+  animation: drawStroke 0.45s var(--ease-out-quart) forwards;
+  opacity: 0.9;
+}
+
+.loading-stroke:nth-child(1) {
+  --dash-len: 90;
+  stroke-width: 8;
+  animation-delay: 0.1s;
+}
+
+.loading-stroke:nth-child(2) {
+  --dash-len: 70;
+  stroke-width: 4;
+  animation-delay: 0.4s;
+}
+
+.loading-stroke:nth-child(3) {
+  --dash-len: 100;
+  stroke-width: 6;
+  animation-delay: 0.7s;
+}
+
+.loading-stroke:nth-child(4) {
+  --dash-len: 80;
+  stroke-width: 3.5;
+  animation-delay: 1.0s;
+}
+
+.loading-stroke:nth-child(5) {
+  --dash-len: 115;
+  stroke-width: 9;
+  animation-delay: 1.3s;
+}
+
+.loading-stroke:nth-child(6) {
+  --dash-len: 60;
+  stroke-width: 4.5;
+  animation-delay: 1.6s;
+}
+
+@keyframes drawStroke {
+  0% {
+    stroke-dashoffset: var(--dash-len);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.9;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 0.9;
+  }
+}
+
+.loading-text {
+  margin-top: 36px;
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  letter-spacing: 0.4em;
+  color: var(--white);
+  opacity: 0;
+  animation: fadeInLoadingText 1s var(--ease-out-expo) forwards 2.2s;
+}
+
+@keyframes fadeInLoadingText {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Washi Fiber Texture Overlay ===== */
+.washi-overlay {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0.03;
+  width: 100%;
+  height: 100%;
+}
+
+/* ===== Ink Stains (positioned per-section) ===== */
+.ink-stain {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1;
+  overflow: visible;
+}
+
+/* ===== Navigation ===== */
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 24px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition:
+    background 0.5s ease,
+    padding 0.4s ease,
+    box-shadow 0.5s ease;
+}
+
+.nav.scrolled {
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 16px 48px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.nav-logo {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  letter-spacing: 0.1em;
+  user-select: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  position: relative;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.4s var(--ease-out-expo);
+}
+
+.nav-links a:hover {
+  opacity: 1;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger (mobile) */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 6px;
+  background: none;
+  border: none;
+  padding: 8px;
+  position: relative;
+  z-index: 1001;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 24px;
+  height: 1px;
+  background: var(--white);
+  transition: transform 0.35s var(--ease-out-expo), opacity 0.25s ease;
+  transform-origin: center;
+}
+
+/* Mobile Nav Overlay */
+.mobile-nav {
+  position: fixed;
+  inset: 0;
+  background: var(--black);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.45s var(--ease-out-expo);
+}
+
+.mobile-nav.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-nav a {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  letter-spacing: 0.18em;
+  opacity: 0.85;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-nav a:hover {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+  .nav-hamburger {
+    display: flex;
+  }
+  .nav {
+    padding: 18px 24px;
+  }
+  .nav.scrolled {
+    padding: 14px 24px;
+  }
+}
+
+/* ===== Scroll Reveal Animations ===== */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition:
+    opacity 1s var(--ease-out-expo),
+    transform 1s var(--ease-out-expo);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 {
+  transition-delay: 0.15s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.3s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.45s;
+}
+
+.reveal-delay-4 {
+  transition-delay: 0.6s;
+}
+
+/* Fade-only variant (no Y movement) */
+.reveal-fade {
+  opacity: 0;
+  transition: opacity 1.2s var(--ease-out-expo);
+}
+
+.reveal-fade.visible {
+  opacity: 1;
+}
+
+/* ===== Brush Heading Effect (kasure/scrape effect) ===== */
+.brush-heading {
+  font-family: var(--font-quote);
+  font-weight: 400;
+  letter-spacing: 0.5em;
+  display: inline-block;
+  color: var(--white);
+}
+
+.brush-heading-dark {
+  font-family: var(--font-quote);
+  font-weight: 400;
+  letter-spacing: 0.5em;
+  display: inline-block;
+  color: var(--washi-text);
+}
+
+/* ===== Section Divider (Brush Stroke SVG Line) ===== */
+.section-divider {
+  display: block;
+  margin: 0 auto;
+  width: 120px;
+  height: 8px;
+  overflow: visible;
+}
+
+/* ===== Hero Section ===== */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.hero-svg-wrap {
+  position: relative;
+  width: min(620px, 90vw);
+}
+
+.hero-kanban {
+  font-family: 'Yuji Boku', serif;
+  font-size: clamp(4.5rem, 10vw, 7.5rem);
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  filter: url(#sumi-text);
+  user-select: none;
+}
+
+.hero-kanban svg {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.hero-subtitle {
+  margin-top: 28px;
+  font-family: var(--font-quote);
+  font-size: clamp(0.82rem, 1.2vw, 1.05rem);
+  letter-spacing: 0.5em;
+  opacity: 0;
+  text-align: center;
+  animation: heroSubtitleIn 1.2s var(--ease-out-expo) forwards 0.6s;
+}
+
+@keyframes heroSubtitleIn {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+}
+
+.hero-en-name {
+  margin-top: 12px;
+  font-family: var(--font-body);
+  font-size: 0.62rem;
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  opacity: 0;
+  text-align: center;
+  animation: heroSubtitleIn 1s var(--ease-out-expo) forwards 1s;
+}
+
+.hero-vertical {
+  position: absolute;
+  right: clamp(18px, 5vw, 64px);
+  top: 50%;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  font-family: var(--font-quote);
+  font-size: 0.88rem;
+  letter-spacing: 0.6em;
+  opacity: 0.07;
+  user-select: none;
+  pointer-events: none;
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  animation: scrollHintIn 1s ease forwards 1.8s;
+}
+
+.hero-scroll-hint span {
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  opacity: 0.5;
+}
+
+.hero-scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.4), rgba(255,255,255,0));
+  animation: scrollLineMove 2s ease-in-out infinite;
+}
+
+@keyframes scrollHintIn {
+  to { opacity: 1; }
+}
+
+@keyframes scrollLineMove {
+  0%, 100% { opacity: 0.4; transform: scaleY(1); }
+  50% { opacity: 0.15; transform: scaleY(0.6); }
+}
+
+/* ===== Shared Section Styles ===== */
+.section-dark {
+  position: relative;
+  background: var(--black);
+  color: var(--white);
+  padding: 130px 24px;
+  overflow: hidden;
+}
+
+.section-washi {
+  position: relative;
+  background: var(--washi);
+  color: var(--washi-text);
+  padding: 130px 24px;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.container-wide {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== Gold Accent Lines ===== */
+.gold-accent-line {
+  width: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light), var(--gold));
+  opacity: 0.45;
+  margin: 0 auto 48px;
+}
+
+.gold-accent-line-left {
+  width: 28px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light), var(--gold));
+  opacity: 0.45;
+  margin-bottom: 48px;
+}
+
+/* ===== Section Label ===== */
+.section-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 14px;
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+/* ===== Philosophy Section ===== */
+.philosophy-quote {
+  font-family: var(--font-quote);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 3.5vw, 2.6rem);
+  letter-spacing: 0.5em;
+  line-height: 1.7;
+  margin-bottom: 48px;
+}
+
+.philosophy-text {
+  font-family: var(--font-body);
+  font-size: clamp(0.88rem, 1.05vw, 0.98rem);
+  line-height: 2.3;
+  max-width: 620px;
+  opacity: 0.82;
+}
+
+.philosophy-gold-line {
+  width: 36px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light), var(--gold));
+  margin: 36px 0;
+  opacity: 0.5;
+}
+
+.philosophy-quote-footer {
+  margin-top: 28px;
+  font-family: var(--font-quote);
+  font-style: italic;
+  opacity: 0.5;
+  font-size: 0.83rem;
+  line-height: 1.8;
+}
+
+/* ===== Kodawari (3 Pillars) Section ===== */
+.kodawari-section-title {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.kodawari-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 52px;
+  margin-top: 68px;
+}
+
+.kodawari-item {
+  text-align: center;
+  position: relative;
+}
+
+.kodawari-item::before {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 0 auto 24px;
+}
+
+.kodawari-num {
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  color: var(--gold);
+  opacity: 0.65;
+  margin-bottom: 18px;
+}
+
+.kodawari-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  margin-bottom: 24px;
+  letter-spacing: 0.08em;
+}
+
+.kodawari-desc {
+  font-size: 0.86rem;
+  line-height: 2.1;
+  opacity: 0.7;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .kodawari-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ===== Omakase Section ===== */
+.omakase-intro {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.omakase-courses {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.omakase-card {
+  border: 1px solid rgba(26, 21, 18, 0.08);
+  padding: 44px 36px;
+  text-align: center;
+  position: relative;
+  transition: border-color 0.4s ease;
+}
+
+.omakase-card:hover {
+  border-color: rgba(26, 21, 18, 0.16);
+}
+
+.omakase-card-label {
+  font-family: var(--font-heading);
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  opacity: 0.7;
+}
+
+.omakase-card-name {
+  font-family: var(--font-heading);
+  font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+  margin-bottom: 10px;
+  letter-spacing: 0.06em;
+}
+
+.omakase-card-price {
+  font-family: var(--font-body);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+  letter-spacing: 0.03em;
+}
+
+.omakase-card-line {
+  width: 20px;
+  height: 1px;
+  background: var(--washi-text);
+  opacity: 0.15;
+  margin: 0 auto 20px;
+}
+
+.omakase-card-desc {
+  font-size: 0.84rem;
+  line-height: 2.1;
+  opacity: 0.65;
+}
+
+.omakase-note {
+  margin-top: 48px;
+  text-align: center;
+  font-size: 0.78rem;
+  opacity: 0.5;
+  letter-spacing: 0.03em;
+}
+
+.omakase-drinks {
+  margin-top: 72px;
+  text-align: center;
+  padding-top: 48px;
+  border-top: 1px solid rgba(26, 21, 18, 0.06);
+}
+
+.omakase-drinks-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-bottom: 24px;
+  letter-spacing: 0.08em;
+}
+
+.omakase-drinks-text {
+  font-size: 0.86rem;
+  line-height: 2.3;
+  opacity: 0.65;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .omakase-courses {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .omakase-card {
+    padding: 36px 28px;
+  }
+}
+
+/* ===== Interior Section ===== */
+.interior-intro {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.interior-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin-top: 60px;
+}
+
+.interior-placeholder {
+  aspect-ratio: 4 / 3;
+  background: #141414;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.25;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: opacity 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.interior-placeholder::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.01) 0%,
+    rgba(255,255,255,0) 60%
+  );
+}
+
+.interior-placeholder:hover {
+  opacity: 0.35;
+}
+
+.interior-caption {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.78rem;
+  opacity: 0.6;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 600px) {
+  .interior-grid {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+/* ===== Reservation Section ===== */
+.reservation-content {
+  text-align: center;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.reservation-badge {
+  display: inline-block;
+  font-size: 0.62rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  border: 1px solid rgba(184, 150, 90, 0.25);
+  padding: 7px 20px;
+  margin-bottom: 36px;
+  font-family: var(--font-heading);
+  opacity: 0.8;
+}
+
+.reservation-phone {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.2rem);
+  letter-spacing: 0.12em;
+  margin: 28px 0;
+}
+
+.reservation-details {
+  font-size: 0.86rem;
+  line-height: 2.4;
+  opacity: 0.72;
+}
+
+.reservation-note {
+  margin-top: 16px;
+  font-family: var(--font-quote);
+  opacity: 0.5;
+  font-size: 0.8rem;
+  line-height: 1.8;
+}
+
+.reservation-seats {
+  margin-top: 44px;
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+}
+
+.reservation-seat-item {
+  text-align: center;
+}
+
+.reservation-seat-item strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  margin-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
+.reservation-seat-item span {
+  font-size: 0.78rem;
+  opacity: 0.55;
+}
+
+.reservation-hours {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(26, 21, 18, 0.06);
+  font-size: 0.82rem;
+  line-height: 2.2;
+  opacity: 0.6;
+}
+
+/* ===== Access Section ===== */
+.access-intro {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.access-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 72px;
+  align-items: start;
+}
+
+.access-info-title {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  margin-bottom: 28px;
+  letter-spacing: 0.06em;
+}
+
+.access-info-text {
+  font-size: 0.86rem;
+  line-height: 2.4;
+  opacity: 0.72;
+}
+
+.access-info-hours {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.8rem;
+  opacity: 0.6;
+  line-height: 2.2;
+}
+
+.access-map-placeholder {
+  aspect-ratio: 4 / 3;
+  background: #121212;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  opacity: 0.25;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+@media (max-width: 768px) {
+  .access-grid {
+    grid-template-columns: 1fr;
+    gap: 44px;
+  }
+}
+
+/* ===== Footer ===== */
+.footer {
+  margin-top: 88px;
+  padding-top: 44px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.footer-logo {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
+  opacity: 0.7;
+}
+
+.footer-copy {
+  font-size: 0.68rem;
+  opacity: 0.5;
+  letter-spacing: 0.12em;
+  margin-bottom: 6px;
+}
+
+.footer-credit {
+  font-size: 0.62rem;
+  opacity: 0.45;
+  letter-spacing: 0.1em;
+}
+
+/* ===== Responsive refinements ===== */
+@media (max-width: 768px) {
+  .section-dark,
+  .section-washi {
+    padding: 88px 20px;
+  }
+
+  .hero-vertical {
+    font-size: 0.72rem;
+    right: 12px;
+    opacity: 0.05;
+  }
+
+  .hero-scroll-hint {
+    bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-dark,
+  .section-washi {
+    padding: 72px 16px;
+  }
+
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+
+  .reservation-seats {
+    gap: 36px;
+  }
+}
+
+/* ===== Parallax-like subtle movement ===== */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-svg-wrap {
+    animation: heroFloat 6s ease-in-out infinite;
+  }
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+</style>
+</head>
+<body>
+
+<!-- ==================== CUSTOM CURSOR ==================== -->
+<div class="custom-cursor" id="customCursor"></div>
+
+<!-- ==================== WASHI FIBER TEXTURE OVERLAY ==================== -->
+<svg class="washi-overlay" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
+     preserveAspectRatio="none">
+  <defs>
+    <filter id="washiFilter" x="0%" y="0%" width="100%" height="100%">
+      <feTurbulence
+        type="fractalNoise"
+        baseFrequency="0.4 0.01"
+        numOctaves="5"
+        seed="7"
+        result="noise"
+      />
+      <feDiffuseLighting
+        in="noise"
+        lighting-color="#fff"
+        surfaceScale="1.5"
+        result="lit"
+      >
+        <feDistantLight azimuth="45" elevation="55"/>
+      </feDiffuseLighting>
+    </filter>
+  </defs>
+  <rect width="100%" height="100%" filter="url(#washiFilter)"/>
+</svg>
+
+<!-- ==================== LOADING SCREEN ==================== -->
+<div class="loading-screen" id="loadingScreen">
+  <svg class="loading-svg" viewBox="0 0 200 120" xmlns="http://www.w3.org/2000/svg">
+    <!-- Brush strokes — abstract kanji forms with calligraphic pressure -->
+    <path class="loading-stroke"
+          d="M25 18 Q55 15 95 17 Q130 19 158 18"
+    />
+    <path class="loading-stroke"
+          d="M50 18 Q49 38 50 62 Q50 78 51 95"
+    />
+    <path class="loading-stroke"
+          d="M25 52 Q55 48 100 50 Q135 52 160 50"
+    />
+    <path class="loading-stroke"
+          d="M105 18 Q104 40 104 60 Q104 80 105 98"
+    />
+    <path class="loading-stroke"
+          d="M22 95 Q60 90 105 92 Q145 94 172 92"
+    />
+    <path class="loading-stroke"
+          d="M135 25 Q145 48 158 72 Q168 88 175 95"
+    />
+  </svg>
+  <div class="loading-text">SUSHI KUROMASA</div>
+</div>
+
+<!-- ==================== NAVIGATION ==================== -->
+<nav class="nav" id="mainNav">
+  <div class="nav-logo">黒政</div>
+  <ul class="nav-links">
+    <li><a href="#philosophy">Philosophy</a></li>
+    <li><a href="#omakase">Omakase</a></li>
+    <li><a href="#reservation">Reserve</a></li>
+    <li><a href="#access">Access</a></li>
+  </ul>
+  <button class="nav-hamburger" id="navHamburger" aria-label="メニューを開く">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile Navigation Overlay -->
+<div class="mobile-nav" id="mobileNav">
+  <a href="#philosophy" class="mobile-nav-link">Philosophy</a>
+  <a href="#omakase" class="mobile-nav-link">Omakase</a>
+  <a href="#reservation" class="mobile-nav-link">Reserve</a>
+  <a href="#access" class="mobile-nav-link">Access</a>
+</div>
+
+
+<!-- ==================== SECTION 1: HERO ==================== -->
+<section class="hero" id="hero">
+
+  <!-- Ink stains for hero background -->
+  <svg class="ink-stain"
+       style="position:absolute;top:12%;left:6%;width:280px;height:200px;opacity:1;"
+       viewBox="0 0 280 200">
+    <ellipse cx="140" cy="100" rx="130" ry="88"
+             fill="#000" opacity="0.03"
+             transform="rotate(14 140 100)"/>
+  </svg>
+  <svg class="ink-stain"
+       style="position:absolute;bottom:18%;right:8%;width:220px;height:160px;opacity:1;"
+       viewBox="0 0 220 160">
+    <ellipse cx="110" cy="80" rx="100" ry="68"
+             fill="#000" opacity="0.025"
+             transform="rotate(-10 110 80)"/>
+  </svg>
+  <svg class="ink-stain"
+       style="position:absolute;top:55%;left:45%;width:160px;height:120px;opacity:1;"
+       viewBox="0 0 160 120">
+    <ellipse cx="80" cy="60" rx="70" ry="50"
+             fill="#000" opacity="0.018"
+             transform="rotate(22 80 60)"/>
+  </svg>
+
+  <div class="hero-svg-wrap reveal">
+    <!-- SVGフィルタ定義（にじみ効果用） -->
+    <svg style="position:absolute;width:0;height:0;" aria-hidden="true">
+      <defs>
+        <filter id="sumi-text">
+          <feGaussianBlur stdDeviation="0.5"/>
+        </filter>
+      </defs>
+    </svg>
+    <div class="hero-kanban">鮨 黒政</div>
+  </div>
+
+  <p class="hero-subtitle">銀座　江戸前鮨</p>
+  <p class="hero-en-name">Sushi Kuromasa</p>
+
+  <span class="hero-vertical">一期一会</span>
+
+  <!-- Scroll hint -->
+  <div class="hero-scroll-hint">
+    <span>Scroll</span>
+    <div class="hero-scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- ==================== SECTION 2: PHILOSOPHY ==================== -->
+<section class="section-washi" id="philosophy">
+
+  <!-- Ink stains -->
+  <svg class="ink-stain"
+       style="position:absolute;top:8%;right:4%;width:320px;height:220px;"
+       viewBox="0 0 320 220">
+    <ellipse cx="160" cy="110" rx="150" ry="100"
+             fill="#1a1512" opacity="0.02"
+             transform="rotate(22 160 110)"/>
+  </svg>
+  <svg class="ink-stain"
+       style="position:absolute;bottom:12%;left:6%;width:200px;height:150px;"
+       viewBox="0 0 200 150">
+    <ellipse cx="100" cy="75" rx="90" ry="65"
+             fill="#1a1512" opacity="0.015"
+             transform="rotate(-8 100 75)"/>
+  </svg>
+
+  <div class="container">
+    <!-- Section divider -->
+    <svg class="section-divider reveal" viewBox="0 0 120 8"
+         xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 4 Q20 2 40 4 Q60 6 80 4 Q100 2 120 4"
+            fill="none" stroke="var(--washi-text)"
+            stroke-width="0.8" stroke-linecap="round"
+            opacity="0.18"/>
+    </svg>
+
+    <div style="margin-top:52px;">
+      <p class="section-label reveal">Philosophy</p>
+      <div class="gold-accent-line-left reveal"></div>
+
+      <h2 class="philosophy-quote brush-heading-dark reveal">
+        一貫に、命を込める。
+      </h2>
+
+      <div class="philosophy-gold-line reveal reveal-delay-1"></div>
+
+      <p class="philosophy-text reveal reveal-delay-1">
+        銀座の路地裏、暖簾の奥に広がる静謐な空間。<br>
+        鮨 黒政は、三代にわたり江戸前の技と心を継承してまいりました。
+      </p>
+
+      <p class="philosophy-text reveal reveal-delay-2" style="margin-top:22px;">
+        毎朝、豊洲で目利きした最上の素材。<br>
+        仕事を施し、舎利と合わせる——その一瞬に、すべてを賭ける。<br>
+        余計なものは何もいらない。素材と技、そして一期一会の心だけ。
+      </p>
+
+      <p class="philosophy-text reveal reveal-delay-3" style="margin-top:22px;">
+        客人とのあいだに流れる沈黙も、会話も、すべてが鮨の味になる。<br>
+        カウンター越しに交わす視線、包丁を入れる音、酢飯の香り——<br>
+        五感のすべてで味わう、それが黒政の鮨でございます。
+      </p>
+
+      <p class="philosophy-quote-footer reveal reveal-delay-4">
+        「鮨は引き算の芸術である」——初代 黒政義信
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== SECTION 3: KODAWARI (3 Pillars) ==================== -->
+<section class="section-dark" id="kodawari">
+
+  <!-- Ink stains -->
+  <svg class="ink-stain"
+       style="position:absolute;bottom:6%;left:3%;width:260px;height:180px;"
+       viewBox="0 0 260 180">
+    <ellipse cx="130" cy="90" rx="120" ry="80"
+             fill="#fff" opacity="0.015"
+             transform="rotate(-12 130 90)"/>
+  </svg>
+  <svg class="ink-stain"
+       style="position:absolute;top:10%;right:5%;width:200px;height:140px;"
+       viewBox="0 0 200 140">
+    <ellipse cx="100" cy="70" rx="90" ry="60"
+             fill="#fff" opacity="0.012"
+             transform="rotate(18 100 70)"/>
+  </svg>
+
+  <div class="container">
+    <!-- Section divider -->
+    <svg class="section-divider reveal" viewBox="0 0 120 8"
+         xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 4 Q20 6 40 4 Q60 2 80 4 Q100 6 120 4"
+            fill="none" stroke="#fff"
+            stroke-width="0.7" stroke-linecap="round"
+            opacity="0.12"/>
+    </svg>
+
+    <div class="kodawari-section-title" style="margin-top:52px;">
+      <p class="section-label reveal">Commitment</p>
+      <div class="gold-accent-line reveal"></div>
+    </div>
+
+    <div class="kodawari-grid">
+
+      <!-- 鮨種 -->
+      <div class="kodawari-item reveal">
+        <p class="kodawari-num">— 壱 —</p>
+        <h3 class="kodawari-title brush-heading">鮨種</h3>
+        <p class="kodawari-desc">
+          毎朝四時、豊洲市場。信頼の仲買人が選び抜いた天然ものだけを仕入れる。鮪は塩釜・大間、白身は明石・五島列島。旬を追い、最上の一貫を握るために妥協はしない。
+        </p>
+      </div>
+
+      <!-- 仕事 -->
+      <div class="kodawari-item reveal reveal-delay-1">
+        <p class="kodawari-num">— 弐 —</p>
+        <h3 class="kodawari-title brush-heading">仕事</h3>
+        <p class="kodawari-desc">
+          〆る、漬ける、煮る、炙る——江戸前の「仕事」は素材を超えた味を生む。昆布〆は三時間、煮穴子は継ぎ足しの煮汁で。手間を惜しまず、素材の可能性を極限まで引き出す。
+        </p>
+      </div>
+
+      <!-- 舎利 -->
+      <div class="kodawari-item reveal reveal-delay-2">
+        <p class="kodawari-num">— 参 —</p>
+        <h3 class="kodawari-title brush-heading">舎利</h3>
+        <p class="kodawari-desc">
+          赤酢と米酢を独自にブレンド。米は新潟の契約農家から届く特別栽培米。人肌の温度、口の中でほどける硬さ——舎利あっての鮨、その信念は揺るがない。
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== SECTION 4: OMAKASE ==================== -->
+<section class="section-washi" id="omakase">
+
+  <!-- Ink stains -->
+  <svg class="ink-stain"
+       style="position:absolute;top:4%;left:7%;width:240px;height:170px;"
+       viewBox="0 0 240 170">
+    <ellipse cx="120" cy="85" rx="110" ry="75"
+             fill="#1a1512" opacity="0.018"
+             transform="rotate(10 120 85)"/>
+  </svg>
+  <svg class="ink-stain"
+       style="position:absolute;bottom:8%;right:4%;width:180px;height:130px;"
+       viewBox="0 0 180 130">
+    <ellipse cx="90" cy="65" rx="80" ry="55"
+             fill="#1a1512" opacity="0.015"
+             transform="rotate(-15 90 65)"/>
+  </svg>
+
+  <div class="container">
+    <!-- Section divider -->
+    <svg class="section-divider reveal" viewBox="0 0 120 8"
+         xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 4 Q30 1 60 4 Q90 7 120 4"
+            fill="none" stroke="var(--washi-text)"
+            stroke-width="0.8" stroke-linecap="round"
+            opacity="0.18"/>
+    </svg>
+
+    <div class="omakase-intro" style="margin-top:52px;">
+      <p class="section-label reveal">Omakase</p>
+      <div class="gold-accent-line reveal"></div>
+      <h2 class="brush-heading-dark reveal"
+          style="font-size:clamp(1.6rem,3vw,2.2rem);">
+        おまかせ
+      </h2>
+    </div>
+
+    <div class="omakase-courses">
+
+      <!-- Course 1 -->
+      <div class="omakase-card reveal">
+        <p class="omakase-card-label">Course</p>
+        <h3 class="omakase-card-name">おまかせ</h3>
+        <p class="omakase-card-price">¥33,000</p>
+        <div class="omakase-card-line"></div>
+        <p class="omakase-card-desc">
+          先付・お椀・握り十二貫・巻物・玉子<br><br>
+          季節の素材を大将が見立てる<br>
+          正統派の江戸前おまかせ
+        </p>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="omakase-card reveal reveal-delay-1">
+        <p class="omakase-card-label">Special Course</p>
+        <h3 class="omakase-card-name">特選おまかせ</h3>
+        <p class="omakase-card-price">¥55,000</p>
+        <div class="omakase-card-line"></div>
+        <p class="omakase-card-desc">
+          先付三種・お造り・焼物・握り十五貫・巻物・玉子・甘味<br><br>
+          希少部位・熟成鮪を含む<br>
+          黒政の真髄を味わう特別構成
+        </p>
+      </div>
+
+    </div>
+
+    <p class="omakase-note reveal reveal-delay-2">
+      ※ 価格は税・サービス料込。仕入れにより内容は変動いたします。
+    </p>
+
+    <div class="omakase-drinks reveal reveal-delay-2">
+      <h3 class="omakase-drinks-title brush-heading-dark">お飲み物</h3>
+      <p class="omakase-drinks-text">
+        日本酒は全国の銘醸蔵から厳選。<br>
+        十四代・而今・新政など常時十種以上をご用意。<br><br>
+        ワインはブルゴーニュ・シャンパーニュを中心に、<br>
+        鮨に寄り添う銘柄を取り揃えております。
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== SECTION 5: INTERIOR ==================== -->
+<section class="section-dark" id="interior">
+
+  <!-- Ink stains -->
+  <svg class="ink-stain"
+       style="position:absolute;top:10%;right:5%;width:300px;height:200px;"
+       viewBox="0 0 300 200">
+    <ellipse cx="150" cy="100" rx="140" ry="90"
+             fill="#fff" opacity="0.012"
+             transform="rotate(16 150 100)"/>
+  </svg>
+  <svg class="ink-stain"
+       style="position:absolute;bottom:5%;left:8%;width:180px;height:130px;"
+       viewBox="0 0 180 130">
+    <ellipse cx="90" cy="65" rx="80" ry="55"
+             fill="#fff" opacity="0.01"
+             transform="rotate(-20 90 65)"/>
+  </svg>
+
+  <div class="container-wide">
+    <!-- Section divider -->
+    <svg class="section-divider reveal" viewBox="0 0 120 8"
+         xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 4 Q20 2 40 4 Q60 6 80 4 Q100 2 120 4"
+            fill="none" stroke="#fff"
+            stroke-width="0.7" stroke-linecap="round"
+            opacity="0.12"/>
+    </svg>
+
+    <div class="interior-intro" style="margin-top:52px;">
+      <p class="section-label reveal">Interior</p>
+      <div class="gold-accent-line reveal"></div>
+      <h2 class="brush-heading reveal"
+          style="font-size:clamp(1.6rem,3vw,2.2rem);">
+        店内
+      </h2>
+    </div>
+
+    <div class="interior-grid">
+      <div class="interior-placeholder reveal">
+        Counter
+      </div>
+      <div class="interior-placeholder reveal reveal-delay-1">
+        Detail
+      </div>
+      <div class="interior-placeholder reveal reveal-delay-2">
+        Private Room
+      </div>
+      <div class="interior-placeholder reveal reveal-delay-3">
+        Entrance
+      </div>
+    </div>
+
+    <p class="interior-caption reveal reveal-delay-3">
+      檜のカウンター、有田焼の器、備前の花器——静寂のなかに凛とした美
+    </p>
+  </div>
+</section>
+
+
+<!-- ==================== SECTION 6: RESERVATION ==================== -->
+<section class="section-washi" id="reservation">
+
+  <!-- Ink stains -->
+  <svg class="ink-stain"
+       style="position:absolute;bottom:8%;right:6%;width:260px;height:180px;"
+       viewBox="0 0 260 180">
+    <ellipse cx="130" cy="90" rx="120" ry="80"
+             fill="#1a1512" opacity="0.02"
+             transform="rotate(-14 130 90)"/>
+  </svg>
+  <svg class="ink-stain"
+       style="position:absolute;top:12%;left:4%;width:180px;height:130px;"
+       viewBox="0 0 180 130">
+    <ellipse cx="90" cy="65" rx="80" ry="55"
+             fill="#1a1512" opacity="0.015"
+             transform="rotate(10 90 65)"/>
+  </svg>
+
+  <div class="container">
+    <!-- Section divider -->
+    <svg class="section-divider reveal" viewBox="0 0 120 8"
+         xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 4 Q30 7 60 4 Q90 1 120 4"
+            fill="none" stroke="var(--washi-text)"
+            stroke-width="0.8" stroke-linecap="round"
+            opacity="0.18"/>
+    </svg>
+
+    <div style="margin-top:52px;">
+      <div class="reservation-content">
+        <p class="section-label reveal">Reservation</p>
+        <div class="gold-accent-line reveal"></div>
+        <h2 class="brush-heading-dark reveal"
+            style="font-size:clamp(1.6rem,3vw,2.2rem);">
+          ご予約
+        </h2>
+
+        <div style="margin-top:44px;" class="reveal reveal-delay-1">
+          <span class="reservation-badge">完全予約制・紹介制</span>
+        </div>
+
+        <p class="reservation-phone reveal reveal-delay-1">
+          03-XXXX-XXXX
+        </p>
+
+        <div class="reservation-details reveal reveal-delay-2">
+          <p>お電話でのご予約のみ承っております。</p>
+          <p>受付時間：14:00〜17:00（日曜・祝日定休）</p>
+        </div>
+
+        <p class="reservation-note reveal reveal-delay-2">
+          ※ 初めてのお客様は、ご常連様からのご紹介をお願いしております。
+        </p>
+
+        <div class="reservation-seats reveal reveal-delay-3">
+          <div class="reservation-seat-item">
+            <strong>カウンター</strong>
+            <span>8席</span>
+          </div>
+          <div class="reservation-seat-item">
+            <strong>個室</strong>
+            <span>1室（4名様まで）</span>
+          </div>
+        </div>
+
+        <div class="reservation-hours reveal reveal-delay-4">
+          <p>営業時間：17:00〜23:00（最終入店 21:00）</p>
+          <p>定休日：日曜・祝日・不定休</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ==================== SECTION 7: ACCESS + FOOTER ==================== -->
+<section class="section-dark" id="access">
+
+  <!-- Ink stains -->
+  <svg class="ink-stain"
+       style="position:absolute;top:5%;left:4%;width:280px;height:190px;"
+       viewBox="0 0 280 190">
+    <ellipse cx="140" cy="95" rx="130" ry="85"
+             fill="#fff" opacity="0.012"
+             transform="rotate(20 140 95)"/>
+  </svg>
+  <svg class="ink-stain"
+       style="position:absolute;bottom:15%;right:6%;width:200px;height:140px;"
+       viewBox="0 0 200 140">
+    <ellipse cx="100" cy="70" rx="90" ry="60"
+             fill="#fff" opacity="0.01"
+             transform="rotate(-8 100 70)"/>
+  </svg>
+
+  <div class="container">
+    <!-- Section divider -->
+    <svg class="section-divider reveal" viewBox="0 0 120 8"
+         xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 4 Q20 6 40 4 Q60 2 80 4 Q100 6 120 4"
+            fill="none" stroke="#fff"
+            stroke-width="0.7" stroke-linecap="round"
+            opacity="0.12"/>
+    </svg>
+
+    <div class="access-intro" style="margin-top:52px;">
+      <p class="section-label reveal">Access</p>
+      <div class="gold-accent-line reveal"></div>
+      <h2 class="brush-heading reveal"
+          style="font-size:clamp(1.6rem,3vw,2.2rem);">
+        アクセス
+      </h2>
+    </div>
+
+    <div class="access-grid">
+
+      <div class="access-info reveal">
+        <h3 class="access-info-title">鮨 黒政</h3>
+        <p class="access-info-text">
+          〒104-0061<br>
+          東京都中央区銀座8-X-X<br>
+          ○○ビル B1F
+        </p>
+        <p class="access-info-text" style="margin-top:20px;">
+          東京メトロ銀座線「新橋駅」1番出口 徒歩3分<br>
+          東京メトロ銀座線「銀座駅」A2出口 徒歩5分<br>
+          JR「新橋駅」銀座口 徒歩4分
+        </p>
+        <div class="access-info-hours">
+          <p>営業時間：17:00〜23:00（最終入店 21:00）</p>
+          <p>定休日：日曜・祝日・不定休</p>
+          <p>お電話：03-XXXX-XXXX</p>
+        </div>
+      </div>
+
+      <div class="access-map-placeholder reveal reveal-delay-1">
+        Map
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer reveal">
+      <p class="footer-logo">鮨 黒政</p>
+      <p class="footer-copy">
+        &copy; 2024 SUSHI KUROMASA. All rights reserved.
+      </p>
+      <p class="footer-credit">
+        Produced by HNH Design Works
+      </p>
+    </footer>
+  </div>
+</section>
+
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+(function() {
+  'use strict';
+
+  /* ==========================================================
+     Loading Screen — 3 second display, then fade out
+     ========================================================== */
+  var loadingScreen = document.getElementById('loadingScreen');
+
+  function dismissLoading() {
+    loadingScreen.classList.add('fade-out');
+    setTimeout(function() {
+      loadingScreen.style.display = 'none';
+      document.body.style.overflow = '';
+    }, 800);
+  }
+
+  window.addEventListener('load', function() {
+    setTimeout(dismissLoading, 3000);
+  });
+
+  // Safety fallback — dismiss after 5s regardless
+  setTimeout(function() {
+    if (!loadingScreen.classList.contains('fade-out')) {
+      dismissLoading();
+    }
+  }, 5000);
+
+
+  /* ==========================================================
+     Custom Cursor — Desktop only (pointer:fine)
+     ========================================================== */
+  var cursor = document.getElementById('customCursor');
+  var mouseX = 0;
+  var mouseY = 0;
+  var curX = 0;
+  var curY = 0;
+  var cursorVisible = false;
+
+  if (window.matchMedia('(pointer: fine)').matches) {
+
+    document.addEventListener('mousemove', function(e) {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+      if (!cursorVisible) {
+        cursorVisible = true;
+        cursor.style.opacity = '1';
+      }
+    });
+
+    document.addEventListener('mouseleave', function() {
+      cursorVisible = false;
+      cursor.style.opacity = '0';
+    });
+
+    document.addEventListener('mouseenter', function() {
+      cursorVisible = true;
+      cursor.style.opacity = '1';
+    });
+
+    // Smooth cursor follow
+    function updateCursor() {
+      var dx = mouseX - curX;
+      var dy = mouseY - curY;
+      curX += dx * 0.15;
+      curY += dy * 0.15;
+      cursor.style.transform =
+        'translate3d(' + (curX - 4) + 'px, ' + (curY - 4) + 'px, 0)';
+      requestAnimationFrame(updateCursor);
+    }
+    updateCursor();
+
+    // Hover effect on interactive elements
+    var hoverTargets = document.querySelectorAll('a, button, .omakase-card');
+    for (var i = 0; i < hoverTargets.length; i++) {
+      hoverTargets[i].addEventListener('mouseenter', function() {
+        cursor.classList.add('cursor-hover');
+      });
+      hoverTargets[i].addEventListener('mouseleave', function() {
+        cursor.classList.remove('cursor-hover');
+      });
+    }
+  }
+
+
+  /* ==========================================================
+     Navigation — Scroll background + hamburger toggle
+     ========================================================== */
+  var nav = document.getElementById('mainNav');
+  var lastScrollY = 0;
+
+  function handleNavScroll() {
+    var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollY > 60) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+    lastScrollY = scrollY;
+  }
+
+  window.addEventListener('scroll', handleNavScroll, { passive: true });
+  handleNavScroll(); // Init
+
+  // Hamburger menu
+  var hamburger = document.getElementById('navHamburger');
+  var mobileNav = document.getElementById('mobileNav');
+  var mobileOpen = false;
+  var hamburgerSpans = hamburger.querySelectorAll('span');
+
+  function toggleMobileNav() {
+    mobileOpen = !mobileOpen;
+
+    if (mobileOpen) {
+      mobileNav.classList.add('active');
+      hamburgerSpans[0].style.transform =
+        'rotate(45deg) translate(4px, 4px)';
+      hamburgerSpans[1].style.opacity = '0';
+      hamburgerSpans[2].style.transform =
+        'rotate(-45deg) translate(4px, -4px)';
+      document.body.style.overflow = 'hidden';
+    } else {
+      mobileNav.classList.remove('active');
+      hamburgerSpans[0].style.transform = 'none';
+      hamburgerSpans[1].style.opacity = '1';
+      hamburgerSpans[2].style.transform = 'none';
+      document.body.style.overflow = '';
+    }
+  }
+
+  hamburger.addEventListener('click', toggleMobileNav);
+
+  // Close mobile nav on link click
+  var mobileLinks = document.querySelectorAll('.mobile-nav-link');
+  for (var j = 0; j < mobileLinks.length; j++) {
+    mobileLinks[j].addEventListener('click', function() {
+      if (mobileOpen) {
+        toggleMobileNav();
+      }
+    });
+  }
+
+
+  /* ==========================================================
+     Scroll Reveal — IntersectionObserver
+     Elements with .reveal fade in when entering viewport
+     ========================================================== */
+  var revealElements = document.querySelectorAll('.reveal, .reveal-fade');
+
+  var observerConfig = {
+    root: null,
+    rootMargin: '0px 0px -50px 0px',
+    threshold: 0.08
+  };
+
+  var revealObserver = new IntersectionObserver(function(entries) {
+    for (var k = 0; k < entries.length; k++) {
+      if (entries[k].isIntersecting) {
+        entries[k].target.classList.add('visible');
+        revealObserver.unobserve(entries[k].target);
+      }
+    }
+  }, observerConfig);
+
+  for (var m = 0; m < revealElements.length; m++) {
+    revealObserver.observe(revealElements[m]);
+  }
+
+
+  /* ==========================================================
+     Smooth Scroll for Anchor Links
+     ========================================================== */
+  var anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+  for (var n = 0; n < anchorLinks.length; n++) {
+    anchorLinks[n].addEventListener('click', function(e) {
+      e.preventDefault();
+      var targetId = this.getAttribute('href');
+      var targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        var offset = targetEl.getBoundingClientRect().top +
+                     window.pageYOffset - 60;
+        window.scrollTo({
+          top: offset,
+          behavior: 'smooth'
+        });
+      }
+    });
+  }
+
+
+  /* ==========================================================
+     Hero SVG — Subtle parallax on scroll
+     ========================================================== */
+  var heroSvgWrap = document.querySelector('.hero-svg-wrap');
+  var heroVertical = document.querySelector('.hero-vertical');
+
+  if (heroSvgWrap) {
+    window.addEventListener('scroll', function() {
+      var scrollY = window.pageYOffset;
+      if (scrollY < window.innerHeight) {
+        var parallax = scrollY * 0.08;
+        heroSvgWrap.style.transform =
+          'translateY(' + parallax + 'px)';
+        if (heroVertical) {
+          heroVertical.style.transform =
+            'translateY(calc(-50% + ' + (scrollY * 0.04) + 'px))';
+        }
+      }
+    }, { passive: true });
+  }
+
+
+  /* ==========================================================
+     Scroll hint — hide after user scrolls
+     ========================================================== */
+  var scrollHint = document.querySelector('.hero-scroll-hint');
+  var scrollHintHidden = false;
+
+  if (scrollHint) {
+    window.addEventListener('scroll', function() {
+      if (!scrollHintHidden && window.pageYOffset > 80) {
+        scrollHintHidden = true;
+        scrollHint.style.opacity = '0';
+        scrollHint.style.transition = 'opacity 0.6s ease';
+      }
+    }, { passive: true });
+  }
+
+})();
+</script>
+
+</body>
+</html>

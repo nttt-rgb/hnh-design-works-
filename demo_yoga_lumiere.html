@@ -1,0 +1,1956 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yoga Studio Lumière | 代官山のヨガスタジオ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* ==============================================
+       0. RESET & CUSTOM PROPERTIES
+    ============================================== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --white: #fafaf7;
+      --white-pure: #ffffff;
+      --beige: #d4c5a9;
+      --beige-light: #f3ede3;
+      --beige-lighter: #f8f5ef;
+      --green: #5a7247;
+      --green-dark: #3e5232;
+      --green-light: #7a9466;
+      --green-pale: rgba(90,114,71,0.08);
+      --brown: #2a2218;
+      --brown-mid: #5c4f3a;
+      --brown-light: #8a7a65;
+      --serif: 'Cormorant Garamond', 'Georgia', serif;
+      --sans: 'Zen Kaku Gothic New', 'Hiragino Sans', sans-serif;
+      --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--sans);
+      font-weight: 300;
+      color: var(--brown);
+      background: var(--white);
+      line-height: 1.8;
+      overflow-x: hidden;
+      cursor: default;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    ul { list-style: none; }
+    button { border: none; background: none; cursor: pointer; font: inherit; }
+    input, textarea, select { font: inherit; border: none; outline: none; }
+
+    /* ==============================================
+       1. LOADING SCREEN
+    ============================================== */
+    #loader {
+      position: fixed;
+      inset: 0;
+      z-index: 10000;
+      background: var(--beige-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: transform 0.9s var(--ease-out-expo), opacity 0.6s ease;
+    }
+    #loader.hide {
+      transform: translateY(-100%);
+      opacity: 0;
+      pointer-events: none;
+    }
+    #loader .loader-logo {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 6vw, 4.5rem);
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      color: var(--brown);
+      opacity: 0;
+      animation: loaderFade 1.6s ease forwards;
+    }
+    #loader .loader-line {
+      width: 60px;
+      height: 1px;
+      background: var(--beige);
+      margin-top: 1.2rem;
+      transform: scaleX(0);
+      animation: loaderLine 1.2s 0.4s var(--ease-out-expo) forwards;
+    }
+    @keyframes loaderFade {
+      0% { opacity: 0; transform: translateY(12px); }
+      50% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes loaderLine {
+      to { transform: scaleX(1); }
+    }
+
+    /* ==============================================
+       2. CUSTOM CURSOR (desktop only)
+    ============================================== */
+    .cursor-dot,
+    .cursor-ring {
+      position: fixed;
+      top: 0; left: 0;
+      pointer-events: none;
+      z-index: 9999;
+      border-radius: 50%;
+      mix-blend-mode: difference;
+    }
+    .cursor-dot {
+      width: 6px; height: 6px;
+      background: var(--brown);
+      transform: translate(-50%, -50%);
+      transition: transform 0.1s;
+    }
+    .cursor-ring {
+      width: 36px; height: 36px;
+      border: 1.5px solid var(--brown);
+      transform: translate(-50%, -50%);
+      transition: width 0.3s, height 0.3s, border-color 0.3s;
+    }
+    .cursor-ring.hover {
+      width: 56px; height: 56px;
+      border-color: var(--green);
+    }
+    @media (pointer: coarse) {
+      .cursor-dot, .cursor-ring { display: none; }
+    }
+
+    /* ==============================================
+       3. NAVIGATION
+    ============================================== */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 1.2rem 3rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.5s, backdrop-filter 0.5s, padding 0.4s;
+    }
+    .nav.scrolled {
+      background: rgba(250,250,247,0.82);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      padding: 0.8rem 3rem;
+      box-shadow: 0 1px 0 rgba(42,34,24,0.06);
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      color: var(--brown);
+    }
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+    }
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      color: var(--brown-mid);
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--green);
+      transition: width 0.4s var(--ease-out-expo);
+    }
+    .nav-links a:hover { color: var(--green); }
+    .nav-links a:hover::after { width: 100%; }
+
+    /* Hamburger */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      width: 28px;
+      cursor: pointer;
+      z-index: 1002;
+    }
+    .nav-hamburger span {
+      display: block;
+      height: 1.5px;
+      background: var(--brown);
+      transition: transform 0.4s var(--ease-out-expo), opacity 0.3s;
+      transform-origin: center;
+    }
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    /* Mobile overlay */
+    .nav-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 1001;
+      background: rgba(250,250,247,0.97);
+      backdrop-filter: blur(30px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s;
+    }
+    .nav-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .nav-overlay a {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--brown);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.5s, transform 0.5s var(--ease-out-expo), color 0.3s;
+    }
+    .nav-overlay.open a {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .nav-overlay.open a:nth-child(1) { transition-delay: 0.1s; }
+    .nav-overlay.open a:nth-child(2) { transition-delay: 0.15s; }
+    .nav-overlay.open a:nth-child(3) { transition-delay: 0.2s; }
+    .nav-overlay.open a:nth-child(4) { transition-delay: 0.25s; }
+    .nav-overlay.open a:nth-child(5) { transition-delay: 0.3s; }
+    .nav-overlay a:hover { color: var(--green); }
+
+    @media (max-width: 768px) {
+      .nav { padding: 1rem 1.5rem; }
+      .nav.scrolled { padding: 0.7rem 1.5rem; }
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+    }
+
+    /* ==============================================
+       4. HERO SECTION
+    ============================================== */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      background: linear-gradient(180deg, var(--beige-light) 0%, var(--white) 100%);
+    }
+    /* Animated blobs */
+    .hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.3;
+      animation: blobFloat 18s ease-in-out infinite;
+    }
+    .hero-blob-1 {
+      width: 500px; height: 500px;
+      background: var(--beige);
+      top: -10%; left: -10%;
+      animation-delay: 0s;
+    }
+    .hero-blob-2 {
+      width: 400px; height: 400px;
+      background: var(--green-pale);
+      background: rgba(90,114,71,0.15);
+      bottom: -5%; right: -8%;
+      animation-delay: -6s;
+    }
+    .hero-blob-3 {
+      width: 300px; height: 300px;
+      background: var(--beige);
+      top: 40%; right: 20%;
+      animation-delay: -12s;
+      opacity: 0.15;
+    }
+    @keyframes blobFloat {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      25% { transform: translate(30px, -40px) scale(1.05); }
+      50% { transform: translate(-20px, 20px) scale(0.95); }
+      75% { transform: translate(15px, 35px) scale(1.02); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 2rem;
+    }
+    .hero-enso {
+      width: 160px;
+      height: 160px;
+      margin: 0 auto 2.5rem;
+    }
+    .hero-enso circle {
+      fill: none;
+      stroke: var(--beige);
+      stroke-width: 2;
+      stroke-dasharray: 440;
+      stroke-dashoffset: 440;
+      stroke-linecap: round;
+      animation: drawEnso 2.5s 1.8s var(--ease-out-expo) forwards;
+    }
+    @keyframes drawEnso {
+      to { stroke-dashoffset: 40; }
+    }
+
+    .hero-title {
+      font-family: var(--serif);
+      font-size: clamp(2.4rem, 7vw, 5rem);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      line-height: 1.3;
+      color: var(--brown);
+      margin-bottom: 1.2rem;
+    }
+    .hero-title .char {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: charReveal 0.7s var(--ease-out-expo) forwards;
+    }
+    @keyframes charReveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .hero-sub {
+      font-size: clamp(0.85rem, 2vw, 1.05rem);
+      font-weight: 300;
+      color: var(--brown-mid);
+      letter-spacing: 0.06em;
+      margin-bottom: 2.5rem;
+      opacity: 0;
+      animation: fadeUp 1s 2.8s ease forwards;
+    }
+
+    .hero-cta {
+      display: inline-block;
+      padding: 1rem 2.8rem;
+      background: var(--green);
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      border-radius: 50px;
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      animation: fadeUp 1s 3.2s ease forwards;
+      transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s;
+    }
+    .hero-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--green-dark);
+      border-radius: 50px;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.5s var(--ease-out-expo);
+      z-index: -1;
+    }
+    .hero-cta:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 30px rgba(90,114,71,0.25);
+    }
+    .hero-cta:hover::before { transform: scaleX(1); }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      opacity: 0;
+      animation: fadeUp 1s 3.6s ease forwards;
+    }
+    .scroll-indicator span {
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      color: var(--brown-light);
+    }
+    .scroll-indicator .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: var(--beige);
+      position: relative;
+      overflow: hidden;
+    }
+    .scroll-indicator .scroll-line::after {
+      content: '';
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--green);
+      animation: scrollLine 2s ease-in-out infinite;
+    }
+    @keyframes scrollLine {
+      0% { top: -100%; }
+      50% { top: 100%; }
+      100% { top: 100%; }
+    }
+
+    /* ==============================================
+       5. REVEAL ANIMATIONS
+    ============================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+    }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+    }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+    }
+    .reveal-scale.visible { opacity: 1; transform: scale(1); }
+
+    /* Staggered children */
+    .stagger-children > * {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s var(--ease-out-expo), transform 0.7s var(--ease-out-expo);
+    }
+    .stagger-children.visible > *:nth-child(1) { transition-delay: 0s; opacity: 1; transform: translateY(0); }
+    .stagger-children.visible > *:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+    .stagger-children.visible > *:nth-child(3) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+    .stagger-children.visible > *:nth-child(4) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+    .stagger-children.visible > *:nth-child(5) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+    .stagger-children.visible > *:nth-child(6) { transition-delay: 0.5s; opacity: 1; transform: translateY(0); }
+
+    /* ==============================================
+       6. SECTION UTILITIES
+    ============================================== */
+    .section {
+      padding: 7rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .section-alt { background: var(--beige-light); }
+    .section-white { background: var(--white); }
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section-label {
+      font-family: var(--serif);
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 0.8rem;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+      color: var(--brown);
+      margin-bottom: 1rem;
+    }
+    .section-desc {
+      font-size: 0.95rem;
+      color: var(--brown-mid);
+      max-width: 600px;
+      line-height: 2;
+    }
+    .section-divider {
+      width: 50px;
+      height: 1px;
+      background: var(--beige);
+      margin: 1.5rem 0;
+    }
+
+    /* Organic SVG decorations */
+    .deco-leaf {
+      position: absolute;
+      opacity: 0.04;
+      pointer-events: none;
+    }
+
+    /* Parallax wrapper */
+    .parallax-bg {
+      position: absolute;
+      inset: -20% 0;
+      z-index: 0;
+      will-change: transform;
+    }
+
+    /* ==============================================
+       7. PHILOSOPHY SECTION
+    ============================================== */
+    .philosophy {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      background: var(--beige-light);
+    }
+    .philosophy .container {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+    .philosophy-quote {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--brown);
+      letter-spacing: 0.04em;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .philosophy-text {
+      font-size: 0.95rem;
+      color: var(--brown-mid);
+      max-width: 560px;
+      margin: 0 auto 3.5rem;
+      line-height: 2;
+    }
+
+    /* Horizontal scrolling values */
+    .values-track-wrapper {
+      overflow: hidden;
+      margin: 0 -2rem;
+      padding: 2rem 0;
+    }
+    .values-track {
+      display: flex;
+      gap: 4rem;
+      animation: scrollValues 20s linear infinite;
+      width: max-content;
+    }
+    .values-track .value-item {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      font-family: var(--serif);
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      color: var(--brown);
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    .values-track .value-item .value-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+    }
+    @keyframes scrollValues {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* Leaf silhouettes in philosophy */
+    .philosophy .deco-leaf-1 {
+      top: 10%; left: 5%;
+      width: 200px;
+      transform: rotate(-20deg);
+    }
+    .philosophy .deco-leaf-2 {
+      bottom: 10%; right: 8%;
+      width: 160px;
+      transform: rotate(15deg);
+    }
+
+    /* Breathing circle decoration */
+    .breathing-circle {
+      position: absolute;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      border: 1px solid var(--beige);
+      opacity: 0.2;
+      animation: breathe 6s ease-in-out infinite;
+    }
+    .breathing-circle-1 { top: 15%; right: 10%; animation-delay: 0s; }
+    .breathing-circle-2 { bottom: 20%; left: 8%; animation-delay: -3s; width: 200px; height: 200px; }
+    @keyframes breathe {
+      0%, 100% { transform: scale(1); opacity: 0.15; }
+      50% { transform: scale(1.08); opacity: 0.25; }
+    }
+
+    /* ==============================================
+       8. CLASSES SECTION
+    ============================================== */
+    .classes-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .class-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 2.2rem 1.8rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s;
+      cursor: default;
+    }
+    .class-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--green-pale);
+      opacity: 0;
+      transition: opacity 0.5s;
+      border-radius: 16px;
+    }
+    .class-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 50px rgba(42,34,24,0.08);
+    }
+    .class-card:hover::before { opacity: 1; }
+    .class-card > * { position: relative; z-index: 1; }
+
+    .class-icon {
+      width: 48px; height: 48px;
+      margin-bottom: 1.5rem;
+    }
+    .class-icon svg {
+      width: 100%; height: 100%;
+      stroke: var(--green);
+      stroke-width: 1.5;
+      fill: none;
+    }
+    .class-card h3 {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.04em;
+    }
+    .class-card .class-meta {
+      font-size: 0.78rem;
+      color: var(--green);
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      margin-bottom: 1rem;
+    }
+    .class-card p {
+      font-size: 0.88rem;
+      color: var(--brown-mid);
+      line-height: 1.8;
+    }
+
+    @media (max-width: 900px) {
+      .classes-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 520px) {
+      .classes-grid { grid-template-columns: 1fr; }
+    }
+
+    /* ==============================================
+       9. PRICING SECTION
+    ============================================== */
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+    .price-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 2.2rem 1.6rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s;
+      border: 1px solid rgba(212,197,169,0.3);
+    }
+    .price-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(42,34,24,0.07);
+    }
+    .price-card.recommended {
+      background: var(--green);
+      color: var(--white);
+      border-color: var(--green);
+    }
+    .price-card.recommended .price-name,
+    .price-card.recommended .price-amount,
+    .price-card.recommended .price-detail { color: var(--white); }
+
+    .price-badge {
+      display: inline-block;
+      padding: 0.25rem 0.9rem;
+      border-radius: 20px;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+      background: rgba(90,114,71,0.1);
+      color: var(--green);
+    }
+    .price-card.recommended .price-badge {
+      background: rgba(255,255,255,0.2);
+      color: var(--white);
+    }
+    .price-badge.trial {
+      background: var(--beige);
+      color: var(--brown);
+    }
+    .price-name {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-weight: 400;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.8rem;
+      color: var(--brown);
+    }
+    .price-amount {
+      font-family: var(--serif);
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--brown);
+      margin-bottom: 0.3rem;
+    }
+    .price-amount small {
+      font-size: 0.8rem;
+      font-weight: 300;
+    }
+    .price-detail {
+      font-size: 0.8rem;
+      color: var(--brown-mid);
+      line-height: 1.7;
+    }
+
+    .pricing-note {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--brown-mid);
+    }
+
+    @media (max-width: 900px) {
+      .pricing-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 520px) {
+      .pricing-grid { grid-template-columns: 1fr; max-width: 340px; margin-left: auto; margin-right: auto; }
+    }
+
+    /* ==============================================
+       10. INSTRUCTOR SECTION
+    ============================================== */
+    .instructor-card {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      margin-bottom: 5rem;
+    }
+    .instructor-card:last-child { margin-bottom: 0; }
+    .instructor-card.reverse { direction: rtl; }
+    .instructor-card.reverse > * { direction: ltr; }
+
+    .instructor-photo {
+      aspect-ratio: 3/4;
+      background: linear-gradient(135deg, var(--beige-light) 0%, rgba(90,114,71,0.08) 100%);
+      border-radius: 24px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.6s var(--ease-out-expo);
+    }
+    .instructor-photo:hover { transform: scale(1.02); }
+    .instructor-photo .photo-placeholder {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .instructor-photo .photo-placeholder .initials {
+      font-family: var(--serif);
+      font-size: 3rem;
+      font-weight: 300;
+      color: var(--beige);
+      letter-spacing: 0.1em;
+    }
+    /* Decorative ring */
+    .instructor-photo::after {
+      content: '';
+      position: absolute;
+      inset: 12px;
+      border: 1px solid rgba(212,197,169,0.3);
+      border-radius: 18px;
+    }
+
+    .instructor-info h3 {
+      font-family: var(--serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.4rem;
+    }
+    .instructor-info .instructor-role {
+      font-size: 0.82rem;
+      color: var(--green);
+      letter-spacing: 0.08em;
+      margin-bottom: 1.2rem;
+    }
+    .instructor-info .instructor-quote {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--brown);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+    .instructor-info p {
+      font-size: 0.9rem;
+      color: var(--brown-mid);
+      line-height: 1.9;
+    }
+
+    @media (max-width: 768px) {
+      .instructor-card { grid-template-columns: 1fr; gap: 2rem; }
+      .instructor-card.reverse { direction: ltr; }
+    }
+
+    /* ==============================================
+       11. SCHEDULE SECTION
+    ============================================== */
+    .schedule-table-wrapper {
+      overflow-x: auto;
+      margin-top: 3rem;
+      border-radius: 16px;
+      background: var(--white);
+      padding: 0.5rem;
+      border: 1px solid rgba(212,197,169,0.2);
+    }
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 700px;
+    }
+    .schedule-table th {
+      font-family: var(--serif);
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      padding: 1.2rem 0.8rem;
+      color: var(--brown);
+      border-bottom: 1px solid rgba(212,197,169,0.3);
+      text-align: center;
+    }
+    .schedule-table td {
+      padding: 0.9rem 0.6rem;
+      text-align: center;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(212,197,169,0.1);
+      font-size: 0.82rem;
+    }
+    .schedule-table tr:last-child td { border-bottom: none; }
+
+    .schedule-cell {
+      display: inline-block;
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+      font-size: 0.78rem;
+      line-height: 1.4;
+      margin: 2px 0;
+    }
+    .schedule-cell.hatha { background: rgba(90,114,71,0.08); color: var(--green-dark); }
+    .schedule-cell.vinyasa { background: rgba(212,197,169,0.3); color: var(--brown); }
+    .schedule-cell.restorative { background: rgba(90,114,71,0.04); color: var(--green); }
+    .schedule-cell.meditation { background: rgba(42,34,24,0.05); color: var(--brown-mid); }
+    .schedule-cell .time { font-weight: 500; display: block; }
+    .schedule-cell .instructor-name { font-size: 0.72rem; opacity: 0.7; }
+    .schedule-rest {
+      color: var(--brown-light);
+      font-size: 0.78rem;
+      font-style: italic;
+    }
+
+    /* ==============================================
+       12. TESTIMONIAL SECTION
+    ============================================== */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 2.5rem 2rem;
+      position: relative;
+      transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(42,34,24,0.06);
+    }
+    .testimonial-quote-mark {
+      font-family: var(--serif);
+      font-size: 5rem;
+      line-height: 1;
+      color: var(--beige);
+      position: absolute;
+      top: 1rem;
+      left: 1.5rem;
+    }
+    .testimonial-text {
+      font-size: 0.92rem;
+      line-height: 2;
+      color: var(--brown);
+      margin-bottom: 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .testimonial-author {
+      font-size: 0.8rem;
+      color: var(--brown-light);
+      letter-spacing: 0.04em;
+    }
+    .testimonial-author span {
+      color: var(--green);
+      margin-right: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .testimonials-grid { grid-template-columns: 1fr; max-width: 500px; margin-left: auto; margin-right: auto; }
+    }
+
+    /* ==============================================
+       13. ACCESS & CONTACT SECTION
+    ============================================== */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      margin-top: 3rem;
+    }
+
+    .access-info h3 {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.04em;
+    }
+    .access-detail {
+      margin-bottom: 1.5rem;
+    }
+    .access-detail dt {
+      font-size: 0.78rem;
+      color: var(--green);
+      letter-spacing: 0.08em;
+      font-weight: 400;
+      margin-bottom: 0.3rem;
+    }
+    .access-detail dd {
+      font-size: 0.92rem;
+      color: var(--brown);
+      line-height: 1.7;
+    }
+
+    /* Map placeholder */
+    .map-placeholder {
+      width: 100%;
+      aspect-ratio: 16/10;
+      background: linear-gradient(135deg, rgba(90,114,71,0.06) 0%, rgba(212,197,169,0.15) 100%);
+      border-radius: 16px;
+      position: relative;
+      overflow: hidden;
+      margin-top: 2rem;
+    }
+    /* Roads */
+    .map-placeholder::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: rgba(212,197,169,0.4);
+      transform: rotate(-5deg);
+    }
+    .map-placeholder::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 40%;
+      width: 2px;
+      background: rgba(212,197,169,0.4);
+      transform: rotate(8deg);
+    }
+    .map-pin {
+      position: absolute;
+      top: 45%;
+      left: 42%;
+      width: 20px; height: 20px;
+      transform: translate(-50%, -50%);
+    }
+    .map-pin .pin-dot {
+      width: 10px; height: 10px;
+      background: var(--green);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .map-pin .pin-pulse {
+      width: 20px; height: 20px;
+      border: 2px solid var(--green);
+      border-radius: 50%;
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0% { transform: translate(-50%, -50%) scale(1); opacity: 0.6; }
+      100% { transform: translate(-50%, -50%) scale(2.5); opacity: 0; }
+    }
+    .map-label {
+      position: absolute;
+      top: 32%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: var(--serif);
+      font-size: 0.75rem;
+      color: var(--green);
+      letter-spacing: 0.1em;
+      background: rgba(250,250,247,0.8);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    /* Contact form */
+    .contact-form h3 {
+      font-family: var(--serif);
+      font-size: 1.3rem;
+      font-weight: 400;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.04em;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+    .form-group label {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--brown-mid);
+      letter-spacing: 0.06em;
+      margin-bottom: 0.5rem;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid var(--beige);
+      background: transparent;
+      color: var(--brown);
+      font-size: 0.92rem;
+      transition: border-color 0.4s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      border-bottom-color: var(--green);
+    }
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .form-group select {
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%235c4f3a' stroke-width='1'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0 center;
+    }
+    .form-line {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background: var(--green);
+      transition: width 0.5s var(--ease-out-expo);
+    }
+    .form-group:focus-within .form-line { width: 100%; }
+
+    .form-submit {
+      display: inline-block;
+      padding: 0.9rem 2.5rem;
+      background: var(--brown);
+      color: var(--white);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      border-radius: 50px;
+      transition: background 0.3s, transform 0.3s;
+      cursor: pointer;
+    }
+    .form-submit:hover {
+      background: var(--green);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+    }
+
+    /* ==============================================
+       14. FOOTER
+    ============================================== */
+    .footer {
+      background: var(--brown);
+      color: rgba(250,250,247,0.6);
+      padding: 4rem 2rem 2.5rem;
+      text-align: center;
+    }
+    .footer-logo {
+      font-family: var(--serif);
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      color: var(--white);
+      margin-bottom: 1.5rem;
+    }
+    .footer-nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .footer-nav a {
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      transition: color 0.3s;
+    }
+    .footer-nav a:hover { color: var(--white); }
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    .footer-social a {
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      transition: color 0.3s;
+    }
+    .footer-social a:hover { color: var(--white); }
+    .footer-copy {
+      font-size: 0.72rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.3rem;
+    }
+    .footer-credit {
+      font-size: 0.68rem;
+      opacity: 0.4;
+    }
+    .footer-divider {
+      width: 40px;
+      height: 1px;
+      background: rgba(250,250,247,0.15);
+      margin: 1.5rem auto;
+    }
+
+    /* ==============================================
+       15. GLOBAL DECORATIONS
+    ============================================== */
+    /* Slow-spinning thin ring */
+    .deco-ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid rgba(212,197,169,0.15);
+      pointer-events: none;
+      animation: spinSlow 60s linear infinite;
+    }
+    @keyframes spinSlow {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Gradient shift background */
+    .gradient-shift {
+      background: linear-gradient(
+        135deg,
+        var(--white) 0%,
+        var(--beige-lighter) 30%,
+        var(--white) 60%,
+        rgba(90,114,71,0.02) 100%
+      );
+      background-size: 400% 400%;
+      animation: gradientMove 15s ease infinite;
+    }
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ==============================================
+       16. RESPONSIVE REFINEMENTS
+    ============================================== */
+    @media (max-width: 768px) {
+      .section { padding: 4.5rem 1.5rem; }
+      .hero-enso { width: 120px; height: 120px; }
+      .breathing-circle { display: none; }
+    }
+    @media (max-width: 480px) {
+      .section { padding: 3.5rem 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ==========================================
+     LOADING SCREEN
+========================================== -->
+<div id="loader">
+  <div class="loader-logo">Lumière</div>
+  <div class="loader-line"></div>
+</div>
+
+<!-- ==========================================
+     CUSTOM CURSOR
+========================================== -->
+<div class="cursor-dot"></div>
+<div class="cursor-ring"></div>
+
+<!-- ==========================================
+     NAVIGATION
+========================================== -->
+<nav class="nav" id="nav">
+  <a href="#" class="nav-logo">Lumière</a>
+  <div class="nav-links">
+    <a href="#classes">Class</a>
+    <a href="#pricing">Price</a>
+    <a href="#instructors">Instructor</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#contact">Access</a>
+  </div>
+  <div class="nav-hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile overlay -->
+<div class="nav-overlay" id="navOverlay">
+  <a href="#classes" class="nav-overlay-link">Class</a>
+  <a href="#pricing" class="nav-overlay-link">Price</a>
+  <a href="#instructors" class="nav-overlay-link">Instructor</a>
+  <a href="#schedule" class="nav-overlay-link">Schedule</a>
+  <a href="#contact" class="nav-overlay-link">Access</a>
+</div>
+
+<!-- ==========================================
+     HERO
+========================================== -->
+<section class="hero" id="hero">
+  <div class="hero-blob hero-blob-1"></div>
+  <div class="hero-blob hero-blob-2"></div>
+  <div class="hero-blob hero-blob-3"></div>
+
+  <div class="hero-content">
+    <!-- Enso circle SVG -->
+    <div class="hero-enso">
+      <svg viewBox="0 0 160 160">
+        <circle cx="80" cy="80" r="70"/>
+      </svg>
+    </div>
+
+    <h1 class="hero-title" id="heroTitle">心と身体に、光を。</h1>
+
+    <p class="hero-sub">代官山の静寂の中で、自分自身と向き合うひととき</p>
+
+    <a href="#contact" class="hero-cta">体験レッスンを予約する</a>
+  </div>
+
+  <div class="scroll-indicator">
+    <span>SCROLL</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ==========================================
+     PHILOSOPHY
+========================================== -->
+<section class="section philosophy" id="philosophy">
+  <!-- Decorative elements -->
+  <div class="breathing-circle breathing-circle-1"></div>
+  <div class="breathing-circle breathing-circle-2"></div>
+
+  <!-- Leaf silhouettes -->
+  <svg class="deco-leaf deco-leaf-1" viewBox="0 0 200 300" xmlns="http://www.w3.org/2000/svg">
+    <path d="M100,10 Q140,80 130,150 Q120,220 100,290 Q80,220 70,150 Q60,80 100,10Z" fill="currentColor"/>
+  </svg>
+  <svg class="deco-leaf deco-leaf-2" viewBox="0 0 160 240" xmlns="http://www.w3.org/2000/svg">
+    <path d="M80,5 Q120,60 110,120 Q100,180 80,235 Q60,180 50,120 Q40,60 80,5Z" fill="currentColor"/>
+  </svg>
+
+  <div class="container">
+    <p class="section-label reveal">Philosophy</p>
+    <h2 class="philosophy-quote reveal">自然のリズムに、身を委ねる。</h2>
+    <p class="philosophy-text reveal">
+      呼吸のように自然に、流れるように。<br>
+      Lumièreは「光」を意味するフランス語。<br>
+      内なる光を見つけるための空間を提供します。
+    </p>
+    <div class="section-divider reveal" style="margin: 0 auto 2rem;"></div>
+  </div>
+
+  <div class="values-track-wrapper">
+    <div class="values-track">
+      <div class="value-item"><div class="value-dot"></div>Breath — 呼吸を整え、心を静める</div>
+      <div class="value-item"><div class="value-dot"></div>Flow — 身体の流れに身を委ねる</div>
+      <div class="value-item"><div class="value-dot"></div>Light — 内なる光を見つける</div>
+      <div class="value-item"><div class="value-dot"></div>Breath — 呼吸を整え、心を静める</div>
+      <div class="value-item"><div class="value-dot"></div>Flow — 身体の流れに身を委ねる</div>
+      <div class="value-item"><div class="value-dot"></div>Light — 内なる光を見つける</div>
+      <div class="value-item"><div class="value-dot"></div>Breath — 呼吸を整え、心を静める</div>
+      <div class="value-item"><div class="value-dot"></div>Flow — 身体の流れに身を委ねる</div>
+      <div class="value-item"><div class="value-dot"></div>Light — 内なる光を見つける</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     CLASSES
+========================================== -->
+<section class="section section-white gradient-shift" id="classes">
+  <div class="container">
+    <p class="section-label reveal">Class</p>
+    <h2 class="section-title reveal">4つのクラスで、<br>あなただけの時間を。</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="classes-grid stagger-children">
+      <!-- Hatha -->
+      <div class="class-card">
+        <div class="class-icon">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="18"/></svg>
+        </div>
+        <h3>ハタヨガ</h3>
+        <div class="class-meta">Basic ・ 60min</div>
+        <p>初心者歓迎。基本ポーズを丁寧に。呼吸法から始める、やさしいヨガ。</p>
+      </div>
+
+      <!-- Vinyasa -->
+      <div class="class-card">
+        <div class="class-icon">
+          <svg viewBox="0 0 48 48"><path d="M4,30 Q16,10 24,24 Q32,38 44,18"/></svg>
+        </div>
+        <h3>ヴィンヤサフロー</h3>
+        <div class="class-meta">Flow ・ 75min</div>
+        <p>呼吸と動きの連動。体力UP・ストレス解消に。中級者向け。</p>
+      </div>
+
+      <!-- Restorative -->
+      <div class="class-card">
+        <div class="class-icon">
+          <svg viewBox="0 0 48 48"><path d="M14,34 Q24,14 34,34" /><line x1="24" y1="14" x2="24" y2="38"/></svg>
+        </div>
+        <h3>リストラティブヨガ</h3>
+        <div class="class-meta">Restore ・ 60min</div>
+        <p>プロップス使用。完全リラクゼーション。疲労回復に最適。</p>
+      </div>
+
+      <!-- Meditation -->
+      <div class="class-card">
+        <div class="class-icon">
+          <svg viewBox="0 0 48 48"><rect x="12" y="12" width="24" height="24" rx="2" transform="rotate(45 24 24)"/></svg>
+        </div>
+        <h3>瞑想</h3>
+        <div class="class-meta">Meditation ・ 45min</div>
+        <p>マインドフルネス。心を静め、内なる光を見つける。全レベル。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative ring -->
+  <div class="deco-ring" style="width:400px;height:400px;top:-100px;right:-100px;"></div>
+</section>
+
+<!-- ==========================================
+     PRICING
+========================================== -->
+<section class="section section-alt" id="pricing">
+  <div class="container">
+    <p class="section-label reveal">Price</p>
+    <h2 class="section-title reveal">シンプルで<br>わかりやすい料金体系。</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="pricing-grid stagger-children">
+      <!-- Trial -->
+      <div class="price-card">
+        <div class="price-badge trial">初回限定</div>
+        <div class="price-name">体験レッスン</div>
+        <div class="price-amount">¥1,500</div>
+        <div class="price-detail">まずは体験から。<br>手ぶらでOK。</div>
+      </div>
+
+      <!-- Drop-in -->
+      <div class="price-card">
+        <div class="price-badge">都度利用</div>
+        <div class="price-name">ドロップイン</div>
+        <div class="price-amount">¥3,500</div>
+        <div class="price-detail">1回ごとの利用。<br>好きなときに。</div>
+      </div>
+
+      <!-- Monthly 4 -->
+      <div class="price-card recommended">
+        <div class="price-badge">おすすめ</div>
+        <div class="price-name">月4回プラン</div>
+        <div class="price-amount">¥10,000</div>
+        <div class="price-detail">週1ペースで<br>無理なく続ける。</div>
+      </div>
+
+      <!-- Unlimited -->
+      <div class="price-card">
+        <div class="price-badge">通い放題</div>
+        <div class="price-name">フリーパス</div>
+        <div class="price-amount">¥16,000</div>
+        <div class="price-detail">何度でも通える。<br>本格的に取り組む方に。</div>
+      </div>
+    </div>
+
+    <div class="pricing-note reveal">
+      マット・タオルレンタル無料 ／ 入会金 ¥5,000（体験当日入会で無料）
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     INSTRUCTORS
+========================================== -->
+<section class="section section-white" id="instructors">
+  <div class="container">
+    <p class="section-label reveal">Instructor</p>
+    <h2 class="section-title reveal">あなたの旅に<br>寄り添うガイド。</h2>
+    <div class="section-divider reveal" style="margin-bottom: 3.5rem;"></div>
+
+    <!-- Miki -->
+    <div class="instructor-card">
+      <div class="instructor-photo reveal-left">
+        <div class="photo-placeholder"><span class="initials">M</span></div>
+      </div>
+      <div class="instructor-info reveal-right">
+        <h3>Miki</h3>
+        <div class="instructor-role">主宰 ・ RYT500</div>
+        <div class="instructor-quote">「ヨガは自分を愛する練習」</div>
+        <p>インドにて2年間の修行を経て、代官山にLumièreをオープン。ハタヨガと瞑想を中心に、生徒一人ひとりのペースに寄り添った指導を行う。呼吸を大切にしたクラスが人気。</p>
+      </div>
+    </div>
+
+    <!-- Aoi -->
+    <div class="instructor-card reverse">
+      <div class="instructor-photo reveal-right">
+        <div class="photo-placeholder"><span class="initials">A</span></div>
+      </div>
+      <div class="instructor-info reveal-left">
+        <h3>Aoi</h3>
+        <div class="instructor-role">インストラクター ・ RYT200</div>
+        <div class="instructor-quote">「身体が変われば、心も変わる」</div>
+        <p>元ダンサー。ヴィンヤサフローとリストラティブヨガを担当。ダイナミックでありながら繊細な指導が特徴。身体の使い方を熟知した的確なアジャストメントに定評がある。</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="deco-ring" style="width:300px;height:300px;bottom:-80px;left:-80px;animation-direction:reverse;"></div>
+</section>
+
+<!-- ==========================================
+     SCHEDULE
+========================================== -->
+<section class="section section-alt" id="schedule">
+  <div class="container">
+    <p class="section-label reveal">Schedule</p>
+    <h2 class="section-title reveal">週間スケジュール</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="schedule-table-wrapper reveal">
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+            <th>Sun</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="font-size:0.78rem;color:var(--brown-light);">AM</td>
+            <td>
+              <div class="schedule-cell hatha">
+                <span class="time">10:00</span>ハタヨガ<br><span class="instructor-name">Miki</span>
+              </div>
+            </td>
+            <td>
+              <div class="schedule-cell restorative">
+                <span class="time">10:00</span>リストラティブ<br><span class="instructor-name">Aoi</span>
+              </div>
+            </td>
+            <td>
+              <div class="schedule-cell hatha">
+                <span class="time">10:00</span>ハタヨガ<br><span class="instructor-name">Miki</span>
+              </div>
+            </td>
+            <td rowspan="3" style="vertical-align:middle;">
+              <span class="schedule-rest">休 み</span>
+            </td>
+            <td>
+              <div class="schedule-cell vinyasa">
+                <span class="time">10:00</span>ヴィンヤサ<br><span class="instructor-name">Miki</span>
+              </div>
+            </td>
+            <td>
+              <div class="schedule-cell hatha">
+                <span class="time">10:00</span>ハタヨガ<br><span class="instructor-name">Miki</span>
+              </div>
+            </td>
+            <td>
+              <div class="schedule-cell hatha">
+                <span class="time">10:00</span>ハタヨガ<br><span class="instructor-name">Aoi</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size:0.78rem;color:var(--brown-light);">PM</td>
+            <td>—</td>
+            <td>
+              <div class="schedule-cell meditation">
+                <span class="time">14:00</span>瞑想<br><span class="instructor-name">Miki</span>
+              </div>
+            </td>
+            <td>—</td>
+            <td>—</td>
+            <td>
+              <div class="schedule-cell meditation">
+                <span class="time">13:00</span>瞑想<br><span class="instructor-name">Miki</span>
+              </div>
+            </td>
+            <td>
+              <div class="schedule-cell restorative">
+                <span class="time">13:00</span>リストラティブ<br><span class="instructor-name">Miki</span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="font-size:0.78rem;color:var(--brown-light);">Eve</td>
+            <td>
+              <div class="schedule-cell vinyasa">
+                <span class="time">19:00</span>ヴィンヤサ<br><span class="instructor-name">Aoi</span>
+              </div>
+            </td>
+            <td>—</td>
+            <td>
+              <div class="schedule-cell vinyasa">
+                <span class="time">19:00</span>ヴィンヤサ<br><span class="instructor-name">Aoi</span>
+              </div>
+            </td>
+            <td>
+              <div class="schedule-cell restorative">
+                <span class="time">19:00</span>リストラティブ<br><span class="instructor-name">Aoi</span>
+              </div>
+            </td>
+            <td>
+              <div class="schedule-cell vinyasa">
+                <span class="time">16:00</span>ヴィンヤサ<br><span class="instructor-name">Aoi</span>
+              </div>
+            </td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     TESTIMONIALS
+========================================== -->
+<section class="section section-white" id="testimonials">
+  <div class="container">
+    <p class="section-label reveal">Voice</p>
+    <h2 class="section-title reveal">通ってくださる方の声。</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="testimonials-grid stagger-children">
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <p class="testimonial-text">仕事で疲れ切った身体が、1回のレッスンで驚くほど軽くなりました。今では週2回通っています。</p>
+        <div class="testimonial-author"><span>—</span> 30代女性・会社員</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <p class="testimonial-text">ヨガ初心者でも安心して通える雰囲気。Miki先生の丁寧な指導が心地いい。</p>
+        <div class="testimonial-author"><span>—</span> 40代男性・経営者</div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-quote-mark">"</div>
+        <p class="testimonial-text">代官山の隠れ家的な空間が大好き。ここに来ると日常のストレスが溶けていく感覚です。</p>
+        <div class="testimonial-author"><span>—</span> 20代女性・デザイナー</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="deco-ring" style="width:250px;height:250px;top:-60px;left:50%;margin-left:-125px;"></div>
+</section>
+
+<!-- ==========================================
+     ACCESS & CONTACT
+========================================== -->
+<section class="section section-alt" id="contact">
+  <div class="container">
+    <p class="section-label reveal">Access & Contact</p>
+    <h2 class="section-title reveal">木漏れ日が差し込む、<br>静かなスタジオで<br>お待ちしています。</h2>
+    <div class="section-divider reveal" style="margin-bottom: 2rem;"></div>
+
+    <div class="contact-grid">
+      <!-- Access Info -->
+      <div class="access-info reveal-left">
+        <h3>アクセス</h3>
+
+        <dl class="access-detail">
+          <dt>ADDRESS</dt>
+          <dd>東京都渋谷区代官山町X-X ○○ハウス 2F</dd>
+        </dl>
+        <dl class="access-detail">
+          <dt>STATION</dt>
+          <dd>東急東横線 代官山駅 正面口 徒歩2分</dd>
+        </dl>
+        <dl class="access-detail">
+          <dt>TEL</dt>
+          <dd>03-XXXX-XXXX</dd>
+        </dl>
+        <dl class="access-detail">
+          <dt>HOURS</dt>
+          <dd>10:00 — 21:00（木曜定休）</dd>
+        </dl>
+
+        <!-- Map placeholder -->
+        <div class="map-placeholder">
+          <div class="map-pin">
+            <div class="pin-dot"></div>
+            <div class="pin-pulse"></div>
+          </div>
+          <div class="map-label">Lumière</div>
+          <!-- Extra road lines -->
+          <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" viewBox="0 0 400 250" preserveAspectRatio="none">
+            <line x1="0" y1="80" x2="400" y2="120" stroke="rgba(212,197,169,0.3)" stroke-width="1.5"/>
+            <line x1="100" y1="0" x2="120" y2="250" stroke="rgba(212,197,169,0.3)" stroke-width="1"/>
+            <line x1="250" y1="0" x2="280" y2="250" stroke="rgba(212,197,169,0.25)" stroke-width="1"/>
+            <line x1="0" y1="180" x2="400" y2="160" stroke="rgba(212,197,169,0.2)" stroke-width="1"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="contact-form reveal-right">
+        <h3>お問い合わせ</h3>
+
+        <form onsubmit="return false;">
+          <div class="form-group">
+            <label>お名前</label>
+            <input type="text" placeholder="山田 太郎">
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <label>メールアドレス</label>
+            <input type="email" placeholder="mail@example.com">
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <label>お電話番号</label>
+            <input type="tel" placeholder="090-0000-0000">
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <label>ご希望のクラス</label>
+            <select>
+              <option value="">選択してください</option>
+              <option>ハタヨガ（Basic）</option>
+              <option>ヴィンヤサフロー（Flow）</option>
+              <option>リストラティブヨガ（Restore）</option>
+              <option>瞑想（Meditation）</option>
+              <option>体験レッスン</option>
+            </select>
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <label>メッセージ</label>
+            <textarea placeholder="ご質問やご希望があればお書きください"></textarea>
+            <div class="form-line"></div>
+          </div>
+          <button type="submit" class="form-submit">送信する</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     FOOTER
+========================================== -->
+<footer class="footer">
+  <div class="footer-logo">Lumière</div>
+  <nav class="footer-nav">
+    <a href="#classes">Class</a>
+    <a href="#pricing">Price</a>
+    <a href="#instructors">Instructor</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#contact">Access</a>
+  </nav>
+  <div class="footer-social">
+    <a href="#">Instagram</a>
+    <a href="#">LINE</a>
+  </div>
+  <div class="footer-divider"></div>
+  <div class="footer-copy">&copy; 2026 Yoga Studio Lumière</div>
+  <div class="footer-credit">Produced by HNH Design Works</div>
+</footer>
+
+<!-- ==========================================
+     JAVASCRIPT
+========================================== -->
+<script>
+(function() {
+  'use strict';
+
+  /* ----------------------------------------
+     1. Loading Screen
+  ---------------------------------------- */
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+      document.getElementById('loader').classList.add('hide');
+    }, 2000);
+  });
+
+  /* ----------------------------------------
+     2. Hero Title — Character-by-character animation
+  ---------------------------------------- */
+  (function() {
+    var title = document.getElementById('heroTitle');
+    var text = title.textContent;
+    title.textContent = '';
+    for (var i = 0; i < text.length; i++) {
+      var span = document.createElement('span');
+      span.classList.add('char');
+      span.textContent = text[i];
+      span.style.animationDelay = (1.8 + i * 0.08) + 's';
+      title.appendChild(span);
+    }
+  })();
+
+  /* ----------------------------------------
+     3. Navigation — Scroll & Mobile Menu
+  ---------------------------------------- */
+  var nav = document.getElementById('nav');
+  var hamburger = document.getElementById('hamburger');
+  var overlay = document.getElementById('navOverlay');
+  var overlayLinks = overlay.querySelectorAll('a');
+
+  function onScroll() {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('open');
+    overlay.classList.toggle('open');
+    document.body.style.overflow = overlay.classList.contains('open') ? 'hidden' : '';
+  });
+
+  overlayLinks.forEach(function(link) {
+    link.addEventListener('click', function() {
+      hamburger.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  /* ----------------------------------------
+     4. Custom Cursor (desktop)
+  ---------------------------------------- */
+  if (window.matchMedia('(pointer: fine)').matches) {
+    var dot = document.querySelector('.cursor-dot');
+    var ring = document.querySelector('.cursor-ring');
+    var mx = 0, my = 0;
+    var rx = 0, ry = 0;
+
+    document.addEventListener('mousemove', function(e) {
+      mx = e.clientX;
+      my = e.clientY;
+      dot.style.left = mx + 'px';
+      dot.style.top = my + 'px';
+    });
+
+    function animateCursor() {
+      rx += (mx - rx) * 0.15;
+      ry += (my - ry) * 0.15;
+      ring.style.left = rx + 'px';
+      ring.style.top = ry + 'px';
+      requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Hover effect on interactive elements
+    var hoverTargets = document.querySelectorAll('a, button, .class-card, .price-card, .testimonial-card, .instructor-photo');
+    hoverTargets.forEach(function(el) {
+      el.addEventListener('mouseenter', function() { ring.classList.add('hover'); });
+      el.addEventListener('mouseleave', function() { ring.classList.remove('hover'); });
+    });
+  }
+
+  /* ----------------------------------------
+     5. Scroll Reveal (IntersectionObserver)
+  ---------------------------------------- */
+  var revealClasses = ['.reveal', '.reveal-left', '.reveal-right', '.reveal-scale', '.stagger-children'];
+  var revealElements = document.querySelectorAll(revealClasses.join(','));
+
+  var revealObserver = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  revealElements.forEach(function(el) {
+    revealObserver.observe(el);
+  });
+
+  /* ----------------------------------------
+     6. Parallax Effects
+  ---------------------------------------- */
+  var breathingCircles = document.querySelectorAll('.breathing-circle');
+  var decoLeaves = document.querySelectorAll('.deco-leaf');
+  var decoRings = document.querySelectorAll('.deco-ring');
+  var heroBlobs = document.querySelectorAll('.hero-blob');
+
+  function parallax() {
+    var scrollY = window.scrollY;
+
+    // Breathing circles
+    breathingCircles.forEach(function(el, i) {
+      var speed = i === 0 ? 0.03 : 0.02;
+      el.style.transform = 'translateY(' + (scrollY * speed) + 'px) scale(' + (1 + Math.sin(Date.now() / 3000 + i) * 0.04) + ')';
+    });
+
+    // Leaf silhouettes
+    decoLeaves.forEach(function(el, i) {
+      var speed = i === 0 ? -0.04 : 0.03;
+      el.style.transform += ' translateY(' + (scrollY * speed) + 'px)';
+    });
+
+    // Hero blobs
+    heroBlobs.forEach(function(el, i) {
+      el.style.transform = 'translateY(' + (scrollY * (0.1 + i * 0.02)) + 'px)';
+    });
+  }
+
+  var ticking = false;
+  window.addEventListener('scroll', function() {
+    if (!ticking) {
+      requestAnimationFrame(function() {
+        parallax();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  /* ----------------------------------------
+     7. Smooth Scroll for Anchor Links
+  ---------------------------------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+      var href = this.getAttribute('href');
+      if (href === '#') return;
+      var target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        var offset = nav.offsetHeight + 10;
+        var top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }
+    });
+  });
+
+})();
+</script>
+
+</body>
+</html>
