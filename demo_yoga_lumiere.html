@@ -1597,42 +1597,76 @@
     /* ==============================================
        23. STRIPE PAYMENT SECTION
     ============================================== */
-    .payment-card {
-      max-width: 420px;
+    .payment-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      max-width: 960px;
       margin: 3rem auto 0;
+    }
+    @media (max-width: 768px) {
+      .payment-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .payment-grid { grid-template-columns: 1fr; }
+    }
+    .payment-card {
       background: var(--white);
       border-radius: 20px;
-      padding: 3rem 2.5rem;
+      padding: 2.2rem 1.5rem 2rem;
       text-align: center;
       box-shadow: 0 8px 40px rgba(42,34,24,0.06);
       border: 1px solid rgba(212,197,169,0.2);
       transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .payment-card:hover {
       transform: translateY(-4px);
       box-shadow: 0 16px 50px rgba(42,34,24,0.1);
     }
+    .payment-card.featured {
+      border: 2px solid var(--green);
+      position: relative;
+    }
+    .payment-card .payment-badge {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      color: var(--white);
+      background: var(--green);
+      padding: 0.25rem 0.9rem;
+      border-radius: 50px;
+      margin-bottom: 1rem;
+      font-family: var(--sans);
+    }
     .payment-card .payment-price-label {
       font-family: var(--serif);
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       color: var(--brown);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
     .payment-card .payment-price {
       font-family: var(--serif);
-      font-size: 2.8rem;
+      font-size: 2.2rem;
       font-weight: 400;
       color: var(--green);
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.3rem;
+    }
+    .payment-card .payment-price-sub {
+      font-size: 0.75rem;
+      color: var(--brown-light);
+      margin-bottom: 1.2rem;
     }
     .payment-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.6rem;
-      padding: 1rem 2.5rem;
+      gap: 0.5rem;
+      padding: 0.8rem 1.8rem;
       background: var(--green);
       color: var(--white);
-      font-size: 0.95rem;
+      font-size: 0.85rem;
       font-weight: 400;
       letter-spacing: 0.06em;
       border-radius: 50px;
@@ -1640,6 +1674,8 @@
       transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
       border: none;
       font-family: var(--sans);
+      margin-top: auto;
+      text-decoration: none;
     }
     .payment-btn:hover {
       background: var(--green-dark);
@@ -1647,26 +1683,83 @@
       box-shadow: 0 8px 25px rgba(90,114,71,0.25);
     }
     .payment-btn svg {
-      width: 20px; height: 20px;
+      width: 18px; height: 18px;
       fill: none;
       stroke: currentColor;
       stroke-width: 1.5;
     }
-    .payment-note {
-      margin-top: 1.2rem;
+    .payment-secure {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-top: 2.5rem;
       font-size: 0.78rem;
       color: var(--brown-light);
     }
-    .payment-feedback {
-      display: none;
-      margin-top: 1rem;
-      padding: 0.8rem 1.2rem;
-      background: rgba(90,114,71,0.08);
-      border-radius: 8px;
-      font-size: 0.85rem;
-      color: var(--green-dark);
+    .payment-secure svg {
+      width: 16px; height: 16px;
+      fill: none;
+      stroke: var(--brown-light);
+      stroke-width: 1.5;
     }
-    .payment-feedback.show { display: block; }
+    .stripe-badge {
+      display: inline-block;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--brown);
+      font-size: 0.82rem;
+    }
+
+    /* Demo modal */
+    .demo-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(42,34,24,0.45);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+    }
+    .demo-modal-overlay.show { display: flex; }
+    .demo-modal {
+      background: var(--white);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      max-width: 420px;
+      width: 90%;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(42,34,24,0.15);
+      animation: modalIn 0.3s var(--ease-out-expo);
+    }
+    @keyframes modalIn {
+      from { opacity: 0; transform: scale(0.92) translateY(20px); }
+      to { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .demo-modal h3 {
+      font-family: var(--serif);
+      font-size: 1.2rem;
+      color: var(--green);
+      margin-bottom: 1rem;
+    }
+    .demo-modal p {
+      font-size: 0.9rem;
+      color: var(--brown);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+    }
+    .demo-modal-close {
+      padding: 0.7rem 2rem;
+      background: var(--green);
+      color: var(--white);
+      border: none;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      cursor: pointer;
+      font-family: var(--sans);
+      transition: background 0.3s;
+    }
+    .demo-modal-close:hover { background: var(--green-dark); }
 
     /* ==============================================
        24. NEWSLETTER SECTION
@@ -2158,22 +2251,81 @@
 ========================================== -->
 <section class="section section-white" id="payment">
   <div class="container" style="text-align:center;">
-    <p class="section-label reveal" data-ja="Booking" data-en="Booking">Booking</p>
-    <h2 class="section-title reveal" data-ja="体験レッスンのご予約" data-en="Book a Trial Lesson">体験レッスンのご予約</h2>
+    <p class="section-label reveal" data-ja="Online Payment" data-en="Online Payment">Online Payment</p>
+    <h2 class="section-title reveal" data-ja="オンライン決済" data-en="Online Payment">オンライン決済</h2>
     <div class="section-divider reveal" style="margin:0 auto 1rem;"></div>
 
-    <div class="payment-card reveal">
-      <div class="payment-price-label" data-ja="体験レッスン" data-en="Trial Lesson">体験レッスン</div>
-      <div class="payment-price">¥1,000</div>
-      <button class="payment-btn" id="stripePayBtn">
-        <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-        <span data-ja="カードで支払う" data-en="Pay by Card">カードで支払う</span>
-      </button>
-      <div class="payment-note" data-ja="※ Stripe決済で安全にお支払いいただけます" data-en="※ Secure payment via Stripe">※ Stripe決済で安全にお支払いいただけます</div>
-      <div class="payment-feedback" id="paymentFeedback" data-ja="ありがとうございます。決済ページへ移動します..." data-en="Thank you. Redirecting to payment...">ありがとうございます。決済ページへ移動します...</div>
+    <div class="payment-grid stagger-children">
+      <!-- 体験レッスン -->
+      <div class="payment-card featured">
+        <div class="payment-badge" data-ja="初回限定" data-en="First Time">初回限定</div>
+        <div class="payment-price-label" data-ja="体験レッスン" data-en="Trial Lesson">体験レッスン</div>
+        <div class="payment-price">¥3,000</div>
+        <div class="payment-price-sub" data-ja="税込" data-en="incl. tax">税込</div>
+        <!-- 本番時はhref="https://buy.stripe.com/xxxxx_trial" に変更 -->
+        <button class="payment-btn stripe-pay-btn" data-plan="体験レッスン ¥3,000">
+          <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          <span data-ja="お支払い" data-en="Pay Now">お支払い</span>
+        </button>
+      </div>
+
+      <!-- ドロップイン -->
+      <div class="payment-card">
+        <div class="payment-badge" data-ja="都度利用" data-en="Drop-in">都度利用</div>
+        <div class="payment-price-label" data-ja="ドロップイン" data-en="Drop-in">ドロップイン</div>
+        <div class="payment-price">¥2,500</div>
+        <div class="payment-price-sub" data-ja="税込 / 1回" data-en="incl. tax / session">税込 / 1回</div>
+        <!-- 本番時はhref="https://buy.stripe.com/xxxxx_dropin" に変更 -->
+        <button class="payment-btn stripe-pay-btn" data-plan="ドロップイン ¥2,500">
+          <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          <span data-ja="お支払い" data-en="Pay Now">お支払い</span>
+        </button>
+      </div>
+
+      <!-- 月4回プラン -->
+      <div class="payment-card">
+        <div class="payment-badge" data-ja="おすすめ" data-en="Recommended">おすすめ</div>
+        <div class="payment-price-label" data-ja="月4回プラン" data-en="4x Monthly">月4回プラン</div>
+        <div class="payment-price">¥8,000</div>
+        <div class="payment-price-sub" data-ja="税込 / 月" data-en="incl. tax / mo">税込 / 月</div>
+        <!-- 本番時はhref="https://buy.stripe.com/xxxxx_monthly4" に変更 -->
+        <button class="payment-btn stripe-pay-btn" data-plan="月4回プラン ¥8,000/月">
+          <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          <span data-ja="お支払い" data-en="Pay Now">お支払い</span>
+        </button>
+      </div>
+
+      <!-- 通い放題 -->
+      <div class="payment-card">
+        <div class="payment-badge" data-ja="通い放題" data-en="Unlimited">通い放題</div>
+        <div class="payment-price-label" data-ja="フリーパス" data-en="Free Pass">フリーパス</div>
+        <div class="payment-price">¥15,000</div>
+        <div class="payment-price-sub" data-ja="税込 / 月" data-en="incl. tax / mo">税込 / 月</div>
+        <!-- 本番時はhref="https://buy.stripe.com/xxxxx_unlimited" に変更 -->
+        <button class="payment-btn stripe-pay-btn" data-plan="フリーパス ¥15,000/月">
+          <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+          <span data-ja="お支払い" data-en="Pay Now">お支払い</span>
+        </button>
+      </div>
+    </div>
+
+    <div class="payment-secure reveal">
+      <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <span>Powered by</span>
+      <span class="stripe-badge">Stripe</span>
+      <span data-ja="— 安全な決済" data-en="— Secure Payment">— 安全な決済</span>
     </div>
   </div>
 </section>
+
+<!-- Demo Modal -->
+<div class="demo-modal-overlay" id="demoModal">
+  <div class="demo-modal">
+    <h3 data-ja="デモサイトです" data-en="Demo Site">デモサイトです</h3>
+    <p id="demoModalText" data-ja="これはデモサイトです。実際のサービスではStripe決済ページへ移動し、安全にお支払いいただけます。" data-en="This is a demo site. In production, you would be redirected to a secure Stripe checkout page.">これはデモサイトです。実際のサービスではStripe決済ページへ移動し、安全にお支払いいただけます。</p>
+    <button class="demo-modal-close" id="demoModalClose" data-ja="閉じる" data-en="Close">閉じる</button>
+  </div>
+</div>
 
 <!-- ==========================================
      INSTRUCTORS
@@ -2810,20 +2962,36 @@
   });
 
   /* ----------------------------------------
-     10. Stripe Payment Button
+     10. Stripe Payment Buttons (Demo Mode)
+     本番切り替え: 各 .stripe-pay-btn を <a> タグに変更し、
+     href="https://buy.stripe.com/xxxxx" を設定するだけでOK
   ---------------------------------------- */
-  var stripeBtn = document.getElementById('stripePayBtn');
-  var paymentFeedback = document.getElementById('paymentFeedback');
-  if (stripeBtn) {
-    stripeBtn.addEventListener('click', function() {
-      paymentFeedback.classList.add('show');
-      stripeBtn.style.opacity = '0.6';
-      stripeBtn.style.pointerEvents = 'none';
-      setTimeout(function() {
-        paymentFeedback.classList.remove('show');
-        stripeBtn.style.opacity = '1';
-        stripeBtn.style.pointerEvents = 'auto';
-      }, 3000);
+  var stripeBtns = document.querySelectorAll('.stripe-pay-btn');
+  var demoModal = document.getElementById('demoModal');
+  var demoModalClose = document.getElementById('demoModalClose');
+  var demoModalText = document.getElementById('demoModalText');
+
+  stripeBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var plan = btn.getAttribute('data-plan');
+      var lang = document.documentElement.lang || 'ja';
+      if (lang === 'en') {
+        demoModalText.textContent = 'This is a demo site. In production, you would be redirected to a secure Stripe checkout page for: ' + plan;
+      } else {
+        demoModalText.textContent = 'これはデモサイトです。実際のサービスではStripe決済ページへ移動し、安全にお支払いいただけます。（選択プラン: ' + plan + '）';
+      }
+      demoModal.classList.add('show');
+    });
+  });
+
+  if (demoModalClose) {
+    demoModalClose.addEventListener('click', function() {
+      demoModal.classList.remove('show');
+    });
+  }
+  if (demoModal) {
+    demoModal.addEventListener('click', function(e) {
+      if (e.target === demoModal) demoModal.classList.remove('show');
     });
   }
 
