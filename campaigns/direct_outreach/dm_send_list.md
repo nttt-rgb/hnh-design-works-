@@ -2,7 +2,13 @@
 
 **最終更新:** 2026-04-09
 **対象:** HPなし＆Instagram判明のリード
-**総数:** 68件
+**総数:** 149件
+
+| テンプレート | 件数 |
+|---|---|
+| パターンA（汎用） | 10 |
+| パターンB（飲食向け） | 112 |
+| パターンC（美容向け） | 27 |
 
 ---
 
@@ -64,7 +70,35 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 3. カフェ ヴィエット アルコ
+## 3. 食堂かど。
+
+- **業種:** 居酒屋
+- **エリア:** 三軒茶屋
+- **Instagram:** https://www.instagram.com/syokudou.kado/
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！食堂かど。さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「三軒茶屋 ランチ」「三軒茶屋 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 4. カフェ ヴィエット アルコ
 
 - **業種:** カフェ
 - **エリア:** 下北沢
@@ -93,7 +127,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 4. マサコ
+## 5. マサコ
 
 - **業種:** カフェ
 - **エリア:** 下北沢
@@ -121,7 +155,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 5. 喫茶 一房
+## 6. 喫茶 一房
 
 - **業種:** カフェ
 - **エリア:** 下北沢
@@ -150,7 +184,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 6. 喫茶ネグラ
+## 7. 喫茶ネグラ
 
 - **業種:** カフェ
 - **エリア:** 下北沢
@@ -179,7 +213,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 7. D-DRAGON
+## 8. D-DRAGON
 
 - **業種:** 居酒屋
 - **エリア:** 下北沢
@@ -208,7 +242,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 8. 下北酒場 こいどろぼう
+## 9. 下北酒場 こいどろぼう
 
 - **業種:** 居酒屋
 - **エリア:** 下北沢
@@ -237,7 +271,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 9. 鶏と魚と炭火焼き 燈
+## 10. 鶏と魚と炭火焼き 燈
 
 - **業種:** 居酒屋
 - **エリア:** 下北沢
@@ -266,7 +300,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 10. アート喫茶 フライ
+## 11. アート喫茶 フライ
 
 - **業種:** 喫茶店
 - **エリア:** 中目黒
@@ -295,7 +329,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 11. レカー
+## 12. レカー
 
 - **業種:** パン・ベーカリー
 - **エリア:** 代官山
@@ -323,7 +357,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 12. WAJO×朗
+## 13. WAJO×朗
 
 - **業種:** レストラン（イタリアン）
 - **エリア:** 代官山
@@ -352,7 +386,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 13. バー六本木
+## 14. バー六本木
 
 - **業種:** バー
 - **エリア:** 六本木
@@ -381,7 +415,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 14. BARATIE
+## 15. BARATIE
 
 - **業種:** バー/居酒屋
 - **エリア:** 六本木
@@ -410,7 +444,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 15. 江戸前鮓 すし通
+## 16. 江戸前鮓 すし通
 
 - **業種:** 寿司
 - **エリア:** 六本木
@@ -439,7 +473,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 16. おでん屋 ずぶ六
+## 17. おでん屋 ずぶ六
 
 - **業種:** 居酒屋
 - **エリア:** 六本木
@@ -468,7 +502,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 17. 弥勒食堂
+## 18. 弥勒食堂
 
 - **業種:** 居酒屋
 - **エリア:** 六本木
@@ -497,7 +531,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 18. 朝日食堂
+## 19. 朝日食堂
 
 - **業種:** 居酒屋
 - **エリア:** 六本木
@@ -526,7 +560,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 19. 酒呑
+## 20. 酒呑
 
 - **業種:** 居酒屋
 - **エリア:** 六本木
@@ -555,7 +589,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 20. 銘柄焼鳥 もつ鍋 個室居酒屋 千鳥 六本木店
+## 21. 銘柄焼鳥 もつ鍋 個室居酒屋 千鳥 六本木店
 
 - **業種:** 居酒屋
 - **エリア:** 六本木
@@ -584,7 +618,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 21. レインボーパンケーキ
+## 22. レインボーパンケーキ
 
 - **業種:** カフェ
 - **エリア:** 原宿
@@ -613,7 +647,85 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 22. COYORI
+## 23. DLAW tokyo
+
+- **業種:** ネイルサロン
+- **エリア:** 原宿
+- **Instagram:** https://www.instagram.com/dlaw_nail/
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！DLAW tokyoさんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 24. Richer
+
+- **業種:** ネイルサロン
+- **エリア:** 原宿
+- **Instagram:** https://www.instagram.com/richer_nail.eyebeauty/
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！Richerさんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 25. Shanty Carina
+
+- **業種:** ネイルサロン
+- **エリア:** 原宿
+- **Instagram:** https://www.instagram.com/nail.carina/
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！Shanty Carinaさんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 26. COYORI
 
 - **業種:** バー
 - **エリア:** 広尾
@@ -641,7 +753,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 23. DBL
+## 27. DBL
 
 - **業種:** バー
 - **エリア:** 広尾
@@ -670,7 +782,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 24. LAIDBACKS
+## 28. LAIDBACKS
 
 - **業種:** バー
 - **エリア:** 広尾
@@ -698,7 +810,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 25. S TOKYO
+## 29. S TOKYO
 
 - **業種:** ワインバー
 - **エリア:** 広尾
@@ -727,7 +839,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 26. 呑み屋 ぺりどっと
+## 30. 呑み屋 ぺりどっと
 
 - **業種:** ワインバー
 - **エリア:** 広尾
@@ -755,7 +867,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 27. きたぽん酒
+## 31. きたぽん酒
 
 - **業種:** 日本酒バー
 - **エリア:** 広尾
@@ -784,7 +896,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 28. 居酒屋 黒電話
+## 32. 居酒屋 黒電話
 
 - **業種:** 居酒屋
 - **エリア:** 恵比寿
@@ -813,7 +925,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 29. 恵比寿 あさひ堂
+## 33. 恵比寿 あさひ堂
 
 - **業種:** 居酒屋
 - **エリア:** 恵比寿
@@ -842,7 +954,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 30. 恵比寿 つむぎや
+## 34. 恵比寿 つむぎや
 
 - **業種:** 居酒屋
 - **エリア:** 恵比寿
@@ -871,7 +983,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 31. 粋 恵比寿店
+## 35. 粋 恵比寿店
 
 - **業種:** 居酒屋
 - **エリア:** 恵比寿
@@ -900,7 +1012,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 32. 酒場 ひまり堂 恵比寿店
+## 36. 酒場 ひまり堂 恵比寿店
 
 - **業種:** 居酒屋
 - **エリア:** 恵比寿
@@ -929,7 +1041,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 33. 284（ニハチヨン）
+## 37. 284（ニハチヨン）
 
 - **業種:** 居酒屋・バー
 - **エリア:** 恵比寿
@@ -958,7 +1070,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 34. amme
+## 38. amme
 
 - **業種:** 居酒屋・バー
 - **エリア:** 恵比寿
@@ -987,7 +1099,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 35. おだし 恵比寿店
+## 39. おだし 恵比寿店
 
 - **業種:** 居酒屋・和食
 - **エリア:** 恵比寿
@@ -1016,7 +1128,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 36. 炭焼と炉端テント 恵比寿
+## 40. 炭焼と炉端テント 恵比寿
 
 - **業種:** 居酒屋・炉端焼き
 - **エリア:** 恵比寿
@@ -1045,7 +1157,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 37. 善菜（ZENNA）
+## 41. 善菜（ZENNA）
 
 - **業種:** 居酒屋・鶏料理
 - **エリア:** 恵比寿
@@ -1074,7 +1186,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 38. 手羽先むつみ 恵比寿店
+## 42. 手羽先むつみ 恵比寿店
 
 - **業種:** 居酒屋・鶏料理
 - **エリア:** 恵比寿
@@ -1103,7 +1215,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 39. えっちゃんラーメン。
+## 43. えっちゃんラーメン。
 
 - **業種:** ラーメン
 - **エリア:** 新宿
@@ -1132,7 +1244,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 40. らぁめん 満来
+## 44. らぁめん 満来
 
 - **業種:** ラーメン
 - **エリア:** 新宿
@@ -1161,7 +1273,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 41. シンちゃんラーメン
+## 45. シンちゃんラーメン
 
 - **業種:** ラーメン
 - **エリア:** 新宿
@@ -1190,7 +1302,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 42. 中華そば 流川
+## 46. 中華そば 流川
 
 - **業種:** ラーメン
 - **エリア:** 新宿
@@ -1219,7 +1331,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 43. 煮干中華そば 鈴蘭
+## 47. 煮干中華そば 鈴蘭
 
 - **業種:** ラーメン
 - **エリア:** 新宿
@@ -1248,7 +1360,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 44. 百日紅
+## 48. 百日紅
 
 - **業種:** ラーメン
 - **エリア:** 新宿
@@ -1277,7 +1389,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 45. 酒場つむぎ堂 新宿店
+## 49. 酒場つむぎ堂 新宿店
 
 - **業種:** 居酒屋
 - **エリア:** 新宿
@@ -1306,7 +1418,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 46. 魚吉酒場 新宿店
+## 50. 魚吉酒場 新宿店
 
 - **業種:** 居酒屋
 - **エリア:** 新宿
@@ -1335,7 +1447,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 47. 鮮魚と炉端と純米酒 かきび
+## 51. 鮮魚と炉端と純米酒 かきび
 
 - **業種:** 居酒屋
 - **エリア:** 新宿
@@ -1364,7 +1476,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 48. らぁ麺や 嶋
+## 52. らぁ麺や 嶋
 
 - **業種:** ラーメン
 - **エリア:** 新宿周辺
@@ -1393,7 +1505,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 49. 串焼バル1.2.3
+## 53. 串焼バル1.2.3
 
 - **業種:** 居酒屋
 - **エリア:** 浅草
@@ -1422,7 +1534,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 50. 呑みやしき209
+## 54. 呑みやしき209
 
 - **業種:** 居酒屋
 - **エリア:** 浅草
@@ -1451,7 +1563,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 51. 浅草 ASA虎
+## 55. 浅草 ASA虎
 
 - **業種:** 居酒屋
 - **エリア:** 浅草
@@ -1480,7 +1592,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 52. 浅草 もつ焼のんき
+## 56. 浅草 もつ焼のんき
 
 - **業種:** 居酒屋
 - **エリア:** 浅草
@@ -1509,7 +1621,35 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 53. 花本
+## 57. 浅草酒場 岡本
+
+- **業種:** 居酒屋
+- **エリア:** 浅草
+- **Instagram:** https://www.instagram.com/asakusa_okamoto2/
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！浅草酒場 岡本さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「浅草 ランチ」「浅草 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 58. 花本
 
 - **業種:** 居酒屋
 - **エリア:** 浅草
@@ -1538,7 +1678,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 54. soba MAREN 渋谷店
+## 59. soba MAREN 渋谷店
 
 - **業種:** ラーメン
 - **エリア:** 渋谷
@@ -1567,7 +1707,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 55. うさぎ
+## 60. うさぎ
 
 - **業種:** ラーメン
 - **エリア:** 渋谷
@@ -1596,7 +1736,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 56. まぜそば七
+## 61. まぜそば七
 
 - **業種:** ラーメン
 - **エリア:** 渋谷
@@ -1625,7 +1765,36 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 57. 麺屋ぬかじ
+## 62. 背脂ラーメン チャッチャ亭
+
+- **業種:** ラーメン
+- **エリア:** 渋谷
+- **Instagram:** https://www.instagram.com/chaccha_tei/
+- **電話:** 03-6277-5385
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！背脂ラーメン チャッチャ亭さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「渋谷 ランチ」「渋谷 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 63. 麺屋ぬかじ
 
 - **業種:** ラーメン
 - **エリア:** 渋谷
@@ -1654,7 +1823,65 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 58. 活惚れ
+## 64. せかんど
+
+- **業種:** 居酒屋
+- **エリア:** 渋谷
+- **Instagram:** https://www.instagram.com/second_sai_1115/
+- **電話:** 03-6277-5450
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！せかんどさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「渋谷 ランチ」「渋谷 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 65. ぴりおど。
+
+- **業種:** 居酒屋
+- **エリア:** 渋谷
+- **Instagram:** https://www.instagram.com/period_shibuya/
+- **電話:** 03-6416-9316
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！ぴりおど。さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「渋谷 ランチ」「渋谷 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 66. 活惚れ
 
 - **業種:** 居酒屋
 - **エリア:** 渋谷
@@ -1683,7 +1910,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 59. 酒場 つむぎ堂 渋谷店
+## 67. 酒場 つむぎ堂 渋谷店
 
 - **業種:** 居酒屋
 - **エリア:** 渋谷
@@ -1712,7 +1939,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 60. 雲隠レ
+## 68. 雲隠レ
 
 - **業種:** 居酒屋
 - **エリア:** 渋谷
@@ -1741,7 +1968,163 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 61. i2 cafe
+## 69. COLULU
+
+- **業種:** 美容室
+- **エリア:** 渋谷
+- **Instagram:** https://www.instagram.com/colulu.shibuya/
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！COLULUさんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 70. Pure Soul
+
+- **業種:** 美容室
+- **エリア:** 渋谷
+- **Instagram:** https://www.instagram.com/h_puresoul/
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！Pure Soulさんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 71. peeps&suu.
+
+- **業種:** 美容室
+- **エリア:** 渋谷
+- **Instagram:** https://www.instagram.com/peeps.suu.official/
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！peeps&suu.さんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 72. seasons by marbles
+
+- **業種:** 美容室
+- **エリア:** 渋谷
+- **Instagram:** https://www.instagram.com/seasons.omotesando/
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！seasons by marblesさんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 73. マックスブロンド
+
+- **業種:** 美容室
+- **エリア:** 渋谷
+- **Instagram:** https://www.instagram.com/maxblonde/
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！マックスブロンドさんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 74. 美容室かぐや姫
+
+- **業種:** 美容室
+- **エリア:** 立川
+- **Instagram:** https://www.instagram.com/kaguyahime_fukstyle/
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！美容室かぐや姫さんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 75. i2 cafe
 
 - **業種:** カフェ
 - **エリア:** 表参道
@@ -1769,7 +2152,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 62. BAR東京
+## 76. BAR東京
 
 - **業種:** バー
 - **エリア:** 銀座
@@ -1798,7 +2181,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 63. MORI BAR
+## 77. MORI BAR
 
 - **業種:** バー
 - **エリア:** 銀座
@@ -1827,7 +2210,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 64. ビストロ Root
+## 78. ビストロ Root
 
 - **業種:** フレンチ
 - **エリア:** 銀座
@@ -1856,7 +2239,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 65. 鮨 さえ喜
+## 79. 鮨 さえ喜
 
 - **業種:** 寿司
 - **エリア:** 銀座
@@ -1885,7 +2268,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 66. 東京焼肉いのうえ 銀座店
+## 80. 東京焼肉いのうえ 銀座店
 
 - **業種:** 焼肉
 - **エリア:** 銀座
@@ -1914,7 +2297,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 67. 焼肉 冷麺 ユッチャン。 銀座店
+## 81. 焼肉 冷麺 ユッチャン。 銀座店
 
 - **業種:** 焼肉・韓国料理
 - **エリア:** 銀座
@@ -1943,7 +2326,7 @@ https://hnh-design-works.vercel.app/intake.html
 
 ---
 
-## 68. 地鶏割烹 稲垣 麻布十番
+## 82. 地鶏割烹 稲垣 麻布十番
 
 - **業種:** 居酒屋
 - **エリア:** 麻布十番
@@ -1958,6 +2341,1881 @@ https://hnh-design-works.vercel.app/intake.html
 東京でHP制作をしているHNH Design Worksです。
 
 「麻布十番 ランチ」「麻布十番 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 83. ユーロベイカーズ EURO BAKERS
+
+- **業種:** ベーカリー
+- **エリア:** 目白
+- **Instagram:** https://www.instagram.com/euro_bakers/
+- **電話:** 03-6908-5777
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！ユーロベイカーズ EURO BAKERSさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「目白 ランチ」「目白 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 84. HABIT PERSONAL GYM神田店
+
+- **業種:** パーソナルジム
+- **エリア:** 神田
+- **Instagram:** https://www.instagram.com/habit_personal_gym/
+- **電話:** 03-3526-2257
+- **テンプレート:** パターンA（汎用）
+- [ ] 送信済み
+
+```
+こんにちは！突然のDM失礼します。
+東京でホームページ制作をしているHNH Design Worksと申します。
+
+HABIT PERSONAL GYM神田店さんの投稿を拝見して、とても素敵だと感じました。
+
+もしホームページをお持ちでなければ、HABIT PERSONAL GYM神田店さんの魅力をもっと多くの方に届けるお手伝いができればと思いご連絡しました。
+
+実際の制作例はこちらからご覧いただけます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。簡単なフォームに答えるだけでスタートできます👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 85. Bar Ritorno
+
+- **業種:** バー
+- **エリア:** 経堂
+- **Instagram:** https://www.instagram.com/bar_ritorno/
+- **電話:** 03-6413-6107
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！Bar Ritornoさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「経堂 ランチ」「経堂 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 86. Shisha Lounge 1986
+
+- **業種:** バー
+- **エリア:** 経堂
+- **Instagram:** https://www.instagram.com/shisha.lounge.1986/
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！Shisha Lounge 1986さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「経堂 ランチ」「経堂 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 87. pilates salon ECRU
+
+- **業種:** ピラティススタジオ
+- **エリア:** 経堂
+- **Instagram:** https://www.instagram.com/pilates_salon_ecru/
+- **テンプレート:** パターンA（汎用）
+- [ ] 送信済み
+
+```
+こんにちは！突然のDM失礼します。
+東京でホームページ制作をしているHNH Design Worksと申します。
+
+pilates salon ECRUさんの投稿を拝見して、とても素敵だと感じました。
+
+もしホームページをお持ちでなければ、pilates salon ECRUさんの魅力をもっと多くの方に届けるお手伝いができればと思いご連絡しました。
+
+実際の制作例はこちらからご覧いただけます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。簡単なフォームに答えるだけでスタートできます👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 88. amber
+
+- **業種:** カフェ
+- **エリア:** 自由が丘
+- **Instagram:** https://www.instagram.com/amber_jiyugaoka/
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！amberさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「自由が丘 ランチ」「自由が丘 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 89. TSUBAKIYA Jiyugaoka
+
+- **業種:** カフェ
+- **エリア:** 自由が丘
+- **Instagram:** https://www.instagram.com/tsubakiya_coffee/
+- **電話:** 03-6421-1140
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！TSUBAKIYA Jiyugaokaさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「自由が丘 ランチ」「自由が丘 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 90. 定食カフェ 黒川食堂
+
+- **業種:** 飲食店
+- **エリア:** 下北沢
+- **Instagram:** https://www.instagram.com/kurokawa_shimokitazawa/
+- **電話:** 03-6450-8137
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！定食カフェ 黒川食堂さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「下北沢 ランチ」「下北沢 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 91. ELENA 六本木店
+
+- **業種:** エステサロン
+- **エリア:** 六本木
+- **Instagram:** https://www.instagram.com/elena.4beauty/
+- **電話:** 080-3356-7987
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！ELENA 六本木店さんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 92. 代官山カーサ
+
+- **業種:** カフェ
+- **エリア:** 代官山
+- **Instagram:** https://www.instagram.com/daikanyama_casa/
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！代官山カーサさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「代官山 ランチ」「代官山 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 93. filonnail 表参道店
+
+- **業種:** ネイルサロン
+- **エリア:** 表参道
+- **Instagram:** https://www.instagram.com/filonnail/
+- **電話:** 090-9757-6916
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！filonnail 表参道店さんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 94. Shibuya Bar The Legless Arms
+
+- **業種:** バー
+- **エリア:** 渋谷
+- **Instagram:** https://www.instagram.com/shibuya_bar_the_legless_arms/
+- **電話:** 080-1226-1556
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！Shibuya Bar The Legless Armsさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「渋谷 ランチ」「渋谷 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 95. eight eyelash 池袋店 【エイト アイラッシュ】
+
+- **業種:** まつげサロン
+- **エリア:** 池袋
+- **Instagram:** https://www.instagram.com/eight_eyelash/
+- **電話:** 03-6907-0708
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！eight eyelash 池袋店 【エイト アイラッシュ】さんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 96. BAR garden
+
+- **業種:** バー
+- **エリア:** 恵比寿
+- **Instagram:** https://www.instagram.com/bar.garden.ebisu/
+- **電話:** 03-6277-0669
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！BAR gardenさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「恵比寿 ランチ」「恵比寿 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 97. メンズ脱毛サロン リアンジュ 立川店
+
+- **業種:** 脱毛サロン
+- **エリア:** 立川
+- **Instagram:** https://www.instagram.com/rienge__mens/
+- **電話:** 042-595-8102
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！メンズ脱毛サロン リアンジュ 立川店さんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 98. スタジオタンク成城
+
+- **業種:** 写真スタジオ
+- **エリア:** 成城
+- **Instagram:** https://www.instagram.com/rhythm_seven_academy/
+- **電話:** 090-4963-2266
+- **テンプレート:** パターンA（汎用）
+- [ ] 送信済み
+
+```
+こんにちは！突然のDM失礼します。
+東京でホームページ制作をしているHNH Design Worksと申します。
+
+スタジオタンク成城さんの投稿を拝見して、とても素敵だと感じました。
+
+もしホームページをお持ちでなければ、スタジオタンク成城さんの魅力をもっと多くの方に届けるお手伝いができればと思いご連絡しました。
+
+実際の制作例はこちらからご覧いただけます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。簡単なフォームに答えるだけでスタートできます👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 99. KEY'S CAFÉ 秋葉原SEEKBASE店
+
+- **業種:** カフェ
+- **エリア:** 秋葉原
+- **Instagram:** https://www.instagram.com/akb.keyscafe/
+- **電話:** 03-3254-6160
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！KEY'S CAFÉ 秋葉原SEEKBASE店さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「秋葉原 ランチ」「秋葉原 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 100. Me+(ミープラス)Perle esthetic Salon
+
+- **業種:** 脱毛サロン
+- **エリア:** 二子玉川
+- **Instagram:** https://www.instagram.com/me_plus3156/
+- **電話:** 070-3353-3156
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！Me+(ミープラス)Perle esthetic Salonさんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 101. シーシャカフェ＆バーmusch（ムッシュ）六本木店（hookah lounge musch）
+
+- **業種:** カフェ
+- **エリア:** 六本木
+- **Instagram:** https://www.instagram.com/musch_roppongi/
+- **電話:** 03-6447-1170
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！シーシャカフェ＆バーmusch（ムッシュ）六本木店（hookah lounge musch）さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「六本木 ランチ」「六本木 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 102. La pilates 上野店《整体×マシンピラティス》ラピラティス
+
+- **業種:** ピラティススタジオ
+- **エリア:** 上野
+- **Instagram:** https://www.instagram.com/lapilates_ueno/
+- **電話:** 070-3546-1883
+- **テンプレート:** パターンA（汎用）
+- [ ] 送信済み
+
+```
+こんにちは！突然のDM失礼します。
+東京でホームページ制作をしているHNH Design Worksと申します。
+
+La pilates 上野店《整体×マシンピラティス》ラピラティスさんの投稿を拝見して、とても素敵だと感じました。
+
+もしホームページをお持ちでなければ、La pilates 上野店《整体×マシンピラティス》ラピラティスさんの魅力をもっと多くの方に届けるお手伝いができればと思いご連絡しました。
+
+実際の制作例はこちらからご覧いただけます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。簡単なフォームに答えるだけでスタートできます👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 103. Utakata
+
+- **業種:** バー
+- **エリア:** 大崎
+- **Instagram:** https://www.instagram.com/utakata_barbistro/
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！Utakataさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「大崎 ランチ」「大崎 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 104. Yoga salon GRACIAGE
+
+- **業種:** ヨガスタジオ
+- **エリア:** 下北沢
+- **Instagram:** https://www.instagram.com/yoga_salon_graciage/
+- **テンプレート:** パターンA（汎用）
+- [ ] 送信済み
+
+```
+こんにちは！突然のDM失礼します。
+東京でホームページ制作をしているHNH Design Worksと申します。
+
+Yoga salon GRACIAGEさんの投稿を拝見して、とても素敵だと感じました。
+
+もしホームページをお持ちでなければ、Yoga salon GRACIAGEさんの魅力をもっと多くの方に届けるお手伝いができればと思いご連絡しました。
+
+実際の制作例はこちらからご覧いただけます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。簡単なフォームに答えるだけでスタートできます👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 105. EYELA高田馬場
+
+- **業種:** まつげサロン
+- **エリア:** 高田馬場
+- **Instagram:** https://www.instagram.com/eyela.official/
+- **電話:** 090-7738-0198
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！EYELA高田馬場さんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 106. RYTヨガ資格 YogaWorks
+
+- **業種:** ヨガスタジオ
+- **エリア:** 五反田
+- **Instagram:** https://www.instagram.com/yogaworkscojp/
+- **テンプレート:** パターンA（汎用）
+- [ ] 送信済み
+
+```
+こんにちは！突然のDM失礼します。
+東京でホームページ制作をしているHNH Design Worksと申します。
+
+RYTヨガ資格 YogaWorksさんの投稿を拝見して、とても素敵だと感じました。
+
+もしホームページをお持ちでなければ、RYTヨガ資格 YogaWorksさんの魅力をもっと多くの方に届けるお手伝いができればと思いご連絡しました。
+
+実際の制作例はこちらからご覧いただけます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。簡単なフォームに答えるだけでスタートできます👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 107. DELICAT【デリカ】中目黒
+
+- **業種:** ネイルサロン
+- **エリア:** 中目黒
+- **Instagram:** https://www.instagram.com/delicat_eyelashsnail/
+- **電話:** 03-6412-7525
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！DELICAT【デリカ】中目黒さんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 108. ネイルサロン アウル
+
+- **業種:** ネイルサロン
+- **エリア:** 中目黒
+- **Instagram:** https://www.instagram.com/nailsalonowl/
+- **電話:** 03-6412-8133
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！ネイルサロン アウルさんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 109. 男の脱毛 toal 新宿高田馬場店
+
+- **業種:** 脱毛サロン
+- **エリア:** 高田馬場
+- **Instagram:** https://www.instagram.com/mens.toal/
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！男の脱毛 toal 新宿高田馬場店さんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 110. SHARE下北沢
+
+- **業種:** バー
+- **エリア:** 下北沢
+- **Instagram:** https://www.instagram.com/share_shimokitazawa/
+- **電話:** 03-5453-3211
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！SHARE下北沢さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「下北沢 ランチ」「下北沢 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 111. BAR GEEK
+
+- **業種:** バー
+- **エリア:** 下北沢
+- **Instagram:** https://www.instagram.com/bar_geek_/
+- **電話:** 03-6804-8409
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！BAR GEEKさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「下北沢 ランチ」「下北沢 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 112. uru 【ウル】二子玉川
+
+- **業種:** 美容室
+- **エリア:** 二子玉川
+- **Instagram:** https://www.instagram.com/uru.futakotamagawa/
+- **電話:** 070-1068-5795
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！uru 【ウル】二子玉川さんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 113. Queen Beauty Salon 大久保本店
+
+- **業種:** 美容室
+- **エリア:** 新大久保
+- **Instagram:** https://www.instagram.com/queenbeautysalonokubo/
+- **電話:** 03-5497-8788
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！Queen Beauty Salon 大久保本店さんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 114. 原宿Rock Bar HALF MOON
+
+- **業種:** バー
+- **エリア:** 表参道
+- **Instagram:** https://www.instagram.com/halfmoonhide_tokyomagic/
+- **電話:** 03-3796-0826
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！原宿Rock Bar HALF MOONさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「表参道 ランチ」「表参道 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 115. WINE LIVING Signature
+
+- **業種:** バー
+- **エリア:** 表参道
+- **Instagram:** https://www.instagram.com/wineliving_signature/
+- **電話:** 03-6459-2980
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！WINE LIVING Signatureさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「表参道 ランチ」「表参道 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 116. Nail salon A L L Y
+
+- **業種:** ネイルサロン
+- **エリア:** 自由が丘
+- **Instagram:** https://www.instagram.com/allynail_yuki/
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！Nail salon A L L Yさんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 117. Stretch＆Training Gym CLEAR六本木
+
+- **業種:** パーソナルジム
+- **エリア:** 六本木
+- **Instagram:** https://www.instagram.com/gym.clear/
+- **電話:** 03-6434-7043
+- **テンプレート:** パターンA（汎用）
+- [ ] 送信済み
+
+```
+こんにちは！突然のDM失礼します。
+東京でホームページ制作をしているHNH Design Worksと申します。
+
+Stretch＆Training Gym CLEAR六本木さんの投稿を拝見して、とても素敵だと感じました。
+
+もしホームページをお持ちでなければ、Stretch＆Training Gym CLEAR六本木さんの魅力をもっと多くの方に届けるお手伝いができればと思いご連絡しました。
+
+実際の制作例はこちらからご覧いただけます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。簡単なフォームに答えるだけでスタートできます👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 118. ちゅーりっぷ原宿
+
+- **業種:** ネイルサロン
+- **エリア:** 原宿
+- **Instagram:** https://www.instagram.com/tulip___nail/
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！ちゅーりっぷ原宿さんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 119. 美瑛 BIEI
+
+- **業種:** ベーカリー
+- **エリア:** 吉祥寺
+- **Instagram:** https://www.instagram.com/bieibakery.adv/
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！美瑛 BIEIさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「吉祥寺 ランチ」「吉祥寺 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 120. 脱毛/ハーブピーリング TRYSHIFT 品川大井町店
+
+- **業種:** エステサロン
+- **エリア:** 品川
+- **Instagram:** https://www.instagram.com/tryshift/
+- **電話:** 080-1753-2774
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！脱毛/ハーブピーリング TRYSHIFT 品川大井町店さんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 121. YOGA STUDIO SOL - ヨガスタジオSOL 新大久保
+
+- **業種:** ヨガスタジオ
+- **エリア:** 新宿
+- **Instagram:** https://www.instagram.com/sol_yoga.jp/
+- **テンプレート:** パターンA（汎用）
+- [ ] 送信済み
+
+```
+こんにちは！突然のDM失礼します。
+東京でホームページ制作をしているHNH Design Worksと申します。
+
+YOGA STUDIO SOL - ヨガスタジオSOL 新大久保さんの投稿を拝見して、とても素敵だと感じました。
+
+もしホームページをお持ちでなければ、YOGA STUDIO SOL - ヨガスタジオSOL 新大久保さんの魅力をもっと多くの方に届けるお手伝いができればと思いご連絡しました。
+
+実際の制作例はこちらからご覧いただけます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。簡単なフォームに答えるだけでスタートできます👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 122. 魚匠屋 神田本店
+
+- **業種:** 飲食店
+- **エリア:** 神田
+- **Instagram:** https://www.instagram.com/gyoshouya/
+- **電話:** 03-5577-5749
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！魚匠屋 神田本店さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「神田 ランチ」「神田 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 123. Caf'e MID STAMP ebisu
+
+- **業種:** カフェ
+- **エリア:** 恵比寿
+- **Instagram:** https://www.instagram.com/mid_stamp/
+- **電話:** 03-6452-3571
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！Caf'e MID STAMP ebisuさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「恵比寿 ランチ」「恵比寿 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 124. THE COOKIE 594新大久保店
+
+- **業種:** ベーカリー
+- **エリア:** 新大久保
+- **Instagram:** https://www.instagram.com/the_cookie_594/
+- **電話:** 03-5937-4416
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！THE COOKIE 594新大久保店さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「新大久保 ランチ」「新大久保 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 125. 東京ベーグルラボ TOKYO BAGEL LAB
+
+- **業種:** ベーカリー
+- **エリア:** 新大久保
+- **Instagram:** https://www.instagram.com/tokyo_bagel_lab/
+- **電話:** 03-6228-0777
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！東京ベーグルラボ TOKYO BAGEL LABさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「新大久保 ランチ」「新大久保 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 126. AREUM BAGELアルムベーグル新大久保
+
+- **業種:** ベーカリー
+- **エリア:** 新大久保
+- **Instagram:** https://www.instagram.com/areum.bagel/
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！AREUM BAGELアルムベーグル新大久保さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「新大久保 ランチ」「新大久保 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 127. Naguy Bar
+
+- **業種:** バー
+- **エリア:** 中目黒
+- **Instagram:** https://www.instagram.com/naguybarofficial/
+- **電話:** 03-3760-7227
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！Naguy Barさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「中目黒 ランチ」「中目黒 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 128. BAR ACQUA OLD-CAFE 新宿OLD店
+
+- **業種:** カフェ
+- **エリア:** 新宿
+- **Instagram:** https://www.instagram.com/oldcafe_24/
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！BAR ACQUA OLD-CAFE 新宿OLD店さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「新宿 ランチ」「新宿 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 129. 珈琲西武 本店
+
+- **業種:** カフェ
+- **エリア:** 新宿
+- **Instagram:** https://www.instagram.com/coffee_seibu/
+- **電話:** 03-4589-8731
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！珈琲西武 本店さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「新宿 ランチ」「新宿 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 130. BerryEyes 二子玉川店 まつげサロン ベリーアイズ
+
+- **業種:** まつげサロン
+- **エリア:** 二子玉川
+- **Instagram:** https://www.instagram.com/berry_eyes25/
+- **電話:** 03-6411-7741
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！BerryEyes 二子玉川店 まつげサロン ベリーアイズさんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 131. ラブルダイニング
+
+- **業種:** 飲食店
+- **エリア:** 三軒茶屋
+- **Instagram:** https://www.instagram.com/lovel_sancha/
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！ラブルダイニングさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「三軒茶屋 ランチ」「三軒茶屋 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 132. ピラティススタジオthe SILK広尾店 別館
+
+- **業種:** ピラティススタジオ
+- **エリア:** 広尾
+- **Instagram:** https://www.instagram.com/pilates_thesilk_hiroo/
+- **テンプレート:** パターンA（汎用）
+- [ ] 送信済み
+
+```
+こんにちは！突然のDM失礼します。
+東京でホームページ制作をしているHNH Design Worksと申します。
+
+ピラティススタジオthe SILK広尾店 別館さんの投稿を拝見して、とても素敵だと感じました。
+
+もしホームページをお持ちでなければ、ピラティススタジオthe SILK広尾店 別館さんの魅力をもっと多くの方に届けるお手伝いができればと思いご連絡しました。
+
+実際の制作例はこちらからご覧いただけます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。簡単なフォームに答えるだけでスタートできます👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 133. SANDO LAB TOKYO 秋葉原店
+
+- **業種:** ベーカリー
+- **エリア:** 秋葉原
+- **Instagram:** https://www.instagram.com/sandolabtokyo/
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！SANDO LAB TOKYO 秋葉原店さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「秋葉原 ランチ」「秋葉原 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 134. 結婚相談所サンマリエ新宿サロン
+
+- **業種:** 結婚相談所
+- **エリア:** 新宿
+- **Instagram:** https://www.instagram.com/ginzajujiya_1874/
+- **テンプレート:** パターンA（汎用）
+- [ ] 送信済み
+
+```
+こんにちは！突然のDM失礼します。
+東京でホームページ制作をしているHNH Design Worksと申します。
+
+結婚相談所サンマリエ新宿サロンさんの投稿を拝見して、とても素敵だと感じました。
+
+もしホームページをお持ちでなければ、結婚相談所サンマリエ新宿サロンさんの魅力をもっと多くの方に届けるお手伝いができればと思いご連絡しました。
+
+実際の制作例はこちらからご覧いただけます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。簡単なフォームに答えるだけでスタートできます👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 135. 燕三
+
+- **業種:** 飲食店
+- **エリア:** 赤坂
+- **Instagram:** https://www.instagram.com/tsubasanakasaka/
+- **電話:** 03-6807-4855
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！燕三さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「赤坂 ランチ」「赤坂 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 136. Princess Tart 下北沢
+
+- **業種:** ベーカリー
+- **エリア:** 下北沢
+- **Instagram:** https://www.instagram.com/princess_tart_official/
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！Princess Tart 下北沢さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「下北沢 ランチ」「下北沢 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 137. パナソニックビューティ表参道カフェ
+
+- **業種:** カフェ
+- **エリア:** 原宿
+- **Instagram:** https://www.instagram.com/panasonic_beauty_omotesando/
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！パナソニックビューティ表参道カフェさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「原宿 ランチ」「原宿 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 138. The Sunrise Shack Hawaii - harajuku cafe Galaxy
+
+- **業種:** カフェ
+- **エリア:** 原宿
+- **Instagram:** https://www.instagram.com/sunriseshackjapan/
+- **電話:** 03-5843-0186
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！The Sunrise Shack Hawaii - harajuku cafe Galaxyさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「原宿 ランチ」「原宿 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 139. Island Cafe&Dining
+
+- **業種:** カフェ
+- **エリア:** 経堂
+- **Instagram:** https://www.instagram.com/island.cafe.kyodo/
+- **電話:** 03-6322-8334
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！Island Cafe&Diningさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「経堂 ランチ」「経堂 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 140. はあとねいる三軒茶屋店
+
+- **業種:** ネイルサロン
+- **エリア:** 三軒茶屋
+- **Instagram:** https://www.instagram.com/heartnail_design/
+- **電話:** 070-4410-4705
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！はあとねいる三軒茶屋店さんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 141. The Mint Ginza | Rooftop Cafe & Bar
+
+- **業種:** カフェ
+- **エリア:** 銀座
+- **Instagram:** https://www.instagram.com/themintginza/
+- **電話:** 050-1720-8203
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！The Mint Ginza | Rooftop Cafe & Barさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「銀座 ランチ」「銀座 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 142. 吉祥寺 もがめ食堂 東急裏店
+
+- **業種:** 飲食店
+- **エリア:** 吉祥寺
+- **Instagram:** https://www.instagram.com/mogame_shokudou_kichijoji/
+- **電話:** 0422-22-7983
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！吉祥寺 もがめ食堂 東急裏店さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「吉祥寺 ランチ」「吉祥寺 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 143. The Tavern in Asakusa
+
+- **業種:** バー
+- **エリア:** 浅草
+- **Instagram:** https://www.instagram.com/the_tavern_in_asakusa/
+- **電話:** 03-6876-8245
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！The Tavern in Asakusaさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「浅草 ランチ」「浅草 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 144. Living Room Asakusa Cocktail Bar
+
+- **業種:** バー
+- **エリア:** 浅草
+- **Instagram:** https://www.instagram.com/livingroom_asakusa/
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！Living Room Asakusa Cocktail Barさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「浅草 ランチ」「浅草 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 145. ことぶきBAKERY
+
+- **業種:** ベーカリー
+- **エリア:** 三鷹
+- **Instagram:** https://www.instagram.com/kotobuki.bakery/
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！ことぶきBAKERYさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「三鷹 ランチ」「三鷹 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 146. 三鷹丸十ベーカリー
+
+- **業種:** ベーカリー
+- **エリア:** 三鷹
+- **Instagram:** https://www.instagram.com/mitaka1919/
+- **電話:** 0422-51-7044
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！三鷹丸十ベーカリーさんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「三鷹 ランチ」「三鷹 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
+
+制作イメージはこちらです👇
+https://hnh-design-works.vercel.app
+
+現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にどうぞ！
+```
+
+---
+
+## 147. BARBER KAMITO HERITAGE
+
+- **業種:** 美容室
+- **エリア:** 神田
+- **Instagram:** https://www.instagram.com/barberkamito/
+- **電話:** 03-4400-8583
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！BARBER KAMITO HERITAGEさんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 148. Buena ブエナ
+
+- **業種:** ネイルサロン
+- **エリア:** 吉祥寺
+- **Instagram:** https://www.instagram.com/eyelash_nail_buena/
+- **電話:** 0422-26-8750
+- **テンプレート:** パターンC（美容向け）
+- [ ] 送信済み
+
+```
+こんにちは！Buena ブエナさんのスタイル写真、とてもセンスが素敵ですね✨
+
+東京でHP制作をしているHNH Design Worksです。
+
+ホームページがあると、予約フォーム・メニュー・料金をまとめて見せられるので、新規指名が増えやすくなります。
+
+こんなサイトが作れます👇
+https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
+ご興味があればお気軽にお返事ください！
+```
+
+---
+
+## 149. Princess Tart 中目黒
+
+- **業種:** ベーカリー
+- **エリア:** 中目黒
+- **Instagram:** https://www.instagram.com/princess_tart_nakameguro/
+- **電話:** 070-4038-3847
+- **テンプレート:** パターンB（飲食向け）
+- [ ] 送信済み
+
+```
+こんにちは！Princess Tart 中目黒さんの投稿、いつも美味しそうで目を引かれます🍽
+
+東京でHP制作をしているHNH Design Worksです。
+
+「中目黒 ランチ」「中目黒 ディナー」等で検索したとき、ホームページがあると新規のお客様に見つけてもらいやすくなります。
 
 制作イメージはこちらです👇
 https://hnh-design-works.vercel.app
