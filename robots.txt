@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://hnh-design-works.vercel.app/sitemap.xml
