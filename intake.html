@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ヒアリングフォーム — HNH Design Works</title>
+<meta name="description" content="打ち合わせ不要。簡単なフォームに答えるだけでホームページ制作をスタートできます。3分で完了。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; }
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #000; background: #fff;
+  line-height: 1.7; font-weight: 300;
+}
+a { color: inherit; text-decoration: none; }
+::selection { background: #000; color: #fff; }
+
+/* NAV */
+.nav {
+  position: fixed; top: 0; left: 0; width: 100%; height: 64px; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 clamp(24px, 5vw, 64px);
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #e8e8e8;
+}
+.nav-logo { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; }
+.nav-back {
+  font-size: 0.75rem; font-weight: 400; letter-spacing: 0.12em;
+  text-transform: uppercase; color: #555;
+  display: flex; align-items: center; gap: 8px; transition: color 0.2s;
+}
+.nav-back:hover { color: #000; }
+.nav-back::before { content: '←'; font-size: 0.85rem; }
+
+/* MAIN */
+.main {
+  max-width: 620px; margin: 0 auto;
+  padding: 120px clamp(24px, 5vw, 48px) 80px;
+}
+.page-label {
+  font-size: 0.65rem; font-weight: 500; letter-spacing: 0.35em;
+  text-transform: uppercase; color: #999; margin-bottom: 12px;
+}
+.page-title {
+  font-size: clamp(1.4rem, 3vw, 1.8rem); font-weight: 700;
+  letter-spacing: -0.02em; line-height: 1.3; margin-bottom: 8px;
+}
+.page-sub {
+  font-size: 0.85rem; color: #777; margin-bottom: 40px;
+  padding-bottom: 24px; border-bottom: 1px solid #e8e8e8;
+}
+
+/* PROGRESS */
+.progress {
+  display: flex; gap: 4px; margin-bottom: 40px;
+}
+.progress-bar {
+  flex: 1; height: 3px; background: #e8e8e8; border-radius: 2px;
+  transition: background 0.4s;
+}
+.progress-bar.active { background: #000; }
+
+/* STEP */
+.step {
+  display: none; opacity: 0;
+  transition: opacity 0.35s;
+}
+.step.active { display: block; opacity: 1; }
+.step-num {
+  font-size: 0.65rem; font-weight: 500; letter-spacing: 0.3em;
+  text-transform: uppercase; color: #999; margin-bottom: 8px;
+}
+.step-title {
+  font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em;
+  margin-bottom: 32px;
+}
+
+/* FORM ELEMENTS */
+.fg { margin-bottom: 24px; }
+.fg label {
+  display: block; font-size: 0.72rem; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: #555; margin-bottom: 8px;
+}
+.fg label .req { color: #c00; margin-left: 4px; text-transform: none; letter-spacing: 0; }
+.fg input, .fg select, .fg textarea {
+  width: 100%; padding: 12px 0; border: none;
+  border-bottom: 1px solid #ddd; font-size: 0.9rem;
+  font-weight: 300; transition: border-color 0.2s;
+  background: transparent; border-radius: 0;
+}
+.fg input:focus, .fg select:focus, .fg textarea:focus {
+  border-bottom-color: #000;
+}
+.fg textarea { resize: vertical; min-height: 100px; }
+.fg select { appearance: none; -webkit-appearance: none; cursor: pointer; }
+.fg .hint { font-size: 0.75rem; color: #999; margin-top: 6px; }
+
+/* CARD SELECT */
+.card-group { display: flex; flex-wrap: wrap; gap: 10px; }
+.card-option {
+  padding: 10px 16px; border: 1px solid #ddd; border-radius: 6px;
+  font-size: 0.82rem; font-weight: 400; cursor: pointer;
+  transition: all 0.2s; user-select: none;
+}
+.card-option:hover { border-color: #999; }
+.card-option.selected { background: #000; color: #fff; border-color: #000; }
+
+/* CHECKBOX GROUP */
+.check-group { display: flex; flex-wrap: wrap; gap: 10px; }
+.check-item {
+  padding: 10px 16px; border: 1px solid #ddd; border-radius: 6px;
+  font-size: 0.82rem; cursor: pointer; transition: all 0.2s; user-select: none;
+}
+.check-item:hover { border-color: #999; }
+.check-item.checked { background: #000; color: #fff; border-color: #000; }
+
+/* PLAN CARD */
+.plan-cards { display: flex; flex-direction: column; gap: 12px; }
+.plan-card {
+  padding: 20px; border: 2px solid #e8e8e8; border-radius: 8px;
+  cursor: pointer; transition: all 0.2s;
+}
+.plan-card:hover { border-color: #999; }
+.plan-card.selected { border-color: #000; background: #f8f8f8; }
+.plan-card-name { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+.plan-card-price { font-size: 0.85rem; color: #555; }
+.plan-card-desc { font-size: 0.78rem; color: #999; margin-top: 4px; }
+.plan-card-campaign {
+  display: inline-block; font-size: 0.7rem; font-weight: 500;
+  background: #000; color: #fff; padding: 2px 8px; border-radius: 3px;
+  margin-top: 6px;
+}
+
+/* CONDITIONAL */
+.conditional { display: none; margin-top: 16px; }
+.conditional.show { display: block; }
+
+/* BUTTONS */
+.btn-row {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 40px; padding-top: 24px; border-top: 1px solid #e8e8e8;
+}
+.btn {
+  padding: 14px 32px; font-size: 0.8rem; font-weight: 500;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  border-radius: 4px; cursor: pointer; transition: all 0.2s;
+}
+.btn-next { background: #000; color: #fff; }
+.btn-next:hover { background: #333; }
+.btn-back { background: none; color: #555; }
+.btn-back:hover { color: #000; }
+.btn-submit { background: #000; color: #fff; padding: 16px 48px; font-size: 0.85rem; }
+.btn-submit:hover { background: #333; }
+.btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+/* CONFIRM TABLE */
+.confirm-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+.confirm-table tr { border-bottom: 1px solid #eee; }
+.confirm-table th {
+  text-align: left; padding: 12px 8px 12px 0; font-size: 0.72rem;
+  font-weight: 500; letter-spacing: 0.06em; color: #777;
+  width: 140px; vertical-align: top;
+}
+.confirm-table td {
+  padding: 12px 0; font-size: 0.85rem; color: #111;
+}
+
+/* COMPLETE */
+.complete {
+  text-align: center; padding: 60px 0;
+}
+.complete-icon { font-size: 3rem; margin-bottom: 24px; }
+.complete-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; }
+.complete-desc { font-size: 0.9rem; color: #555; margin-bottom: 32px; }
+.complete-link {
+  display: inline-block; padding: 14px 32px; font-size: 0.8rem;
+  font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+  border: 1px solid #000; transition: all 0.2s;
+}
+.complete-link:hover { background: #000; color: #fff; }
+
+/* ERROR */
+.field-error { border-bottom-color: #c00 !important; }
+.error-msg { font-size: 0.72rem; color: #c00; margin-top: 4px; display: none; }
+.error-msg.show { display: block; }
+
+/* FOOTER */
+.footer {
+  border-top: 1px solid #e8e8e8;
+  padding: 32px clamp(24px, 5vw, 64px);
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+}
+.footer-copy { font-size: 0.72rem; font-weight: 300; letter-spacing: 0.06em; color: #aaa; }
+.footer-link {
+  font-size: 0.72rem; font-weight: 300; letter-spacing: 0.1em;
+  text-transform: uppercase; color: #aaa;
+  border-bottom: 1px solid transparent; transition: color 0.2s, border-color 0.2s;
+}
+.footer-link:hover { color: #000; border-color: #000; }
+
+@media (max-width: 600px) {
+  .plan-cards { gap: 10px; }
+  .card-group, .check-group { gap: 8px; }
+  .card-option, .check-item { font-size: 0.78rem; padding: 8px 12px; }
+  .confirm-table th { width: 110px; font-size: 0.68rem; }
+  .confirm-table td { font-size: 0.8rem; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-logo">HNH Design Works</span>
+  <a href="index.html" class="nav-back">トップに戻る</a>
+</nav>
+
+<main class="main">
+  <p class="page-label">Intake Form</p>
+  <h1 class="page-title">ヒアリングフォーム</h1>
+  <p class="page-sub">打ち合わせ不要。フォームに答えるだけで制作スタート。約3分で完了します。</p>
+
+  <div class="progress" id="progress">
+    <div class="progress-bar active"></div>
+    <div class="progress-bar"></div>
+    <div class="progress-bar"></div>
+    <div class="progress-bar"></div>
+    <div class="progress-bar"></div>
+    <div class="progress-bar"></div>
+  </div>
+
+  <form id="intakeForm" action="https://formspree.io/f/xreodqrq" method="POST">
+
+    <!-- ===== STEP 1: 基本情報 ===== -->
+    <div class="step active" data-step="1">
+      <p class="step-num">Step 1 / 6</p>
+      <h2 class="step-title">基本情報</h2>
+      <div class="fg">
+        <label>お名前<span class="req">*</span></label>
+        <input type="text" name="name" required placeholder="例：田中 太郎">
+        <p class="error-msg">お名前を入力してください</p>
+      </div>
+      <div class="fg">
+        <label>メールアドレス<span class="req">*</span></label>
+        <input type="email" name="email" required placeholder="例：info@example.com">
+        <p class="error-msg">正しいメールアドレスを入力してください</p>
+      </div>
+      <div class="fg">
+        <label>お電話番号 <span style="opacity:0.4;text-transform:none;letter-spacing:0">(任意)</span></label>
+        <input type="tel" name="phone" placeholder="例：03-1234-5678">
+      </div>
+      <div class="fg">
+        <label>お店の名前<span class="req">*</span></label>
+        <input type="text" name="shop_name" required placeholder="例：Cafe Sakura">
+        <p class="error-msg">お店の名前を入力してください</p>
+      </div>
+      <div class="fg">
+        <label>業種<span class="req">*</span></label>
+        <select name="category" required>
+          <option value="" disabled selected>選択してください</option>
+          <option value="飲食店">飲食店</option>
+          <option value="美容室">美容室</option>
+          <option value="ネイルサロン">ネイルサロン</option>
+          <option value="エステ">エステ</option>
+          <option value="ヨガ・ジム">ヨガ・ジム</option>
+          <option value="整体・鍼灸">整体・鍼灸</option>
+          <option value="クリニック">クリニック</option>
+          <option value="スクール">スクール</option>
+          <option value="その他">その他</option>
+        </select>
+        <p class="error-msg">業種を選択してください</p>
+      </div>
+      <div class="fg">
+        <label>エリア</label>
+        <input type="text" name="area" placeholder="例：渋谷、銀座、恵比寿">
+      </div>
+      <div class="fg">
+        <label>現在ホームページはお持ちですか？</label>
+        <div class="card-group" data-name="has_website" data-single="true">
+          <div class="card-option" data-value="はい">はい</div>
+          <div class="card-option" data-value="いいえ">いいえ</div>
+        </div>
+        <input type="hidden" name="has_website" value="">
+      </div>
+      <div class="conditional" id="websiteUrl">
+        <div class="fg">
+          <label>現在のサイトURL</label>
+          <input type="url" name="current_website" placeholder="https://...">
+        </div>
+      </div>
+      <div class="btn-row">
+        <div></div>
+        <button type="button" class="btn btn-next" onclick="nextStep()">次へ</button>
+      </div>
+    </div>
+
+    <!-- ===== STEP 2: お店の雰囲気 ===== -->
+    <div class="step" data-step="2">
+      <p class="step-num">Step 2 / 6</p>
+      <h2 class="step-title">お店の雰囲気</h2>
+      <div class="fg">
+        <label>お店の雰囲気を一言で（複数可）</label>
+        <div class="check-group" data-name="atmosphere">
+          <div class="check-item" data-value="高級感">高級感</div>
+          <div class="check-item" data-value="カジュアル">カジュアル</div>
+          <div class="check-item" data-value="ナチュラル">ナチュラル</div>
+          <div class="check-item" data-value="モダン">モダン</div>
+          <div class="check-item" data-value="和風">和風</div>
+          <div class="check-item" data-value="ポップ">ポップ</div>
+          <div class="check-item" data-value="クール">クール</div>
+          <div class="check-item" data-value="温かみ">温かみ</div>
+        </div>
+        <input type="hidden" name="atmosphere" value="">
+      </div>
+      <div class="fg">
+        <label>ターゲット層（複数可）</label>
+        <div class="check-group" data-name="target">
+          <div class="check-item" data-value="20代女性">20代女性</div>
+          <div class="check-item" data-value="30代女性">30代女性</div>
+          <div class="check-item" data-value="40代以上">40代以上</div>
+          <div class="check-item" data-value="男性">男性</div>
+          <div class="check-item" data-value="ファミリー">ファミリー</div>
+          <div class="check-item" data-value="カップル">カップル</div>
+          <div class="check-item" data-value="ビジネス層">ビジネス層</div>
+          <div class="check-item" data-value="外国人観光客">外国人観光客</div>
+        </div>
+        <input type="hidden" name="target" value="">
+      </div>
+      <div class="fg">
+        <label>お店のカラーやロゴはありますか？</label>
+        <div class="card-group" data-name="has_logo" data-single="true">
+          <div class="card-option" data-value="はい">はい</div>
+          <div class="card-option" data-value="いいえ（おまかせ）">いいえ（おまかせ）</div>
+        </div>
+        <input type="hidden" name="has_logo" value="">
+        <p class="hint">ロゴデータをお持ちの場合は、後ほどメールでお送りください。</p>
+      </div>
+      <div class="fg">
+        <label>参考にしたいサイトのURL（任意・最大3つ）</label>
+        <input type="url" name="ref_url_1" placeholder="https://..." style="margin-bottom:8px">
+        <input type="url" name="ref_url_2" placeholder="https://..." style="margin-bottom:8px">
+        <input type="url" name="ref_url_3" placeholder="https://...">
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-back" onclick="prevStep()">戻る</button>
+        <button type="button" class="btn btn-next" onclick="nextStep()">次へ</button>
+      </div>
+    </div>
+
+    <!-- ===== STEP 3: 載せたい情報 ===== -->
+    <div class="step" data-step="3">
+      <p class="step-num">Step 3 / 6</p>
+      <h2 class="step-title">載せたい情報</h2>
+      <div class="fg">
+        <label>ホームページに載せたい情報（複数可）</label>
+        <div class="check-group" data-name="features">
+          <div class="check-item" data-value="メニュー・料金表">メニュー・料金表</div>
+          <div class="check-item" data-value="営業時間・定休日">営業時間・定休日</div>
+          <div class="check-item" data-value="アクセス・地図">アクセス・地図</div>
+          <div class="check-item" data-value="予約フォーム">予約フォーム</div>
+          <div class="check-item" data-value="お問い合わせフォーム">お問い合わせフォーム</div>
+          <div class="check-item" data-value="スタッフ紹介">スタッフ紹介</div>
+          <div class="check-item" data-value="お客様の声・口コミ">お客様の声・口コミ</div>
+          <div class="check-item" data-value="ギャラリー（写真集）">ギャラリー（写真集）</div>
+          <div class="check-item" data-value="SNSリンク">SNSリンク（Instagram等）</div>
+          <div class="check-item" data-value="ブログ・お知らせ">ブログ・お知らせ</div>
+          <div class="check-item" data-value="日本語・英語切り替え">日本語・英語切り替え</div>
+          <div class="check-item" data-value="LINE連携">LINE連携</div>
+        </div>
+        <input type="hidden" name="features" value="">
+      </div>
+      <div class="fg">
+        <label>その他載せたい情報</label>
+        <input type="text" name="features_other" placeholder="自由にご記入ください">
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-back" onclick="prevStep()">戻る</button>
+        <button type="button" class="btn btn-next" onclick="nextStep()">次へ</button>
+      </div>
+    </div>
+
+    <!-- ===== STEP 4: 写真・素材 ===== -->
+    <div class="step" data-step="4">
+      <p class="step-num">Step 4 / 6</p>
+      <h2 class="step-title">写真・素材</h2>
+      <div class="fg">
+        <label>お店の写真はご用意できますか？</label>
+        <div class="card-group" data-name="photos" data-single="true">
+          <div class="card-option" data-value="10枚以上ある">10枚以上ある</div>
+          <div class="card-option" data-value="数枚ならある">数枚ならある</div>
+          <div class="card-option" data-value="ほとんどない">ほとんどない</div>
+        </div>
+        <input type="hidden" name="photos" value="">
+        <div class="conditional" id="noPhotosHint">
+          <p class="hint">フリー素材を活用してデザインします。ご安心ください。</p>
+        </div>
+      </div>
+      <div class="fg">
+        <label>ロゴデータはありますか？</label>
+        <div class="card-group" data-name="logo_data" data-single="true">
+          <div class="card-option" data-value="はい">はい</div>
+          <div class="card-option" data-value="いいえ">いいえ</div>
+          <div class="card-option" data-value="新しく作ってほしい">新しく作ってほしい</div>
+        </div>
+        <input type="hidden" name="logo_data" value="">
+      </div>
+      <div class="fg">
+        <label>掲載テキスト（メニュー名・料金等）のご用意は？</label>
+        <div class="card-group" data-name="text_ready" data-single="true">
+          <div class="card-option" data-value="はい">はい</div>
+          <div class="card-option" data-value="だいたいある">だいたいある</div>
+          <div class="card-option" data-value="おまかせしたい">おまかせしたい</div>
+        </div>
+        <input type="hidden" name="text_ready" value="">
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-back" onclick="prevStep()">戻る</button>
+        <button type="button" class="btn btn-next" onclick="nextStep()">次へ</button>
+      </div>
+    </div>
+
+    <!-- ===== STEP 5: ご希望 ===== -->
+    <div class="step" data-step="5">
+      <p class="step-num">Step 5 / 6</p>
+      <h2 class="step-title">ご希望</h2>
+      <div class="fg">
+        <label>ご希望のプラン</label>
+        <div class="plan-cards" data-name="plan">
+          <div class="plan-card" data-value="Light">
+            <div class="plan-card-name">Light</div>
+            <div class="plan-card-price">¥100,000（税込¥110,000）</div>
+            <div class="plan-card-desc">トップページ1枚構成 / スマホ対応 / 納期約1週間</div>
+          </div>
+          <div class="plan-card" data-value="Standard">
+            <div class="plan-card-name">Standard</div>
+            <div class="plan-card-price">¥150,000（税込¥165,000）</div>
+            <div class="plan-card-desc">5〜8ページ構成 / ギャラリー / SNS連携 / 日英対応 / 納期約2週間</div>
+          </div>
+          <div class="plan-card" data-value="Premium">
+            <div class="plan-card-name">Premium</div>
+            <div class="plan-card-price"><span style="text-decoration:line-through;opacity:0.4">¥250,000</span> ¥200,000（税込¥220,000）</div>
+            <div class="plan-card-desc">10ページ以上 / Analytics / 決済連携 / 1ヶ月サポート / 納期約3週間</div>
+            <span class="plan-card-campaign">先着5社キャンペーン</span>
+          </div>
+          <div class="plan-card" data-value="未定">
+            <div class="plan-card-name">まだ決めていない</div>
+            <div class="plan-card-desc">ご要望をお伺いしてから最適なプランをご提案します</div>
+          </div>
+        </div>
+        <input type="hidden" name="plan" value="">
+      </div>
+      <div class="fg">
+        <label>ご希望の公開時期</label>
+        <div class="card-group" data-name="timeline" data-single="true">
+          <div class="card-option" data-value="1週間以内">1週間以内</div>
+          <div class="card-option" data-value="2週間以内">2週間以内</div>
+          <div class="card-option" data-value="1ヶ月以内">1ヶ月以内</div>
+          <div class="card-option" data-value="特に急いでいない">特に急いでいない</div>
+        </div>
+        <input type="hidden" name="timeline" value="">
+      </div>
+      <div class="fg">
+        <label>その他ご要望</label>
+        <textarea name="message" rows="4" placeholder="自由にご記入ください"></textarea>
+      </div>
+      <div class="btn-row">
+        <button type="button" class="btn btn-back" onclick="prevStep()">戻る</button>
+        <button type="button" class="btn btn-next" onclick="nextStep()">確認画面へ</button>
+      </div>
+    </div>
+
+    <!-- ===== STEP 6: 確認・送信 ===== -->
+    <div class="step" data-step="6">
+      <p class="step-num">Step 6 / 6</p>
+      <h2 class="step-title">入力内容の確認</h2>
+      <table class="confirm-table" id="confirmTable"></table>
+      <div class="btn-row">
+        <button type="button" class="btn btn-back" onclick="prevStep()">戻る</button>
+        <button type="submit" class="btn btn-submit">送信する</button>
+      </div>
+    </div>
+
+    <!-- ===== COMPLETE ===== -->
+    <div class="step" data-step="complete" style="display:none;">
+      <div class="complete">
+        <div class="complete-icon">&#10003;</div>
+        <h2 class="complete-title">ありがとうございます！</h2>
+        <p class="complete-desc">24時間以内にご連絡いたします。<br>お急ぎの場合は <a href="mailto:hnhdesignworks@gmail.com" style="border-bottom:1px solid #000;">hnhdesignworks@gmail.com</a> へご連絡ください。</p>
+        <a href="index.html" class="complete-link">トップへ戻る</a>
+      </div>
+    </div>
+
+  </form>
+</main>
+
+<footer class="footer">
+  <p class="footer-copy">&copy; 2024 HNH Design Works. All rights reserved.</p>
+  <a href="index.html" class="footer-link">Home</a>
+</footer>
+
+<script>
+let currentStep = 1;
+const totalSteps = 6;
+
+// URL param: auto-select plan
+const params = new URLSearchParams(location.search);
+const presetPlan = params.get('plan');
+if (presetPlan) {
+  window.addEventListener('DOMContentLoaded', () => {
+    const planMap = { light: 'Light', standard: 'Standard', premium: 'Premium' };
+    const val = planMap[presetPlan.toLowerCase()];
+    if (val) {
+      document.querySelector(`[data-name="plan"] [data-value="${val}"]`)?.classList.add('selected');
+      const hidden = document.querySelector('input[name="plan"]');
+      if (hidden) hidden.value = val;
+    }
+  });
+}
+
+// Card select (single)
+document.querySelectorAll('.card-group[data-single="true"]').forEach(group => {
+  group.querySelectorAll('.card-option').forEach(card => {
+    card.addEventListener('click', () => {
+      group.querySelectorAll('.card-option').forEach(c => c.classList.remove('selected'));
+      card.classList.add('selected');
+      const name = group.dataset.name;
+      const hidden = document.querySelector(`input[name="${name}"]`);
+      if (hidden) hidden.value = card.dataset.value;
+      // Conditional: website URL
+      if (name === 'has_website') {
+        document.getElementById('websiteUrl').classList.toggle('show', card.dataset.value === 'はい');
+      }
+      // Conditional: no photos hint
+      if (name === 'photos') {
+        document.getElementById('noPhotosHint').classList.toggle('show', card.dataset.value === 'ほとんどない');
+      }
+    });
+  });
+});
+
+// Check group (multi-select)
+document.querySelectorAll('.check-group').forEach(group => {
+  group.querySelectorAll('.check-item').forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('checked');
+      const name = group.dataset.name;
+      const vals = [...group.querySelectorAll('.check-item.checked')].map(i => i.dataset.value);
+      const hidden = document.querySelector(`input[name="${name}"]`);
+      if (hidden) hidden.value = vals.join(', ');
+    });
+  });
+});
+
+// Plan cards (single select)
+document.querySelectorAll('.plan-cards .plan-card').forEach(card => {
+  card.addEventListener('click', () => {
+    document.querySelectorAll('.plan-cards .plan-card').forEach(c => c.classList.remove('selected'));
+    card.classList.add('selected');
+    const hidden = document.querySelector('input[name="plan"]');
+    if (hidden) hidden.value = card.dataset.value;
+  });
+});
+
+// Validation
+function validateStep(step) {
+  const stepEl = document.querySelector(`[data-step="${step}"]`);
+  let valid = true;
+  stepEl.querySelectorAll('input[required], select[required]').forEach(field => {
+    const err = field.parentElement.querySelector('.error-msg');
+    if (!field.value.trim()) {
+      field.classList.add('field-error');
+      if (err) err.classList.add('show');
+      valid = false;
+    } else if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value)) {
+      field.classList.add('field-error');
+      if (err) err.classList.add('show');
+      valid = false;
+    } else {
+      field.classList.remove('field-error');
+      if (err) err.classList.remove('show');
+    }
+  });
+  return valid;
+}
+
+function nextStep() {
+  if (!validateStep(currentStep)) return;
+  if (currentStep === 5) buildConfirm();
+  currentStep++;
+  showStep(currentStep);
+}
+
+function prevStep() {
+  currentStep--;
+  showStep(currentStep);
+}
+
+function showStep(n) {
+  document.querySelectorAll('.step').forEach(s => {
+    s.classList.remove('active');
+    s.style.display = 'none';
+  });
+  const target = document.querySelector(`[data-step="${n}"]`);
+  if (target) {
+    target.style.display = 'block';
+    setTimeout(() => target.classList.add('active'), 20);
+  }
+  // Progress
+  document.querySelectorAll('.progress-bar').forEach((bar, i) => {
+    bar.classList.toggle('active', i < n);
+  });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Build confirmation
+function buildConfirm() {
+  const fields = [
+    ['お名前', 'name'], ['メールアドレス', 'email'], ['お電話番号', 'phone'],
+    ['お店の名前', 'shop_name'], ['業種', 'category'], ['エリア', 'area'],
+    ['HP有無', 'has_website'], ['現在のサイトURL', 'current_website'],
+    ['雰囲気', 'atmosphere'], ['ターゲット層', 'target'],
+    ['ロゴ有無', 'has_logo'], ['参考URL 1', 'ref_url_1'],
+    ['参考URL 2', 'ref_url_2'], ['参考URL 3', 'ref_url_3'],
+    ['載せたい情報', 'features'], ['その他情報', 'features_other'],
+    ['写真', 'photos'], ['ロゴデータ', 'logo_data'],
+    ['テキスト用意', 'text_ready'],
+    ['プラン', 'plan'], ['公開時期', 'timeline'],
+    ['その他ご要望', 'message']
+  ];
+  const table = document.getElementById('confirmTable');
+  table.innerHTML = '';
+  fields.forEach(([label, name]) => {
+    const input = document.querySelector(`[name="${name}"]`);
+    const val = input ? input.value : '';
+    if (!val) return;
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<th>${label}</th><td>${val.replace(/</g, '&lt;')}</td>`;
+    table.appendChild(tr);
+  });
+}
+
+// Form submit
+document.getElementById('intakeForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = this;
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(res => {
+    if (res.ok) {
+      document.querySelectorAll('.step').forEach(s => { s.classList.remove('active'); s.style.display = 'none'; });
+      document.getElementById('progress').style.display = 'none';
+      const complete = document.querySelector('[data-step="complete"]');
+      complete.style.display = 'block';
+      setTimeout(() => complete.classList.add('active'), 20);
+    } else {
+      alert('送信に失敗しました。お手数ですがメールでお問い合わせください。');
+    }
+  }).catch(() => {
+    alert('送信に失敗しました。ネットワーク接続を確認してください。');
+  });
+});
+</script>
+
+</body>
+</html>

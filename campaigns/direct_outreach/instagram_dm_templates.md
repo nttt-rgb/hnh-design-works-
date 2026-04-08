@@ -14,6 +14,9 @@
 実際の制作例はこちらからご覧いただけます👇
 https://hnh-design-works.vercel.app
 
+打ち合わせ不要で始められます。簡単なフォームに答えるだけでスタートできます👇
+https://hnh-design-works.vercel.app/intake.html
+
 ご興味があればお気軽にお返事ください！
 
 ---
@@ -31,6 +34,9 @@ https://hnh-design-works.vercel.app
 
 現在、先着5社限定でPremiumプラン（通常¥275,000）を¥220,000（税込）で承っております。もちろんシンプルなプラン（¥110,000〜）もあります。
 
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
+
 ご興味があればお気軽にどうぞ！
 
 ---
@@ -45,6 +51,9 @@ https://hnh-design-works.vercel.app
 
 こんなサイトが作れます👇
 https://hnh-design-works.vercel.app
+
+打ち合わせ不要で始められます。フォームに答えるだけ👇
+https://hnh-design-works.vercel.app/intake.html
 
 ご興味があればお気軽にお返事ください！
 
