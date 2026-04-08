@@ -30,14 +30,14 @@ module.exports = {
   MAX_CONSECUTIVE_FAILURES: 5,
 
   // ============================================================
-  // Places API ハードリミット（変更厳禁）
-  // .env や環境変数からの上書き不可。コスト上限: 月$75以下
+  // Places API リミット
+  // Google Maps 月$200無料クレジット内で運用
   // Text Search: $32/1000req, Place Details: $17/1000req
-  // 50req/日 → 最大 $2.5/日, $75/月
+  // 500req/日 → 最大 $16/日, $200無料枠内
   // ============================================================
-  DAILY_API_LIMIT: 50,            // 1日の絶対上限（ハードコード）
-  PER_RUN_API_LIMIT: 30,          // 1実行あたりの上限（ハードコード）
-  API_WARNING_THRESHOLD: 40,      // 警告を出す閾値（日次上限の80%）
+  DAILY_API_LIMIT: 500,           // 1日の上限
+  PER_RUN_API_LIMIT: 300,         // 1実行あたりの上限
+  API_WARNING_THRESHOLD: 400,     // 警告を出す閾値（日次上限の80%）
   API_USAGE_FILE: path.join(ROOT, 'logs/api_usage.json'),
 
   // Owner
@@ -122,12 +122,12 @@ module.exports = {
    */
   recordApiRequest(usage, runCount) {
     // Hard stop: daily
-    if (usage.requests >= 50) {
-      return { ok: false, usage, stopped: 'API制限に達しました。本日の実行を停止します。' };
+    if (usage.requests >= this.DAILY_API_LIMIT) {
+      return { ok: false, usage, stopped: `API制限に達しました。本日の実行を停止します。(${usage.requests}/${this.DAILY_API_LIMIT})` };
     }
     // Hard stop: per-run
-    if (runCount >= 30) {
-      return { ok: false, usage, stopped: '1回の実行上限（30リクエスト）に達しました。停止します。' };
+    if (runCount >= this.PER_RUN_API_LIMIT) {
+      return { ok: false, usage, stopped: `1回の実行上限（${this.PER_RUN_API_LIMIT}リクエスト）に達しました。停止します。` };
     }
 
     usage.requests++;
@@ -135,8 +135,8 @@ module.exports = {
 
     // Warning at 80%
     let warning;
-    if (usage.requests === 40) {
-      warning = `[WARN] 日次API上限の80%に到達しました（${usage.requests}/50）。残り${50 - usage.requests}リクエスト。`;
+    if (usage.requests === this.API_WARNING_THRESHOLD) {
+      warning = `[WARN] 日次API上限の80%に到達しました（${usage.requests}/${this.DAILY_API_LIMIT}）。残り${this.DAILY_API_LIMIT - usage.requests}リクエスト。`;
     }
 
     return { ok: true, usage, warning };

@@ -17,8 +17,8 @@ function getTodaySlots() {
   const areaCount = config.AREAS.length;
   const typeCount = config.TYPES.length;
 
-  // Pick 3 area×type combos per day
-  for (let i = 0; i < 3; i++) {
+  // Pick 15 area×type combos per day (for broader coverage)
+  for (let i = 0; i < 15; i++) {
     const aIdx = (dayOfYear * 3 + i) % areaCount;
     const tIdx = (dayOfYear + i) % typeCount;
     pairs.push({ area: config.AREAS[aIdx], type: config.TYPES[tIdx] });
@@ -112,12 +112,12 @@ async function run(options = {}) {
   const usage = config.loadApiUsage();
 
   // Pre-flight check
-  if (usage.requests >= 50) {
-    console.log(`  API制限に達しました。本日の実行を停止します。(${usage.requests}/50)`);
+  if (usage.requests >= config.DAILY_API_LIMIT) {
+    console.log(`  API制限に達しました。本日の実行を停止します。(${usage.requests}/${config.DAILY_API_LIMIT})`);
     return 0;
   }
 
-  console.log(`  本日のAPI使用量: ${usage.requests}/50 (残り${50 - usage.requests}回)`);
+  console.log(`  本日のAPI使用量: ${usage.requests}/${config.DAILY_API_LIMIT} (残り${config.DAILY_API_LIMIT - usage.requests}回)`);
 
   // Ensure CSV exists with header
   if (!fs.existsSync(config.TARGET_CSV)) {
@@ -143,7 +143,7 @@ async function run(options = {}) {
 
     console.log(`  Searching: ${slot.area} × ${config.TYPE_LABELS[slot.type] || slot.type}`);
     const places = await searchPlaces(slot.area, slot.type);
-    console.log(`  Found ${places.length} results (API: ${usage.requests}/50, run: ${runCount}/30)`);
+    console.log(`  Found ${places.length} results (API: ${usage.requests}/${config.DAILY_API_LIMIT}, run: ${runCount}/${config.PER_RUN_API_LIMIT})`);
 
     for (const place of places) {
       if (existingNames.has(place.name)) continue;
@@ -190,7 +190,7 @@ async function run(options = {}) {
 
   console.log(`  New leads added: ${newLeads}`);
   console.log(`  Total leads: ${existingNames.size}`);
-  console.log(`  API: 今回${runCount}回 / 本日合計${usage.requests}回 / 上限50回`);
+  console.log(`  API: 今回${runCount}回 / 本日合計${usage.requests}回 / 上限${config.DAILY_API_LIMIT}回`);
   if (stopped) {
     console.log(`  Scout stopped early due to API rate limit.`);
   }
