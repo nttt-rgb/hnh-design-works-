@@ -183,8 +183,38 @@ async function run(options = {}) {
 
       const details = await getPlaceDetails(place.place_id);
 
-      // Skip if has a website
-      if (details.website) continue;
+      // HP有りの場合: 品質チェックしてスコア5以下ならリデザイン対象として追加
+      if (details.website) {
+        try {
+          const { checkSite } = require('./site_checker');
+          const domain = new URL(details.website).hostname;
+          const result = await checkSite(domain);
+          if (result.score <= 5) {
+            const row = [
+              csvEscape(details.name || place.name),
+              csvEscape(config.TYPE_LABELS[slot.type] || slot.type),
+              csvEscape(slot.area),
+              csvEscape(result.emails && result.emails[0] || ''),
+              csvEscape(details.formatted_phone_number || ''),
+              details.rating || '',
+              details.user_ratings_total || '',
+              'あり',
+              '',
+              csvEscape(`HP品質スコア: ${result.score}/10 (${result.issues.join(', ')}). URL: ${details.website}. 自動取得 (${TODAY})`),
+              'リデザイン対象',
+              '',
+              ''
+            ].join(',');
+            fs.appendFileSync(config.TARGET_CSV, row + '\n');
+            existingNames.add(details.name || place.name);
+            newLeads++;
+            console.log(`    [REDESIGN] ${details.name} — スコア${result.score}/10 (${result.issues.join(', ')})`);
+          }
+        } catch (e) {
+          // Site check failed, skip
+        }
+        continue;
+      }
 
       const row = [
         csvEscape(details.name || place.name),

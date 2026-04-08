@@ -1,0 +1,253 @@
+[
+  {
+    "line": 6,
+    "name": "和食 ごしき",
+    "domain": "washoku-goshiki.com",
+    "score": 3,
+    "issues": [
+      "サイトにアクセスできない"
+    ],
+    "emails": []
+  },
+  {
+    "line": 9,
+    "name": "豚とバラの日々",
+    "domain": "bravopeoples.com",
+    "score": 3,
+    "issues": [
+      "スマホ非対応",
+      "SSL非対応",
+      "地図なし",
+      "SNSリンクなし"
+    ],
+    "emails": []
+  },
+  {
+    "line": 20,
+    "name": "下北SABA食堂 佐助酒場",
+    "domain": "saba-sasuke.com",
+    "score": 3,
+    "issues": [
+      "サイトにアクセスできない"
+    ],
+    "emails": []
+  },
+  {
+    "line": 64,
+    "name": "甘美堂",
+    "domain": "kanmido.com",
+    "score": 7,
+    "issues": [
+      "問い合わせフォームなし",
+      "地図なし",
+      "SNSリンクなし"
+    ],
+    "emails": []
+  },
+  {
+    "line": 4,
+    "name": "三茶 貝介",
+    "domain": "kemurigroup.com",
+    "score": 8,
+    "issues": [
+      "地図なし",
+      "SNSリンクなし"
+    ],
+    "emails": []
+  },
+  {
+    "line": 30,
+    "name": "カフェ ファソン 中目黒本店",
+    "domain": "cafefacon.com",
+    "score": 8,
+    "issues": [
+      "問い合わせフォームなし",
+      "地図なし"
+    ],
+    "emails": []
+  },
+  {
+    "line": 155,
+    "name": "薬膳火鍋OSHIDORI",
+    "domain": "oshidori.info",
+    "score": 8,
+    "issues": [
+      "読み込み4.4秒",
+      "地図なし"
+    ],
+    "emails": []
+  },
+  {
+    "line": 156,
+    "name": "麻布 やきとん ふじ嶋",
+    "domain": "infinity8.tokyo",
+    "score": 8,
+    "issues": [
+      "問い合わせフォームなし",
+      "地図なし"
+    ],
+    "emails": []
+  },
+  {
+    "line": 25,
+    "name": "都夏 本店",
+    "domain": "jack-pot.co.jp",
+    "score": 9,
+    "issues": [
+      "地図なし"
+    ],
+    "emails": []
+  },
+  {
+    "line": 27,
+    "name": "CHIYA-BA",
+    "domain": "chiyaba.com",
+    "score": 9,
+    "issues": [
+      "地図なし"
+    ],
+    "emails": []
+  },
+  {
+    "line": 29,
+    "name": "neel 中目黒",
+    "domain": "neel.coffee",
+    "score": 9,
+    "issues": [
+      "地図なし"
+    ],
+    "emails": []
+  },
+  {
+    "line": 151,
+    "name": "三六 麻布十番店",
+    "domain": "miroku-motsu.jp",
+    "score": 9,
+    "issues": [
+      "地図なし"
+    ],
+    "emails": []
+  },
+  {
+    "line": 154,
+    "name": "惣菜 ふじやま",
+    "domain": "azabu-fujiyama.jp",
+    "score": 9,
+    "issues": [
+      "地図なし"
+    ],
+    "emails": []
+  },
+  {
+    "line": 2,
+    "name": "ニューマルコ",
+    "domain": "marco.tokyo",
+    "score": 10,
+    "issues": [],
+    "emails": []
+  },
+  {
+    "line": 8,
+    "name": "寿司とワイン サンチャモニカ",
+    "domain": "sancha-monica.com",
+    "score": 10,
+    "issues": [],
+    "emails": []
+  },
+  {
+    "line": 11,
+    "name": "KISSA RAY",
+    "domain": "kissaray.com",
+    "score": 10,
+    "issues": [],
+    "emails": [
+      "info@kissaray.com"
+    ]
+  },
+  {
+    "line": 14,
+    "name": "ベアポンド エスプレッソ",
+    "domain": "bearpondespresso.com",
+    "score": 10,
+    "issues": [],
+    "emails": [
+      "bearpondespresso@gmail.com",
+      "flowerchildbeans@gmail.com",
+      "littlebeargeneral@gmail.com"
+    ]
+  },
+  {
+    "line": 21,
+    "name": "下北六角",
+    "domain": "marco.tokyo",
+    "score": 10,
+    "issues": [],
+    "emails": []
+  },
+  {
+    "line": 23,
+    "name": "串焼きと煮野菜 零や",
+    "domain": "shimokita-zeroya.com",
+    "score": 10,
+    "issues": [],
+    "emails": []
+  },
+  {
+    "line": 24,
+    "name": "焼野菜 銀河団",
+    "domain": "yakiyasai-gingadan.com",
+    "score": 10,
+    "issues": [],
+    "emails": []
+  },
+  {
+    "line": 28,
+    "name": "HAUTE COUTURE・CAFE",
+    "domain": "hautecouturecafe.com",
+    "score": 10,
+    "issues": [],
+    "emails": []
+  },
+  {
+    "line": 31,
+    "name": "カフェ モクシャチャイ",
+    "domain": "mokshajapan.jp",
+    "score": 10,
+    "issues": [],
+    "emails": [
+      "info@mokshajapan.co.jp"
+    ]
+  },
+  {
+    "line": 103,
+    "name": "ジャストミート",
+    "domain": "justmeat-asakusa.com",
+    "score": 10,
+    "issues": [],
+    "emails": []
+  },
+  {
+    "line": 108,
+    "name": "浅草 更科天狐",
+    "domain": "sarashina-tenko.com",
+    "score": 10,
+    "issues": [],
+    "emails": []
+  },
+  {
+    "line": 152,
+    "name": "博多ほたる 麻布十番店",
+    "domain": "behappy-obu.co.jp",
+    "score": 10,
+    "issues": [],
+    "emails": []
+  },
+  {
+    "line": 158,
+    "name": "麻布十番居酒屋 あさごや",
+    "domain": "asagoya.jp",
+    "score": 10,
+    "issues": [],
+    "emails": []
+  }
+]
