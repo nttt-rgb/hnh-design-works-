@@ -58,38 +58,39 @@ function buildEmail(lead) {
   const category = lead['業種'] || '店舗';
   const pitchLine = config.PITCH_LINES[category] || 'お店の魅力を、プロフェッショナルなデザインでWebに届けます。';
 
-  const subject = `【ご提案】${shopName}様のホームページ制作についてご案内`;
+  const subject = `${shopName}様、ホームページで「${area} ${category}」の検索に出ませんか？`;
 
   const body = `${shopName}
 ご担当者様
 
-突然のご連絡失礼いたします。
-東京でビジネス向けのWeb制作を行っておりますHNH Design Worksの${config.OWNER_NAME}と申します。
+はじめまして。
+HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
-Googleマップで${shopName}様を拝見し、とても魅力的だと感じました。
-現在ホームページをお持ちでないようでしたので、お力になれればと思いご連絡いたしました。
+Googleマップで${shopName}様を拝見しました。
+${pitchLine}
 
-ホームページがあると、Googleで「${area} ${category}」と検索したお客様に見つけてもらえるようになります。${pitchLine}
+「${area} ${category}」で検索したとき、公式サイトがないと
+新しいお客様に見つけてもらう機会を逃しているかもしれません。
 
-飲食店・美容室・クリニック・ジム・スクールなど、さまざまな業種のホームページを制作しております。制作実績はこちらからご覧いただけます：
-
+普段こういうサイトを作っています：
 ${config.PORTFOLIO_URL}
 
-スマホ対応・SEO対策・予約フォームなど、集客に必要な機能を全て標準装備。
-Lightプランは¥110,000（税込）から。先着5社様限定でPremiumプラン（通常¥275,000）を¥220,000（税込）でお受けしております。
-
-打ち合わせ不要で始められます。簡単なフォームにお答えいただくだけで制作をスタートできます：
+今ちょうどキャンペーン中で、通常よりお得にご依頼いただけます。
+こちらのフォーム（3分くらいです）からお店の情報を教えていただければ、
+打ち合わせなしで制作を進められます：
 ${config.PORTFOLIO_URL}/intake.html
 
-もちろん、このメールへのご返信でも結構です。
-お見積もりは無料です。無理な勧誘は一切いたしません。
+ご興味なければスルーで構いません。
+お忙しいところ失礼しました。
 
+──────────────────
 HNH Design Works
-${config.OWNER_NAME}
-${config.SMTP_USER}
+豊川 直也
+hnh.designworks@gmail.com
+──────────────────
 
-※本メールはGoogleマップに公開されている情報をもとにお送りしております。
-※今後のご案内が不要な場合は、その旨ご返信いただければ即時配信を停止いたします。`;
+※Googleマップの公開情報をもとにご連絡しております。
+※ご不要の場合はご返信いただければ即時停止いたします。`;
 
   return { subject, body };
 }
@@ -114,7 +115,7 @@ async function run(options = {}) {
 
     // Skip if already sent, queued, or no email
     if (!email || !shopName) continue;
-    if (status && status !== '未送信') continue;
+    if (status && status !== '未送信' && status !== 'リデザイン対象') continue;
     if (queuedShops.has(shopName)) continue;
     if (unsubscribed.has(email.toLowerCase())) continue;
 
