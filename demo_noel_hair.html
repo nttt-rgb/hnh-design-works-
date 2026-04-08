@@ -1,12 +1,55 @@
+<!-- Plan: Standard ¥150,000（税込¥165,000） -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NOEL HAIR TOKYO | BE YOUR OWN ICON.</title>
+  <meta name="description" content="NOEL HAIR TOKYO - 原宿の人気ヘアサロン。カット、カラー、パーマ、トリートメントなど、トレンドを超えたあなただけのスタイルを提案します。">
+  <meta property="og:title" content="NOEL HAIR TOKYO | BE YOUR OWN ICON.">
+  <meta property="og:description" content="原宿から発信する、あなただけのスタイル。カット・カラー・パーマ・トリートメントならNOEL HAIR TOKYOへ。">
+  <meta property="og:image" content="https://noel-hair.tokyo/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://noel-hair.tokyo/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NOEL HAIR TOKYO | BE YOUR OWN ICON.">
+  <meta name="twitter:description" content="原宿から発信する、あなただけのスタイル。カット・カラー・パーマ・トリートメントならNOEL HAIR TOKYOへ。">
+  <meta name="twitter:image" content="https://noel-hair.tokyo/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "NOEL HAIR TOKYO",
+    "description": "原宿の人気ヘアサロン。カット、カラー、パーマ、トリートメントなど、トレンドを超えたあなただけのスタイルを提案します。",
+    "url": "https://noel-hair.tokyo/",
+    "telephone": "03-XXXX-XXXX",
+    "email": "info@noel-hair.tokyo",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "神宮前1-X-X ○○ビル 2F",
+      "addressLocality": "渋谷区",
+      "addressRegion": "東京都",
+      "postalCode": "150-0001",
+      "addressCountry": "JP"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 35.6695,
+      "longitude": 139.7028
+    },
+    "openingHours": "Mo,We-Su 11:00-21:00",
+    "priceRange": "¥¥",
+    "image": "https://noel-hair.tokyo/og-image.jpg",
+    "sameAs": [
+      "https://instagram.com/",
+      "https://x.com/",
+      "https://tiktok.com/"
+    ]
+  }
+  </script>
   <style>
     /* ==============================================
        0. RESET & CUSTOM PROPERTIES
@@ -240,6 +283,12 @@
       color: var(--text);
     }
 
+    .nav__right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+
     .nav__links {
       display: flex;
       gap: 36px;
@@ -256,6 +305,24 @@
 
     .nav__links a:hover {
       color: var(--neon-pink);
+    }
+
+    .lang-toggle {
+      padding: 6px 14px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      border: 2px solid var(--neon-pink);
+      border-radius: 20px;
+      background: transparent;
+      color: var(--neon-pink);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .lang-toggle:hover {
+      background: var(--neon-pink);
+      color: var(--white);
     }
 
     /* Hamburger */
@@ -478,10 +545,89 @@
     }
 
     /* ==============================================
+       5.5. GALLERY
+    ============================================== */
+    .gallery {
+      background: rgba(255,255,255,0.85);
+      padding: 120px 0;
+    }
+
+    .gallery__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .gallery__item {
+      aspect-ratio: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .gallery__item-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.4s ease;
+    }
+
+    .gallery__item:hover .gallery__item-inner {
+      transform: scale(1.08);
+    }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .lightbox.active {
+      display: flex;
+    }
+
+    .lightbox__content {
+      width: 80vmin;
+      height: 80vmin;
+      border-radius: 16px;
+      position: relative;
+    }
+
+    .lightbox__close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 48px;
+      height: 48px;
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      border: none;
+      border-radius: 50%;
+      color: var(--white);
+      font-size: 24px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+      z-index: 2001;
+    }
+
+    .lightbox__close:hover {
+      background: rgba(255,255,255,0.3);
+    }
+
+    /* ==============================================
        6. MENU
     ============================================== */
     .menu {
-      background: rgba(255,255,255,0.82);
+      background: rgba(245,245,245,0.82);
       padding: 120px 0;
     }
 
@@ -562,6 +708,12 @@
       display: flex;
       flex-direction: column;
       gap: 20px;
+    }
+
+    .booking__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
     }
 
     .booking__field label {
@@ -657,6 +809,81 @@
     }
 
     /* ==============================================
+       7.5. FAQ
+    ============================================== */
+    .faq {
+      background: rgba(245,245,245,0.82);
+      padding: 120px 0;
+    }
+
+    .faq__list {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq__item {
+      border-bottom: 1px solid var(--border);
+    }
+
+    .faq__item:first-child {
+      border-top: 1px solid var(--border);
+    }
+
+    .faq__question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 24px 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text);
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      letter-spacing: 0.5px;
+      line-height: 1.6;
+    }
+
+    .faq__question:hover {
+      color: var(--neon-pink);
+    }
+
+    .faq__icon {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--neon-pink);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 700;
+      transition: transform 0.3s ease;
+    }
+
+    .faq__item.active .faq__icon {
+      transform: rotate(45deg);
+    }
+
+    .faq__answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+
+    .faq__answer-inner {
+      padding: 0 0 24px 0;
+      font-size: 15px;
+      color: var(--text-sub);
+      line-height: 1.8;
+    }
+
+    /* ==============================================
        8. ACCESS
     ============================================== */
     .access {
@@ -697,65 +924,54 @@
 
     .access__map {
       width: 100%;
-      aspect-ratio: 4/3;
-      background: var(--offwhite);
       border-radius: 16px;
-      position: relative;
       overflow: hidden;
       border: 1px solid var(--border);
     }
 
-    /* Grid pattern on map placeholder */
-    .access__map::before {
+    /* ==============================================
+       8.5. SNS
+    ============================================== */
+    .sns {
+      background: rgba(245,245,245,0.8);
+      padding: 120px 0;
+    }
+
+    .sns__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .sns__item {
+      aspect-ratio: 1;
+      border-radius: 12px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sns__item-inner {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.4s ease;
+    }
+
+    .sns__item:hover .sns__item-inner {
+      transform: scale(1.05);
+    }
+
+    .sns__item::after {
       content: '';
       position: absolute;
       inset: 0;
-      background-image:
-        linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,0,0,0.04) 1px, transparent 1px);
-      background-size: 40px 40px;
+      background: rgba(0,0,0,0);
+      transition: background 0.3s ease;
     }
 
-    /* Pin */
-    .access__pin {
-      position: absolute;
-      top: 45%;
-      left: 50%;
-      transform: translate(-50%, -100%);
-      width: 32px;
-      height: 42px;
-    }
-
-    .access__pin-head {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--neon-pink), var(--purple));
-      box-shadow: 0 4px 16px rgba(255,45,123,0.3);
-    }
-
-    .access__pin-tail {
-      width: 0;
-      height: 0;
-      border-left: 8px solid transparent;
-      border-right: 8px solid transparent;
-      border-top: 12px solid var(--purple);
-      margin: -2px auto 0;
-    }
-
-    .access__map-label {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-size: 12px;
-      font-weight: 500;
-      letter-spacing: 3px;
-      color: var(--text-light);
-      text-transform: uppercase;
-      background: rgba(255,255,255,0.9);
-      padding: 6px 16px;
-      border-radius: 20px;
+    .sns__item:hover::after {
+      background: rgba(0,0,0,0.1);
     }
 
     /* ==============================================
@@ -833,14 +1049,28 @@
         margin: 0 auto;
       }
 
+      .gallery__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+      }
+
       .booking__wrapper {
         grid-template-columns: 1fr;
         gap: 48px;
       }
 
+      .booking__row {
+        grid-template-columns: 1fr;
+      }
+
       .access__wrapper {
         grid-template-columns: 1fr;
         gap: 40px;
+      }
+
+      .sns__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
       }
 
       /* Reduce bubble sizes on tablet */
@@ -884,11 +1114,16 @@
         margin-bottom: 36px;
       }
 
-      .stylist, .menu, .booking, .access {
+      .stylist, .menu, .booking, .access, .gallery, .faq, .sns {
         padding: 80px 0;
       }
 
       .stylist__card { padding: 36px 24px; }
+
+      .gallery__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+      }
 
       .menu__item { padding: 12px 0; }
       .menu__item-name { font-size: 14px; }
@@ -897,6 +1132,11 @@
       .booking__submit {
         width: 100%;
         text-align: center;
+      }
+
+      .sns__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
       }
 
       /* Further reduce bubbles on mobile */
@@ -938,25 +1178,33 @@
   ============================================= -->
   <nav class="nav">
     <a href="#" class="nav__logo">NOEL</a>
-    <div class="nav__links">
-      <a href="#stylist">Stylist</a>
-      <a href="#menu">Menu</a>
-      <a href="#booking">Book</a>
-      <a href="#access">Access</a>
+    <div class="nav__right">
+      <div class="nav__links">
+        <a href="#stylist" data-ja="Stylist" data-en="Stylist">Stylist</a>
+        <a href="#gallery" data-ja="Gallery" data-en="Gallery">Gallery</a>
+        <a href="#menu" data-ja="Menu" data-en="Menu">Menu</a>
+        <a href="#booking" data-ja="Book" data-en="Book">Book</a>
+        <a href="#faq" data-ja="FAQ" data-en="FAQ">FAQ</a>
+        <a href="#access" data-ja="Access" data-en="Access">Access</a>
+      </div>
+      <button class="lang-toggle" id="langToggle">EN</button>
+      <button class="hamburger" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
-    <button class="hamburger" aria-label="Menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
   </nav>
 
   <!-- Mobile Menu Overlay -->
   <div class="mobile-menu">
     <a href="#stylist">Stylist</a>
+    <a href="#gallery">Gallery</a>
     <a href="#menu">Menu</a>
     <a href="#booking">Book</a>
+    <a href="#faq">FAQ</a>
     <a href="#access">Access</a>
+    <a href="#sns">SNS</a>
   </div>
 
   <!-- ============================================
@@ -964,11 +1212,16 @@
   ============================================= -->
   <section class="hero">
     <div class="hero__content">
-      <h1 class="hero__copy">BE YOUR OWN<br>ICON.</h1>
-      <p class="hero__sub">原宿から発信する、あなただけのスタイル。</p>
-      <a href="#booking" class="hero__cta">BOOK NOW</a>
+      <h1 class="hero__copy" data-ja="BE YOUR OWN<br>ICON." data-en="BE YOUR OWN<br>ICON.">BE YOUR OWN<br>ICON.</h1>
+      <p class="hero__sub" data-ja="原宿から発信する、あなただけのスタイル。" data-en="Your one-of-a-kind style, from Harajuku.">原宿から発信する、あなただけのスタイル。</p>
+      <a href="#booking" class="hero__cta" data-ja="BOOK NOW" data-en="BOOK NOW">BOOK NOW</a>
     </div>
   </section>
+
+  <!-- ============================================
+       YOUTUBE EMBED (Salon Introduction Movie)
+  ============================================= -->
+  <div style="aspect-ratio:16/9;background:#f0f0f0;border-radius:12px;display:flex;align-items:center;justify-content:center;margin:40px auto;max-width:800px;"><span style="font-size:0.8rem;letter-spacing:0.2em;text-transform:uppercase;opacity:0.3;">Salon Introduction Movie</span></div>
 
   <!-- ============================================
        STYLIST
@@ -976,7 +1229,7 @@
   <section class="stylist" id="stylist">
     <div class="section-inner">
       <p class="section-label">Stylist</p>
-      <h2 class="section-title">OUR TEAM</h2>
+      <h2 class="section-title" data-ja="OUR TEAM" data-en="OUR TEAM">OUR TEAM</h2>
       <div class="stylist__grid">
 
         <div class="stylist__card">
@@ -1011,12 +1264,57 @@
   </section>
 
   <!-- ============================================
+       GALLERY
+  ============================================= -->
+  <section class="gallery" id="gallery">
+    <div class="section-inner">
+      <p class="section-label">Works</p>
+      <h2 class="section-title" data-ja="GALLERY" data-en="GALLERY">GALLERY</h2>
+      <div class="gallery__grid">
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <div class="gallery__item-inner" style="background:linear-gradient(135deg, #FF2D7B, #9B2DFF);"></div>
+        </div>
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <div class="gallery__item-inner" style="background:linear-gradient(135deg, #2D7BFF, #2DFFFF);"></div>
+        </div>
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <div class="gallery__item-inner" style="background:linear-gradient(135deg, #7BFF2D, #2D7BFF);"></div>
+        </div>
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <div class="gallery__item-inner" style="background:linear-gradient(135deg, #9B2DFF, #FF2D7B);"></div>
+        </div>
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <div class="gallery__item-inner" style="background:linear-gradient(135deg, #2DFFFF, #7BFF2D);"></div>
+        </div>
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <div class="gallery__item-inner" style="background:linear-gradient(135deg, #FF7B2D, #FF2D7B);"></div>
+        </div>
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <div class="gallery__item-inner" style="background:linear-gradient(135deg, #FF2D7B, #2D7BFF);"></div>
+        </div>
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <div class="gallery__item-inner" style="background:linear-gradient(135deg, #7BFF2D, #9B2DFF);"></div>
+        </div>
+        <div class="gallery__item" onclick="openLightbox(this)">
+          <div class="gallery__item-inner" style="background:linear-gradient(135deg, #2D7BFF, #FF7B2D);"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox__close" onclick="closeLightbox(event)">&times;</button>
+    <div class="lightbox__content" id="lightboxContent"></div>
+  </div>
+
+  <!-- ============================================
        MENU
   ============================================= -->
   <section class="menu" id="menu">
     <div class="section-inner">
       <p class="section-label">Menu</p>
-      <h2 class="section-title">PRICE LIST</h2>
+      <h2 class="section-title" data-ja="PRICE LIST" data-en="PRICE LIST">PRICE LIST</h2>
 
       <!-- CUT -->
       <div class="menu__category">
@@ -1118,7 +1416,7 @@
   <section class="booking" id="booking">
     <div class="section-inner">
       <p class="section-label">Reservation</p>
-      <h2 class="section-title">BOOK NOW</h2>
+      <h2 class="section-title" data-ja="BOOK NOW" data-en="BOOK NOW">BOOK NOW</h2>
       <div class="booking__wrapper">
 
         <form class="booking__form" id="bookingForm">
@@ -1126,17 +1424,35 @@
             <label for="name">お名前</label>
             <input type="text" id="name" name="name" required placeholder="山田 太郎">
           </div>
-          <div class="booking__field">
-            <label for="tel">電話番号</label>
-            <input type="tel" id="tel" name="tel" required placeholder="090-XXXX-XXXX">
+          <div class="booking__row">
+            <div class="booking__field">
+              <label for="email">メールアドレス</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com">
+            </div>
+            <div class="booking__field">
+              <label for="tel">電話番号</label>
+              <input type="tel" id="tel" name="tel" required placeholder="090-XXXX-XXXX">
+            </div>
           </div>
           <div class="booking__field">
-            <label for="email">メールアドレス</label>
-            <input type="email" id="email" name="email" required placeholder="your@email.com">
+            <label for="menu-select">メニュー</label>
+            <select id="menu-select" name="menu" required>
+              <option value="">選択してください</option>
+              <option value="カット">Cut / カット</option>
+              <option value="カラー">Color / カラー</option>
+              <option value="パーマ">Perm / パーマ</option>
+              <option value="トリートメント">Treatment / トリートメント</option>
+            </select>
           </div>
-          <div class="booking__field">
-            <label for="date">ご希望日時</label>
-            <input type="datetime-local" id="date" name="date" required>
+          <div class="booking__row">
+            <div class="booking__field">
+              <label for="date">ご希望日</label>
+              <input type="date" id="date" name="date" required>
+            </div>
+            <div class="booking__field">
+              <label for="time">ご希望時間</label>
+              <input type="time" id="time" name="time" required min="11:00" max="20:00">
+            </div>
           </div>
           <div class="booking__field">
             <label for="stylist-select">指名スタイリスト</label>
@@ -1149,23 +1465,10 @@
             </select>
           </div>
           <div class="booking__field">
-            <label for="menu-select">メニュー</label>
-            <select id="menu-select" name="menu">
-              <option value="">選択してください</option>
-              <option value="カット">カット</option>
-              <option value="カラー">カラー</option>
-              <option value="パーマ">パーマ</option>
-              <option value="トリートメント">トリートメント</option>
-              <option value="カット+カラー">カット + カラー</option>
-              <option value="カット+パーマ">カット + パーマ</option>
-              <option value="その他">その他（備考欄にご記入ください）</option>
-            </select>
-          </div>
-          <div class="booking__field">
-            <label for="note">備考</label>
+            <label for="note">メッセージ</label>
             <textarea id="note" name="note" placeholder="ご要望やご質問があればお書きください。"></textarea>
           </div>
-          <button type="submit" class="booking__submit">BOOK NOW</button>
+          <button type="submit" class="booking__submit" data-ja="BOOK NOW" data-en="BOOK NOW">BOOK NOW</button>
         </form>
 
         <div class="booking__info">
@@ -1205,12 +1508,75 @@
   </section>
 
   <!-- ============================================
+       FAQ
+  ============================================= -->
+  <section class="faq" id="faq">
+    <div class="section-inner">
+      <p class="section-label">Questions</p>
+      <h2 class="section-title" data-ja="FAQ" data-en="FAQ">FAQ</h2>
+      <div class="faq__list">
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="toggleFaq(this)">
+            <span>予約なしでも来店できますか？</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">はい、空き状況によってはお受けできますが、事前予約をおすすめしています。</div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="toggleFaq(this)">
+            <span>メニューに迷っています。相談できますか？</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">もちろんです。カウンセリング時にスタイリストがご提案いたします。</div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="toggleFaq(this)">
+            <span>カラーとカットを同日にできますか？</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">はい、セットメニューとして承っています。所要時間は約2〜3時間です。</div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="toggleFaq(this)">
+            <span>駐車場はありますか？</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">専用駐車場はございませんが、近隣にコインパーキングがございます。</div>
+          </div>
+        </div>
+
+        <div class="faq__item">
+          <button class="faq__question" onclick="toggleFaq(this)">
+            <span>英語対応していますか？</span>
+            <span class="faq__icon">+</span>
+          </button>
+          <div class="faq__answer">
+            <div class="faq__answer-inner">はい、英語対応可能なスタイリストが在籍しています。</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
        ACCESS
   ============================================= -->
   <section class="access" id="access">
     <div class="section-inner">
       <p class="section-label">Access</p>
-      <h2 class="section-title">FIND US</h2>
+      <h2 class="section-title" data-ja="FIND US" data-en="FIND US">FIND US</h2>
       <div class="access__wrapper">
 
         <div class="access__details">
@@ -1227,13 +1593,39 @@
         </div>
 
         <div class="access__map">
-          <div class="access__pin">
-            <div class="access__pin-head"></div>
-            <div class="access__pin-tail"></div>
-          </div>
-          <span class="access__map-label">Harajuku, Tokyo</span>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.0!2d139.7028!3d35.6695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDQwJzEwLjIiTiAxMznCsDQyJzEwLjEiRQ!5e0!3m2!1sen!2sjp!4v1" width="100%" height="300" style="border:0;border-radius:8px;" allowfullscreen loading="lazy"></iframe>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SNS / FOLLOW US
+  ============================================= -->
+  <section class="sns" id="sns">
+    <div class="section-inner">
+      <p class="section-label">Social</p>
+      <h2 class="section-title" data-ja="FOLLOW US" data-en="FOLLOW US">FOLLOW US</h2>
+      <div class="sns__grid">
+        <div class="sns__item">
+          <div class="sns__item-inner" style="background:linear-gradient(135deg, #FF2D7B, #FF7B2D);"></div>
+        </div>
+        <div class="sns__item">
+          <div class="sns__item-inner" style="background:linear-gradient(135deg, #2D7BFF, #9B2DFF);"></div>
+        </div>
+        <div class="sns__item">
+          <div class="sns__item-inner" style="background:linear-gradient(135deg, #7BFF2D, #2DFFFF);"></div>
+        </div>
+        <div class="sns__item">
+          <div class="sns__item-inner" style="background:linear-gradient(135deg, #9B2DFF, #2D7BFF);"></div>
+        </div>
+        <div class="sns__item">
+          <div class="sns__item-inner" style="background:linear-gradient(135deg, #2DFFFF, #FF2D7B);"></div>
+        </div>
+        <div class="sns__item">
+          <div class="sns__item-inner" style="background:linear-gradient(135deg, #FF7B2D, #7BFF2D);"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -1246,7 +1638,8 @@
       <p class="footer__logo">NOEL HAIR TOKYO</p>
       <div class="footer__social">
         <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://x.com/" target="_blank" rel="noopener">X</a>
+        <a href="https://x.com/" target="_blank" rel="noopener">X / Twitter</a>
+        <a href="https://tiktok.com/" target="_blank" rel="noopener">TikTok</a>
       </div>
       <p class="footer__copy">&copy; 2026 NOEL HAIR TOKYO. All rights reserved.</p>
       <p class="footer__credit">Produced by HNH Design Works</p>
@@ -1254,7 +1647,7 @@
   </footer>
 
   <!-- ============================================
-       JAVASCRIPT (Hamburger + Form)
+       JAVASCRIPT
   ============================================= -->
   <script>
     /* --- Hamburger Menu --- */
@@ -1284,6 +1677,7 @@
       var tel = document.getElementById('tel').value;
       var email = document.getElementById('email').value;
       var date = document.getElementById('date').value;
+      var time = document.getElementById('time').value;
       var stylist = document.getElementById('stylist-select').value;
       var menu = document.getElementById('menu-select').value;
       var note = document.getElementById('note').value;
@@ -1293,13 +1687,72 @@
         '■ お名前: ' + name + '\n' +
         '■ 電話番号: ' + tel + '\n' +
         '■ メール: ' + email + '\n' +
-        '■ 希望日時: ' + date + '\n' +
+        '■ 希望日: ' + date + '\n' +
+        '■ 希望時間: ' + time + '\n' +
         '■ 指名: ' + (stylist || '未選択') + '\n' +
         '■ メニュー: ' + (menu || '未選択') + '\n' +
-        '■ 備考: ' + (note || 'なし')
+        '■ メッセージ: ' + (note || 'なし')
       );
 
       window.location.href = 'mailto:info@noel-hair.tokyo?subject=' + subject + '&body=' + body;
+    });
+
+    /* --- FAQ Accordion --- */
+    function toggleFaq(btn) {
+      var item = btn.parentElement;
+      var answer = item.querySelector('.faq__answer');
+      var isActive = item.classList.contains('active');
+
+      // Close all
+      document.querySelectorAll('.faq__item').forEach(function(el) {
+        el.classList.remove('active');
+        el.querySelector('.faq__answer').style.maxHeight = '0';
+      });
+
+      // Open clicked if it was closed
+      if (!isActive) {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    }
+
+    /* --- Gallery Lightbox --- */
+    function openLightbox(el) {
+      var bg = el.querySelector('.gallery__item-inner').style.background;
+      var content = document.getElementById('lightboxContent');
+      content.style.background = bg;
+      document.getElementById('lightbox').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeLightbox(e) {
+      if (e.target === document.getElementById('lightbox') || e.target.classList.contains('lightbox__close')) {
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        document.getElementById('lightbox').classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    });
+
+    /* --- JP / EN Language Toggle --- */
+    var currentLang = 'ja';
+    document.getElementById('langToggle').addEventListener('click', function() {
+      currentLang = currentLang === 'ja' ? 'en' : 'ja';
+      this.textContent = currentLang === 'ja' ? 'EN' : 'JP';
+
+      document.querySelectorAll('[data-ja][data-en]').forEach(function(el) {
+        var text = el.getAttribute('data-' + currentLang);
+        if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+          el.placeholder = text;
+        } else {
+          el.innerHTML = text;
+        }
+      });
     });
   </script>
 

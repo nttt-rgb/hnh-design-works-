@@ -1,9 +1,48 @@
+<!-- Plan: Premium ¥250,000（税込¥275,000） -->
 <!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yoga Studio Lumière | 代官山のヨガスタジオ</title>
+  <meta name="description" content="代官山駅徒歩2分。自然光あふれるヨガスタジオLumière（リュミエール）。ハタヨガ・ヴィンヤサ・瞑想など多彩なクラスで、心と身体に光を。体験レッスン¥1,000。">
+  <meta property="og:title" content="Yoga Studio Lumière | 代官山のヨガスタジオ">
+  <meta property="og:description" content="代官山駅徒歩2分。自然光あふれるヨガスタジオ。ハタヨガ・ヴィンヤサ・瞑想など多彩なクラスで、心と身体に光を。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yoga-lumiere.com">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Yoga Studio Lumière | 代官山のヨガスタジオ">
+  <meta name="twitter:description" content="代官山駅徒歩2分。自然光あふれるヨガスタジオ。体験レッスン¥1,000。">
+  <!-- Google Analytics -->
+  <!-- GA4 measurement ID goes here -->
+  <!-- End Google Analytics -->
+  <!-- Google Search Console verification goes here -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["HealthAndBeautyBusiness", "LocalBusiness"],
+    "name": "Yoga Studio Lumière",
+    "description": "代官山駅徒歩2分。自然光あふれるヨガスタジオ。ハタヨガ・ヴィンヤサ・瞑想など多彩なクラス。",
+    "url": "https://yoga-lumiere.com",
+    "telephone": "03-XXXX-XXXX",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "代官山町X-X ○○ハウス 2F",
+      "addressLocality": "渋谷区",
+      "addressRegion": "東京都",
+      "postalCode": "150-0034",
+      "addressCountry": "JP"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 35.6499,
+      "longitude": 139.7036
+    },
+    "openingHours": "Mo,Tu,We,Fr,Sa,Su 10:00-21:00",
+    "priceRange": "¥1,000〜¥16,000"
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Zen+Kaku+Gothic+New:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -243,6 +282,8 @@
     .nav-overlay.open a:nth-child(3) { transition-delay: 0.2s; }
     .nav-overlay.open a:nth-child(4) { transition-delay: 0.25s; }
     .nav-overlay.open a:nth-child(5) { transition-delay: 0.3s; }
+    .nav-overlay.open a:nth-child(6) { transition-delay: 0.35s; }
+    .nav-overlay.open a:nth-child(7) { transition-delay: 0.4s; }
     .nav-overlay a:hover { color: var(--green); }
 
     @media (max-width: 768px) {
@@ -1261,6 +1302,573 @@
     @media (max-width: 480px) {
       .section { padding: 3.5rem 1.2rem; }
     }
+
+    /* ==============================================
+       17. TEXTURE OVERLAY
+    ============================================== */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 9998;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 256px 256px;
+    }
+
+    /* ==============================================
+       18. SECTION ALT WARM GRAY
+    ============================================== */
+    .section-warm { background: #ece7de; }
+
+    /* ==============================================
+       19. VIDEO PLACEHOLDER STYLES
+    ============================================== */
+    .video-placeholder {
+      position: relative;
+      background: linear-gradient(135deg, rgba(90,114,71,0.06) 0%, rgba(212,197,169,0.18) 50%, rgba(90,114,71,0.04) 100%);
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      overflow: hidden;
+      cursor: pointer;
+      transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s;
+    }
+    .video-placeholder:hover {
+      transform: scale(1.01);
+      box-shadow: 0 12px 40px rgba(42,34,24,0.08);
+    }
+    .video-placeholder .play-btn {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      background: rgba(250,250,247,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+      box-shadow: 0 4px 20px rgba(42,34,24,0.08);
+      transition: transform 0.4s var(--ease-out-expo), background 0.3s;
+    }
+    .video-placeholder:hover .play-btn {
+      transform: scale(1.1);
+      background: var(--white);
+    }
+    .play-btn svg {
+      width: 24px; height: 24px;
+      fill: var(--green);
+      margin-left: 3px;
+    }
+    .video-placeholder .video-label {
+      font-family: var(--serif);
+      font-size: 0.9rem;
+      color: var(--brown-mid);
+      letter-spacing: 0.08em;
+    }
+    .video-full {
+      width: 100%;
+      aspect-ratio: 21/9;
+      margin: 0;
+      border-radius: 0;
+    }
+    .video-inline {
+      width: 100%;
+      max-width: 480px;
+      aspect-ratio: 16/9;
+      margin: 2rem auto 0;
+    }
+
+    /* ==============================================
+       20. GALLERY SECTION
+    ============================================== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 200px;
+      gap: 1rem;
+      margin-top: 3rem;
+    }
+    .gallery-grid .gallery-item:nth-child(1) { grid-row: span 2; }
+    .gallery-grid .gallery-item:nth-child(4) { grid-row: span 2; }
+    .gallery-grid .gallery-item:nth-child(7) { grid-column: span 2; }
+    .gallery-grid .gallery-item:nth-child(10) { grid-row: span 2; }
+
+    .gallery-item {
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s;
+    }
+    .gallery-item:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(42,34,24,0.1);
+      z-index: 2;
+    }
+    .gallery-item .gallery-inner {
+      width: 100%; height: 100%;
+      transition: transform 0.6s var(--ease-out-expo);
+    }
+    .gallery-item:hover .gallery-inner {
+      transform: scale(1.08);
+    }
+
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 160px;
+      }
+      .gallery-grid .gallery-item:nth-child(7) { grid-column: span 1; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 140px;
+      }
+    }
+
+    /* Gallery Lightbox */
+    .lightbox-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 10001;
+      background: rgba(42,34,24,0.85);
+      backdrop-filter: blur(20px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s;
+      cursor: pointer;
+    }
+    .lightbox-overlay.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .lightbox-content {
+      width: 70vw;
+      max-width: 700px;
+      aspect-ratio: 4/3;
+      border-radius: 16px;
+      transform: scale(0.9);
+      transition: transform 0.5s var(--ease-out-expo);
+    }
+    .lightbox-overlay.active .lightbox-content {
+      transform: scale(1);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      width: 44px; height: 44px;
+      background: rgba(250,250,247,0.15);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .lightbox-close:hover { background: rgba(250,250,247,0.3); }
+    .lightbox-close svg { width: 18px; height: 18px; stroke: var(--white); stroke-width: 2; }
+
+    /* ==============================================
+       21. FAQ ACCORDION
+    ============================================== */
+    .faq-list {
+      max-width: 760px;
+      margin: 3rem auto 0;
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(212,197,169,0.3);
+    }
+    .faq-question {
+      width: 100%;
+      padding: 1.4rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-align: left;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--brown);
+      letter-spacing: 0.02em;
+      cursor: pointer;
+      transition: color 0.3s;
+      background: none;
+      border: none;
+      font-family: var(--sans);
+    }
+    .faq-question:hover { color: var(--green); }
+    .faq-question .faq-icon {
+      width: 24px; height: 24px;
+      flex-shrink: 0;
+      position: relative;
+      margin-left: 1rem;
+    }
+    .faq-icon::before,
+    .faq-icon::after {
+      content: '';
+      position: absolute;
+      background: var(--green);
+      transition: transform 0.4s var(--ease-out-expo);
+    }
+    .faq-icon::before {
+      width: 14px; height: 1.5px;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .faq-icon::after {
+      width: 1.5px; height: 14px;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .faq-item.active .faq-icon::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+    .faq-item.active .faq-question { color: var(--green); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s var(--ease-out-expo), padding 0.4s;
+    }
+    .faq-answer-inner {
+      padding: 0 0 1.4rem;
+      font-size: 0.9rem;
+      color: var(--brown-mid);
+      line-height: 1.9;
+    }
+
+    /* ==============================================
+       22. SNS SECTION
+    ============================================== */
+    .sns-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 3rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .sns-item {
+      aspect-ratio: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.4s var(--ease-out-expo);
+    }
+    .sns-item:hover { transform: scale(1.05); }
+    .sns-item .sns-inner {
+      width: 100%; height: 100%;
+    }
+    .sns-item .sns-overlay-icon {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(42,34,24,0.0);
+      transition: background 0.3s;
+    }
+    .sns-item:hover .sns-overlay-icon {
+      background: rgba(42,34,24,0.2);
+    }
+    .sns-overlay-icon svg {
+      width: 28px; height: 28px;
+      fill: var(--white);
+      opacity: 0;
+      transform: scale(0.8);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .sns-item:hover .sns-overlay-icon svg {
+      opacity: 1;
+      transform: scale(1);
+    }
+    @media (max-width: 480px) {
+      .sns-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* ==============================================
+       23. STRIPE PAYMENT SECTION
+    ============================================== */
+    .payment-card {
+      max-width: 420px;
+      margin: 3rem auto 0;
+      background: var(--white);
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      text-align: center;
+      box-shadow: 0 8px 40px rgba(42,34,24,0.06);
+      border: 1px solid rgba(212,197,169,0.2);
+      transition: transform 0.5s var(--ease-out-expo), box-shadow 0.5s;
+    }
+    .payment-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 50px rgba(42,34,24,0.1);
+    }
+    .payment-card .payment-price-label {
+      font-family: var(--serif);
+      font-size: 1.1rem;
+      color: var(--brown);
+      margin-bottom: 0.5rem;
+    }
+    .payment-card .payment-price {
+      font-family: var(--serif);
+      font-size: 2.8rem;
+      font-weight: 400;
+      color: var(--green);
+      margin-bottom: 1.5rem;
+    }
+    .payment-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 1rem 2.5rem;
+      background: var(--green);
+      color: var(--white);
+      font-size: 0.95rem;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+      border: none;
+      font-family: var(--sans);
+    }
+    .payment-btn:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(90,114,71,0.25);
+    }
+    .payment-btn svg {
+      width: 20px; height: 20px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.5;
+    }
+    .payment-note {
+      margin-top: 1.2rem;
+      font-size: 0.78rem;
+      color: var(--brown-light);
+    }
+    .payment-feedback {
+      display: none;
+      margin-top: 1rem;
+      padding: 0.8rem 1.2rem;
+      background: rgba(90,114,71,0.08);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--green-dark);
+    }
+    .payment-feedback.show { display: block; }
+
+    /* ==============================================
+       24. NEWSLETTER SECTION
+    ============================================== */
+    .newsletter-section {
+      background: rgba(90,114,71,0.06);
+      padding: 4.5rem 2rem;
+      text-align: center;
+    }
+    .newsletter-section h2 {
+      font-family: var(--serif);
+      font-size: clamp(1.4rem, 3.5vw, 2rem);
+      font-weight: 300;
+      color: var(--brown);
+      letter-spacing: 0.04em;
+      margin-bottom: 1rem;
+    }
+    .newsletter-section p {
+      font-size: 0.88rem;
+      color: var(--brown-mid);
+      margin-bottom: 2rem;
+    }
+    .newsletter-form {
+      display: flex;
+      gap: 0.8rem;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+    .newsletter-form input {
+      flex: 1;
+      padding: 0.9rem 1.2rem;
+      border: 1px solid rgba(212,197,169,0.4);
+      border-radius: 50px;
+      background: var(--white);
+      font-size: 0.9rem;
+      color: var(--brown);
+      transition: border-color 0.3s;
+    }
+    .newsletter-form input:focus {
+      border-color: var(--green);
+      outline: none;
+    }
+    .newsletter-form button {
+      padding: 0.9rem 2rem;
+      background: var(--green);
+      color: var(--white);
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.3s, transform 0.3s;
+      font-family: var(--sans);
+    }
+    .newsletter-form button:hover {
+      background: var(--green-dark);
+      transform: translateY(-2px);
+    }
+    .newsletter-feedback {
+      display: none;
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: var(--green);
+    }
+    .newsletter-feedback.show { display: block; }
+    @media (max-width: 480px) {
+      .newsletter-form { flex-direction: column; }
+      .newsletter-form button { width: 100%; }
+    }
+
+    /* ==============================================
+       25. LINE FLOATING BUTTON
+    ============================================== */
+    .line-float {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 999;
+      width: 60px; height: 60px;
+      background: #06C755;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(6,199,85,0.35);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: none;
+      font-family: var(--sans);
+    }
+    .line-float:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 30px rgba(6,199,85,0.45);
+    }
+    .line-tooltip {
+      position: absolute;
+      bottom: 70px;
+      right: 0;
+      background: var(--brown);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 300;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(8px);
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .line-tooltip::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      right: 20px;
+      border-left: 6px solid transparent;
+      border-right: 6px solid transparent;
+      border-top: 6px solid var(--brown);
+    }
+    .line-float:hover .line-tooltip,
+    .line-tooltip.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==============================================
+       26. LANGUAGE TOGGLE
+    ============================================== */
+    .lang-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 0;
+      margin-left: 1.5rem;
+      border: 1px solid rgba(212,197,169,0.4);
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .lang-toggle button {
+      padding: 0.3rem 0.7rem;
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: var(--brown-mid);
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      font-family: var(--sans);
+    }
+    .lang-toggle button.active {
+      background: var(--green);
+      color: var(--white);
+    }
+    @media (max-width: 768px) {
+      .lang-toggle {
+        position: absolute;
+        top: 50%;
+        right: 3.5rem;
+        transform: translateY(-50%);
+        margin-left: 0;
+      }
+    }
+
+    /* ==============================================
+       27. BOOKING FORM ENHANCEMENTS
+    ============================================== */
+    .radio-group {
+      display: flex;
+      gap: 1.5rem;
+      padding: 0.6rem 0;
+    }
+    .radio-group label {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.88rem !important;
+      color: var(--brown) !important;
+      cursor: pointer;
+      margin-bottom: 0 !important;
+    }
+    .radio-group input[type="radio"] {
+      width: auto;
+      accent-color: var(--green);
+    }
+    .form-group input[type="date"] {
+      cursor: pointer;
+    }
+
+    /* ==============================================
+       28. GOOGLE MAPS IFRAME
+    ============================================== */
+    .map-embed {
+      margin-top: 2rem;
+      border-radius: 12px;
+      overflow: hidden;
+    }
   </style>
 </head>
 <body>
@@ -1286,10 +1894,16 @@
   <a href="#" class="nav-logo">Lumière</a>
   <div class="nav-links">
     <a href="#classes">Class</a>
+    <a href="#gallery">Gallery</a>
     <a href="#pricing">Price</a>
     <a href="#instructors">Instructor</a>
     <a href="#schedule">Schedule</a>
+    <a href="#faq">FAQ</a>
     <a href="#contact">Access</a>
+    <div class="lang-toggle" id="langToggle">
+      <button class="active" data-lang="ja">JP</button>
+      <button data-lang="en">EN</button>
+    </div>
   </div>
   <div class="nav-hamburger" id="hamburger">
     <span></span><span></span><span></span>
@@ -1299,10 +1913,16 @@
 <!-- Mobile overlay -->
 <div class="nav-overlay" id="navOverlay">
   <a href="#classes" class="nav-overlay-link">Class</a>
+  <a href="#gallery" class="nav-overlay-link">Gallery</a>
   <a href="#pricing" class="nav-overlay-link">Price</a>
   <a href="#instructors" class="nav-overlay-link">Instructor</a>
   <a href="#schedule" class="nav-overlay-link">Schedule</a>
+  <a href="#faq" class="nav-overlay-link">FAQ</a>
   <a href="#contact" class="nav-overlay-link">Access</a>
+  <div class="lang-toggle" id="langToggleMobile" style="position:static;transform:none;margin-top:1rem;">
+    <button class="active" data-lang="ja">JP</button>
+    <button data-lang="en">EN</button>
+  </div>
 </div>
 
 <!-- ==========================================
@@ -1321,9 +1941,9 @@
       </svg>
     </div>
 
-    <h1 class="hero-title" id="heroTitle">心と身体に、光を。</h1>
+    <h1 class="hero-title" id="heroTitle" data-ja="心と身体に、光を。" data-en="Light for your mind and body.">心と身体に、光を。</h1>
 
-    <p class="hero-sub">代官山の静寂の中で、自分自身と向き合うひととき</p>
+    <p class="hero-sub" data-ja="代官山の静寂の中で、自分自身と向き合うひととき" data-en="A moment to reconnect with yourself in the tranquility of Daikanyama">代官山の静寂の中で、自分自身と向き合うひととき</p>
 
     <a href="#contact" class="hero-cta">体験レッスンを予約する</a>
   </div>
@@ -1333,6 +1953,16 @@
     <div class="scroll-line"></div>
   </div>
 </section>
+
+<!-- ==========================================
+     VIDEO: STUDIO INTRODUCTION (full-width)
+========================================== -->
+<div class="video-placeholder video-full reveal" data-ja="Studio Introduction" data-en="Studio Introduction">
+  <div class="play-btn">
+    <svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>
+  </div>
+  <span class="video-label" data-ja="スタジオ紹介ムービー" data-en="Studio Introduction">スタジオ紹介ムービー</span>
+</div>
 
 <!-- ==========================================
      PHILOSOPHY
@@ -1351,14 +1981,22 @@
   </svg>
 
   <div class="container">
-    <p class="section-label reveal">Philosophy</p>
-    <h2 class="philosophy-quote reveal">自然のリズムに、身を委ねる。</h2>
+    <p class="section-label reveal" data-ja="Philosophy" data-en="Philosophy">Philosophy</p>
+    <h2 class="philosophy-quote reveal" data-ja="自然のリズムに、身を委ねる。" data-en="Surrender to the rhythm of nature.">自然のリズムに、身を委ねる。</h2>
     <p class="philosophy-text reveal">
       呼吸のように自然に、流れるように。<br>
       Lumièreは「光」を意味するフランス語。<br>
       内なる光を見つけるための空間を提供します。
     </p>
     <div class="section-divider reveal" style="margin: 0 auto 2rem;"></div>
+
+    <!-- Inline video: Our Story -->
+    <div class="video-placeholder video-inline reveal" data-ja="Our Story" data-en="Our Story">
+      <div class="play-btn">
+        <svg viewBox="0 0 24 24"><polygon points="8,5 19,12 8,19"/></svg>
+      </div>
+      <span class="video-label" data-ja="私たちのストーリー" data-en="Our Story">私たちのストーリー</span>
+    </div>
   </div>
 
   <div class="values-track-wrapper">
@@ -1381,8 +2019,8 @@
 ========================================== -->
 <section class="section section-white gradient-shift" id="classes">
   <div class="container">
-    <p class="section-label reveal">Class</p>
-    <h2 class="section-title reveal">4つのクラスで、<br>あなただけの時間を。</h2>
+    <p class="section-label reveal" data-ja="Class" data-en="Class">Class</p>
+    <h2 class="section-title reveal" data-ja="4つのクラスで、<br>あなただけの時間を。" data-en="Four classes,<br>your personal time.">4つのクラスで、<br>あなただけの時間を。</h2>
     <div class="section-divider reveal"></div>
 
     <div class="classes-grid stagger-children">
@@ -1433,43 +2071,77 @@
 </section>
 
 <!-- ==========================================
+     GALLERY
+========================================== -->
+<section class="section section-warm" id="gallery">
+  <div class="container">
+    <p class="section-label reveal" data-ja="Gallery" data-en="Gallery">Gallery</p>
+    <h2 class="section-title reveal" data-ja="スタジオギャラリー" data-en="Studio Gallery">スタジオギャラリー</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="gallery-grid stagger-children">
+      <div class="gallery-item reveal"><div class="gallery-inner" style="background:linear-gradient(135deg,#c8d4b8 0%,#e8e0d0 100%);"></div></div>
+      <div class="gallery-item reveal"><div class="gallery-inner" style="background:linear-gradient(135deg,#d4c5a9 0%,#f3ede3 100%);"></div></div>
+      <div class="gallery-item reveal"><div class="gallery-inner" style="background:linear-gradient(135deg,#e8e0d0 0%,#c8d4b8 100%);"></div></div>
+      <div class="gallery-item reveal"><div class="gallery-inner" style="background:linear-gradient(135deg,#a8b898 0%,#d4c5a9 100%);"></div></div>
+      <div class="gallery-item reveal"><div class="gallery-inner" style="background:linear-gradient(135deg,#f3ede3 0%,#c8d4b8 100%);"></div></div>
+      <div class="gallery-item reveal"><div class="gallery-inner" style="background:linear-gradient(135deg,#b8c8a8 0%,#e8e0d0 100%);"></div></div>
+      <div class="gallery-item reveal"><div class="gallery-inner" style="background:linear-gradient(135deg,#d4c5a9 0%,#a8b898 100%);"></div></div>
+      <div class="gallery-item reveal"><div class="gallery-inner" style="background:linear-gradient(135deg,#e0d8c8 0%,#b8c8a8 100%);"></div></div>
+      <div class="gallery-item reveal"><div class="gallery-inner" style="background:linear-gradient(135deg,#c8d4b8 0%,#f3ede3 100%);"></div></div>
+      <div class="gallery-item reveal"><div class="gallery-inner" style="background:linear-gradient(135deg,#a8b898 0%,#e8e0d0 100%);"></div></div>
+      <div class="gallery-item reveal"><div class="gallery-inner" style="background:linear-gradient(135deg,#d4c5a9 0%,#c8d4b8 100%);"></div></div>
+      <div class="gallery-item reveal"><div class="gallery-inner" style="background:linear-gradient(135deg,#e8e0d0 0%,#a8b898 100%);"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox-overlay" id="lightbox">
+  <div class="lightbox-close" id="lightboxClose">
+    <svg viewBox="0 0 24 24"><line x1="6" y1="6" x2="18" y2="18"/><line x1="18" y1="6" x2="6" y2="18"/></svg>
+  </div>
+  <div class="lightbox-content" id="lightboxContent"></div>
+</div>
+
+<!-- ==========================================
      PRICING
 ========================================== -->
 <section class="section section-alt" id="pricing">
   <div class="container">
-    <p class="section-label reveal">Price</p>
-    <h2 class="section-title reveal">シンプルで<br>わかりやすい料金体系。</h2>
+    <p class="section-label reveal" data-ja="Price" data-en="Price">Price</p>
+    <h2 class="section-title reveal" data-ja="シンプルで<br>わかりやすい料金体系。" data-en="Simple and<br>transparent pricing.">シンプルで<br>わかりやすい料金体系。</h2>
     <div class="section-divider reveal"></div>
 
     <div class="pricing-grid stagger-children">
       <!-- Trial -->
       <div class="price-card">
-        <div class="price-badge trial">初回限定</div>
-        <div class="price-name">体験レッスン</div>
+        <div class="price-badge trial" data-ja="初回限定" data-en="First Time">初回限定</div>
+        <div class="price-name" data-ja="体験レッスン" data-en="Trial Lesson">体験レッスン</div>
         <div class="price-amount">¥1,500</div>
         <div class="price-detail">まずは体験から。<br>手ぶらでOK。</div>
       </div>
 
       <!-- Drop-in -->
       <div class="price-card">
-        <div class="price-badge">都度利用</div>
-        <div class="price-name">ドロップイン</div>
+        <div class="price-badge" data-ja="都度利用" data-en="Drop-in">都度利用</div>
+        <div class="price-name" data-ja="ドロップイン" data-en="Drop-in">ドロップイン</div>
         <div class="price-amount">¥3,500</div>
         <div class="price-detail">1回ごとの利用。<br>好きなときに。</div>
       </div>
 
       <!-- Monthly 4 -->
       <div class="price-card recommended">
-        <div class="price-badge">おすすめ</div>
-        <div class="price-name">月4回プラン</div>
+        <div class="price-badge" data-ja="おすすめ" data-en="Recommended">おすすめ</div>
+        <div class="price-name" data-ja="月4回プラン" data-en="4x Monthly">月4回プラン</div>
         <div class="price-amount">¥10,000</div>
         <div class="price-detail">週1ペースで<br>無理なく続ける。</div>
       </div>
 
       <!-- Unlimited -->
       <div class="price-card">
-        <div class="price-badge">通い放題</div>
-        <div class="price-name">フリーパス</div>
+        <div class="price-badge" data-ja="通い放題" data-en="Unlimited">通い放題</div>
+        <div class="price-name" data-ja="フリーパス" data-en="Free Pass">フリーパス</div>
         <div class="price-amount">¥16,000</div>
         <div class="price-detail">何度でも通える。<br>本格的に取り組む方に。</div>
       </div>
@@ -1482,12 +2154,34 @@
 </section>
 
 <!-- ==========================================
+     STRIPE PAYMENT
+========================================== -->
+<section class="section section-white" id="payment">
+  <div class="container" style="text-align:center;">
+    <p class="section-label reveal" data-ja="Booking" data-en="Booking">Booking</p>
+    <h2 class="section-title reveal" data-ja="体験レッスンのご予約" data-en="Book a Trial Lesson">体験レッスンのご予約</h2>
+    <div class="section-divider reveal" style="margin:0 auto 1rem;"></div>
+
+    <div class="payment-card reveal">
+      <div class="payment-price-label" data-ja="体験レッスン" data-en="Trial Lesson">体験レッスン</div>
+      <div class="payment-price">¥1,000</div>
+      <button class="payment-btn" id="stripePayBtn">
+        <svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+        <span data-ja="カードで支払う" data-en="Pay by Card">カードで支払う</span>
+      </button>
+      <div class="payment-note" data-ja="※ Stripe決済で安全にお支払いいただけます" data-en="※ Secure payment via Stripe">※ Stripe決済で安全にお支払いいただけます</div>
+      <div class="payment-feedback" id="paymentFeedback" data-ja="ありがとうございます。決済ページへ移動します..." data-en="Thank you. Redirecting to payment...">ありがとうございます。決済ページへ移動します...</div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
      INSTRUCTORS
 ========================================== -->
 <section class="section section-white" id="instructors">
   <div class="container">
-    <p class="section-label reveal">Instructor</p>
-    <h2 class="section-title reveal">あなたの旅に<br>寄り添うガイド。</h2>
+    <p class="section-label reveal" data-ja="Instructor" data-en="Instructor">Instructor</p>
+    <h2 class="section-title reveal" data-ja="あなたの旅に<br>寄り添うガイド。" data-en="Guides who walk<br>beside you.">あなたの旅に<br>寄り添うガイド。</h2>
     <div class="section-divider reveal" style="margin-bottom: 3.5rem;"></div>
 
     <!-- Miki -->
@@ -1525,8 +2219,8 @@
 ========================================== -->
 <section class="section section-alt" id="schedule">
   <div class="container">
-    <p class="section-label reveal">Schedule</p>
-    <h2 class="section-title reveal">週間スケジュール</h2>
+    <p class="section-label reveal" data-ja="Schedule" data-en="Schedule">Schedule</p>
+    <h2 class="section-title reveal" data-ja="週間スケジュール" data-en="Weekly Schedule">週間スケジュール</h2>
     <div class="section-divider reveal"></div>
 
     <div class="schedule-table-wrapper reveal">
@@ -1637,8 +2331,8 @@
 ========================================== -->
 <section class="section section-white" id="testimonials">
   <div class="container">
-    <p class="section-label reveal">Voice</p>
-    <h2 class="section-title reveal">通ってくださる方の声。</h2>
+    <p class="section-label reveal" data-ja="Voice" data-en="Testimonials">Voice</p>
+    <h2 class="section-title reveal" data-ja="通ってくださる方の声。" data-en="What our members say.">通ってくださる方の声。</h2>
     <div class="section-divider reveal"></div>
 
     <div class="testimonials-grid stagger-children">
@@ -1666,12 +2360,102 @@
 </section>
 
 <!-- ==========================================
+     SNS
+========================================== -->
+<section class="section section-warm" id="sns">
+  <div class="container" style="text-align:center;">
+    <p class="section-label reveal" data-ja="Follow Us" data-en="Follow Us">Follow Us</p>
+    <h2 class="section-title reveal" data-ja="Instagram" data-en="Instagram">Instagram</h2>
+    <div class="section-divider reveal" style="margin:0 auto 1rem;"></div>
+
+    <div class="sns-grid stagger-children">
+      <div class="sns-item"><div class="sns-inner" style="background:linear-gradient(135deg,#c8d4b8 0%,#e8e0d0 100%);"></div><div class="sns-overlay-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></div></div>
+      <div class="sns-item"><div class="sns-inner" style="background:linear-gradient(135deg,#d4c5a9 0%,#f3ede3 100%);"></div><div class="sns-overlay-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></div></div>
+      <div class="sns-item"><div class="sns-inner" style="background:linear-gradient(135deg,#a8b898 0%,#d4c5a9 100%);"></div><div class="sns-overlay-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></div></div>
+      <div class="sns-item"><div class="sns-inner" style="background:linear-gradient(135deg,#e8e0d0 0%,#b8c8a8 100%);"></div><div class="sns-overlay-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></div></div>
+      <div class="sns-item"><div class="sns-inner" style="background:linear-gradient(135deg,#b8c8a8 0%,#e8e0d0 100%);"></div><div class="sns-overlay-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></div></div>
+      <div class="sns-item"><div class="sns-inner" style="background:linear-gradient(135deg,#d4c5a9 0%,#c8d4b8 100%);"></div><div class="sns-overlay-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
+     FAQ
+========================================== -->
+<section class="section section-white" id="faq">
+  <div class="container" style="text-align:center;">
+    <p class="section-label reveal" data-ja="FAQ" data-en="FAQ">FAQ</p>
+    <h2 class="section-title reveal" data-ja="よくあるご質問" data-en="Frequently Asked Questions">よくあるご質問</h2>
+    <div class="section-divider reveal" style="margin:0 auto 1rem;"></div>
+
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-question" data-ja="持ち物は何が必要ですか？" data-en="What should I bring?">
+          <span>持ち物は何が必要ですか？</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-ja="マット・タオル・お水をお持ちください。レンタルマットもご用意しております（¥300）。動きやすい服装でお越しください。" data-en="Please bring a mat, towel, and water. Rental mats are available (¥300). Please wear comfortable clothing.">マット・タオル・お水をお持ちください。レンタルマットもご用意しております（¥300）。動きやすい服装でお越しください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" data-ja="体験レッスンはありますか？" data-en="Do you offer trial lessons?">
+          <span>体験レッスンはありますか？</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-ja="はい、初回体験レッスンを¥1,000でご用意しております。ご予約が必要ですので、お電話またはフォームよりお申し込みください。" data-en="Yes, we offer a first-time trial lesson for ¥1,000. Reservation is required — please book by phone or via our form.">はい、初回体験レッスンを¥1,000でご用意しております。ご予約が必要ですので、お電話またはフォームよりお申し込みください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" data-ja="キャンセルポリシーは？" data-en="What is your cancellation policy?">
+          <span>キャンセルポリシーは？</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-ja="前日18時までのキャンセルは無料です。当日キャンセルの場合はレッスン料の50%を頂戴いたします。" data-en="Cancellations are free until 6 PM the day before. Same-day cancellations incur a 50% charge.">前日18時までのキャンセルは無料です。当日キャンセルの場合はレッスン料の50%を頂戴いたします。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" data-ja="駐車場はありますか？" data-en="Is parking available?">
+          <span>駐車場はありますか？</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-ja="提携駐車場がございます。1時間まで無料でご利用いただけます。詳しくはスタッフまでお尋ねください。" data-en="We have partner parking available. Free for up to 1 hour. Please ask staff for details.">提携駐車場がございます。1時間まで無料でご利用いただけます。詳しくはスタッフまでお尋ねください。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" data-ja="男性も参加できますか？" data-en="Can men participate?">
+          <span>男性も参加できますか？</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-ja="もちろん歓迎です。当スタジオは性別を問わず、すべての方にヨガを楽しんでいただける空間です。" data-en="Of course! Our studio welcomes everyone regardless of gender.">もちろん歓迎です。当スタジオは性別を問わず、すべての方にヨガを楽しんでいただける空間です。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" data-ja="レベル別のクラスはありますか？" data-en="Do you have classes by level?">
+          <span>レベル別のクラスはありますか？</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-ja="はい、初心者・初中級・中級・上級の4段階に分かれたクラスをご用意しています。ご自身のペースで無理なくステップアップできます。" data-en="Yes, we offer 4 levels: beginner, beginner-intermediate, intermediate, and advanced. You can progress at your own pace.">はい、初心者・初中級・中級・上級の4段階に分かれたクラスをご用意しています。ご自身のペースで無理なくステップアップできます。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" data-ja="支払い方法は？" data-en="What payment methods are accepted?">
+          <span>支払い方法は？</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-ja="現金・クレジットカード・PayPay・LINE Payに対応しております。" data-en="We accept cash, credit cards, PayPay, and LINE Pay.">現金・クレジットカード・PayPay・LINE Payに対応しております。</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question" data-ja="マタニティヨガはありますか？" data-en="Do you offer prenatal yoga?">
+          <span>マタニティヨガはありますか？</span>
+          <span class="faq-icon"></span>
+        </button>
+        <div class="faq-answer"><div class="faq-answer-inner" data-ja="安定期以降の方を対象にマタニティヨガクラスをご用意しております。ご参加前に必ずかかりつけ医にご相談ください。" data-en="We offer prenatal yoga for those past the stable period. Please consult your doctor before joining.">安定期以降の方を対象にマタニティヨガクラスをご用意しております。ご参加前に必ずかかりつけ医にご相談ください。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================
      ACCESS & CONTACT
 ========================================== -->
 <section class="section section-alt" id="contact">
   <div class="container">
-    <p class="section-label reveal">Access & Contact</p>
-    <h2 class="section-title reveal">木漏れ日が差し込む、<br>静かなスタジオで<br>お待ちしています。</h2>
+    <p class="section-label reveal" data-ja="Access & Contact" data-en="Access & Contact">Access & Contact</p>
+    <h2 class="section-title reveal" data-ja="木漏れ日が差し込む、<br>静かなスタジオで<br>お待ちしています。" data-en="We await you<br>in our tranquil studio,<br>bathed in soft light.">木漏れ日が差し込む、<br>静かなスタジオで<br>お待ちしています。</h2>
     <div class="section-divider reveal" style="margin-bottom: 2rem;"></div>
 
     <div class="contact-grid">
@@ -1696,66 +2480,80 @@
           <dd>10:00 — 21:00（木曜定休）</dd>
         </dl>
 
-        <!-- Map placeholder -->
-        <div class="map-placeholder">
-          <div class="map-pin">
-            <div class="pin-dot"></div>
-            <div class="pin-pulse"></div>
-          </div>
-          <div class="map-label">Lumière</div>
-          <!-- Extra road lines -->
-          <svg style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none;" viewBox="0 0 400 250" preserveAspectRatio="none">
-            <line x1="0" y1="80" x2="400" y2="120" stroke="rgba(212,197,169,0.3)" stroke-width="1.5"/>
-            <line x1="100" y1="0" x2="120" y2="250" stroke="rgba(212,197,169,0.3)" stroke-width="1"/>
-            <line x1="250" y1="0" x2="280" y2="250" stroke="rgba(212,197,169,0.25)" stroke-width="1"/>
-            <line x1="0" y1="180" x2="400" y2="160" stroke="rgba(212,197,169,0.2)" stroke-width="1"/>
-          </svg>
+        <!-- Google Maps -->
+        <div class="map-embed">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.0!2d139.7036!3d35.6499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDM4JzU5LjYiTiAxMznCsDQyJzEzLjAiRQ!5e0!3m2!1sen!2sjp!4v1" width="100%" height="350" style="border:0;border-radius:4px;" allowfullscreen loading="lazy"></iframe>
         </div>
       </div>
 
-      <!-- Contact Form -->
+      <!-- Booking Form -->
       <div class="contact-form reveal-right">
-        <h3>お問い合わせ</h3>
+        <h3 data-ja="レッスン予約" data-en="Book a Lesson">レッスン予約</h3>
 
         <form onsubmit="return false;">
           <div class="form-group">
-            <label>お名前</label>
+            <label data-ja="お名前" data-en="Name">お名前</label>
             <input type="text" placeholder="山田 太郎">
             <div class="form-line"></div>
           </div>
           <div class="form-group">
-            <label>メールアドレス</label>
-            <input type="email" placeholder="mail@example.com">
-            <div class="form-line"></div>
-          </div>
-          <div class="form-group">
-            <label>お電話番号</label>
+            <label data-ja="お電話番号" data-en="Phone">お電話番号</label>
             <input type="tel" placeholder="090-0000-0000">
             <div class="form-line"></div>
           </div>
           <div class="form-group">
-            <label>ご希望のクラス</label>
+            <label data-ja="メールアドレス" data-en="Email">メールアドレス</label>
+            <input type="email" placeholder="mail@example.com">
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <label data-ja="ご希望日" data-en="Preferred Date">ご希望日</label>
+            <input type="date">
+            <div class="form-line"></div>
+          </div>
+          <div class="form-group">
+            <label data-ja="ご希望のクラス" data-en="Class">ご希望のクラス</label>
             <select>
               <option value="">選択してください</option>
-              <option>ハタヨガ（Basic）</option>
-              <option>ヴィンヤサフロー（Flow）</option>
-              <option>リストラティブヨガ（Restore）</option>
-              <option>瞑想（Meditation）</option>
-              <option>体験レッスン</option>
+              <option>Morning Flow</option>
+              <option>Power Vinyasa</option>
+              <option>Yin Yoga</option>
+              <option>Meditation</option>
             </select>
             <div class="form-line"></div>
           </div>
           <div class="form-group">
-            <label>メッセージ</label>
+            <label data-ja="ヨガのご経験" data-en="Experience Level">ヨガのご経験</label>
+            <div class="radio-group">
+              <label><input type="radio" name="experience" value="beginner" checked> <span data-ja="初心者" data-en="Beginner">初心者</span></label>
+              <label><input type="radio" name="experience" value="intermediate"> <span data-ja="中級者" data-en="Intermediate">中級者</span></label>
+              <label><input type="radio" name="experience" value="advanced"> <span data-ja="上級者" data-en="Advanced">上級者</span></label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label data-ja="備考・ご質問" data-en="Notes / Questions">備考・ご質問</label>
             <textarea placeholder="ご質問やご希望があればお書きください"></textarea>
             <div class="form-line"></div>
           </div>
-          <button type="submit" class="form-submit">送信する</button>
+          <button type="submit" class="form-submit" data-ja="予約する" data-en="Book Now">予約する</button>
         </form>
       </div>
     </div>
   </div>
 </section>
+
+<!-- ==========================================
+     NEWSLETTER
+========================================== -->
+<div class="newsletter-section" id="newsletter">
+  <h2 data-ja="季節のクラス情報をお届けします" data-en="Stay updated with seasonal class info">季節のクラス情報をお届けします</h2>
+  <p data-ja="メールアドレスをご登録いただくと、新クラスやイベント情報をお届けします。" data-en="Subscribe to receive updates about new classes and events.">メールアドレスをご登録いただくと、新クラスやイベント情報をお届けします。</p>
+  <div class="newsletter-form">
+    <input type="email" placeholder="mail@example.com">
+    <button id="newsletterBtn" data-ja="登録する" data-en="Subscribe">登録する</button>
+  </div>
+  <div class="newsletter-feedback" id="newsletterFeedback" data-ja="ご登録ありがとうございます。" data-en="Thank you for subscribing.">ご登録ありがとうございます。</div>
+</div>
 
 <!-- ==========================================
      FOOTER
@@ -1770,13 +2568,23 @@
     <a href="#contact">Access</a>
   </nav>
   <div class="footer-social">
-    <a href="#">Instagram</a>
-    <a href="#">LINE</a>
+    <a href="#" aria-label="Instagram">Instagram</a>
+    <a href="#" aria-label="LINE">LINE</a>
+    <a href="#" aria-label="Twitter">Twitter</a>
+    <a href="#" aria-label="YouTube">YouTube</a>
   </div>
   <div class="footer-divider"></div>
   <div class="footer-copy">&copy; 2026 Yoga Studio Lumière</div>
   <div class="footer-credit">Produced by HNH Design Works</div>
 </footer>
+
+<!-- ==========================================
+     LINE FLOATING BUTTON
+========================================== -->
+<button class="line-float" id="lineBtn">
+  LINE
+  <div class="line-tooltip" id="lineTooltip">LINE公式アカウントを友だち追加</div>
+</button>
 
 <!-- ==========================================
      JAVASCRIPT
@@ -1946,6 +2754,144 @@
         var top = target.getBoundingClientRect().top + window.scrollY - offset;
         window.scrollTo({ top: top, behavior: 'smooth' });
       }
+    });
+  });
+
+  /* ----------------------------------------
+     8. FAQ Accordion
+  ---------------------------------------- */
+  document.querySelectorAll('.faq-question').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = this.parentElement;
+      var answer = item.querySelector('.faq-answer');
+      var isActive = item.classList.contains('active');
+
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(function(fi) {
+        fi.classList.remove('active');
+        fi.querySelector('.faq-answer').style.maxHeight = null;
+      });
+
+      // Open clicked if wasn't active
+      if (!isActive) {
+        item.classList.add('active');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  /* ----------------------------------------
+     9. Gallery Lightbox
+  ---------------------------------------- */
+  var lightboxOverlay = document.getElementById('lightbox');
+  var lightboxContent = document.getElementById('lightboxContent');
+  var lightboxClose = document.getElementById('lightboxClose');
+
+  document.querySelectorAll('.gallery-item').forEach(function(item) {
+    item.addEventListener('click', function() {
+      var inner = this.querySelector('.gallery-inner');
+      var bg = inner.style.background || inner.style.backgroundColor;
+      lightboxContent.style.background = bg;
+      lightboxOverlay.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    lightboxOverlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+  lightboxClose.addEventListener('click', function(e) { e.stopPropagation(); closeLightbox(); });
+  lightboxOverlay.addEventListener('click', function(e) {
+    if (e.target === lightboxOverlay) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightboxOverlay.classList.contains('active')) closeLightbox();
+  });
+
+  /* ----------------------------------------
+     10. Stripe Payment Button
+  ---------------------------------------- */
+  var stripeBtn = document.getElementById('stripePayBtn');
+  var paymentFeedback = document.getElementById('paymentFeedback');
+  if (stripeBtn) {
+    stripeBtn.addEventListener('click', function() {
+      paymentFeedback.classList.add('show');
+      stripeBtn.style.opacity = '0.6';
+      stripeBtn.style.pointerEvents = 'none';
+      setTimeout(function() {
+        paymentFeedback.classList.remove('show');
+        stripeBtn.style.opacity = '1';
+        stripeBtn.style.pointerEvents = 'auto';
+      }, 3000);
+    });
+  }
+
+  /* ----------------------------------------
+     11. Newsletter
+  ---------------------------------------- */
+  var nlBtn = document.getElementById('newsletterBtn');
+  var nlFeedback = document.getElementById('newsletterFeedback');
+  if (nlBtn) {
+    nlBtn.addEventListener('click', function() {
+      nlFeedback.classList.add('show');
+      setTimeout(function() { nlFeedback.classList.remove('show'); }, 3000);
+    });
+  }
+
+  /* ----------------------------------------
+     12. LINE Floating Button
+  ---------------------------------------- */
+  var lineBtn = document.getElementById('lineBtn');
+  var lineTooltip = document.getElementById('lineTooltip');
+  if (lineBtn) {
+    lineBtn.addEventListener('click', function() {
+      lineTooltip.classList.toggle('show');
+      setTimeout(function() { lineTooltip.classList.remove('show'); }, 3000);
+    });
+  }
+
+  /* ----------------------------------------
+     13. JP/EN Language Toggle
+  ---------------------------------------- */
+  var currentLang = 'ja';
+
+  function switchLang(lang) {
+    currentLang = lang;
+    // Update toggle buttons
+    document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+      btn.classList.toggle('active', btn.dataset.lang === lang);
+    });
+
+    // Update all elements with data-ja / data-en
+    document.querySelectorAll('[data-ja][data-en]').forEach(function(el) {
+      var text = el.getAttribute('data-' + lang);
+      if (text !== null) {
+        // Check if it's an element with child nodes we shouldn't overwrite (like faq-question with icon)
+        if (el.classList.contains('faq-question')) {
+          var span = el.querySelector('span:first-child');
+          if (span) span.textContent = text;
+        } else if (el.id === 'heroTitle') {
+          // Re-animate hero title
+          el.textContent = '';
+          for (var i = 0; i < text.length; i++) {
+            var s = document.createElement('span');
+            s.classList.add('char');
+            s.textContent = text[i];
+            s.style.animationDelay = (0.05 * i) + 's';
+            el.appendChild(s);
+          }
+        } else {
+          el.innerHTML = text;
+        }
+      }
+    });
+  }
+
+  // Attach to all toggle buttons
+  document.querySelectorAll('.lang-toggle button').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      switchLang(this.dataset.lang);
     });
   });
 
