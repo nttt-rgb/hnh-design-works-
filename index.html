@@ -1048,7 +1048,7 @@ button, input, textarea, select {
       <p class="c-email"><a href="mailto:hnh.designworks@gmail.com">hnh.designworks@gmail.com</a></p>
       <p class="c-note" data-ja="24時間以内にご返信いたします" data-en="We'll respond within 24 hours">24時間以内にご返信いたします</p>
     </div>
-    <form class="c-form r" id="contactForm">
+    <form class="c-form r" id="contactForm" action="https://formspree.io/f/xaqlkoov" method="POST">
       <div class="fg">
         <label>Name</label>
         <input type="text" name="name" required placeholder="お名前" data-ja-ph="お名前" data-en-ph="Your name">
@@ -1291,16 +1291,29 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 });
 
 /* ── CONTACT FORM ── */
-document.getElementById('contactForm').addEventListener('submit', e => {
+document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
-  const fd = new FormData(e.target);
-  const subj = encodeURIComponent('【お問い合わせ】' + (fd.get('business') || fd.get('name')) + ' 様');
-  const body = encodeURIComponent(
-    'お名前: ' + fd.get('name') + '\nメール: ' + fd.get('email') +
-    '\nビジネス名: ' + fd.get('business') + '\nプラン: ' + fd.get('plan') +
-    '\n\nメッセージ:\n' + fd.get('message')
-  );
-  window.location.href = 'mailto:hnh.designworks@gmail.com?subject=' + subj + '&body=' + body;
+  var form = e.target;
+  var btn = form.querySelector('button[type="submit"] .btn-text');
+  var origText = btn.textContent;
+  btn.textContent = 'Sending...';
+  fetch(form.action, {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(function(res) {
+    if (res.ok) {
+      btn.textContent = 'Sent ✓';
+      form.reset();
+      setTimeout(function(){ btn.textContent = origText; }, 3000);
+    } else {
+      btn.textContent = 'Error — try again';
+      setTimeout(function(){ btn.textContent = origText; }, 3000);
+    }
+  }).catch(function() {
+    btn.textContent = 'Error — try again';
+    setTimeout(function(){ btn.textContent = origText; }, 3000);
+  });
 });
 
 })();
