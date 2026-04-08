@@ -341,11 +341,70 @@ a { color: inherit; text-decoration: none; }
         <input type="hidden" name="has_logo" value="">
         <p class="hint">ロゴデータをお持ちの場合は、後ほどメールでお送りください。</p>
       </div>
-      <div class="fg">
-        <label>参考にしたいサイトのURL（任意・最大3つ）</label>
-        <input type="url" name="ref_url_1" placeholder="https://..." style="margin-bottom:8px">
-        <input type="url" name="ref_url_2" placeholder="https://..." style="margin-bottom:8px">
-        <input type="url" name="ref_url_3" placeholder="https://...">
+      <div style="margin-top:8px;margin-bottom:32px;padding-top:24px;border-top:1px solid #e8e8e8;">
+        <label style="display:block;font-size:0.85rem;font-weight:700;margin-bottom:4px;">参考サイト</label>
+        <p class="hint" style="margin-bottom:20px;">理想に近いと感じるサイトを2つ教えてください。デザインの方向性を正確に把握するために必ずご記入をお願いします。</p>
+
+        <div class="fg">
+          <label>参考サイト 1<span class="req">*</span></label>
+          <input type="url" name="ref_url_1" required placeholder="https://..." class="ref-url-required">
+          <p class="error-msg">参考サイトのURLを入力してください（https://で始まるURL）</p>
+        </div>
+        <div class="fg">
+          <label>このサイトのどこが好きですか？（複数可）</label>
+          <div class="check-group" data-name="ref_like_1">
+            <div class="check-item" data-value="全体の色使い">全体の色使い</div>
+            <div class="check-item" data-value="フォント・文字の雰囲気">フォント・文字の雰囲気</div>
+            <div class="check-item" data-value="写真の使い方">写真の使い方</div>
+            <div class="check-item" data-value="レイアウト・配置">レイアウト・配置</div>
+            <div class="check-item" data-value="アニメーション・動き">アニメーション・動き</div>
+            <div class="check-item" data-value="全体の雰囲気">全体の雰囲気</div>
+          </div>
+          <input type="hidden" name="ref_like_1" value="">
+          <input type="text" name="ref_like_1_other" placeholder="その他（自由記入）" style="margin-top:8px">
+        </div>
+
+        <div class="fg" style="margin-top:24px;">
+          <label>参考サイト 2<span class="req">*</span></label>
+          <input type="url" name="ref_url_2" required placeholder="https://..." class="ref-url-required">
+          <p class="error-msg">参考サイトのURLを入力してください（https://で始まるURL）</p>
+        </div>
+        <div class="fg">
+          <label>このサイトのどこが好きですか？（複数可）</label>
+          <div class="check-group" data-name="ref_like_2">
+            <div class="check-item" data-value="全体の色使い">全体の色使い</div>
+            <div class="check-item" data-value="フォント・文字の雰囲気">フォント・文字の雰囲気</div>
+            <div class="check-item" data-value="写真の使い方">写真の使い方</div>
+            <div class="check-item" data-value="レイアウト・配置">レイアウト・配置</div>
+            <div class="check-item" data-value="アニメーション・動き">アニメーション・動き</div>
+            <div class="check-item" data-value="全体の雰囲気">全体の雰囲気</div>
+          </div>
+          <input type="hidden" name="ref_like_2" value="">
+          <input type="text" name="ref_like_2_other" placeholder="その他（自由記入）" style="margin-top:8px">
+        </div>
+
+        <div class="fg" style="margin-top:24px;">
+          <label>参考サイト 3 <span style="opacity:0.4;text-transform:none;letter-spacing:0">(任意)</span></label>
+          <input type="url" name="ref_url_3" placeholder="https://...">
+        </div>
+        <div class="fg">
+          <label>このサイトのどこが好きですか？（複数可）</label>
+          <div class="check-group" data-name="ref_like_3">
+            <div class="check-item" data-value="全体の色使い">全体の色使い</div>
+            <div class="check-item" data-value="フォント・文字の雰囲気">フォント・文字の雰囲気</div>
+            <div class="check-item" data-value="写真の使い方">写真の使い方</div>
+            <div class="check-item" data-value="レイアウト・配置">レイアウト・配置</div>
+            <div class="check-item" data-value="アニメーション・動き">アニメーション・動き</div>
+            <div class="check-item" data-value="全体の雰囲気">全体の雰囲気</div>
+          </div>
+          <input type="hidden" name="ref_like_3" value="">
+          <input type="text" name="ref_like_3_other" placeholder="その他（自由記入）" style="margin-top:8px">
+        </div>
+
+        <div class="fg" style="margin-top:24px;">
+          <label>逆にこういうデザインは避けたいというイメージはありますか？ <span style="opacity:0.4;text-transform:none;letter-spacing:0">(任意)</span></label>
+          <textarea name="design_avoid" rows="3" placeholder="例：ごちゃごちゃした感じ、派手すぎる色使い、など"></textarea>
+        </div>
       </div>
       <div class="btn-row">
         <button type="button" class="btn btn-back" onclick="prevStep()">戻る</button>
@@ -581,6 +640,10 @@ function validateStep(step) {
       field.classList.add('field-error');
       if (err) err.classList.add('show');
       valid = false;
+    } else if (field.type === 'url' && field.classList.contains('ref-url-required') && !/^https?:\/\/.+/.test(field.value)) {
+      field.classList.add('field-error');
+      if (err) err.classList.add('show');
+      valid = false;
     } else {
       field.classList.remove('field-error');
       if (err) err.classList.remove('show');
@@ -625,8 +688,11 @@ function buildConfirm() {
     ['お店の名前', 'shop_name'], ['業種', 'category'], ['エリア', 'area'],
     ['HP有無', 'has_website'], ['現在のサイトURL', 'current_website'],
     ['雰囲気', 'atmosphere'], ['ターゲット層', 'target'],
-    ['ロゴ有無', 'has_logo'], ['参考URL 1', 'ref_url_1'],
-    ['参考URL 2', 'ref_url_2'], ['参考URL 3', 'ref_url_3'],
+    ['ロゴ有無', 'has_logo'],
+    ['参考サイト1', 'ref_url_1'], ['好きなポイント1', 'ref_like_1'], ['その他1', 'ref_like_1_other'],
+    ['参考サイト2', 'ref_url_2'], ['好きなポイント2', 'ref_like_2'], ['その他2', 'ref_like_2_other'],
+    ['参考サイト3', 'ref_url_3'], ['好きなポイント3', 'ref_like_3'], ['その他3', 'ref_like_3_other'],
+    ['避けたいデザイン', 'design_avoid'],
     ['載せたい情報', 'features'], ['その他情報', 'features_other'],
     ['写真', 'photos'], ['ロゴデータ', 'logo_data'],
     ['テキスト用意', 'text_ready'],
