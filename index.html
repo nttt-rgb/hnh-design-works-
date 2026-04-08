@@ -705,6 +705,7 @@ button, input, textarea, select {
   display: grid; grid-template-columns: 1fr 1.1fr;
   gap: 100px; max-width: 1000px;
 }
+.contact > div { margin: 0 auto; }
 .c-name {
   font-size: 1.3rem; font-weight: 700;
   letter-spacing: 0.05em; margin-bottom: 24px;
@@ -1326,66 +1327,16 @@ button, input, textarea, select {
 <section class="contact" id="contact">
   <div class="sec-n" style="color:#fff;" data-parallax="0.12">07</div>
   <h2 class="sh r">Contact</h2>
-  <div class="c-grid">
-    <div class="r">
-      <h3 class="c-name">HNH Design Works</h3>
-      <p class="c-desc" data-ja="ビジネスの魅力を最大限に引き出すプロフェッショナルなWeb制作を行っています。あなたのビジョンに最適なWebサイトをご提案いたします。まずはお気軽にご相談ください。" data-en="We create professional websites that bring out the full potential of your business. Let us craft the perfect site for your vision. Feel free to reach out.">ビジネスの魅力を最大限に引き出すプロフェッショナルなWeb制作を行っています。あなたのビジョンに最適なWebサイトをご提案いたします。まずはお気軽にご相談ください。</p>
-      <p class="c-email"><a href="mailto:hnh.designworks@gmail.com">hnh.designworks@gmail.com</a></p>
-      <p class="c-note" data-ja="24時間以内にご返信いたします" data-en="We'll respond within 24 hours">24時間以内にご返信いたします</p>
-      <a href="intake.html" style="display:inline-block;margin-top:20px;padding:14px 28px;background:#000;color:#fff;font-size:0.8rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;border-radius:4px;transition:background 0.2s;" onmouseover="this.style.background='#333'" onmouseout="this.style.background='#000'" data-ja="簡単3分！フォームに答えるだけでスタート →" data-en="Easy 3-min form to get started →">簡単3分！フォームに答えるだけでスタート →</a>
-    </div>
-    <form class="c-form r" id="contactForm" action="https://formspree.io/f/xreodqrq" method="POST">
-      <div class="fg">
-        <label>Name</label>
-        <input type="text" name="name" required placeholder="お名前" data-ja-ph="お名前" data-en-ph="Your name">
-        <div class="focus-line"></div>
-      </div>
-      <div class="fg">
-        <label>Email</label>
-        <input type="email" name="email" required placeholder="メールアドレス" data-ja-ph="メールアドレス" data-en-ph="Email address">
-        <div class="focus-line"></div>
-      </div>
-      <div class="fg">
-        <label>Phone <span style="opacity:0.4;text-transform:none;letter-spacing:0">(optional)</span></label>
-        <input type="tel" name="phone" placeholder="電話番号（任意）" data-ja-ph="電話番号（任意）" data-en-ph="Phone number (optional)">
-        <div class="focus-line"></div>
-      </div>
-      <div class="fg">
-        <label>Business</label>
-        <input type="text" name="business" placeholder="ビジネス名・店舗名" data-ja-ph="ビジネス名・店舗名" data-en-ph="Business / Store name">
-        <div class="focus-line"></div>
-      </div>
-      <div class="fg">
-        <label>Plan</label>
-        <select name="plan">
-          <option value="" disabled selected data-ja="プランを選択（未定でもOK）" data-en="Select a plan (undecided is OK)">プランを選択（未定でもOK）</option>
-          <option value="Light">Light — ¥100,000</option>
-          <option value="Standard">Standard — ¥150,000</option>
-          <option value="Premium">Premium — ¥200,000（税込¥220,000・先着5社キャンペーン）</option>
-        </select>
-        <div class="focus-line"></div>
-      </div>
-      <div class="fg">
-        <label>Preferred Timeline</label>
-        <select name="timeline">
-          <option value="" disabled selected data-ja="ご希望の納期" data-en="Preferred timeline">ご希望の納期</option>
-          <option value="1week" data-ja="1週間以内" data-en="Within 1 week">1週間以内</option>
-          <option value="2weeks" data-ja="2週間以内" data-en="Within 2 weeks">2週間以内</option>
-          <option value="1month" data-ja="1ヶ月以内" data-en="Within 1 month">1ヶ月以内</option>
-          <option value="norush" data-ja="特に急いでいない" data-en="No rush">特に急いでいない</option>
-        </select>
-        <div class="focus-line"></div>
-      </div>
-      <div class="fg">
-        <label>Message</label>
-        <textarea name="message" rows="4" placeholder="ご相談内容をお書きください" data-ja-ph="ご相談内容をお書きください" data-en-ph="Tell us about your project"></textarea>
-        <div class="focus-line"></div>
-      </div>
-      <button type="submit" class="mag-btn inv" data-magnetic>
-        <span class="btn-bg"></span>
-        <span class="btn-text">Submit</span>
-      </button>
-    </form>
+  <div style="max-width:560px;text-align:center;">
+    <h3 class="c-name r" data-ja="Start Your Project" data-en="Start Your Project">Start Your Project</h3>
+    <p class="c-desc r" data-ja="簡単3分。フォームに答えるだけで制作スタート。" data-en="Just 3 minutes. Answer a simple form to get started.">簡単3分。フォームに答えるだけで制作スタート。</p>
+    <a href="intake.html" class="mag-btn inv r" data-magnetic style="display:inline-flex;margin-top:8px;">
+      <span class="btn-bg"></span>
+      <span class="btn-text" data-ja="無料ヒアリングを始める →" data-en="Start Free Hearing →">無料ヒアリングを始める →</span>
+    </a>
+    <p class="c-note r" style="margin-top:28px;" data-ja="まずは相談だけでもOK。24時間以内にご連絡します。" data-en="Consultation only is fine. We'll respond within 24 hours.">まずは相談だけでもOK。24時間以内にご連絡します。</p>
+    <p class="c-email r" style="margin-top:20px;"><a href="mailto:hnhdesignworks@gmail.com">hnhdesignworks@gmail.com</a></p>
+    <p class="c-note r" data-ja="フォームが苦手な方はメールでもOK" data-en="Email works too if you prefer">フォームが苦手な方はメールでもOK</p>
   </div>
 </section>
 
@@ -1617,31 +1568,7 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 
-/* ── CONTACT FORM ── */
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var form = e.target;
-  var btn = form.querySelector('button[type="submit"] .btn-text');
-  var origText = btn.textContent;
-  btn.textContent = 'Sending...';
-  fetch(form.action, {
-    method: 'POST',
-    body: new FormData(form),
-    headers: { 'Accept': 'application/json' }
-  }).then(function(res) {
-    if (res.ok) {
-      btn.textContent = 'Sent ✓';
-      form.reset();
-      setTimeout(function(){ btn.textContent = origText; }, 3000);
-    } else {
-      btn.textContent = 'Error — try again';
-      setTimeout(function(){ btn.textContent = origText; }, 3000);
-    }
-  }).catch(function() {
-    btn.textContent = 'Error — try again';
-    setTimeout(function(){ btn.textContent = origText; }, 3000);
-  });
-});
+/* ── CONTACT (form removed — intake.html handles submissions) ── */
 
 })();
 
