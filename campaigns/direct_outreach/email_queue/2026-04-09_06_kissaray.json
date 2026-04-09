@@ -1,0 +1,18 @@
+{
+  "to": "kissaray2022@gmail.com",
+  "subject": "KISSA RAYさんのサイト、もう一歩で集客力ぐっと上がりそうです",
+  "body": "KISSA RAY\nご担当者様\n\nはじめまして。\nHNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。\n\n下北沢のKISSA RAYさん、Wixで作られた現在のサイトを拝見しました。\nスマホ対応もSSLもしっかり整っていて、ベースは綺麗に仕上がっていますね。\n\nただ拝見していて、もったいないなと感じた点が3つほどありまして——\n\n・Googleマップが埋め込まれていない\n　→「下北沢 喫茶」「下北沢 カフェ」で検索したお客様が、お店の場所までたどり着きにくい状態です\n\n・InstagramなどのSNSリンクが見当たらない\n　→せっかくの世界観が、サイトとSNSで分断されてしまっています\n\n・問い合わせ手段（フォーム・電話番号）がトップから見つけにくい\n　→「行きたいけど聞きたいことがある」段階のお客様を取りこぼしている可能性があります\n\nこの3つを補強するだけで、検索からの新規流入と再来店率がぐっと上がる印象でした。\n\nゼロから作り直すのではなく、現サイトをベースに不足要素を足していくご提案も可能です。\n\n普段こういうサイトを作っています：\nhttps://hnh-design-works.vercel.app\n\nお忙しければスルーで構いません。\nもしご興味あれば、こちらのフォーム（3分くらいです）からお店の情報を教えていただければ、打ち合わせなしで具体的なご提案までお持ちします：\nhttps://hnh-design-works.vercel.app/intake.html\n\n──────────────────\nHNH Design Works\n豊川 直也\nhnh.designworks@gmail.com\n──────────────────\n\n※Googleマップの公開情報をもとにご連絡しております。\n※ご不要の場合はご返信いただければ即時停止いたします。",
+  "shop_name": "KISSA RAY",
+  "category": "カフェ",
+  "area": "下北沢",
+  "type": "redesign_proposal",
+  "status": "queued",
+  "created_at": "2026-04-09T16:30:00.000Z",
+  "hp_audit": {
+    "url": "https://kissaray.com",
+    "platform": "Wix",
+    "score": "6/10",
+    "strengths": ["responsive", "SSL", "mobile-optimized"],
+    "gaps": ["no Google Maps embed", "no SNS links", "contact form/phone not prominent"]
+  }
+}
