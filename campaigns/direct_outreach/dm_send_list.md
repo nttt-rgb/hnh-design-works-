@@ -24,7 +24,7 @@
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 三茶 ユキツバキさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -37,7 +37,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -52,7 +52,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 三茶一九さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -65,7 +65,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -79,7 +79,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 食堂かど。さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -92,7 +92,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -107,7 +107,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 カフェ ヴィエット アルコさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -120,7 +120,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -134,7 +134,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 マサコさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -147,7 +147,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -162,7 +162,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 喫茶 一房さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -175,7 +175,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -190,7 +190,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 喫茶ネグラさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -203,7 +203,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -218,7 +218,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 D-DRAGONさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -231,7 +231,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -246,7 +246,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 下北酒場 こいどろぼうさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -259,7 +259,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -274,7 +274,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 鶏と魚と炭火焼き 燈さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -287,7 +287,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -302,7 +302,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 アート喫茶 フライさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -315,7 +315,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -329,7 +329,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 レカーさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -342,7 +342,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -357,7 +357,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 WAJO×朗さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -370,7 +370,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -385,12 +385,12 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
-BARATIEさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
+BARATIEさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
 
-公式サイトがあると「六本木 ランチ」「六本木 ディナー」等の検索で新規のお客様に見つけてもらいやすくなります。
+公式サイトがあると「六本木 バー」「六本木 隠れ家」等の検索で、お店の世界観を事前に届けられます。
 
 制作実績はこちらです👇
 https://hnh-design-works.vercel.app
@@ -398,7 +398,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -413,7 +413,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 江戸前鮓 すし通さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -426,7 +426,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -441,7 +441,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 おでん屋 ずぶ六さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -454,7 +454,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -469,7 +469,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 弥勒食堂さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -482,7 +482,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -497,7 +497,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 酒呑さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -510,7 +510,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -525,7 +525,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 レインボーパンケーキさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -538,7 +538,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -552,7 +552,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 DLAW tokyoさんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -565,7 +565,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -579,7 +579,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Richerさんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -592,7 +592,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -606,7 +606,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Shanty Carinaさんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -619,7 +619,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -633,7 +633,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 COYORIさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -646,7 +646,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -661,7 +661,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 DBLさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -674,7 +674,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -688,7 +688,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 LAIDBACKSさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -701,7 +701,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -716,7 +716,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 S TOKYOさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -729,7 +729,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -743,7 +743,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 呑み屋 ぺりどっとさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -756,7 +756,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -771,7 +771,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 きたぽん酒さんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -784,7 +784,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -799,7 +799,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 恵比寿 つむぎやさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -812,7 +812,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -827,7 +827,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 酒場 ひまり堂 恵比寿店さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -840,7 +840,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -855,12 +855,12 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
-284（ニハチヨン）さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
+284（ニハチヨン）さんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
 
-公式サイトがあると「恵比寿 ランチ」「恵比寿 ディナー」等の検索で新規のお客様に見つけてもらいやすくなります。
+公式サイトがあると「恵比寿 バー」「恵比寿 隠れ家」等の検索で、お店の世界観を事前に届けられます。
 
 制作実績はこちらです👇
 https://hnh-design-works.vercel.app
@@ -868,7 +868,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -883,12 +883,12 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
-ammeさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
+ammeさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
 
-公式サイトがあると「恵比寿 ランチ」「恵比寿 ディナー」等の検索で新規のお客様に見つけてもらいやすくなります。
+公式サイトがあると「恵比寿 バー」「恵比寿 隠れ家」等の検索で、お店の世界観を事前に届けられます。
 
 制作実績はこちらです👇
 https://hnh-design-works.vercel.app
@@ -896,7 +896,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -911,7 +911,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 炭焼と炉端テント 恵比寿さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -924,7 +924,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -939,7 +939,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 善菜（ZENNA）さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -952,7 +952,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -967,7 +967,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 手羽先むつみ 恵比寿店さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -980,7 +980,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -995,7 +995,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 中華そば 流川さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1008,7 +1008,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1023,7 +1023,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 煮干中華そば 鈴蘭さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1036,7 +1036,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1051,7 +1051,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 百日紅さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1064,7 +1064,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1079,7 +1079,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 酒場つむぎ堂 新宿店さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1092,7 +1092,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1107,7 +1107,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 鮮魚と炉端と純米酒 かきびさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1120,7 +1120,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1135,7 +1135,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 らぁ麺や 嶋さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1148,7 +1148,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1163,7 +1163,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 串焼バル1.2.3さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1176,7 +1176,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1191,7 +1191,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 呑みやしき209さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1204,7 +1204,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1219,7 +1219,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 浅草 ASA虎さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1232,7 +1232,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1247,7 +1247,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 浅草 もつ焼のんきさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1260,7 +1260,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1274,7 +1274,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 浅草酒場 岡本さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1287,7 +1287,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1302,7 +1302,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 花本さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1315,7 +1315,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1330,7 +1330,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 soba MAREN 渋谷店さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1343,7 +1343,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1358,7 +1358,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 うさぎさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1371,7 +1371,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1386,7 +1386,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 まぜそば七さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1399,7 +1399,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1414,7 +1414,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 背脂ラーメン チャッチャ亭さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1427,7 +1427,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1442,7 +1442,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 麺屋ぬかじさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1455,7 +1455,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1470,7 +1470,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 せかんどさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1483,7 +1483,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1498,7 +1498,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 ぴりおど。さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1511,7 +1511,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1526,7 +1526,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 活惚れさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1539,7 +1539,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1554,7 +1554,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 酒場 つむぎ堂 渋谷店さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1567,7 +1567,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1582,7 +1582,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 雲隠レさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1595,7 +1595,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1609,7 +1609,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 COLULUさんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -1622,7 +1622,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -1636,7 +1636,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Pure Soulさんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -1649,7 +1649,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -1663,7 +1663,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 peeps&suu.さんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -1676,7 +1676,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -1690,7 +1690,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 seasons by marblesさんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -1703,7 +1703,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -1717,7 +1717,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 マックスブロンドさんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -1730,7 +1730,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -1744,7 +1744,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 美容室かぐや姫さんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -1757,7 +1757,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -1771,7 +1771,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 i2 cafeさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1784,7 +1784,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1799,7 +1799,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 MORI BARさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -1812,7 +1812,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1827,7 +1827,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 ビストロ Rootさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1840,7 +1840,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1855,7 +1855,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 東京焼肉いのうえ 銀座店さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1868,7 +1868,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1883,7 +1883,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 地鶏割烹 稲垣 麻布十番さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1896,7 +1896,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1911,7 +1911,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 ユーロベイカーズ EURO BAKERSさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -1924,7 +1924,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1939,7 +1939,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 HABIT PERSONAL GYM神田店さんの投稿を拝見しました。教育への情熱が伝わってきます。
@@ -1952,7 +1952,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1967,7 +1967,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Bar Ritornoさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -1980,7 +1980,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -1994,7 +1994,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Shisha Lounge 1986さんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -2007,7 +2007,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2021,7 +2021,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 pilates salon ECRUさんの投稿を拝見しました。教育への情熱が伝わってきます。
@@ -2034,7 +2034,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2048,7 +2048,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 amberさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -2061,7 +2061,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2076,7 +2076,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 TSUBAKIYA Jiyugaokaさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -2089,7 +2089,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2104,7 +2104,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 定食カフェ 黒川食堂さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -2117,7 +2117,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2132,7 +2132,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 ELENA 六本木店さんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -2145,7 +2145,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -2159,7 +2159,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 代官山カーサさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -2172,7 +2172,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2187,7 +2187,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 filonnail 表参道店さんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -2200,7 +2200,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -2215,7 +2215,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Shibuya Bar The Legless Armsさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -2228,7 +2228,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2243,7 +2243,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 eight eyelash 池袋店 【エイト アイラッシュ】さんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -2256,7 +2256,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -2271,7 +2271,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 BAR gardenさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -2284,7 +2284,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2299,7 +2299,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 メンズ脱毛サロン リアンジュ 立川店さんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -2312,7 +2312,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -2327,7 +2327,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 スタジオタンク成城さんの投稿を拝見して、とても素敵なお仕事だと感じました。
@@ -2340,7 +2340,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2355,7 +2355,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 KEY'S CAFÉ 秋葉原SEEKBASE店さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -2368,7 +2368,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2383,7 +2383,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Me+(ミープラス)Perle esthetic Salonさんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -2396,7 +2396,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -2411,7 +2411,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 シーシャカフェ＆バーmusch（ムッシュ）六本木店（hookah lounge musch）さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -2424,7 +2424,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2439,7 +2439,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 La pilates 上野店《整体×マシンピラティス》ラピラティスさんの投稿を拝見しました。教育への情熱が伝わってきます。
@@ -2452,7 +2452,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2466,7 +2466,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Utakataさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -2479,7 +2479,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2493,7 +2493,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Yoga salon GRACIAGEさんの投稿を拝見しました。教育への情熱が伝わってきます。
@@ -2506,7 +2506,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2521,7 +2521,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 EYELA高田馬場さんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -2534,7 +2534,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -2548,7 +2548,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 RYTヨガ資格 YogaWorksさんの投稿を拝見しました。教育への情熱が伝わってきます。
@@ -2561,7 +2561,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2576,7 +2576,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 DELICAT【デリカ】中目黒さんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -2589,7 +2589,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -2604,7 +2604,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 ネイルサロン アウルさんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -2617,7 +2617,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -2631,7 +2631,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 男の脱毛 toal 新宿高田馬場店さんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -2644,7 +2644,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -2659,7 +2659,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 SHARE下北沢さんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -2672,7 +2672,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2687,7 +2687,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 BAR GEEKさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -2700,7 +2700,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2715,7 +2715,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 uru 【ウル】二子玉川さんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -2728,7 +2728,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -2743,7 +2743,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Queen Beauty Salon 大久保本店さんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -2756,7 +2756,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -2771,7 +2771,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 原宿Rock Bar HALF MOONさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -2784,7 +2784,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2799,7 +2799,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 WINE LIVING Signatureさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -2812,7 +2812,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2826,7 +2826,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Nail salon A L L Yさんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -2839,7 +2839,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -2854,7 +2854,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Stretch＆Training Gym CLEAR六本木さんの投稿を拝見しました。教育への情熱が伝わってきます。
@@ -2867,7 +2867,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2881,7 +2881,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 ちゅーりっぷ原宿さんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -2894,7 +2894,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -2908,7 +2908,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 美瑛 BIEIさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -2921,7 +2921,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2936,7 +2936,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 脱毛/ハーブピーリング TRYSHIFT 品川大井町店さんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -2949,7 +2949,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -2963,7 +2963,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 YOGA STUDIO SOL - ヨガスタジオSOL 新大久保さんの投稿を拝見しました。教育への情熱が伝わってきます。
@@ -2976,7 +2976,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -2991,7 +2991,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 魚匠屋 神田本店さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3004,7 +3004,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3019,7 +3019,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Caf'e MID STAMP ebisuさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3032,7 +3032,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3047,7 +3047,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 THE COOKIE 594新大久保店さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3060,7 +3060,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3075,7 +3075,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 東京ベーグルラボ TOKYO BAGEL LABさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3088,7 +3088,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3102,7 +3102,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 AREUM BAGELアルムベーグル新大久保さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3115,7 +3115,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3130,7 +3130,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Naguy Barさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -3143,7 +3143,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3157,7 +3157,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 BAR ACQUA OLD-CAFE 新宿OLD店さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3170,7 +3170,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3185,7 +3185,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 珈琲西武 本店さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3198,7 +3198,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3213,7 +3213,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 BerryEyes 二子玉川店 まつげサロン ベリーアイズさんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -3226,7 +3226,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -3240,7 +3240,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 ラブルダイニングさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3253,7 +3253,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3267,7 +3267,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 ピラティススタジオthe SILK広尾店 別館さんの投稿を拝見しました。教育への情熱が伝わってきます。
@@ -3280,7 +3280,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3294,7 +3294,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 SANDO LAB TOKYO 秋葉原店さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3307,7 +3307,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3321,7 +3321,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 結婚相談所サンマリエ新宿サロンさんの投稿を拝見して、とても素敵なお仕事だと感じました。
@@ -3334,7 +3334,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3349,7 +3349,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 燕三さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3362,7 +3362,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3376,7 +3376,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Princess Tart 下北沢さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3389,7 +3389,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3403,7 +3403,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 パナソニックビューティ表参道カフェさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3416,7 +3416,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3431,7 +3431,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 The Sunrise Shack Hawaii - harajuku cafe Galaxyさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3444,7 +3444,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3459,7 +3459,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Island Cafe&Diningさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3472,7 +3472,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3487,7 +3487,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 はあとねいる三軒茶屋店さんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -3500,7 +3500,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -3515,7 +3515,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 The Mint Ginza | Rooftop Cafe & Barさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3528,7 +3528,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3543,7 +3543,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 吉祥寺 もがめ食堂 東急裏店さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3556,7 +3556,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3571,7 +3571,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 The Tavern in Asakusaさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -3584,7 +3584,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3598,7 +3598,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍸
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Living Room Asakusa Cocktail Barさんの投稿、お店の雰囲気がとても素敵ですね。こだわりが伝わってきます。
@@ -3611,7 +3611,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3625,7 +3625,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 ことぶきBAKERYさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3638,7 +3638,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3653,7 +3653,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 三鷹丸十ベーカリーさんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3666,7 +3666,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
@@ -3681,7 +3681,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 BARBER KAMITO HERITAGEさんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -3694,7 +3694,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -3709,7 +3709,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します ✨
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Buena ブエナさんの作品、とてもセンスが素敵ですね。技術の高さが伝わってきます。
@@ -3722,7 +3722,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！😊
 ```
 
 ---
@@ -3737,7 +3737,7 @@ https://hnh-design-works.vercel.app/intake.html
 - [ ] 送信済み
 
 ```
-こんにちは！突然のDM失礼します。
+こんにちは！突然のDM失礼します 🍽
 HNH Design Worksの豊川です。ビジネスの可能性をWebで最大化する、をコンセプトにHP制作をしています。
 
 Princess Tart 中目黒さんの投稿、いつも目を引かれます。お料理の魅力が写真からしっかり伝わってきますね。
@@ -3750,7 +3750,7 @@ https://hnh-design-works.vercel.app
 今キャンペーン中です。打ち合わせ不要、フォーム3分で始められます👇
 https://hnh-design-works.vercel.app/intake.html
 
-ご興味あればお気軽にどうぞ！
+ご興味あればお気軽にどうぞ！🙏
 ```
 
 ---
