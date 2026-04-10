@@ -1,13 +1,42 @@
 # HNH Design Works — プロジェクト現状
 
-**最終更新:** 2026-04-09
+**最終更新:** 2026-04-10
 **目的:** 次セッション開始時に現状を即把握できるサマリー
 
 > このファイルは CLAUDE.md と一緒に必ず読むこと（CLAUDE.md の重要ルール #1 を遵守するため）。
 
 ---
 
-## 1. 本日（2026-04-09）の営業実績
+## 🎯 事業目標（CLAUDE.md追加）
+- **全プロジェクト合計**: 月収 ¥5,000,000（天井なし）
+- **HNH Design Works 最低ライン**: 月収 ¥2,000,000
+  - Premium ¥250k × 4 + Standard ¥150k × 4 + Light ¥100k × 4 = 月12件受注
+- 全ての意思決定・提案・戦略はこの目標に基づく
+- 「安全策」より「最速で目標到達」を優先
+
+**月12件受注に必要な営業数**: 返信率2% × 成約率25% → **日20件 / 月600件のアプローチ必要**
+**現状ギャップ**: 今日43件アプローチ → 月換算 約860件。ペースはOK。ただし **リード発掘がボトルネック**
+
+---
+
+## 🆕 2026-04-10 追加アセット（企業向けリード拡張）
+
+本日追加した企業向け営業アセット（Places API枠切れ対応のWeb検索ベース）：
+
+| ファイル | 用途 |
+|---|---|
+| `campaigns/direct_outreach/corporate_email_template.md` | 企業向け営業メール（4パターン: A完全HP無し/B採用中/Cリデザイン/D士業向け） |
+| `scripts/auto_pipeline/scout_websearch.js` | Web検索ベースでリードを発掘 → JSONで受け取りCSV追記するフレームワーク |
+| `campaigns/direct_outreach/lead_sources_corporate.md` | 企業向けリード発掘ガイド（Instagram・Indeed・法人番号公表サイト等） |
+
+**次アクション**:
+1. 月末4/29以降にGoogle Places API枠がリセット → scout.js で企業向け業種（税理士・社労士・不動産・コワーキング・保険代理店等）を一気に収集
+2. それまでは `lead_sources_corporate.md` のInstagramハッシュタグ探索で手動発掘（1時間で20件狙い）
+3. 発掘したリードは `leads.json` にしてから `node scripts/auto_pipeline/scout_websearch.js leads.json` で CSV追記
+
+---
+
+## 1. 2026-04-09 の営業実績
 
 | チャネル | 送信数 | 備考 |
 |---|---|---|
