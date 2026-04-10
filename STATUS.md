@@ -21,18 +21,54 @@
 
 ## 🆕 2026-04-10 追加アセット（企業向けリード拡張）
 
-本日追加した企業向け営業アセット（Places API枠切れ対応のWeb検索ベース）：
+本日追加した企業向け営業アセット（Places API枠切れ対応）：
 
+### Web検索・手動ベース
 | ファイル | 用途 |
 |---|---|
 | `campaigns/direct_outreach/corporate_email_template.md` | 企業向け営業メール（4パターン: A完全HP無し/B採用中/Cリデザイン/D士業向け） |
 | `scripts/auto_pipeline/scout_websearch.js` | Web検索ベースでリードを発掘 → JSONで受け取りCSV追記するフレームワーク |
 | `campaigns/direct_outreach/lead_sources_corporate.md` | 企業向けリード発掘ガイド（Instagram・Indeed・法人番号公表サイト等） |
+| `campaigns/direct_outreach/wantedly_manual_guide.md` | Wantedly手動リード発掘ガイド（ToS遵守、企業発見→Google経由連絡先取得） |
+
+### 法人番号API連携（新設法人リード自動取得）
+| ファイル | 用途 |
+|---|---|
+| `scripts/auto_pipeline/safety.js` | 全スクリプト共通のAPI安全管理モジュール（日次制限・月次コスト上限・ALLOW_PAIDフラグ） |
+| `scripts/auto_pipeline/scout_houjin.js` | 国税庁法人番号APIから東京都の新設法人を自動取得 |
+| `logs/houjin_api_usage.json` | 法人番号API日次カウンター（自動生成） |
+| `logs/google_search_usage.json` | Google検索日次カウンター（自動生成） |
+| `logs/monthly_api_costs.json` | 月間API総コスト管理（自動生成） |
+
+### セーフティ設計
+- 法人番号API: 日次100件上限、無料（申請必要）
+- Google Custom Search: 日次50件上限、$5/1000 queries、ALLOW_PAID=true必須、最小5秒間隔
+- 月間API総コスト上限: **$200（全API合算）** — 超えたら全スクリプト停止
+- デフォルト: `ALLOW_PAID=false`（有料APIは明示的許可が必要）
+
+### 実行コマンド
+```bash
+# 法人番号APIで東京の直近90日の新設法人を取得（HP確認なし）
+npm run scout:houjin
+
+# 直近30日のみ
+node scripts/auto_pipeline/scout_houjin.js --days 30
+
+# 手動ダウンロードCSVから取り込み（App ID未取得時）
+node scripts/auto_pipeline/scout_houjin.js --csv ~/Downloads/houjin.csv
+
+# HP自動確認モード（要 ALLOW_PAID=true + Google Custom Search API）
+ALLOW_PAID=true node scripts/auto_pipeline/scout_houjin.js --verify-hp
+
+# ドライラン
+npm run scout:houjin:dry
+```
 
 **次アクション**:
-1. 月末4/29以降にGoogle Places API枠がリセット → scout.js で企業向け業種（税理士・社労士・不動産・コワーキング・保険代理店等）を一気に収集
-2. それまでは `lead_sources_corporate.md` のInstagramハッシュタグ探索で手動発掘（1時間で20件狙い）
-3. 発掘したリードは `leads.json` にしてから `node scripts/auto_pipeline/scout_websearch.js leads.json` で CSV追記
+1. **即日**: 国税庁法人番号API App ID 申請 (https://www.houjin-bangou.nta.go.jp/webapi/) — 発行まで2週〜1ヶ月
+2. **即日**: https://www.houjin-bangou.nta.go.jp/download/ から月次CSVダウンロード → `npm run scout:houjin -- --csv <path>` で今日から使える
+3. **即日**: `wantedly_manual_guide.md` に従ってWantedly手動ブラウズ（1セット15分）
+4. **4/29以降**: Google Places API枠リセット → 既存scout.jsで企業向け業種を一気に収集
 
 ---
 

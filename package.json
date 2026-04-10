@@ -6,6 +6,9 @@
     "pipeline": "node scripts/auto_pipeline/pipeline.js",
     "pipeline:dry": "node scripts/auto_pipeline/pipeline.js --dry-run",
     "scout": "node scripts/auto_pipeline/pipeline.js --scout-only",
+    "scout:houjin": "node scripts/auto_pipeline/scout_houjin.js",
+    "scout:houjin:dry": "node scripts/auto_pipeline/scout_houjin.js --dry-run",
+    "scout:websearch": "node scripts/auto_pipeline/scout_websearch.js",
     "send": "node scripts/auto_pipeline/pipeline.js --send-only",
     "stats": "node scripts/auto_pipeline/pipeline.js --stats"
   },
