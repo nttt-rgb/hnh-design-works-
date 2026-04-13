@@ -1,6 +1,6 @@
 # HNH Design Works — プロジェクト現状
 
-**最終更新:** 2026-04-10
+**最終更新:** 2026-04-13
 **目的:** 次セッション開始時に現状を即把握できるサマリー
 
 > このファイルは CLAUDE.md と一緒に必ず読むこと（CLAUDE.md の重要ルール #1 を遵守するため）。
@@ -16,6 +16,75 @@
 
 **月12件受注に必要な営業数**: 返信率2% × 成約率25% → **日20件 / 月600件のアプローチ必要**
 **現状ギャップ**: 今日43件アプローチ → 月換算 約860件。ペースはOK。ただし **リード発掘がボトルネック**
+
+---
+
+## 🆕 2026-04-13 追加アセット（サービスラインナップ拡張：Koe サブサービス）
+
+Web制作後の月額継続収益源を追加する目的で `services/` ディレクトリを新設。
+当初別プロジェクトとして着手していた副業ツール群を HNH サブサービスとして統合。
+
+### サービスラインナップ（CLAUDE.md に追記済み）
+
+| # | サービス | 料金 | 位置づけ | 実装状況 |
+|---|---------|------|---------|---------|
+| 1 | Web制作（本業） | ¥100K–¥250K 初期 | 受注パイプライン | 既存 |
+| 2 | **Koe（声）** | **¥20,000/月** | Web制作納品後の月次レビュー分析レポート（解約防止＋LTV向上） | **✅ MVP完成** |
+| 3 | Slides | スポット/月額 ¥5K–¥30K | 提案資料・月次レポートのスライド自動生成 | 部分実装 |
+
+**月商シミュレーション**: Web¥2M + Koe¥200K（10店舗）+ Slides¥195K = **¥2,395,000**（+20%上積み）
+
+### Koe の中身（`services/koe/`）
+
+| ファイル | 役割 |
+|---|---|
+| `koe/fetch_reviews.py` | Google Places API (New) v1 + ローカルJSONフォールバック。`PlaceSnapshot` で店舗全体★・総レビュー数を保持 |
+| `koe/analyze.py` | Claude で構造化JSON分析。前月比較データがあれば `trend` セクションを生成 |
+| `koe/diff.py` | スナップショット自動検出・機械的差分計算（★デルタ／新規/消失レビュー） |
+| `koe/prompts.py` | 本分析＋トレンド分析の両対応プロンプト |
+| `koe/charts.py` | matplotlib で評価分布の横棒＋★推移折れ線の PNG 生成（日本語=Hiragino Sans 自動検出） |
+| `koe/report.py` | ReportLab 組込CIDフォントで日本語 PDF 生成。チャート画像を埋め込み |
+| `koe/main.py` | CLI。単一店舗／複数店舗バッチ（`clients.yaml`）両対応。`~/Desktop/.env` 優先読込 |
+| `submodules/minutes/` | 議事録自動生成（Zoom mp4 → Whisper → Claude） |
+| `submodules/slides/koe_deck.py` | python-pptx で Koe 月次分析JSON → 16:9 プレゼン .pptx 生成（11スライド） |
+| `submodules/slides/main.py` | Slides CLI（現時点は Koe デッキ生成のみ対応） |
+| `clients.yaml.example` | 複数店舗バッチ用設定テンプレート |
+| `input/sample_reviews_{march,april}.json` | 前月比較テスト用サンプル（実データなし） |
+
+### 動作確認済み（サンプルデータ）
+
+- 単月レポート生成: `.venv/bin/python -m koe.main --reviews-json input/sample_reviews.json --store-name "..."` → PDF + analysis.json + チャート
+- 前月比較: 3月→4月サンプルで `★Δ=+0.5 (3.60→4.10)` を検出、trend セクション内で解消論点3件／新出論点1件を正しく峻別
+- スライド生成: 同じ analysis.json から `review_deck.pptx`（11スライド、86KB）を生成
+
+### 実 API 疎通は未実施（次回セッション）
+
+- Google Places API キーは `~/Desktop/.env` に未設定（`GOOGLE_PLACES_API_KEY` 追記が必要）
+- ユーザーが自身で疎通テスト予定
+
+### 月次自動実行（cron 例・READMEに記載済み）
+
+```cron
+0 9 1 * * cd ~/Desktop/WEBDEV_AGENCY/services/koe && .venv/bin/python -m koe.main --config clients.yaml >> output/cron.log 2>&1
+```
+
+### ドキュメント更新
+
+- `CLAUDE.md`: 事業目標直下に「サービスラインナップ」表を追加。Web制作成約時は Koe（月¥20K）を必ず提案するルール明記
+- `services/README.md`（新規）: サービス総覧＋月商シミュレーション
+- `services/koe/README.md`（新規）: セールストーク・使い方・運用注意・次のステップ
+
+### 次セッションのアクション
+
+1. **Slides #1 実装**: Scout Agent 出力のリード情報から HNH 営業用提案スライド（.pptx）を自動生成。`submodules/slides/` 配下に `sales_deck.py` を追加
+2. **README/docs 更新**: サービス追加に伴う全体ドキュメント整備（`services/koe/README.md` への slides モジュール使い方追記など）
+3. **Koe 本番疎通テスト**: `~/Desktop/.env` に `GOOGLE_PLACES_API_KEY` 追加後、実店舗 place_id で動作確認。API レートリミット・レビュー取得上限（5件）の実挙動検証
+
+### 既知の技術メモ
+
+- Python 3.9 環境のため、型注釈で `X | None` を使う場合は各ファイル先頭に `from __future__ import annotations` 必須
+- Places API (New) v1 は 1 リクエストで返るレビュー最大 5 件。長期トレンドには `output/snapshots/` の月次蓄積が前提
+- venv は `services/koe/.venv`（`services/koe/` 配下で完結）
 
 ---
 
@@ -198,6 +267,17 @@ WEBDEV_AGENCY/
 ├── STATUS.md                            # 本ファイル（必読）
 ├── index.html, intake.html, demo_*.html # 自社サイト
 ├── sitemap.xml, robots.txt              # SEO
+├── services/                            # 🆕 サブサービスライン
+│   ├── README.md                        # サービス総覧・月商シミュレーション
+│   └── koe/                             # Koe（月次レビュー分析 ¥20K/月）
+│       ├── README.md
+│       ├── koe/                         # メインパッケージ
+│       ├── submodules/
+│       │   ├── minutes/                 # 議事録自動生成
+│       │   └── slides/                  # スライド生成（Koeデッキ対応済）
+│       ├── clients.yaml.example
+│       ├── input/, output/              # 入出力（gitignore）
+│       └── .venv/                       # Python 仮想環境
 ├── docs/
 │   └── google_search_console_setup.md   # GSC手順書
 ├── campaigns/
@@ -240,3 +320,15 @@ WEBDEV_AGENCY/
 ---
 
 *このSTATUS.mdは作業終了時に更新する。次セッション開始時に CLAUDE.md と一緒に必読。*
+
+---
+
+## 実行待ちタスク（オーナー手作業）
+**棚卸し日**: 2026-04-13
+
+| # | タスク | プロジェクト | 所要時間 | 準備状況 | 滞留日数 |
+|---|---|---|---|---|---:|
+| 1 | ココナラ 出品 (HNH Design Works) | HNH | 15分 | 出品文テキスト準備済 | 未測定 |
+| 2 | 進行中リード 返信2件 フォローアップ | HNH | 10分 | 返信テンプレ済 | 未測定 |
+
+件数: **2 / 5**
