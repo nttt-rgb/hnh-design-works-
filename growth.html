@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a0a0a">
+<title>Growth Plan — 納品後の伴走サポート | HNH Design Works</title>
+<meta name="description" content="HNH Design Works の Growth Plan。ホームページ納品後も、AI レビュー分析・SEO改善・投稿文制作で集客を伴走する月額サポート。月¥30,000〜。">
+<link rel="canonical" href="https://hnh-design-works.vercel.app/growth.html">
+<meta property="og:title" content="Growth Plan — 納品後の伴走サポート | HNH Design Works">
+<meta property="og:description" content="AI レビュー分析 + SEO改善 + 投稿文制作。月¥30,000〜">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hnh-design-works.vercel.app/growth.html">
+<meta property="og:image" content="https://hnh-design-works.vercel.app/screenshots/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Inter', -apple-system, 'Hiragino Kaku Gothic ProN', sans-serif;
+  background: #fff; color: #000;
+  font-weight: 300; line-height: 1.75; letter-spacing: 0.02em;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+::selection { background: #000; color: #fff; }
+
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 clamp(24px, 4vw, 60px); background: transparent;
+  transition: background 0.4s, backdrop-filter 0.4s;
+}
+.nav.scrolled { background: rgba(255,255,255,0.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 1px 0 rgba(0,0,0,0.06); }
+.nav-logo { display: flex; align-items: baseline; gap: 6px; }
+.nav-logo b { font-weight: 900; font-size: 1.2rem; letter-spacing: 0.06em; }
+.nav-logo span { font-weight: 200; font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.7; }
+.nav-back { font-size: 0.7rem; letter-spacing: 0.2em; padding: 9px 18px; border: 1px solid rgba(0,0,0,0.2); text-transform: uppercase; transition: all 0.3s; }
+.nav-back:hover { background: #000; color: #fff; border-color: #000; }
+
+.hdr { padding: 160px clamp(24px, 5vw, 60px) 80px; max-width: 1400px; margin: 0 auto; }
+.hdr-label { font-size: 0.7rem; letter-spacing: 0.4em; opacity: 0.5; font-weight: 400; text-transform: uppercase; margin-bottom: 28px; }
+.hdr h1 { font-size: clamp(2.6rem, 5.5vw, 5rem); font-weight: 200; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 32px; max-width: 900px; }
+.hdr h1 em { font-style: normal; font-weight: 300; opacity: 0.35; }
+.hdr-desc { font-size: 1.05rem; opacity: 0.7; max-width: 640px; line-height: 1.9; }
+.hdr-meta { margin-top: 36px; display: flex; gap: 24px; flex-wrap: wrap; font-size: 0.75rem; letter-spacing: 0.15em; opacity: 0.5; text-transform: uppercase; }
+.hdr-meta span::after { content: " ·"; margin-left: 8px; opacity: 0.5; }
+.hdr-meta span:last-child::after { content: ""; }
+
+section { padding: 100px clamp(24px, 5vw, 60px); }
+.max { max-width: 1100px; margin: 0 auto; }
+
+.sec-label { font-size: 0.7rem; letter-spacing: 0.4em; opacity: 0.5; text-transform: uppercase; margin-bottom: 20px; font-weight: 400; }
+.sec-title { font-size: clamp(1.8rem, 3.5vw, 2.8rem); font-weight: 300; line-height: 1.25; letter-spacing: -0.01em; margin-bottom: 40px; }
+
+.bg-soft { background: #fafafa; }
+.bg-black { background: #000; color: #fff; }
+
+/* Why section */
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 32px; }
+@media (max-width: 880px) { .why-grid { grid-template-columns: 1fr; } }
+.why-card { padding: 40px 32px; border: 1px solid rgba(0,0,0,0.1); transition: all 0.3s; }
+.why-card:hover { border-color: #000; transform: translateY(-4px); box-shadow: 0 30px 60px rgba(0,0,0,0.06); }
+.why-num { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.2em; opacity: 0.5; margin-bottom: 20px; }
+.why-card h3 { font-size: 1.3rem; font-weight: 500; margin-bottom: 14px; letter-spacing: -0.005em; line-height: 1.35; }
+.why-card p { font-size: 0.92rem; opacity: 0.7; line-height: 1.85; }
+
+/* Includes section */
+.inc-list { display: grid; gap: 2px; background: rgba(0,0,0,0.06); margin-top: 40px; }
+.inc-row { background: #fff; padding: 28px 32px; display: grid; grid-template-columns: 64px 1fr auto; gap: 28px; align-items: center; }
+@media (max-width: 720px) { .inc-row { grid-template-columns: 48px 1fr; } .inc-row > .inc-freq { grid-column: 2; grid-row: 2; } }
+.inc-num { font-size: 1.2rem; font-weight: 900; letter-spacing: -0.02em; opacity: 0.25; }
+.inc-body h3 { font-size: 1.05rem; font-weight: 500; margin-bottom: 6px; }
+.inc-body p { font-size: 0.88rem; opacity: 0.7; line-height: 1.7; }
+.inc-freq { font-size: 0.7rem; letter-spacing: 0.18em; opacity: 0.55; text-transform: uppercase; white-space: nowrap; }
+
+/* Pricing */
+.price-box {
+  max-width: 720px; margin: 0 auto; padding: 60px clamp(32px, 5vw, 60px);
+  border: 1px solid rgba(255,255,255,0.15); text-align: center;
+}
+.price-label { font-size: 0.72rem; letter-spacing: 0.3em; opacity: 0.55; text-transform: uppercase; margin-bottom: 24px; }
+.price-v { font-size: clamp(3rem, 6vw, 4.5rem); font-weight: 200; letter-spacing: -0.03em; line-height: 1; margin-bottom: 14px; font-variant-numeric: tabular-nums; }
+.price-v sup { font-size: 1.2rem; font-weight: 300; opacity: 0.6; vertical-align: top; }
+.price-sub { font-size: 0.85rem; opacity: 0.65; margin-bottom: 40px; letter-spacing: 0.05em; }
+.price-note { font-size: 0.78rem; opacity: 0.5; letter-spacing: 0.02em; }
+
+/* Koe callout */
+.koe-callout { max-width: 900px; margin: 60px auto 0; padding: 36px; border: 1px solid rgba(255,255,255,0.15); display: grid; grid-template-columns: auto 1fr auto; gap: 28px; align-items: center; }
+@media (max-width: 720px) { .koe-callout { grid-template-columns: 1fr; text-align: center; } }
+.koe-badge { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.25em; padding: 6px 14px; border: 1px solid rgba(255,255,255,0.3); }
+.koe-callout p { font-size: 0.92rem; opacity: 0.78; }
+.koe-callout-link {
+  font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; padding-bottom: 3px;
+  border-bottom: 1px solid rgba(255,255,255,0.3); display: inline-flex; align-items: center; gap: 8px;
+  transition: all 0.3s;
+}
+.koe-callout-link:hover { border-bottom-color: #fff; }
+
+/* CTA */
+.cta { text-align: center; }
+.cta h2 { font-size: clamp(2.2rem, 4.5vw, 3.6rem); font-weight: 200; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 28px; }
+.cta p { opacity: 0.7; max-width: 520px; margin: 0 auto 40px; font-size: 0.98rem; }
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 18px 40px; background: #000; color: #fff;
+  font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500;
+  transition: all 0.3s;
+}
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+
+footer { padding: 60px 24px 40px; text-align: center; border-top: 1px solid rgba(0,0,0,0.08); }
+footer .logo-big { font-size: 1.3rem; font-weight: 900; letter-spacing: 0.06em; margin-bottom: 8px; }
+footer .sub { font-size: 0.75rem; opacity: 0.55; font-weight: 300; letter-spacing: 0.1em; }
+footer .cp { font-size: 0.7rem; opacity: 0.4; margin-top: 24px; }
+
+.fade { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease-out, transform 0.9s ease-out; }
+.fade.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo"><b>HNH</b><span>Design Works</span></a>
+  <a href="/" class="nav-back">← HOME</a>
+</nav>
+
+<header class="hdr">
+  <p class="hdr-label fade">Growth Plan · 納品後の伴走サポート</p>
+  <h1 class="fade">作って終わりには、<br><em>しない。</em></h1>
+  <p class="hdr-desc fade">
+    ホームページは、公開した瞬間から育てていくもの。Growth Planは、AI レビュー分析・SEO改善・投稿文制作を毎月継続し、
+    納品後も集客が伸び続ける状態をHNHが伴走する、月額継続のサポートプランです。
+  </p>
+  <div class="hdr-meta fade">
+    <span>月¥30,000〜</span><span>MONTHLY SUPPORT</span><span>FROM LAUNCH DAY</span>
+  </div>
+</header>
+
+<section class="bg-soft">
+  <div class="max">
+    <p class="sec-label fade">Why Growth Plan</p>
+    <h2 class="sec-title fade">"公開"で終わる制作会社とは、<br>違う伴走の形。</h2>
+    <div class="why-grid">
+      <div class="why-card fade">
+        <p class="why-num">01</p>
+        <h3>作って終わらせない</h3>
+        <p>Webサイトは、運用しなければ数ヶ月でSEO・口コミの鮮度が落ちます。月次で改善を積み重ねる体制で、公開後のパフォーマンスを守ります。</p>
+      </div>
+      <div class="why-card fade">
+        <p class="why-num">02</p>
+        <h3>一社ですべて完結</h3>
+        <p>制作・SEO・MEO・レビュー分析・投稿文制作を一社で一貫。外注先の調整で時間を使わず、本業に集中できます。</p>
+      </div>
+      <div class="why-card fade">
+        <p class="why-num">03</p>
+        <h3>データに基づく提案</h3>
+        <p>Googleレビュー・検索クエリ・流入ログをAIが毎月分析。「何をすれば伸びるか」を、数字で示します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="max">
+    <p class="sec-label fade">What's Included</p>
+    <h2 class="sec-title fade">毎月お届けするもの。</h2>
+    <div class="inc-list">
+      <div class="inc-row fade">
+        <div class="inc-num">01</div>
+        <div class="inc-body">
+          <h3>Googleレビュー分析レポート</h3>
+          <p>新着レビューを AI が分析し、ポジ/ネガ傾向・改善ポイント・競合比較を可視化。</p>
+        </div>
+        <span class="inc-freq">Monthly</span>
+      </div>
+      <div class="inc-row fade">
+        <div class="inc-num">02</div>
+        <div class="inc-body">
+          <h3>SEO改善施策の実行</h3>
+          <p>流入クエリの見直し、タイトル・メタの最適化、内部リンク整備まで月次で実施。</p>
+        </div>
+        <span class="inc-freq">Monthly</span>
+      </div>
+      <div class="inc-row fade">
+        <div class="inc-num">03</div>
+        <div class="inc-body">
+          <h3>投稿文・ブログ原稿の作成支援</h3>
+          <p>Instagram / ブログ / Googleビジネスプロフィールの投稿文をAIと一緒に設計。業種文脈を反映。</p>
+        </div>
+        <span class="inc-freq">Monthly</span>
+      </div>
+      <div class="inc-row fade">
+        <div class="inc-num">04</div>
+        <div class="inc-body">
+          <h3>月次ミーティング（任意・30分）</h3>
+          <p>レポートの読み解き、次月の優先施策をすり合わせるオンラインセッション。Zoom / Google Meet 対応。</p>
+        </div>
+        <span class="inc-freq">Optional</span>
+      </div>
+      <div class="inc-row fade">
+        <div class="inc-num">05</div>
+        <div class="inc-body">
+          <h3>緊急対応・軽微な修正</h3>
+          <p>月2回まで、営業日内の軽微な文面・画像差し替えに無料で対応します。</p>
+        </div>
+        <span class="inc-freq">As needed</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-black">
+  <div class="max">
+    <div class="price-box fade">
+      <p class="price-label">Growth Plan · Monthly</p>
+      <p class="price-v"><sup>¥</sup>30,000<sup>〜</sup></p>
+      <p class="price-sub">/ 月額 · 税別 / 3ヶ月ごとに見直し可能</p>
+      <p class="price-note">初回3ヶ月分のみお支払い確定。以降は月次更新。いつでも解約可能です。</p>
+    </div>
+    <div class="koe-callout fade">
+      <span class="koe-badge">KOE · ¥20,000</span>
+      <p>レビュー分析のみをご希望の方は、単品サービス「Koe」もございます。（月¥20,000・月次レポートのみ）</p>
+      <a href="https://koe-by-hnh.vercel.app/" target="_blank" rel="noopener" class="koe-callout-link">Koeを見る <span>→</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="max">
+    <p class="sec-label fade">Contact</p>
+    <h2 class="fade">まずは納品時に、<br>ご検討ください。</h2>
+    <p class="fade">Growth Planはホームページ制作ご依頼時、または納品時に追加できます。<br>すでに納品済みのお客様も、随時お申込みいただけます。</p>
+    <a href="/#contact" class="cta-btn fade">無料相談を申し込む <span>→</span></a>
+  </div>
+</section>
+
+<footer>
+  <p class="logo-big">HNH Design Works</p>
+  <p class="sub">Design that drives business.</p>
+  <p class="cp">© 2026 HNH Design Works. All rights reserved.</p>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 30); });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
