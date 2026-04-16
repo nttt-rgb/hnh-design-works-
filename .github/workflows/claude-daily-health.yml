@@ -1,0 +1,35 @@
+name: Daily Code Health
+on:
+  schedule:
+    - cron: "0 0 * * *"  # 00:00 UTC = 09:00 JST
+  workflow_dispatch:
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+      - name: Install dependencies
+        run: npm ci
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Run a daily health check:
+            1. Count TODO/FIXME: grep -rn 'TODO\|FIXME' --include='*.js' --exclude-dir=node_modules
+            2. Run npm audit: npm audit --json
+            3. Run tests: npm test
+            4. Check for tracked .env files: git ls-files | grep '\.env$'
+            5. Check for large tracked files: git ls-files | xargs du -h | sort -rh | head -10
+            Create a GitHub issue titled "Daily Health: $(date +%Y-%m-%d)" with findings.
+          claude_args: |
+            --allowedTools "Bash(grep:*),Bash(npm:*),Bash(git:*),Bash(gh issue:*),Bash(du:*),Bash(date:*),Read,Glob"

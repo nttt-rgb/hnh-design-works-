@@ -10,12 +10,17 @@
     "scout:houjin:dry": "node scripts/auto_pipeline/scout_houjin.js --dry-run",
     "scout:websearch": "node scripts/auto_pipeline/scout_websearch.js",
     "send": "node scripts/auto_pipeline/pipeline.js --send-only",
-    "stats": "node scripts/auto_pipeline/pipeline.js --stats"
+    "stats": "node scripts/auto_pipeline/pipeline.js --stats",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "canvas": "^3.2.3",
     "dotenv": "^16.6.1",
     "nodemailer": "^6.10.1",
     "puppeteer": "^24.40.0"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.4"
   }
 }

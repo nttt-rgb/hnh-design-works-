@@ -1,0 +1,27 @@
+name: Claude PR Review
+on:
+  pull_request:
+    types: [opened, synchronize, ready_for_review]
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            Review this PR. Focus on:
+            - Bugs and logic errors
+            - Security issues (API key leaks, injection, XSS, email injection)
+            - Code quality and maintainability
+            - Performance considerations
+            Read CLAUDE.md for project-specific context.
+            Post a summary comment and inline comments on specific issues.

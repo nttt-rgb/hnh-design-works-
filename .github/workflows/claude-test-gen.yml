@@ -1,0 +1,35 @@
+name: Claude Test Generator
+on:
+  push:
+    branches: [main]
+    paths: ["**/*.js"]
+
+jobs:
+  generate-tests:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+      - name: Install dependencies
+        run: npm ci
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            1. Run: git diff HEAD~1 --name-only -- '*.js' to find changed files
+            2. For each changed file in scripts/, identify new or modified exported functions
+            3. Generate Vitest test cases (use globals: describe/it/expect, no import from vitest)
+            4. Place tests in test/ with .test.js suffix
+            5. Run: npm test to verify
+            6. If new tests were created, create a branch and PR titled "test: auto-generate tests for [files]"
+            7. If no testable changes, do nothing
+          claude_args: |
+            --allowedTools "Read,Write,Bash(git:*),Bash(npm:*),Bash(gh pr:*),Glob,Grep"

@@ -1,0 +1,41 @@
+name: Claude Issue Responder
+on:
+  issues:
+    types: [opened, labeled]
+  issue_comment:
+    types: [created]
+
+jobs:
+  respond:
+    if: |
+      (github.event.label.name == 'claude') ||
+      (github.event_name == 'issue_comment' && contains(github.event.comment.body, '@claude'))
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: write
+      pull-requests: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+      - name: Install dependencies
+        run: npm ci
+      - uses: anthropics/claude-code-action@v1
+        with:
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
+          prompt: |
+            ISSUE #${{ github.event.issue.number }}: ${{ github.event.issue.title }}
+            BODY: ${{ github.event.issue.body }}
+
+            Read CLAUDE.md for project context.
+            1. Analyze this issue and comment your understanding
+            2. If it's a bug: locate the code, create a fix branch, commit, open a PR
+            3. If it's a feature request: comment a proposed plan
+            4. If unclear: ask clarifying questions
+          claude_args: |
+            --allowedTools "Read,Edit,Write,Bash(git:*),Bash(npm:*),Bash(gh pr:*),Bash(gh issue:*),Glob,Grep"
