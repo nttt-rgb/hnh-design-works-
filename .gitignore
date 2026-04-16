@@ -2,3 +2,16 @@ node_modules/
 _archive/
 package-lock.json
 .DS_Store
+
+# Python services (services/koe/ 以下)
+services/**/.venv/
+services/**/__pycache__/
+services/**/*.pyc
+services/**/.env
+services/**/output/
+services/**/input/
+services/**/clients.yaml
+!services/**/.env.example
+!services/**/clients.yaml.example
+!services/**/input/sample_*.json
+.vercel

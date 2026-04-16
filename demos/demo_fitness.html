@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#F4F8F5">
+<title>PULSE FIT | 恵比寿 | HNH Design Works デモサイト</title>
+<meta name="description" content="今日の自分を、超えていく。恵比寿のパーソナルジム&ヨガスタジオ PULSE FIT。科学的メソッドであなたの目標達成を伴走します。">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="PULSE FIT | 恵比寿のパーソナルジム&ヨガ">
+<meta property="og:description" content="今日の自分を、超えていく。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://cdn.tailwindcss.com">
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "PULSE FIT",
+  "description": "恵比寿のパーソナルジム&ヨガスタジオ。科学的メソッドで目標達成を伴走。",
+  "url": "https://hnh-design-works.vercel.app/demos/demo_fitness.html",
+  "telephone": "03-0000-0000",
+  "priceRange": "¥¥",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "恵比寿X-X-X PULSEビル 4F",
+    "addressLocality": "渋谷区",
+    "addressRegion": "東京都",
+    "postalCode": "150-0013",
+    "addressCountry": "JP"
+  },
+  "geo": {"@type": "GeoCoordinates", "latitude": 35.6465, "longitude": 139.7100},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "07:00", "closes": "22:00"}
+  ]
+}
+</script>
+<style>
+  :root {
+    --bg: #F4F8F5;
+    --bg-soft: #E8F0EA;
+    --white: #FFFFFF;
+    --green: #2D8659;
+    --green-dark: #1F5E3F;
+    --lime: #7FB069;
+    --accent: #A8D5BA;
+    --text: #1A2E24;
+    --text-sub: #5A6E62;
+    --border: #D4E4DA;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, 'Hiragino Kaku Gothic ProN', 'Yu Gothic', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.8;
+  }
+  .font-display { font-family: 'Inter', -apple-system, sans-serif; font-weight: 800; letter-spacing: -0.02em; }
+  .font-mono { font-family: 'JetBrains Mono', ui-monospace, monospace; letter-spacing: 0.05em; }
+  .bg-primary { background: var(--bg); }
+  .bg-soft { background: var(--bg-soft); }
+  .bg-white { background: var(--white); }
+  .bg-green { background: var(--green); }
+  .bg-green-dark { background: var(--green-dark); }
+  .text-green { color: var(--green); }
+  .text-green-dark { color: var(--green-dark); }
+  .text-lime { color: var(--lime); }
+  .text-ink { color: var(--text); }
+  .text-sub { color: var(--text-sub); }
+
+  .hero-bg {
+    background:
+      radial-gradient(ellipse at 80% 20%, rgba(127,176,105,0.25), transparent 55%),
+      radial-gradient(ellipse at 10% 80%, rgba(45,134,89,0.15), transparent 50%),
+      linear-gradient(180deg, #F4F8F5 0%, #E8F0EA 100%);
+  }
+  .trainer-ph-1 { background: linear-gradient(135deg, #E8F0EA 0%, #7FB069 50%, #2D8659 100%); }
+  .trainer-ph-2 { background: linear-gradient(135deg, #D4E4DA 0%, #A8D5BA 50%, #1F5E3F 100%); }
+  .trainer-ph-3 { background: linear-gradient(135deg, #F4F8F5 0%, #7FB069 60%, #2D8659 100%); }
+
+  .fade { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease-out, transform 0.9s ease-out; }
+  .fade.in { opacity: 1; transform: translateY(0); }
+
+  .btn-green {
+    background: var(--green); color: white;
+    padding: 1rem 2.4rem; font-weight: 600; letter-spacing: 0.1em; font-size: 0.9rem;
+    border-radius: 8px;
+    transition: all 0.3s ease; display: inline-block;
+  }
+  .btn-green:hover { background: var(--green-dark); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(45,134,89,0.25); }
+  .btn-ghost-green {
+    border: 2px solid var(--green); color: var(--green);
+    padding: 0.875rem 2.3rem; font-weight: 600; letter-spacing: 0.1em; font-size: 0.9rem;
+    border-radius: 8px;
+    transition: all 0.3s ease; display: inline-block;
+  }
+  .btn-ghost-green:hover { background: var(--green); color: white; }
+
+  input, textarea, select {
+    background: white; border: 1.5px solid var(--border);
+    color: var(--text); padding: 0.9rem 1.1rem; width: 100%;
+    font-family: inherit; border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+  input:focus, textarea:focus, select:focus { outline: none; border-color: var(--green); }
+  label { color: var(--text-sub); font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 0.4rem; }
+
+  .feature-card {
+    background: white; padding: 2.5rem; border-radius: 16px;
+    border: 1px solid var(--border); transition: all 0.3s ease;
+  }
+  .feature-card:hover { border-color: var(--green); transform: translateY(-6px); box-shadow: 0 20px 40px rgba(45,134,89,0.1); }
+
+  .class-card {
+    background: white; border-radius: 16px; overflow: hidden;
+    border: 1px solid var(--border); transition: all 0.3s ease;
+  }
+  .class-card:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(45,134,89,0.12); }
+
+  .plan-card {
+    background: white; padding: 2.5rem 2rem; border-radius: 20px;
+    border: 2px solid var(--border); transition: all 0.3s ease;
+  }
+  .plan-card.featured { border-color: var(--green); background: linear-gradient(180deg, #F4F8F5 0%, white 100%); transform: scale(1.03); }
+
+  .stat-num {
+    font-size: 3rem; font-weight: 800; line-height: 1;
+    background: linear-gradient(135deg, var(--green) 0%, var(--lime) 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white bg-opacity-95 backdrop-blur border-b border-gray-100">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-2">
+      <span class="inline-block w-3 h-3 rounded-full bg-green"></span>
+      <span class="font-display text-xl text-ink">PULSE FIT</span>
+    </a>
+    <ul class="hidden md:flex gap-8 text-sm font-medium text-ink">
+      <li><a href="#features" class="hover:text-green transition">特長</a></li>
+      <li><a href="#classes" class="hover:text-green transition">クラス</a></li>
+      <li><a href="#trainer" class="hover:text-green transition">トレーナー</a></li>
+      <li><a href="#price" class="hover:text-green transition">料金</a></li>
+      <li><a href="#access" class="hover:text-green transition">アクセス</a></li>
+    </ul>
+    <a href="#trial" class="btn-green text-xs" style="padding: 0.6rem 1.4rem;">体験予約</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="top" class="hero-bg min-h-screen flex items-center px-6 pt-24">
+  <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-16 items-center">
+    <div>
+      <p class="font-mono text-green text-xs tracking-[0.3em] mb-6 fade">// PULSE FIT · EBISU</p>
+      <h1 class="font-display text-5xl md:text-7xl text-ink leading-[1.1] mb-8 fade">
+        今日の自分を、<br><span class="text-green">超えていく。</span>
+      </h1>
+      <p class="text-sub text-base md:text-lg leading-relaxed mb-10 fade max-w-md">
+        一人では変われなかった身体を、科学的メソッドとプロの伴走で変えていく。<br>
+        初めての方に、3ヶ月で結果が見える設計を。
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mb-12 fade">
+        <a href="#trial" class="btn-green">無料体験に申し込む</a>
+        <a href="#classes" class="btn-ghost-green">クラスを見る</a>
+      </div>
+      <div class="grid grid-cols-3 gap-6 fade max-w-md">
+        <div><div class="stat-num">98%</div><p class="text-sub text-xs mt-1">継続率</p></div>
+        <div><div class="stat-num">-6.2kg</div><p class="text-sub text-xs mt-1">平均減量/3ヶ月</p></div>
+        <div><div class="stat-num">1,200+</div><p class="text-sub text-xs mt-1">会員数</p></div>
+      </div>
+    </div>
+    <div class="trainer-ph-1 aspect-[4/5] rounded-3xl fade"></div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features" class="py-28 px-6 bg-primary">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="font-mono text-green text-xs tracking-[0.3em] mb-4 fade">// WHY PULSE FIT</p>
+      <h2 class="font-display text-4xl md:text-5xl text-ink fade">選ばれる理由</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="feature-card fade">
+        <div class="w-12 h-12 bg-green rounded-xl flex items-center justify-center text-white text-2xl font-bold mb-6">01</div>
+        <h3 class="font-display text-xl text-ink mb-3">完全個別プログラム</h3>
+        <p class="text-sub leading-relaxed">InBody測定と面談で現状を可視化。あなたの生活・目標に合わせた3ヶ月計画を組みます。</p>
+      </div>
+      <div class="feature-card fade">
+        <div class="w-12 h-12 bg-green rounded-xl flex items-center justify-center text-white text-2xl font-bold mb-6">02</div>
+        <h3 class="font-display text-xl text-ink mb-3">LINE食事サポート</h3>
+        <p class="text-sub leading-relaxed">毎食の写真をLINEで送るだけ。管理栄養士が24時間以内にフィードバック。</p>
+      </div>
+      <div class="feature-card fade">
+        <div class="w-12 h-12 bg-green rounded-xl flex items-center justify-center text-white text-2xl font-bold mb-6">03</div>
+        <h3 class="font-display text-xl text-ink mb-3">ヨガも筋トレも</h3>
+        <p class="text-sub leading-relaxed">パーソナルとグループヨガの両方が利用可能。心と身体のバランスで続けられる。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CLASSES -->
+<section id="classes" class="py-28 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="font-mono text-green text-xs tracking-[0.3em] mb-4 fade">// CLASS</p>
+      <h2 class="font-display text-4xl md:text-5xl text-ink fade">クラス一覧</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="class-card fade">
+        <div class="trainer-ph-1 aspect-[5/3]"></div>
+        <div class="p-6">
+          <p class="font-mono text-xs text-green tracking-widest mb-2">PERSONAL · 60min</p>
+          <h3 class="font-display text-xl text-ink mb-3">パーソナルトレーニング</h3>
+          <p class="text-sub text-sm leading-relaxed">マンツーマンで筋トレ・食事指導。目標達成までフルサポート。</p>
+        </div>
+      </div>
+      <div class="class-card fade">
+        <div class="trainer-ph-2 aspect-[5/3]"></div>
+        <div class="p-6">
+          <p class="font-mono text-xs text-green tracking-widest mb-2">YOGA · 60min</p>
+          <h3 class="font-display text-xl text-ink mb-3">グループヨガ</h3>
+          <p class="text-sub text-sm leading-relaxed">朝ヨガ・リラックスヨガ・パワーヨガ。週15本のレッスンから選べる。</p>
+        </div>
+      </div>
+      <div class="class-card fade">
+        <div class="trainer-ph-3 aspect-[5/3]"></div>
+        <div class="p-6">
+          <p class="font-mono text-xs text-green tracking-widest mb-2">PILATES · 50min</p>
+          <h3 class="font-display text-xl text-ink mb-3">マシンピラティス</h3>
+          <p class="text-sub text-sm leading-relaxed">最新リフォーマーで体幹と姿勢を整える。少人数制で丁寧な指導。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRAINER -->
+<section id="trainer" class="py-28 px-6 bg-primary">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="font-mono text-green text-xs tracking-[0.3em] mb-4 fade">// TRAINER</p>
+      <h2 class="font-display text-4xl md:text-5xl text-ink fade">トレーナー</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="fade">
+        <div class="trainer-ph-1 aspect-[4/5] rounded-2xl mb-6"></div>
+        <p class="font-mono text-xs text-green tracking-widest mb-2">HEAD TRAINER</p>
+        <h3 class="font-display text-2xl text-ink mb-2">KOBAYASHI DAIKI</h3>
+        <p class="text-sub text-sm leading-relaxed">NSCA-CPT。減量とボディメイクを得意とし、のべ3,000名のクライアントを指導。</p>
+      </div>
+      <div class="fade">
+        <div class="trainer-ph-2 aspect-[4/5] rounded-2xl mb-6"></div>
+        <p class="font-mono text-xs text-green tracking-widest mb-2">YOGA INSTRUCTOR</p>
+        <h3 class="font-display text-2xl text-ink mb-2">NAKAJIMA AOI</h3>
+        <p class="text-sub text-sm leading-relaxed">全米ヨガアライアンス RYT500。呼吸法と瞑想を組み込んだ独自メソッド。</p>
+      </div>
+      <div class="fade">
+        <div class="trainer-ph-3 aspect-[4/5] rounded-2xl mb-6"></div>
+        <p class="font-mono text-xs text-green tracking-widest mb-2">PILATES TRAINER</p>
+        <h3 class="font-display text-2xl text-ink mb-2">WADA HINA</h3>
+        <p class="text-sub text-sm leading-relaxed">BASI Pilates認定。産後ケア・姿勢改善に特化した指導で女性から支持。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICE -->
+<section id="price" class="py-28 px-6 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-16">
+      <p class="font-mono text-green text-xs tracking-[0.3em] mb-4 fade">// PRICE</p>
+      <h2 class="font-display text-4xl md:text-5xl text-ink fade">料金プラン</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6 items-stretch">
+      <div class="plan-card fade">
+        <p class="font-mono text-xs text-green tracking-widest mb-3">LIGHT</p>
+        <h3 class="font-display text-2xl text-ink mb-2">ヨガ・ピラティス</h3>
+        <p class="text-sub text-sm mb-6">月8回まで利用可</p>
+        <p class="stat-num mb-2">¥12,800</p>
+        <p class="text-sub text-xs mb-8">/ 月</p>
+        <ul class="text-sm text-sub space-y-2 mb-8">
+          <li>✓ ヨガ・ピラティス全クラス</li>
+          <li>✓ ウェア無料レンタル</li>
+          <li>✓ InBody測定 年2回</li>
+        </ul>
+        <a href="#trial" class="btn-ghost-green w-full text-center">体験する</a>
+      </div>
+      <div class="plan-card featured fade">
+        <p class="font-mono text-xs text-green tracking-widest mb-3">POPULAR</p>
+        <h3 class="font-display text-2xl text-ink mb-2">パーソナル</h3>
+        <p class="text-sub text-sm mb-6">週1回(月4回)コース</p>
+        <p class="stat-num mb-2">¥29,800</p>
+        <p class="text-sub text-xs mb-8">/ 月</p>
+        <ul class="text-sm text-sub space-y-2 mb-8">
+          <li>✓ パーソナル月4回</li>
+          <li>✓ ヨガ・ピラティス通い放題</li>
+          <li>✓ LINE食事サポート</li>
+          <li>✓ 3ヶ月プログラム設計</li>
+        </ul>
+        <a href="#trial" class="btn-green w-full text-center">体験する</a>
+      </div>
+      <div class="plan-card fade">
+        <p class="font-mono text-xs text-green tracking-widest mb-3">INTENSIVE</p>
+        <h3 class="font-display text-2xl text-ink mb-2">プレミアム</h3>
+        <p class="text-sub text-sm mb-6">週2回(月8回)コース</p>
+        <p class="stat-num mb-2">¥49,800</p>
+        <p class="text-sub text-xs mb-8">/ 月</p>
+        <ul class="text-sm text-sub space-y-2 mb-8">
+          <li>✓ パーソナル月8回</li>
+          <li>✓ 全クラス通い放題</li>
+          <li>✓ LINE食事サポート</li>
+          <li>✓ 専属栄養士付き</li>
+        </ul>
+        <a href="#trial" class="btn-ghost-green w-full text-center">体験する</a>
+      </div>
+    </div>
+    <p class="text-center text-sub text-sm mt-8 fade">※価格はすべて税込。入会金¥33,000は無料体験後にご入会の場合、免除となります。</p>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section id="access" class="py-28 px-6 bg-primary">
+  <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+    <div class="fade">
+      <p class="font-mono text-green text-xs tracking-[0.3em] mb-4">// ACCESS</p>
+      <h2 class="font-display text-4xl md:text-5xl text-ink mb-10">恵比寿駅 徒歩5分</h2>
+      <dl class="space-y-6">
+        <div><dt class="text-sub text-xs font-semibold mb-1 tracking-widest">ADDRESS</dt><dd class="text-ink">東京都渋谷区恵比寿X-X-X PULSEビル 4F</dd></div>
+        <div><dt class="text-sub text-xs font-semibold mb-1 tracking-widest">TEL</dt><dd class="text-ink">03-0000-0000</dd></div>
+        <div><dt class="text-sub text-xs font-semibold mb-1 tracking-widest">HOURS</dt><dd class="text-ink">07:00 – 22:00 / 年中無休</dd></div>
+        <div><dt class="text-sub text-xs font-semibold mb-1 tracking-widest">SNS</dt><dd class="text-ink">Instagram @pulsefit_demo</dd></div>
+      </dl>
+    </div>
+    <div class="trainer-ph-2 aspect-square rounded-3xl fade"></div>
+  </div>
+</section>
+
+<!-- TRIAL FORM -->
+<section id="trial" class="py-28 px-6 bg-green">
+  <div class="max-w-2xl mx-auto">
+    <div class="text-center mb-12">
+      <p class="font-mono text-lime text-xs tracking-[0.3em] mb-4 fade">// FREE TRIAL</p>
+      <h2 class="font-display text-4xl md:text-5xl text-white fade">無料体験を予約する</h2>
+      <p class="text-white text-opacity-80 mt-6 fade">60分の体験セッション + カウンセリング無料。</p>
+    </div>
+    <form class="space-y-5 bg-white p-8 rounded-2xl fade" onsubmit="event.preventDefault(); alert('デモサイトのためお問い合わせは受け付けていません。');">
+      <div><label>お名前</label><input type="text" required></div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label>メール</label><input type="email" required></div>
+        <div><label>電話番号</label><input type="tel" required></div>
+      </div>
+      <div class="grid sm:grid-cols-2 gap-5">
+        <div><label>希望日</label><input type="date" required></div>
+        <div><label>希望クラス</label><select><option>パーソナル</option><option>ヨガ</option><option>ピラティス</option><option>未定</option></select></div>
+      </div>
+      <div><label>目標・ご要望</label><textarea rows="3" placeholder="例: 3ヶ月で-5kg、姿勢改善など"></textarea></div>
+      <button type="submit" class="btn-green w-full mt-4">無料体験を予約する</button>
+    </form>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-16 px-6 bg-green-dark text-center">
+  <p class="font-display text-3xl text-white mb-4">PULSE FIT</p>
+  <p class="text-white text-opacity-70 text-sm mb-8">今日の自分を、超えていく。</p>
+  <p class="text-white text-opacity-60 text-xs">
+    Designed by <a href="https://hnh-design-works.vercel.app" class="text-lime hover:underline">HNH Design Works</a> — デモサイト
+  </p>
+  <p class="text-white text-opacity-60 text-xs mt-2">© 2026 PULSE FIT. All rights reserved.</p>
+</footer>
+
+<script>
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
