@@ -901,47 +901,6 @@ button, input, textarea, select {
 .back-to-top:hover { background: #000; color: #fff; border-color: #000; }
 
 /* ══════════════════════════════════════
-   KOE / GROWTH NOTICE — subtle bridge to footer
-   ══════════════════════════════════════ */
-.koe-notice {
-  background: #0a0a0a; color: #fff;
-  padding: clamp(32px, 4.5vw, 48px) clamp(24px, 5vw, 60px);
-  border-top: 1px solid rgba(255,255,255,0.06);
-}
-.koe-notice-inner {
-  max-width: 1200px; margin: 0 auto;
-  display: flex; justify-content: space-between; align-items: center;
-  gap: clamp(24px, 4vw, 48px);
-}
-.koe-notice-txt { flex: 1; min-width: 0; }
-.koe-notice-label {
-  font-size: 0.65rem; font-weight: 500; letter-spacing: 0.3em;
-  opacity: 0.45; text-transform: uppercase; margin-bottom: 10px;
-}
-.koe-notice-body {
-  font-size: clamp(0.82rem, 1vw, 0.92rem);
-  opacity: 0.75; font-weight: 300; line-height: 1.75; max-width: 720px;
-}
-.koe-notice-body .growth-tag {
-  display: inline-block; font-size: 0.65rem; letter-spacing: 0.2em;
-  padding: 2px 8px; background: rgba(255,255,255,0.08); margin-left: 6px;
-  border-radius: 2px; text-transform: uppercase; opacity: 0.8;
-  vertical-align: middle;
-}
-.koe-notice-link {
-  font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase;
-  opacity: 0.7; white-space: nowrap; transition: opacity 0.3s;
-  display: inline-flex; align-items: center; gap: 8px;
-  border-bottom: 1px solid rgba(255,255,255,0.25); padding-bottom: 3px;
-}
-.koe-notice-link:hover { opacity: 1; border-bottom-color: #fff; }
-.koe-notice-link .arr { transition: transform 0.3s; }
-.koe-notice-link:hover .arr { transform: translateX(4px); }
-@media (max-width: 720px) {
-  .koe-notice-inner { flex-direction: column; align-items: flex-start; gap: 18px; }
-}
-
-/* ══════════════════════════════════════
    FOOTER
    ══════════════════════════════════════ */
 .footer {
@@ -1458,19 +1417,6 @@ button, input, textarea, select {
 
 <!-- ═══════ BACK TO TOP ═══════ -->
 <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
-
-<!-- ═══════ KOE / GROWTH NOTICE ═══════ -->
-<aside class="koe-notice" aria-label="Growth Plan 案内">
-  <div class="koe-notice-inner">
-    <div class="koe-notice-txt">
-      <p class="koe-notice-label" data-ja="口コミ・レビュー分析" data-en="Review Analytics">口コミ・レビュー分析</p>
-      <p class="koe-notice-body" data-ja="Googleの口コミをAIで分析し、集客改善のヒントを毎月レポート。" data-en="Monthly AI-powered Google review analytics with actionable growth hints.">Googleの口コミをAIで分析し、集客改善のヒントを毎月レポート。<span class="growth-tag">Growth Plan</span></p>
-    </div>
-    <a href="/growth.html" class="koe-notice-link" data-ja="詳細を見る" data-en="Learn more">
-      <span>詳細を見る</span><span class="arr">→</span>
-    </a>
-  </div>
-</aside>
 
 <!-- ═══════ FOOTER ═══════ -->
 <footer class="footer">

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="APEX PERSONAL GYM sample">
+  <defs>
+    <linearGradient id="bg-dumbbell" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A0A0A"/>
+      <stop offset="100%" stop-color="#1A0505"/>
+    </linearGradient>
+    <radialGradient id="glow-dumbbell" cx="0.78" cy="0.28" r="0.6">
+      <stop offset="0%" stop-color="#E53935" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#E53935" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="640" height="400" fill="url(#bg-dumbbell)"/>
+  <rect width="640" height="400" fill="url(#glow-dumbbell)"/>
+
+  <!-- Decorative frame -->
+  <rect x="24" y="24" width="592" height="352" fill="none" stroke="#E53935" stroke-width="1" opacity="0.35"/>
+
+  <!-- Motif (right) -->
+  
+    <g fill="#E53935">
+      <rect x="380" y="152" width="30" height="96" rx="4"/>
+      <rect x="410" y="170" width="16" height="60" rx="3"/>
+      <rect x="426" y="190" width="128" height="20" rx="4"/>
+      <rect x="554" y="170" width="16" height="60" rx="3"/>
+      <rect x="570" y="152" width="30" height="96" rx="4"/>
+    </g>
+    <g fill="#FFFFFF" opacity="0.12">
+      <rect x="380" y="152" width="30" height="24" rx="4"/>
+      <rect x="570" y="152" width="30" height="24" rx="4"/>
+    </g>
+  
+
+  <!-- Text: industry label (top-left) -->
+  <text x="52" y="82" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="600" letter-spacing="2" fill="#E53935">P E R S O N A L   G Y M</text>
+  <line x1="52" y1="96" x2="96" y2="96" stroke="#E53935" stroke-width="1.5" opacity="0.85"/>
+
+  <!-- Text: brand name (large) -->
+  <text x="52" y="166" font-family="'Inter', -apple-system, sans-serif" font-size="72" font-weight="800" letter-spacing="-1" fill="#FFFFFF">APEX</text>
+
+  <!-- Text: brand sub -->
+  <text x="52" y="200" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="400" letter-spacing="2" fill="#9A9A9A">GYM · NAKAMEGURO</text>
+
+  <!-- Text: tagline (italic serif) -->
+  <text x="52" y="268" font-family="'Cormorant Garamond', 'Hiragino Mincho ProN', 'Yu Mincho', serif" font-size="20" font-style="italic" font-weight="400" fill="#FFFFFF" opacity="0.88">Beyond your yesterday.</text>
+
+  <!-- Footer: HNH credit -->
+  <text x="52" y="352" font-family="'Inter', -apple-system, sans-serif" font-size="10" font-weight="500" letter-spacing="3" fill="#9A9A9A" opacity="0.55">H N H  D E S I G N  W O R K S</text>
+</svg>
