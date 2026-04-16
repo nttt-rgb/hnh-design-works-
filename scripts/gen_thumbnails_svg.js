@@ -176,6 +176,18 @@ const MOTIFS = {
 };
 
 // ────────────────────────────────────────────
+// XML 特殊文字のエスケープ（SVG は XML なので必須）
+// ────────────────────────────────────────────
+function xml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&apos;');
+}
+
+// ────────────────────────────────────────────
 // SVG 組み立て
 // ────────────────────────────────────────────
 function buildSVG(d) {
@@ -185,7 +197,7 @@ function buildSVG(d) {
   // 産業ラベル: 文字間に半角スペース
   const labelSpaced = d.industry.split('').join(' ');
 
-  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${d.brand} ${d.industry} sample">
+  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="${xml(d.brand)} ${xml(d.industry)} sample">
   <defs>
     <linearGradient id="bg-${d.motif}" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="${c1}"/>
@@ -208,17 +220,17 @@ function buildSVG(d) {
   ${motifSvg}
 
   <!-- Text: industry label (top-left) -->
-  <text x="52" y="82" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="600" letter-spacing="2" fill="${d.accent}">${labelSpaced}</text>
+  <text x="52" y="82" font-family="'Inter', -apple-system, sans-serif" font-size="13" font-weight="600" letter-spacing="2" fill="${d.accent}">${xml(labelSpaced)}</text>
   <line x1="52" y1="96" x2="96" y2="96" stroke="${d.accent}" stroke-width="1.5" opacity="0.85"/>
 
   <!-- Text: brand name (large) -->
-  <text x="52" y="${160 + Math.floor((brandFontSize - 52) / 3)}" font-family="'Inter', -apple-system, sans-serif" font-size="${brandFontSize}" font-weight="800" letter-spacing="-1" fill="${d.text}">${d.brand}</text>
+  <text x="52" y="${160 + Math.floor((brandFontSize - 52) / 3)}" font-family="'Inter', -apple-system, sans-serif" font-size="${brandFontSize}" font-weight="800" letter-spacing="-1" fill="${d.text}">${xml(d.brand)}</text>
 
   <!-- Text: brand sub -->
-  <text x="52" y="200" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="400" letter-spacing="2" fill="${d.sub}">${d.brandSub}</text>
+  <text x="52" y="200" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="400" letter-spacing="2" fill="${d.sub}">${xml(d.brandSub)}</text>
 
   <!-- Text: tagline (italic serif) -->
-  <text x="52" y="268" font-family="'Cormorant Garamond', 'Hiragino Mincho ProN', 'Yu Mincho', serif" font-size="20" font-style="italic" font-weight="400" fill="${d.text}" opacity="0.88">${d.tagline}</text>
+  <text x="52" y="268" font-family="'Cormorant Garamond', 'Hiragino Mincho ProN', 'Yu Mincho', serif" font-size="20" font-style="italic" font-weight="400" fill="${d.text}" opacity="0.88">${xml(d.tagline)}</text>
 
   <!-- Footer: HNH credit -->
   <text x="52" y="352" font-family="'Inter', -apple-system, sans-serif" font-size="10" font-weight="500" letter-spacing="3" fill="${d.sub}" opacity="0.55">H N H  D E S I G N  W O R K S</text>

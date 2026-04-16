@@ -38,7 +38,7 @@
   <text x="52" y="200" font-family="'Inter', -apple-system, sans-serif" font-size="12" font-weight="400" letter-spacing="2" fill="#6A7E94">CLINIC · OMOTESANDO</text>
 
   <!-- Text: tagline (italic serif) -->
-  <text x="52" y="268" font-family="'Cormorant Garamond', 'Hiragino Mincho ProN', 'Yu Mincho', serif" font-size="20" font-style="italic" font-weight="400" fill="#0F2540" opacity="0.88">Precision & aesthetic.</text>
+  <text x="52" y="268" font-family="'Cormorant Garamond', 'Hiragino Mincho ProN', 'Yu Mincho', serif" font-size="20" font-style="italic" font-weight="400" fill="#0F2540" opacity="0.88">Precision &amp; aesthetic.</text>
 
   <!-- Footer: HNH credit -->
   <text x="52" y="352" font-family="'Inter', -apple-system, sans-serif" font-size="10" font-weight="500" letter-spacing="3" fill="#6A7E94" opacity="0.55">H N H  D E S I G N  W O R K S</text>
