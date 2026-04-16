@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>業種別制作実績・サンプル一覧 | HNH Design Works</title>
+<meta name="description" content="HNH Design Worksが制作した業種別ホームページのサンプル一覧。飲食・美容・医療・士業など、8業種の実例をご覧いただけます。">
+<link rel="canonical" href="https://hnh-design-works.vercel.app/catalog.html">
+<meta property="og:title" content="業種別制作実績・サンプル一覧 | HNH Design Works">
+<meta property="og:description" content="8業種のホームページ制作実例。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hnh-design-works.vercel.app/catalog.html">
+<meta property="og:image" content="https://hnh-design-works.vercel.app/screenshots/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Inter', -apple-system, 'Hiragino Kaku Gothic ProN', sans-serif;
+  background: #fff; color: #000;
+  font-weight: 300; line-height: 1.7; letter-spacing: 0.02em;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+::selection { background: #000; color: #fff; }
+
+/* NAV */
+.nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 clamp(24px, 4vw, 60px); background: transparent;
+  transition: background 0.4s, backdrop-filter 0.4s;
+}
+.nav.scrolled { background: rgba(255,255,255,0.88); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 1px 0 rgba(0,0,0,0.06); }
+.nav-logo { display: flex; align-items: baseline; gap: 6px; }
+.nav-logo b { font-weight: 900; font-size: 1.2rem; letter-spacing: 0.06em; }
+.nav-logo span { font-weight: 200; font-size: 0.8rem; letter-spacing: 0.1em; opacity: 0.7; }
+.nav-links { display: flex; gap: 36px; align-items: center; }
+.nav-links a { font-size: 0.75rem; font-weight: 400; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.85; transition: opacity 0.3s; }
+.nav-links a:hover { opacity: 1; }
+.nav-back { font-size: 0.7rem; letter-spacing: 0.2em; padding: 9px 18px; border: 1px solid rgba(0,0,0,0.2); text-transform: uppercase; transition: all 0.3s; }
+.nav-back:hover { background: #000; color: #fff; border-color: #000; }
+@media (max-width: 768px) { .nav-links { display: none; } }
+
+/* HEADER */
+.hdr { padding: 160px clamp(24px, 5vw, 60px) 80px; max-width: 1400px; margin: 0 auto; }
+.hdr-label { font-size: 0.7rem; letter-spacing: 0.4em; opacity: 0.5; font-weight: 400; text-transform: uppercase; margin-bottom: 28px; }
+.hdr h1 { font-size: clamp(2.6rem, 5.5vw, 5rem); font-weight: 200; line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 32px; max-width: 900px; }
+.hdr h1 em { font-style: normal; font-weight: 300; opacity: 0.35; }
+.hdr-desc { font-size: 1rem; opacity: 0.65; max-width: 600px; line-height: 1.9; }
+.hdr-meta { margin-top: 36px; display: flex; gap: 24px; flex-wrap: wrap; font-size: 0.75rem; letter-spacing: 0.15em; opacity: 0.5; text-transform: uppercase; }
+.hdr-meta span::after { content: " ·"; margin-left: 8px; opacity: 0.5; }
+.hdr-meta span:last-child::after { content: ""; }
+
+/* FILTER CHIPS (visual only, styling) */
+.filter-row {
+  max-width: 1400px; margin: 0 auto; padding: 0 clamp(24px, 5vw, 60px) 40px;
+  display: flex; gap: 10px; flex-wrap: wrap; border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding-bottom: 32px;
+}
+.chip {
+  font-size: 0.72rem; font-weight: 500; letter-spacing: 0.05em;
+  padding: 8px 18px; border-radius: 999px; background: #f4f4f4;
+  transition: all 0.3s;
+}
+.chip:hover { background: #000; color: #fff; }
+.chip.active { background: #000; color: #fff; }
+
+/* GRID */
+.grid-wrap { max-width: 1400px; margin: 0 auto; padding: 60px clamp(24px, 5vw, 60px) 120px; }
+.grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px;
+}
+@media (max-width: 880px) { .grid { grid-template-columns: 1fr; gap: 24px; } }
+
+/* CARD */
+.card {
+  display: grid; gap: 0;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #fff;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+}
+.card:hover { border-color: #000; transform: translateY(-6px); box-shadow: 0 40px 80px rgba(0,0,0,0.12); }
+.card-preview { aspect-ratio: 16/10; position: relative; overflow: hidden; }
+.card-preview::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0,0,0,0.5) 100%);
+}
+.card-preview-label {
+  position: absolute; top: 20px; left: 20px; z-index: 2;
+  font-size: 0.65rem; font-weight: 500; letter-spacing: 0.25em;
+  padding: 6px 12px; background: rgba(255,255,255,0.95); color: #000;
+  text-transform: uppercase;
+}
+.card-preview-num {
+  position: absolute; bottom: 20px; right: 24px; z-index: 2;
+  font-size: 0.8rem; letter-spacing: 0.15em; color: rgba(255,255,255,0.85);
+  font-weight: 300;
+}
+
+/* Preview gradients per industry */
+.pv-sushi { background: radial-gradient(ellipse at 30% 30%, rgba(255,255,255,0.08), transparent 55%), linear-gradient(135deg, #1a1a1a 0%, #0a0a0a 100%); }
+.pv-hair { background: radial-gradient(ellipse at 70% 30%, rgba(255,255,255,0.25), transparent 60%), linear-gradient(135deg, #fafafa 0%, #ddd0c8 50%, #9e8e80 100%); }
+.pv-yoga { background: radial-gradient(ellipse at 30% 40%, rgba(220,230,210,0.4), transparent 55%), linear-gradient(135deg, #f2efea 0%, #c8d5c4 50%, #6b7a6e 100%); }
+.pv-bar { background: radial-gradient(ellipse at 30% 40%, rgba(255,255,255,0.06), transparent 55%), linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #050505 100%); }
+.pv-nail { background: radial-gradient(ellipse at 70% 30%, rgba(255,255,255,0.4), transparent 60%), linear-gradient(135deg, #f0f0f0 0%, #c0c0c0 50%, #2a2a2a 100%); }
+.pv-gym { background: radial-gradient(ellipse at 30% 30%, rgba(255,255,255,0.08), transparent 55%), linear-gradient(135deg, #1a1a1a 0%, #050505 100%); }
+.pv-clinic { background: radial-gradient(ellipse at 70% 30%, rgba(255,255,255,0.3), transparent 60%), linear-gradient(135deg, #fafafa 0%, #e8e8e8 50%, #a0a0a0 100%); }
+.pv-law { background: radial-gradient(ellipse at 30% 30%, rgba(255,255,255,0.15), transparent 55%), linear-gradient(135deg, #f5f5f5 0%, #8a8a8a 50%, #1a1a1a 100%); }
+
+.card-body { padding: 28px 32px 32px; display: grid; gap: 14px; }
+.card-cat {
+  font-size: 0.7rem; letter-spacing: 0.2em; opacity: 0.55;
+  text-transform: uppercase; font-weight: 500;
+  display: flex; align-items: center; gap: 10px;
+}
+.card-cat .plan {
+  padding: 3px 10px; background: #000; color: #fff;
+  font-size: 0.6rem; letter-spacing: 0.18em;
+}
+.card-cat .plan.premium { background: #000; }
+.card-cat .plan.standard { background: #2a2a2a; }
+.card-cat .plan.light { background: #5a5a5a; }
+.card-name { font-size: clamp(1.4rem, 2.4vw, 2rem); font-weight: 500; line-height: 1.2; letter-spacing: -0.01em; }
+.card-name-en { font-size: 0.85rem; opacity: 0.55; font-weight: 300; letter-spacing: 0.1em; }
+.card-desc { font-size: 0.92rem; opacity: 0.72; line-height: 1.8; margin-top: 6px; }
+.card-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+.card-tag {
+  font-size: 0.68rem; letter-spacing: 0.05em; padding: 4px 10px;
+  background: #f4f4f4; border-radius: 999px; opacity: 0.85;
+}
+.card-cta {
+  margin-top: 8px; display: inline-flex; align-items: center; gap: 10px;
+  font-size: 0.78rem; letter-spacing: 0.15em; font-weight: 500;
+  text-transform: uppercase; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.08);
+}
+.card-cta .arrow { transition: transform 0.3s ease; display: inline-block; }
+.card:hover .card-cta .arrow { transform: translateX(6px); }
+
+/* CTA SECTION */
+.cta {
+  padding: 120px clamp(24px, 5vw, 60px) 120px;
+  background: #000; color: #fff; text-align: center;
+}
+.cta .sec-label { font-size: 0.7rem; letter-spacing: 0.4em; opacity: 0.6; text-transform: uppercase; margin-bottom: 24px; }
+.cta h2 { font-size: clamp(2.2rem, 4.5vw, 4rem); font-weight: 200; line-height: 1.1; letter-spacing: -0.015em; margin-bottom: 28px; }
+.cta p { opacity: 0.7; max-width: 560px; margin: 0 auto 40px; font-size: 0.98rem; }
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 14px;
+  padding: 18px 40px; background: #fff; color: #000;
+  font-size: 0.78rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500;
+  transition: all 0.3s ease;
+}
+.cta-btn:hover { transform: translateY(-2px); box-shadow: 0 20px 40px rgba(255,255,255,0.2); }
+
+/* FOOTER */
+footer { padding: 60px 24px 40px; text-align: center; border-top: 1px solid rgba(0,0,0,0.08); }
+footer .logo-big { font-size: 1.3rem; font-weight: 900; letter-spacing: 0.06em; margin-bottom: 8px; }
+footer .sub { font-size: 0.75rem; opacity: 0.55; font-weight: 300; letter-spacing: 0.1em; }
+footer .cp { font-size: 0.7rem; opacity: 0.4; margin-top: 24px; }
+
+.fade { opacity: 0; transform: translateY(28px); transition: opacity 0.9s ease-out, transform 0.9s ease-out; }
+.fade.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav class="nav" id="nav">
+  <a href="/" class="nav-logo"><b>HNH</b><span>Design Works</span></a>
+  <ul class="nav-links">
+    <li><a href="/#works">Works</a></li>
+    <li><a href="/#plans">Plans</a></li>
+    <li><a href="/#process">Process</a></li>
+    <li><a href="/#contact">Contact</a></li>
+  </ul>
+  <a href="/" class="nav-back">← HOME</a>
+</nav>
+
+<header class="hdr">
+  <p class="hdr-label fade">Catalog · 業種別サンプル</p>
+  <h1 class="fade">業種別制作実績・<br><em>サンプル一覧。</em></h1>
+  <p class="hdr-desc fade">
+    飲食・美容・医療・士業など、HNH Design Worksが手がけた業種別ホームページのデモサイト集。
+    業種ごとのトーン・情報設計・導線づくりの"手触り"を、実際のページでご確認いただけます。
+  </p>
+  <div class="hdr-meta fade">
+    <span>8 CATEGORIES</span><span>UPDATED 2026</span><span>MOBILE READY</span>
+  </div>
+</header>
+
+<div class="filter-row">
+  <span class="chip active">All</span>
+  <span class="chip">飲食</span>
+  <span class="chip">美容</span>
+  <span class="chip">医療</span>
+  <span class="chip">フィットネス</span>
+  <span class="chip">士業</span>
+</div>
+
+<main class="grid-wrap">
+  <div class="grid">
+
+    <!-- 01 鮨 黒政 -->
+    <a href="/demo_sushi_kuromasa.html" class="card fade">
+      <div class="card-preview pv-sushi">
+        <span class="card-preview-label">飲食 · 寿司</span>
+        <span class="card-preview-num">01 / 08</span>
+      </div>
+      <div class="card-body">
+        <div class="card-cat"><span class="plan light">Light</span><span>¥100,000</span></div>
+        <h2 class="card-name">鮨 黒政</h2>
+        <p class="card-name-en">SUSHI KUROMASA · 銀座</p>
+        <p class="card-desc">筆文字ロゴ、墨のにじみ、和紙テクスチャ。完全予約制の世界観をデジタルで再現。</p>
+        <div class="card-tags">
+          <span class="card-tag">筆文字</span>
+          <span class="card-tag">墨にじみ</span>
+          <span class="card-tag">パララックス</span>
+          <span class="card-tag">カスタムカーソル</span>
+        </div>
+        <span class="card-cta">詳細を見る <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+    <!-- 02 NOEL HAIR -->
+    <a href="/demo_noel_hair.html" class="card fade">
+      <div class="card-preview pv-hair">
+        <span class="card-preview-label">美容 · ヘアサロン</span>
+        <span class="card-preview-num">02 / 08</span>
+      </div>
+      <div class="card-body">
+        <div class="card-cat"><span class="plan standard">Standard</span><span>¥150,000</span></div>
+        <h2 class="card-name">NOEL HAIR TOKYO</h2>
+        <p class="card-name-en">Hair Salon · 原宿</p>
+        <p class="card-desc">画面を漂うバブルアニメーション。スタイリスト紹介・料金表・予約フォーム・日英切り替え。</p>
+        <div class="card-tags">
+          <span class="card-tag">予約フォーム</span>
+          <span class="card-tag">料金表</span>
+          <span class="card-tag">日英切替</span>
+          <span class="card-tag">SNS連携</span>
+        </div>
+        <span class="card-cta">詳細を見る <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+    <!-- 03 Yoga Studio Lumière -->
+    <a href="/demo_yoga_lumiere.html" class="card fade">
+      <div class="card-preview pv-yoga">
+        <span class="card-preview-label">フィットネス · ヨガ</span>
+        <span class="card-preview-num">03 / 08</span>
+      </div>
+      <div class="card-body">
+        <div class="card-cat"><span class="plan premium">Premium</span><span>¥200,000</span></div>
+        <h2 class="card-name">Yoga Studio Lumière</h2>
+        <p class="card-name-en">Yoga Studio · 代官山</p>
+        <p class="card-desc">オフホワイト×深緑のナチュラル配色。呼吸アニメーション、決済・定期課金、SEOフル対応。</p>
+        <div class="card-tags">
+          <span class="card-tag">呼吸アニメ</span>
+          <span class="card-tag">Stripe決済</span>
+          <span class="card-tag">LINE連携</span>
+          <span class="card-tag">SEOフル</span>
+        </div>
+        <span class="card-cta">詳細を見る <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+    <!-- 04 NOCTURNE BAR -->
+    <a href="/demo_bar.html" class="card fade">
+      <div class="card-preview pv-bar">
+        <span class="card-preview-label">飲食 · バー</span>
+        <span class="card-preview-num">04 / 08</span>
+      </div>
+      <div class="card-body">
+        <div class="card-cat"><span class="plan standard">Standard</span><span>¥150,000</span></div>
+        <h2 class="card-name">NOCTURNE BAR</h2>
+        <p class="card-name-en">Bar · 西麻布</p>
+        <p class="card-desc">ブラック基調の隠れ家バー。メニュー・アクセス・予約フォーム込みのシンプル構成。</p>
+        <div class="card-tags">
+          <span class="card-tag">ダークモード</span>
+          <span class="card-tag">セリフ書体</span>
+          <span class="card-tag">予約フォーム</span>
+          <span class="card-tag">スクロール演出</span>
+        </div>
+        <span class="card-cta">詳細を見る <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+    <!-- 05 AETHER NAIL -->
+    <a href="/demo_nail.html" class="card fade">
+      <div class="card-preview pv-nail">
+        <span class="card-preview-label">美容 · ネイル</span>
+        <span class="card-preview-num">05 / 08</span>
+      </div>
+      <div class="card-body">
+        <div class="card-cat"><span class="plan standard">Standard</span><span>¥150,000</span></div>
+        <h2 class="card-name">AETHER NAIL</h2>
+        <p class="card-name-en">Nail Salon · 南青山</p>
+        <p class="card-desc">ミニマルモノトーンのプライベートネイルサロン。施術例ギャラリー・予約フォーム付き。</p>
+        <div class="card-tags">
+          <span class="card-tag">ミニマル</span>
+          <span class="card-tag">ギャラリー</span>
+          <span class="card-tag">予約フォーム</span>
+          <span class="card-tag">モバイル最適化</span>
+        </div>
+        <span class="card-cta">詳細を見る <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+    <!-- 06 APEX GYM -->
+    <a href="/demo_gym.html" class="card fade">
+      <div class="card-preview pv-gym">
+        <span class="card-preview-label">フィットネス · ジム</span>
+        <span class="card-preview-num">06 / 08</span>
+      </div>
+      <div class="card-body">
+        <div class="card-cat"><span class="plan premium">Premium</span><span>¥200,000</span></div>
+        <h2 class="card-name">APEX GYM</h2>
+        <p class="card-name-en">Personal Gym · 中目黒</p>
+        <p class="card-desc">成果訴求型のパーソナルジムサイト。数字ファースト、料金3プラン、お客様の声まで完備。</p>
+        <div class="card-tags">
+          <span class="card-tag">成果訴求</span>
+          <span class="card-tag">3プラン表</span>
+          <span class="card-tag">体験予約</span>
+          <span class="card-tag">お客様の声</span>
+        </div>
+        <span class="card-cta">詳細を見る <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+    <!-- 07 LUMEN CLINIC -->
+    <a href="/demo_clinic.html" class="card fade">
+      <div class="card-preview pv-clinic">
+        <span class="card-preview-label">医療 · 美容クリニック</span>
+        <span class="card-preview-num">07 / 08</span>
+      </div>
+      <div class="card-body">
+        <div class="card-cat"><span class="plan premium">Premium</span><span>¥200,000</span></div>
+        <h2 class="card-name">LUMEN CLINIC</h2>
+        <p class="card-name-en">Cosmetic Clinic · 表参道</p>
+        <p class="card-desc">診療メニュー・ドクター紹介・ご予約の流れ・カウンセリング導線まで医療に求められる要素を網羅。</p>
+        <div class="card-tags">
+          <span class="card-tag">診療メニュー</span>
+          <span class="card-tag">ドクター紹介</span>
+          <span class="card-tag">フロー図</span>
+          <span class="card-tag">医療LP</span>
+        </div>
+        <span class="card-cta">詳細を見る <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+    <!-- 08 SENTINEL -->
+    <a href="/demo_law.html" class="card fade">
+      <div class="card-preview pv-law">
+        <span class="card-preview-label">士業 · 法律事務所</span>
+        <span class="card-preview-num">08 / 08</span>
+      </div>
+      <div class="card-body">
+        <div class="card-cat"><span class="plan standard">Standard</span><span>¥150,000</span></div>
+        <h2 class="card-name">SENTINEL 法律事務所</h2>
+        <p class="card-name-en">Law Office · 丸の内</p>
+        <p class="card-desc">取扱業務・弁護士紹介・料金・お問い合わせまで、B2Bの信頼設計に特化したコーポレート構成。</p>
+        <div class="card-tags">
+          <span class="card-tag">B2B設計</span>
+          <span class="card-tag">数字実績</span>
+          <span class="card-tag">料金表</span>
+          <span class="card-tag">コーポレート</span>
+        </div>
+        <span class="card-cta">詳細を見る <span class="arrow">→</span></span>
+      </div>
+    </a>
+
+  </div>
+</main>
+
+<section class="cta">
+  <p class="sec-label">For Your Business</p>
+  <h2>あなたの業種にも、<br>一枚仕立てる。</h2>
+  <p>ここに並んだデモは、すべて業種の"空気"を形にしたサンプルです。<br>あなたの事業に合わせた一枚を、ひとつひとつ丁寧にお作りいたします。</p>
+  <a href="/#contact" class="cta-btn">無料相談をはじめる <span>→</span></a>
+</section>
+
+<footer>
+  <p class="logo-big">HNH Design Works</p>
+  <p class="sub">Design that drives business.</p>
+  <p class="cp">© 2026 HNH Design Works. All rights reserved.</p>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 30); });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.fade').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>

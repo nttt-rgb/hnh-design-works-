@@ -693,6 +693,41 @@ button, input, textarea, select {
 }
 .w-link:hover .arr { transform: translateX(6px); }
 
+/* ── Works — See All Categories ── */
+.works-more {
+  margin-top: clamp(80px, 12vw, 140px);
+  padding: clamp(50px, 7vw, 90px) 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+}
+.works-more-link {
+  display: inline-flex; align-items: center; gap: 16px;
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  padding: 20px 48px;
+  border: 1px solid rgba(0,0,0,0.9);
+  border-radius: 2px;
+  transition: background 0.35s cubic-bezier(0.23,1,0.32,1), color 0.35s;
+  position: relative;
+  overflow: hidden;
+}
+.works-more-link:hover { background: #000; color: #fff; }
+.works-more-arr {
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.23,1,0.32,1);
+  font-weight: 300;
+}
+.works-more-link:hover .works-more-arr { transform: translateX(8px); }
+.works-more-sub {
+  font-size: clamp(0.65rem, 0.85vw, 0.75rem);
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  opacity: 0.4;
+  text-transform: uppercase;
+}
+
 /* ══════════════════════════════════════
    CONTACT
    ══════════════════════════════════════ */
@@ -1190,7 +1225,7 @@ button, input, textarea, select {
 
   <div class="works-header r">
     <h2>Selected Works</h2>
-    <span class="works-count">3 Projects — 2026</span>
+    <span class="works-count">4 Projects — 2026</span>
   </div>
 
   <!-- ─── Case 01: 鮨 黒政 — Light ─── -->
@@ -1273,6 +1308,43 @@ button, input, textarea, select {
       <p class="w-plan-includes" data-ja="予約フォーム / ギャラリー / FAQ / SNS / 動画×2 / Stripe決済 / メルマガ / LINE / 日英 / SEOフル" data-en="Booking / Gallery / FAQ / SNS / Video×2 / Stripe / Newsletter / LINE / JA+EN / Full SEO">予約フォーム / ギャラリー / FAQ / SNS / 動画×2 / Stripe決済 / メルマガ / LINE / 日英 / SEOフル</p>
       <a href="demo_yoga_lumiere.html" class="w-link" data-magnetic>View Project <span class="arr">→</span></a>
     </div>
+  </div>
+
+  <!-- ─── Case 04: Koe — HNH Design Works 自社サービス ─── -->
+  <div class="work-item rev">
+    <div class="w-info r-left">
+      <div class="w-num">04</div>
+      <p class="w-info-label">自社サービス — Koe <span class="w-campaign" data-ja="NEW" data-en="NEW">NEW</span></p>
+      <h3 class="w-info-name">Koe（声）<br>Review Analytics Service</h3>
+      <p class="w-info-cat" data-ja="AI レビュー分析サービス / 月額¥20,000" data-en="AI Review Analytics / ¥20,000/mo">AI レビュー分析サービス / 月額¥20,000</p>
+      <div class="w-tags">
+        <span class="w-tag" data-ja="AI 分析" data-en="AI Analytics">AI 分析</span>
+        <span class="w-tag" data-ja="レスポンシブLP" data-en="Responsive LP">レスポンシブLP</span>
+        <span class="w-tag" data-ja="Formspree連携" data-en="Formspree Integration">Formspree連携</span>
+        <span class="w-tag" data-ja="OGP対応" data-en="OGP">OGP対応</span>
+        <span class="w-tag" data-ja="3業種訴求" data-en="3 Verticals">3業種訴求</span>
+      </div>
+      <p class="w-info-desc" data-ja="HNH Design Works 自社サービス「Koe」のサービスサイト。Google レビューを毎月 AI が分析し、飲食店・美容サロン・クリニック向けに改善レポートを納品する月額サブスクリプションサービス。MEO 業者との差別化・業種別レポートサンプル・Formspree連携のデモCTAまで、1ページLPに凝縮。" data-en="Landing page for Koe, HNH's own SaaS — an AI-powered monthly Google review analytics service for restaurants, beauty salons, and clinics. ¥20,000/mo subscription with 3-vertical pain targeting, MEO-vs-Koe comparison, and a Formspree-integrated demo CTA — all in a single responsive LP.">HNH Design Works 自社サービス「Koe」のサービスサイト。Google レビューを毎月 AI が分析し、飲食店・美容サロン・クリニック向けに改善レポートを納品する月額サブスクリプションサービス。MEO 業者との差別化・業種別レポートサンプル・Formspree連携のデモCTAまで、1ページLPに凝縮。</p>
+      <p class="w-plan-includes" data-ja="LP設計 / コピーライティング / AI バックエンド連携 / Formspree / OGP / Vercel / Analytics" data-en="LP design / Copywriting / AI backend / Formspree / OGP / Vercel / Analytics">LP設計 / コピーライティング / AI バックエンド連携 / Formspree / OGP / Vercel / Analytics</p>
+      <a href="https://koe-by-hnh.vercel.app/" target="_blank" rel="noopener" class="w-link" data-magnetic>View Project <span class="arr">→</span></a>
+    </div>
+    <div class="w-ss r-right">
+      <a href="https://koe-by-hnh.vercel.app/" target="_blank" rel="noopener" class="w-ss-link">
+        <div class="w-ss-wrap">
+          <img src="screenshots/ss_koe.png" alt="Koe - Review Analytics Service" class="w-ss-img" loading="lazy"/>
+          <div class="w-ss-overlay"></div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <!-- ─── See All Categories ─── -->
+  <div class="works-more r">
+    <a href="/catalog.html" class="works-more-link" data-magnetic>
+      <span data-ja="すべての業種を見る" data-en="See all categories">すべての業種を見る</span>
+      <span class="works-more-arr">→</span>
+    </a>
+    <p class="works-more-sub" data-ja="8業種 · 業種別サンプル一覧" data-en="8 categories · Full catalog">8業種 · 業種別サンプル一覧</p>
   </div>
 </section>
 

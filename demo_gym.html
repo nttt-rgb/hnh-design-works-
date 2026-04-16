@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<title>APEX GYM — 中目黒のパーソナルジム</title>
+<meta name="description" content="中目黒のパーソナルジム APEX。3ヶ月で身体と習慣を再設計する、マンツーマンのトレーニングプログラム。">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="APEX GYM">
+<meta property="og:description" content="3ヶ月で身体と習慣を再設計するパーソナルジム。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "APEX GYM",
+  "description": "中目黒のパーソナルジム。3ヶ月で身体と習慣を再設計。",
+  "url": "https://hnh-design-works.vercel.app/demo_gym.html",
+  "telephone": "03-0000-0000",
+  "priceRange": "¥¥¥",
+  "address": {"@type":"PostalAddress","streetAddress":"上目黒X-X-X APEXビル 3F","addressLocality":"目黒区","addressRegion":"東京都","postalCode":"153-0051","addressCountry":"JP"},
+  "geo": {"@type":"GeoCoordinates","latitude":35.6447,"longitude":139.6983},
+  "openingHoursSpecification": [{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"07:00","closes":"22:00"}]
+}
+</script>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: 'Inter', -apple-system, 'Hiragino Kaku Gothic ProN', sans-serif;
+  background: #fff; color: #0a0a0a;
+  font-weight: 400; line-height: 1.7; letter-spacing: 0.01em;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+.strong { font-weight: 900; letter-spacing: -0.03em; }
+.mono { font-family: 'Inter', monospace; font-feature-settings: "tnum"; letter-spacing: 0.02em; }
+
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 72px;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 clamp(24px, 4vw, 60px); background: transparent;
+  transition: background 0.4s, backdrop-filter 0.4s;
+}
+nav.scrolled { background: rgba(255,255,255,0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 1px 0 rgba(0,0,0,0.08); }
+.logo { display: flex; align-items: baseline; gap: 6px; }
+.logo b { font-weight: 900; font-size: 1.1rem; letter-spacing: -0.02em; }
+.logo span { font-weight: 300; font-size: 0.7rem; letter-spacing: 0.2em; opacity: 0.6; }
+nav ul { display: flex; gap: 32px; align-items: center; }
+nav ul a { font-size: 0.78rem; font-weight: 500; transition: opacity 0.3s; }
+nav ul a:hover { opacity: 0.6; }
+.trial-btn { font-size: 0.75rem; font-weight: 600; padding: 10px 20px; background: #0a0a0a; color: #fff; transition: all 0.3s; }
+.trial-btn:hover { background: #fff; color: #0a0a0a; box-shadow: inset 0 0 0 2px #0a0a0a; }
+@media (max-width: 768px) { nav ul { display: none; } }
+
+section { padding: clamp(80px, 11vw, 140px) clamp(24px, 5vw, 60px); position: relative; }
+
+.hero { min-height: 100vh; display: flex; align-items: center; padding-top: 120px;
+  background: linear-gradient(180deg, #fafafa 0%, #fff 100%);
+}
+.hero-inner { max-width: 1200px; margin: 0 auto; width: 100%; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: clamp(40px, 6vw, 80px); align-items: center; }
+@media (max-width: 880px) { .hero-inner { grid-template-columns: 1fr; } }
+.hero-num { font-size: 0.72rem; letter-spacing: 0.2em; opacity: 0.55; margin-bottom: 24px; font-weight: 600; text-transform: uppercase; }
+.hero h1 { font-size: clamp(3rem, 7vw, 6rem); font-weight: 900; line-height: 0.98; margin-bottom: 32px; letter-spacing: -0.03em; }
+.hero h1 .dim { opacity: 0.25; }
+.hero p { font-size: clamp(0.95rem, 1.2vw, 1.05rem); opacity: 0.75; max-width: 480px; margin-bottom: 40px; }
+.hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 56px; }
+
+.hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; max-width: 480px; }
+.stat-num { font-size: 2.3rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1; margin-bottom: 4px; }
+.stat-label { font-size: 0.72rem; opacity: 0.55; font-weight: 500; }
+
+.hero-img { aspect-ratio: 4/5; background: linear-gradient(135deg, #2a2a2a 0%, #0a0a0a 100%); position: relative; overflow: hidden; }
+.hero-img::after { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 30%, rgba(255,255,255,0.1), transparent 50%); }
+
+.btn { display: inline-block; padding: 14px 30px; font-size: 0.8rem; font-weight: 600; transition: all 0.3s ease; letter-spacing: 0.02em; }
+.btn-fill { background: #0a0a0a; color: #fff; }
+.btn-fill:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,0.2); }
+.btn-out { border: 2px solid #0a0a0a; color: #0a0a0a; padding: 12px 28px; }
+.btn-out:hover { background: #0a0a0a; color: #fff; }
+
+.sec-label { font-size: 0.7rem; letter-spacing: 0.25em; opacity: 0.55; font-weight: 600; text-transform: uppercase; margin-bottom: 20px; }
+.sec-title { font-size: clamp(2rem, 4.5vw, 3.6rem); font-weight: 900; margin-bottom: 48px; line-height: 1.05; letter-spacing: -0.025em; }
+
+.bg-black { background: #0a0a0a; color: #fff; }
+.bg-soft { background: #f7f7f7; }
+
+.features { max-width: 1200px; margin: 0 auto; }
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
+@media (max-width: 880px) { .features-grid { grid-template-columns: 1fr; } }
+.feature { padding: 40px 32px; background: #fff; border: 1px solid rgba(0,0,0,0.08); transition: all 0.3s; }
+.feature:hover { border-color: #0a0a0a; transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
+.feature-num { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.2em; margin-bottom: 20px; opacity: 0.5; }
+.feature h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 14px; letter-spacing: -0.01em; }
+.feature p { font-size: 0.92rem; opacity: 0.7; }
+
+.price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1100px; margin: 40px auto 0; align-items: stretch; }
+@media (max-width: 880px) { .price-grid { grid-template-columns: 1fr; } }
+.plan { padding: 40px 30px; background: #fff; border: 2px solid rgba(255,255,255,0.1); display: flex; flex-direction: column; transition: all 0.3s; }
+.plan.popular { background: #fff; color: #0a0a0a; border-color: transparent; transform: scale(1.02); box-shadow: 0 20px 40px rgba(0,0,0,0.3); }
+.plan:not(.popular) { background: transparent; color: #fff; border-color: rgba(255,255,255,0.15); }
+.plan:not(.popular):hover { border-color: rgba(255,255,255,0.5); }
+.plan-badge { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; margin-bottom: 16px; text-transform: uppercase; opacity: 0.6; }
+.plan.popular .plan-badge { background: #0a0a0a; color: #fff; padding: 4px 10px; display: inline-block; opacity: 1; margin-bottom: 20px; }
+.plan h3 { font-size: 1.6rem; font-weight: 700; margin-bottom: 8px; }
+.plan .plan-price { font-size: 3rem; font-weight: 900; letter-spacing: -0.03em; line-height: 1; margin: 16px 0 4px; }
+.plan .plan-period { font-size: 0.8rem; opacity: 0.6; margin-bottom: 28px; }
+.plan ul { display: grid; gap: 10px; margin-bottom: 32px; flex: 1; }
+.plan li { font-size: 0.92rem; opacity: 0.8; display: flex; gap: 8px; align-items: flex-start; }
+.plan li::before { content: "✓"; opacity: 0.5; }
+
+.testimonial-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1100px; margin: 40px auto 0; }
+@media (max-width: 768px) { .testimonial-grid { grid-template-columns: 1fr; } }
+.testimonial { padding: 32px; background: #fff; border: 1px solid rgba(0,0,0,0.08); }
+.testimonial-text { font-size: 0.95rem; line-height: 1.8; margin-bottom: 20px; }
+.testimonial-meta { display: flex; gap: 12px; align-items: center; font-size: 0.8rem; opacity: 0.6; }
+.testimonial-result { font-weight: 700; color: #0a0a0a; opacity: 1; }
+
+.access-grid { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: clamp(40px, 6vw, 80px); align-items: center; }
+.access dl { display: grid; gap: 24px; }
+.access dt { font-size: 0.7rem; letter-spacing: 0.2em; opacity: 0.55; font-weight: 600; text-transform: uppercase; margin-bottom: 6px; }
+.access dd { font-size: 1rem; }
+.access-img { aspect-ratio: 1; background: linear-gradient(135deg, #2a2a2a 0%, #0a0a0a 100%); }
+@media (max-width: 768px) { .access-grid { grid-template-columns: 1fr; } }
+
+.form-wrap { max-width: 600px; margin: 0 auto; }
+form { display: grid; gap: 20px; background: #fff; padding: 40px; color: #0a0a0a; }
+.form-row { display: grid; gap: 6px; }
+.form-row label { font-size: 0.72rem; font-weight: 600; letter-spacing: 0.1em; opacity: 0.7; text-transform: uppercase; }
+.form-row input, .form-row select, .form-row textarea {
+  width: 100%; background: #f7f7f7; border: 1px solid transparent;
+  color: #0a0a0a; font-family: inherit; font-size: 0.95rem; padding: 12px 14px;
+  transition: border-color 0.3s;
+}
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus { outline: none; border-color: #0a0a0a; }
+.form-cols-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 560px) { .form-cols-2 { grid-template-columns: 1fr; } }
+
+footer { padding: 60px 24px 40px; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); background: #0a0a0a; color: #fff; }
+footer .logo-big { font-size: 1.5rem; font-weight: 900; letter-spacing: -0.02em; margin-bottom: 12px; }
+footer p { font-size: 0.8rem; opacity: 0.6; margin-bottom: 6px; }
+footer .hnh { font-size: 0.7rem; opacity: 0.4; margin-top: 24px; }
+footer .hnh a { text-decoration: underline; opacity: 0.7; }
+
+.fade { opacity: 0; transform: translateY(24px); transition: opacity 0.9s ease-out, transform 0.9s ease-out; }
+.fade.in { opacity: 1; transform: translateY(0); }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#top" class="logo"><b>APEX</b><span>GYM</span></a>
+  <ul>
+    <li><a href="#why">Why APEX</a></li>
+    <li><a href="#price">Price</a></li>
+    <li><a href="#voice">Voice</a></li>
+    <li><a href="#access">Access</a></li>
+  </ul>
+  <a href="#trial" class="trial-btn">無料体験</a>
+</nav>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div>
+      <p class="hero-num fade">NAKAMEGURO · PERSONAL GYM</p>
+      <h1 class="fade">Beyond<br>your <span class="dim">yesterday</span>.</h1>
+      <p class="fade">3ヶ月で身体を変え、一生使える習慣を設計する。<br>完全マンツーマン。InBody測定・食事サポート込み。</p>
+      <div class="hero-ctas fade">
+        <a href="#trial" class="btn btn-fill">無料体験を予約する</a>
+        <a href="#price" class="btn btn-out">料金を見る</a>
+      </div>
+      <div class="hero-stats fade">
+        <div><div class="stat-num mono">−6.2kg</div><div class="stat-label">平均減量 / 3ヶ月</div></div>
+        <div><div class="stat-num mono">98%</div><div class="stat-label">継続率</div></div>
+        <div><div class="stat-num mono">1,200+</div><div class="stat-label">延べ会員数</div></div>
+      </div>
+    </div>
+    <div class="hero-img fade"></div>
+  </div>
+</section>
+
+<section id="why" class="bg-soft">
+  <div class="features">
+    <div style="text-align: center;">
+      <p class="sec-label fade">Why APEX</p>
+      <h2 class="sec-title fade">続けられる理由が、<br>3つあります。</h2>
+    </div>
+    <div class="features-grid">
+      <div class="feature fade">
+        <p class="feature-num mono">01</p>
+        <h3>完全個別プログラム</h3>
+        <p>InBodyと面談で現状を数値化。骨格・生活・目標に合わせた3ヶ月計画を設計します。</p>
+      </div>
+      <div class="feature fade">
+        <p class="feature-num mono">02</p>
+        <h3>LINE食事サポート</h3>
+        <p>毎食の写真をLINEに送るだけ。24時間以内に管理栄養士が改善ポイントを返します。</p>
+      </div>
+      <div class="feature fade">
+        <p class="feature-num mono">03</p>
+        <h3>完全予約制・個室</h3>
+        <p>他の会員の目がない環境で集中。シャワー・ウェア・アメニティ無料。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="price" class="bg-black">
+  <div style="text-align: center;">
+    <p class="sec-label fade" style="opacity: 0.7;">Price</p>
+    <h2 class="sec-title fade">料金プラン</h2>
+  </div>
+  <div class="price-grid">
+    <div class="plan fade">
+      <p class="plan-badge">Trial</p>
+      <h3>お試し</h3>
+      <div class="plan-price mono">¥9,800</div>
+      <p class="plan-period">/ 月4回 · 1ヶ月</p>
+      <ul>
+        <li>パーソナル月4回</li>
+        <li>InBody測定 × 2</li>
+        <li>食事アドバイス簡易版</li>
+      </ul>
+      <a href="#trial" class="btn btn-out" style="border-color: rgba(255,255,255,0.3); color: #fff;">始める</a>
+    </div>
+    <div class="plan popular fade">
+      <p class="plan-badge">Most popular</p>
+      <h3>スタンダード</h3>
+      <div class="plan-price mono">¥29,800</div>
+      <p class="plan-period">/ 月4回 · 継続</p>
+      <ul>
+        <li>パーソナル月4回</li>
+        <li>LINE食事サポート</li>
+        <li>InBody測定 毎月</li>
+        <li>3ヶ月プログラム設計</li>
+        <li>ウェア・シャワー無料</li>
+      </ul>
+      <a href="#trial" class="btn btn-fill">始める</a>
+    </div>
+    <div class="plan fade">
+      <p class="plan-badge">Intensive</p>
+      <h3>プレミアム</h3>
+      <div class="plan-price mono">¥49,800</div>
+      <p class="plan-period">/ 月8回 · 継続</p>
+      <ul>
+        <li>パーソナル月8回</li>
+        <li>LINE食事サポート</li>
+        <li>専属栄養士の献立提案</li>
+        <li>外食サポート</li>
+      </ul>
+      <a href="#trial" class="btn btn-out" style="border-color: rgba(255,255,255,0.3); color: #fff;">始める</a>
+    </div>
+  </div>
+  <p style="text-align: center; font-size: 0.82rem; opacity: 0.5; margin-top: 32px;" class="fade">※価格はすべて税込。入会金¥33,000は体験後にご入会の場合 免除。</p>
+</section>
+
+<section id="voice">
+  <div style="text-align: center;">
+    <p class="sec-label fade">Voice</p>
+    <h2 class="sec-title fade">お客様の声</h2>
+  </div>
+  <div class="testimonial-grid">
+    <div class="testimonial fade">
+      <p class="testimonial-text">「3ヶ月で−7kg。食事の知識も身について、リバウンドの不安が消えました。担当が一緒に伴走してくれる安心感が大きい。」</p>
+      <div class="testimonial-meta"><span>30代女性</span>／<span class="testimonial-result">−7.2kg</span></div>
+    </div>
+    <div class="testimonial fade">
+      <p class="testimonial-text">「仕事で忙しいのに続けられた理由は、LINEで気軽に質問できたこと。細かい改善が積み重なって身体が変わった。」</p>
+      <div class="testimonial-meta"><span>40代男性</span>／<span class="testimonial-result">体脂肪 −5.1%</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="access" class="bg-soft">
+  <div class="access-grid access">
+    <div class="fade">
+      <p class="sec-label">Access</p>
+      <h2 class="sec-title">中目黒駅 徒歩3分。</h2>
+      <dl>
+        <div><dt>Address</dt><dd>東京都目黒区上目黒X-X-X APEXビル 3F</dd></div>
+        <div><dt>Tel</dt><dd>03-0000-0000</dd></div>
+        <div><dt>Hours</dt><dd>07:00 – 22:00 / 年中無休</dd></div>
+        <div><dt>SNS</dt><dd>Instagram @apex_gym_demo</dd></div>
+      </dl>
+    </div>
+    <div class="access-img fade"></div>
+  </div>
+</section>
+
+<section id="trial" class="bg-black">
+  <div class="form-wrap">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <p class="sec-label fade" style="opacity: 0.7;">Free Trial</p>
+      <h2 class="sec-title fade">60分の無料体験から。</h2>
+      <p style="opacity: 0.7; font-size: 0.95rem;" class="fade">体験セッション + カウンセリング。持ち物不要。</p>
+    </div>
+    <form class="fade" onsubmit="event.preventDefault(); alert('デモサイトのためお問い合わせは受け付けていません。');">
+      <div class="form-row"><label>お名前</label><input type="text" required></div>
+      <div class="form-cols-2">
+        <div class="form-row"><label>Email</label><input type="email" required></div>
+        <div class="form-row"><label>Tel</label><input type="tel" required></div>
+      </div>
+      <div class="form-row"><label>希望日</label><input type="date" required></div>
+      <div class="form-row"><label>目標・ご要望</label><textarea rows="3" placeholder="例: 3ヶ月で-5kg、姿勢改善、ボディメイクなど"></textarea></div>
+      <button type="submit" class="btn btn-fill" style="margin-top: 8px;">無料体験を予約する</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p class="logo-big">APEX GYM</p>
+  <p>Beyond your yesterday.</p>
+  <p class="hnh">Designed by <a href="/">HNH Design Works</a> — デモサイト</p>
+  <p class="hnh" style="margin-top: 8px;">© 2026 APEX GYM</p>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade').forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
