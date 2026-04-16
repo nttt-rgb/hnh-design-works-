@@ -6,6 +6,7 @@
   "category": "音楽教室",
   "area": "日本橋",
   "type": "initial",
-  "status": "queued",
-  "created_at": "2026-04-09T01:15:00.000Z"
+  "status": "sent",
+  "created_at": "2026-04-09T01:15:00.000Z",
+  "sent_at": "2026-04-09T00:24:12.222Z"
 }

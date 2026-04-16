@@ -1,0 +1,31 @@
+{
+  "to": "@i2.cafe",
+  "to_platform": "instagram_dm",
+  "to_url": "https://www.instagram.com/i2.cafe/",
+  "subject": null,
+  "body": "はじめまして、HNH Design Worksの豊川です🙇‍♂️\n\ni2 cafe様のInstagramを拝見しました。インテリアと料理写真の世界観と506件のレビューから感じる支持の厚みが写真から滲み出ていて、一度訪れた方の「記憶に残る時間」が目に浮かぶようでした。その体験がホームページからも伝わると、予約や来店の前に「ここに行きたい」と確信を持ってもらえる入口ができます。\n\nご提案は制作（¥110,000〜）＋ 公開後の集客サポート「Growth Plan」（月¥30,000〜）のセットです。単にページを作るだけでなく、「表参道 カフェ」で検索したお客様に見つけてもらえるよう、月次でSEO改善・レビュー分析・投稿文制作を継続サポートします。\n\n実績 → https://hnh-design-works.vercel.app\n業種に近い制作例もあります：\nhttps://hnh-design-works.vercel.app/demo_sushi_kuromasa.html\n\nもし少しでもご興味があれば、お店のこと・理想をお聞かせください🙏\n\n──────────────────\nHNH Design Works\nNaoya Toyokawa\nhnh.designworks@gmail.com\n──────────────────",
+  "shop_name": "i2 cafe",
+  "category": "カフェ",
+  "area": "表参道",
+  "template_used": "C-typed (Growth Plan + Owner Profiler)",
+  "owner_profile": {
+    "primary_type": "emotional",
+    "secondary_type": null,
+    "scores": {
+      "anxious": 0.15,
+      "logical": 0.15,
+      "emotional": 0.7,
+      "intuitive": 0.2,
+      "explorer": 0.1
+    },
+    "confidence": 0.7,
+    "source": "heuristic",
+    "reason": "category=カフェ, rating=3.57, reviews=506"
+  },
+  "type": "initial",
+  "status": "sent",
+  "created_at": "2026-04-14T03:29:30.870Z",
+  "sent_at": "2026-04-16T05:38:25.284Z",
+  "template_variation": "emotional-food-A",
+  "regenerated_at": "2026-04-14T04:26:18.560Z"
+}

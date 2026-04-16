@@ -1,0 +1,31 @@
+{
+  "to": "@areum.bagel",
+  "to_platform": "instagram_dm",
+  "to_url": "https://www.instagram.com/areum.bagel/",
+  "subject": null,
+  "body": "突然のご連絡、失礼いたします。HNH Design Worksの豊川と申します🙇‍♂️\n\nAREUM BAGELアルムベーグル新大久保様のInstagramを拝見させていただき、焼きたてパンのビジュアルと店の佇まいに感銘を受けました。一つひとつのご投稿から、お仕事の丁寧さや、お客様に向き合っていらっしゃる姿勢が自然と伝わってまいります。\n\n拝見しているうちに「もしこのお店のホームページを一枚ラフに描くなら、こんな形だろうか」というイメージが自然と浮かんでまいりまして、せっかくですので、そのラフ案（画像1枚）と、Instagramから感じた気づきを2〜3点まとめて、お送りできればと思っております。\n\nもしご興味をお持ちいただけましたら「見てみたい」「気になる」など一言だけで結構ですので、お返事いただけますと幸いです。ご判断やご返信の内容は、その後で全く問題ございません🙏\n\n──────────────────\nHNH Design Works\nNaoya Toyokawa\nhnh.designworks@gmail.com\n──────────────────",
+  "shop_name": "AREUM BAGELアルムベーグル新大久保",
+  "category": "ベーカリー",
+  "area": "新大久保",
+  "template_used": "C-typed (Growth Plan + Owner Profiler)",
+  "owner_profile": {
+    "primary_type": "emotional",
+    "secondary_type": null,
+    "scores": {
+      "anxious": 0.35,
+      "logical": 0.2,
+      "emotional": 0.6,
+      "intuitive": 0,
+      "explorer": 0
+    },
+    "confidence": 0.6,
+    "source": "heuristic",
+    "reason": "category=ベーカリー, rating=3.3, reviews=64"
+  },
+  "type": "initial",
+  "status": "queued",
+  "created_at": "2026-04-14T03:36:49.571Z",
+  "sent_at": null,
+  "template_variation": "polite-v1",
+  "regenerated_at": "2026-04-16T08:04:42.736Z"
+}

@@ -6,6 +6,7 @@
   "category": "英会話教室",
   "area": "五反田",
   "type": "initial",
-  "status": "queued",
-  "created_at": "2026-04-09T01:15:00.000Z"
+  "status": "sent",
+  "created_at": "2026-04-09T01:15:00.000Z",
+  "sent_at": "2026-04-09T00:28:15.419Z"
 }

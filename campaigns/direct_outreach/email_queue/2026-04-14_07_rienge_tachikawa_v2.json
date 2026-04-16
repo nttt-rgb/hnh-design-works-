@@ -1,0 +1,29 @@
+{
+  "to": "@rienge__mens",
+  "to_platform": "instagram_dm",
+  "to_url": "https://www.instagram.com/rienge__mens/",
+  "subject": null,
+  "body": "はじめまして、HNH Design Worksの豊川と申します。\n\nメンズ脱毛サロン リアンジュ 立川店様のInstagramを拝見し、メンズ脱毛専門という切り口と105件4.8の信頼感が印象的でした。Googleで「立川 メンズ脱毛」の月間検索数は概ね590回あります。この検索需要は自社HPがないと取りきれず、Instagram経由とは別の集客チャネルを1本丸ごと逃している状態です。\n\nご提案は制作（¥110,000〜）＋ 公開後の集客サポート「Growth Plan」（月¥30,000〜）のセットです。単にページを作るだけでなく、「立川 メンズ脱毛」で検索したお客様に見つけてもらえるよう、月次でSEO改善・レビュー分析・投稿文制作を継続サポートします。\n\n実績 → https://hnh-design-works.vercel.app\n業種に近い制作例もあります：\nhttps://hnh-design-works.vercel.app/demo_noel_hair.html\n\n資料（SEO施策詳細 + 料金内訳PDF）をメールでお送りできます。ご返信ください。\n\n──────────────────\nHNH Design Works\nNaoya Toyokawa\nhnh.designworks@gmail.com\n──────────────────",
+  "shop_name": "メンズ脱毛サロン リアンジュ 立川店",
+  "category": "脱毛サロン",
+  "area": "立川",
+  "template_used": "C-typed (Growth Plan + Owner Profiler)",
+  "owner_profile": {
+    "primary_type": "logical",
+    "secondary_type": "emotional",
+    "scores": {
+      "anxious": 0.3,
+      "logical": 0.55,
+      "emotional": 0.4,
+      "intuitive": 0,
+      "explorer": 0
+    },
+    "confidence": 0.55,
+    "source": "heuristic",
+    "reason": "category=脱毛サロン, rating=4.8, reviews=105"
+  },
+  "type": "initial",
+  "status": "sent",
+  "created_at": "2026-04-14T03:29:30.871Z",
+  "sent_at": "2026-04-16T05:39:44.788Z"
+}

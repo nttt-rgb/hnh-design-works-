@@ -1,0 +1,31 @@
+{
+  "to": "@elena.4beauty",
+  "to_platform": "instagram_dm",
+  "to_url": "https://www.instagram.com/elena.4beauty/",
+  "subject": null,
+  "body": "はじめまして、HNH Design Worksの豊川です🙇‍♂️\n\nELENA 六本木店様のInstagramを拝見しました。店内の落ち着きと施術の専門性と評価5の高い満足度に加えて、施術後のお客様の表情から「日常に小さな自信が増えた」感じが伝わってきます。この空気感がホームページに流れていると、新規のお客様にとって予約のきっかけが一つ増えます。\n\nご提案は制作（¥110,000〜）＋ 公開後の集客サポート「Growth Plan」（月¥30,000〜）のセットです。単にページを作るだけでなく、「六本木 エステサロン」で検索したお客様に見つけてもらえるよう、月次でSEO改善・レビュー分析・投稿文制作を継続サポートします。\n\n実績 → https://hnh-design-works.vercel.app\n業種に近い制作例もあります：\nhttps://hnh-design-works.vercel.app/demo_noel_hair.html\n\nもし少しでもご興味があれば、お店のこと・理想をお聞かせください🙏\n\n──────────────────\nHNH Design Works\nNaoya Toyokawa\nhnh.designworks@gmail.com\n──────────────────",
+  "shop_name": "ELENA 六本木店",
+  "category": "エステサロン",
+  "area": "六本木",
+  "template_used": "C-typed (Growth Plan + Owner Profiler)",
+  "owner_profile": {
+    "primary_type": "emotional",
+    "secondary_type": "anxious",
+    "scores": {
+      "anxious": 0.5,
+      "logical": 0.2,
+      "emotional": 0.6,
+      "intuitive": 0,
+      "explorer": 0
+    },
+    "confidence": 0.6,
+    "source": "heuristic",
+    "reason": "category=エステサロン, rating=5, reviews=7"
+  },
+  "type": "initial",
+  "status": "sent",
+  "created_at": "2026-04-14T03:36:49.568Z",
+  "sent_at": "2026-04-16T05:43:44.523Z",
+  "template_variation": "emotional-beauty-B",
+  "regenerated_at": "2026-04-14T04:26:18.564Z"
+}

@@ -1,0 +1,29 @@
+{
+  "to": "@inoue_ginza",
+  "to_platform": "instagram_dm",
+  "to_url": "https://www.instagram.com/inoue_ginza/",
+  "subject": null,
+  "body": "東京焼肉いのうえ 銀座店様のInstagramを拝見しました🙇‍♂️\n\nHNH Design Worksの豊川と申します。同じ焼肉のオーナー様から「Instagramは見てもらえるけど、新規のお客様からの問い合わせが月々安定しない」というご相談を本当に多くいただきます。東京焼肉いのうえ 銀座店様ももし同じ不安をお持ちでしたら、30分のご相談だけでも大丈夫です。\n\nご提案は制作（¥110,000〜）＋ 公開後の集客サポート「Growth Plan」（月¥30,000〜）のセットです。単にページを作るだけでなく、「銀座 焼肉」で検索したお客様に見つけてもらえるよう、月次でSEO改善・レビュー分析・投稿文制作を継続サポートします。\n\n実績 → https://hnh-design-works.vercel.app\n業種に近い制作例もあります：\nhttps://hnh-design-works.vercel.app/demo_sushi_kuromasa.html\n\n15分の無料相談だけでも歓迎です。まず現状把握からでも構いません🙏\n\n──────────────────\nHNH Design Works\nNaoya Toyokawa\nhnh.designworks@gmail.com\n──────────────────",
+  "shop_name": "東京焼肉いのうえ 銀座店",
+  "category": "焼肉",
+  "area": "銀座",
+  "template_used": "C-typed (Growth Plan + Owner Profiler)",
+  "owner_profile": {
+    "primary_type": "anxious",
+    "secondary_type": "emotional",
+    "scores": {
+      "anxious": 0.44999999999999996,
+      "logical": 0.15,
+      "emotional": 0.4,
+      "intuitive": 0.3,
+      "explorer": 0
+    },
+    "confidence": 0.45,
+    "source": "heuristic",
+    "reason": "category=焼肉, rating=3.56, reviews=1095"
+  },
+  "type": "initial",
+  "status": "sent",
+  "created_at": "2026-04-14T03:36:49.538Z",
+  "sent_at": "2026-04-16T05:42:01.419Z"
+}

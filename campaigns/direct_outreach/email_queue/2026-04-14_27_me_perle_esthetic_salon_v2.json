@@ -1,0 +1,32 @@
+{
+  "to": "@me_plus3156",
+  "to_platform": "instagram_dm",
+  "to_url": "https://www.instagram.com/me_plus3156/",
+  "subject": null,
+  "body": "突然のご連絡、失礼いたします。HNH Design Worksの豊川と申します🙇‍♂️\n\nMe+(ミープラス)Perle esthetic Salon様のInstagramを拝見させていただき、施術環境の清潔感とご説明の分かりやすさと評価5の高い満足度に感銘を受けました。ご発信の明快さと、お客様への誠実な姿勢が伝わってまいります。一点、検索需要の観点から僭越ながらお伝えさせてください。「二子玉川 脱毛サロン」で検索される方の受け皿となるホームページが一つあると、Instagram経由とは別の入口を確保できる可能性が高いかと存じます。\n\n拝見しているうちに「もしこのサロンのホームページを一枚ラフに描くなら、こんな形だろうか」というイメージが自然と浮かんでまいりまして、せっかくですので、そのラフ案（画像1枚）と、Instagramから感じた気づきを2〜3点まとめて、お送りできればと思っております。\n\nもしご興味をお持ちいただけましたら「見てみたい」「気になる」など一言だけで結構ですので、お返事いただけますと幸いです。ご判断やご返信の内容は、その後で全く問題ございません🙏\n\n──────────────────\nHNH Design Works\nNaoya Toyokawa\nhnh.designworks@gmail.com\n──────────────────",
+  "shop_name": "Me+(ミープラス)Perle esthetic Salon",
+  "category": "脱毛サロン",
+  "area": "二子玉川",
+  "template_used": "C-typed (Growth Plan + Owner Profiler)",
+  "owner_profile": {
+    "primary_type": "logical",
+    "secondary_type": "emotional",
+    "scores": {
+      "anxious": 0.3,
+      "logical": 0.4,
+      "emotional": 0.4,
+      "intuitive": 0,
+      "explorer": 0
+    },
+    "confidence": 0.4,
+    "source": "heuristic",
+    "reason": "category=脱毛サロン, rating=5, reviews=28"
+  },
+  "type": "initial",
+  "status": "queued",
+  "created_at": "2026-04-14T03:36:49.569Z",
+  "sent_at": null,
+  "warning": "IGハンドルと店名のローマ字一致なし。送信前に実在・ハンドル正当性を確認",
+  "template_variation": "polite-v1",
+  "regenerated_at": "2026-04-16T08:04:42.730Z"
+}

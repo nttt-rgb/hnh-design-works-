@@ -6,6 +6,7 @@
   "category": "弁護士事務所",
   "area": "渋谷",
   "type": "initial",
-  "status": "queued",
-  "created_at": "2026-04-09T01:15:00.000Z"
+  "status": "sent",
+  "created_at": "2026-04-09T01:15:00.000Z",
+  "sent_at": "2026-04-09T00:34:20.516Z"
 }

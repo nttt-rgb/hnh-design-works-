@@ -1,0 +1,31 @@
+{
+  "to": "@amber_jiyugaoka",
+  "to_platform": "instagram_dm",
+  "to_url": "https://www.instagram.com/amber_jiyugaoka/",
+  "subject": null,
+  "body": "はじめまして、HNH Design Worksの豊川です🙇‍♂️\n\namber様のInstagramを拝見しました。インテリアと料理写真の世界観と評価4の安定感、156件のレビューから感じる支持の厚みから、料理や空間の一つひとつに込められた仕事の丁寧さが伝わってきました。その\"お店の温度\"がホームページにも載ると、検索から訪れた方が予約ボタンを押すまでの心理的ハードルがぐっと下がります。\n\nご提案は制作（¥110,000〜）＋ 公開後の集客サポート「Growth Plan」（月¥30,000〜）のセットです。単にページを作るだけでなく、「自由が丘 カフェ」で検索したお客様に見つけてもらえるよう、月次でSEO改善・レビュー分析・投稿文制作を継続サポートします。\n\n実績 → https://hnh-design-works.vercel.app\n業種に近い制作例もあります：\nhttps://hnh-design-works.vercel.app/demo_sushi_kuromasa.html\n\nもし少しでもご興味があれば、お店のこと・理想をお聞かせください🙏\n\n──────────────────\nHNH Design Works\nNaoya Toyokawa\nhnh.designworks@gmail.com\n──────────────────",
+  "shop_name": "amber",
+  "category": "カフェ",
+  "area": "自由が丘",
+  "template_used": "C-typed (Growth Plan + Owner Profiler)",
+  "owner_profile": {
+    "primary_type": "emotional",
+    "secondary_type": null,
+    "scores": {
+      "anxious": 0,
+      "logical": 0.15,
+      "emotional": 0.7,
+      "intuitive": 0.2,
+      "explorer": 0.1
+    },
+    "confidence": 0.7,
+    "source": "heuristic",
+    "reason": "category=カフェ, rating=4, reviews=156"
+  },
+  "type": "initial",
+  "status": "sent",
+  "created_at": "2026-04-14T03:36:49.568Z",
+  "sent_at": "2026-04-16T05:43:21.059Z",
+  "template_variation": "emotional-food-B",
+  "regenerated_at": "2026-04-14T04:26:18.563Z"
+}
