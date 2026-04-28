@@ -692,6 +692,12 @@ button, input, textarea, select {
   transition: transform 0.3s cubic-bezier(0.23,1,0.32,1);
 }
 .w-link:hover .arr { transform: translateX(6px); }
+.w-links { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; }
+.w-link-sub {
+  font-weight: 400; font-size: 0.7rem; opacity: 0.55;
+  letter-spacing: 0.1em;
+}
+.w-link-sub:hover { opacity: 1; }
 
 /* ── Works — See All Categories ── */
 .works-more {
@@ -843,6 +849,33 @@ button, input, textarea, select {
   transform: rotate(90deg);
 }
 .proc-step:last-child .proc-line { display: none; }
+
+/* ══════════════════════════════════════
+   BY THE NUMBERS
+   ══════════════════════════════════════ */
+.numbers {
+  position: relative; background: #fff;
+  padding: clamp(100px, 12vw, 180px) clamp(24px, 6vw, 80px);
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+.numbers-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 40px; max-width: 1100px; margin-top: 60px;
+}
+.number-item {
+  display: flex; flex-direction: column; gap: 18px;
+  padding-top: 28px; border-top: 1px solid rgba(0,0,0,0.12);
+}
+.number-item .number {
+  font-size: clamp(3.5rem, 7vw, 5.5rem); font-weight: 200;
+  letter-spacing: -0.02em; line-height: 1;
+}
+.number-item .label {
+  font-size: 0.78rem; font-weight: 400;
+  letter-spacing: 0.06em; opacity: 0.55;
+}
+@media (max-width: 1024px) { .numbers-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 600px)  { .numbers-grid { grid-template-columns: 1fr; gap: 28px; } }
 
 /* ══════════════════════════════════════
    FAQ
@@ -1000,9 +1033,10 @@ button, input, textarea, select {
     <a href="#services" data-magnetic><span class="n">01.</span> Services</a>
     <a href="#pricing" data-magnetic><span class="n">03.</span> Pricing</a>
     <a href="#process" data-magnetic><span class="n">04.</span> Process</a>
-    <a href="#works" data-magnetic><span class="n">05.</span> Works</a>
-    <a href="#faq" data-magnetic><span class="n">06.</span> FAQ</a>
-    <a href="#contact" data-magnetic><span class="n">07.</span> Contact</a>
+    <a href="#numbers" data-magnetic><span class="n">05.</span> Numbers</a>
+    <a href="#works" data-magnetic><span class="n">06.</span> Works</a>
+    <a href="#faq" data-magnetic><span class="n">07.</span> FAQ</a>
+    <a href="#contact" data-magnetic><span class="n">08.</span> Contact</a>
     <span class="lang-toggle" id="langToggle" data-magnetic>EN</span>
   </div>
   <div class="hamburger" id="hamburger">
@@ -1015,6 +1049,7 @@ button, input, textarea, select {
   <a href="#services">Services</a>
   <a href="#pricing">Pricing</a>
   <a href="#process">Process</a>
+  <a href="#numbers">Numbers</a>
   <a href="#works">Works</a>
   <a href="#faq">FAQ</a>
   <a href="#contact">Contact</a>
@@ -1219,9 +1254,33 @@ button, input, textarea, select {
   </div>
 </section>
 
+<!-- ═══════ BY THE NUMBERS ═══════ -->
+<section class="numbers" id="numbers">
+  <div class="sec-n" data-parallax="0.15">05</div>
+  <h2 class="sh r" data-ja="By the Numbers" data-en="By the Numbers">By the Numbers</h2>
+  <div class="numbers-grid">
+    <div class="number-item r" data-delay="1">
+      <span class="number">3</span>
+      <p class="label" data-ja="完全オーダーメイド案件" data-en="Full custom-built projects">完全オーダーメイド案件</p>
+    </div>
+    <div class="number-item r" data-delay="2">
+      <span class="number">100%</span>
+      <p class="label" data-ja="テンプレート不使用" data-en="Zero template reuse">テンプレート不使用</p>
+    </div>
+    <div class="number-item r" data-delay="3">
+      <span class="number">4</span>
+      <p class="label" data-ja="確立されたデザインパターン" data-en="Established design patterns">確立されたデザインパターン</p>
+    </div>
+    <div class="number-item r" data-delay="4">
+      <span class="number">2W</span>
+      <p class="label" data-ja="初稿納期(平均)" data-en="First-draft delivery (avg.)">初稿納期(平均)</p>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════ WORKS ═══════ -->
 <section class="works" id="works">
-  <div class="sec-n" data-parallax="0.15">05</div>
+  <div class="sec-n" data-parallax="0.15">06</div>
 
   <div class="works-header r">
     <h2>Selected Works</h2>
@@ -1251,7 +1310,10 @@ button, input, textarea, select {
       </div>
       <p class="w-info-desc" data-ja="筆文字フォントによる看板ロゴ、墨のにじみフィルタ、和紙テクスチャの背景、カスタムカーソル。スクロールに連動するパララックスと、ローディングアニメーション付き。完全予約制の世界観をデジタルで完全再現。" data-en="Brush calligraphy logo, ink blur filter, washi paper textures, custom cursor. Scroll-linked parallax and loading animation. The fully-reserved dining experience, digitally recreated.">筆文字フォントによる看板ロゴ、墨のにじみフィルタ、和紙テクスチャの背景、カスタムカーソル。スクロールに連動するパララックスと、ローディングアニメーション付き。完全予約制の世界観をデジタルで完全再現。</p>
       <p class="w-plan-includes" data-ja="1ページ構成 / 問い合わせフォーム / Googleマップ / スマホ対応" data-en="Single page / Contact form / Google Maps / Mobile responsive">1ページ構成 / 問い合わせフォーム / Googleマップ / スマホ対応</p>
-      <a href="demo_sushi_kuromasa.html" class="w-link" data-magnetic>View Project <span class="arr">→</span></a>
+      <div class="w-links">
+        <a href="works_kuromasa.html" class="w-link" data-magnetic>View Case Study <span class="arr">→</span></a>
+        <a href="demo_sushi_kuromasa.html" class="w-link w-link-sub" data-magnetic>View Live Demo <span class="arr">→</span></a>
+      </div>
     </div>
   </div>
 
@@ -1271,7 +1333,10 @@ button, input, textarea, select {
       </div>
       <p class="w-info-desc" data-ja="画面全体を漂うカラフルなバブルアニメーション。スタイリスト紹介、カット・カラー・パーマの料金表、日時選択付き予約フォームを搭載。日本語／英語のワンクリック切り替えで、インバウンド客にも対応。" data-en="Colorful floating bubble animation across the entire page. Stylist profiles, full price list for cut/color/perm, and a booking form with date picker. One-click Japanese/English switch for international visitors.">画面全体を漂うカラフルなバブルアニメーション。スタイリスト紹介、カット・カラー・パーマの料金表、日時選択付き予約フォームを搭載。日本語／英語のワンクリック切り替えで、インバウンド客にも対応。</p>
       <p class="w-plan-includes" data-ja="予約フォーム / ギャラリー / FAQ / SNS連携 / 動画 / 日英切り替え / SEO" data-en="Booking form / Gallery / FAQ / SNS / Video / JA+EN / SEO">予約フォーム / ギャラリー / FAQ / SNS連携 / 動画 / 日英切り替え / SEO</p>
-      <a href="demo_noel_hair.html" class="w-link" data-magnetic>View Project <span class="arr">→</span></a>
+      <div class="w-links">
+        <a href="works_noel.html" class="w-link" data-magnetic>View Case Study <span class="arr">→</span></a>
+        <a href="demo_noel_hair.html" class="w-link w-link-sub" data-magnetic>View Live Demo <span class="arr">→</span></a>
+      </div>
     </div>
     <div class="w-ss r-right">
       <a href="demo_noel_hair.html" class="w-ss-link">
@@ -1306,7 +1371,10 @@ button, input, textarea, select {
       </div>
       <p class="w-info-desc" data-ja="オフホワイト×深緑のナチュラル配色。クラス紹介・料金・インストラクター情報をミニマルに掲載。円が静かに膨らむ呼吸アニメーションが、ヨガスタジオの穏やかな空気感を演出。スマホ対応で予約ボタンも完備。" data-en="Off-white and deep green color palette. Class info, pricing, and instructor profiles in a minimal layout. A gentle breathing circle animation evokes the calm atmosphere of the studio. Mobile-ready with a booking button.">オフホワイト×深緑のナチュラル配色。クラス紹介・料金・インストラクター情報をミニマルに掲載。円が静かに膨らむ呼吸アニメーションが、ヨガスタジオの穏やかな空気感を演出。スマホ対応で予約ボタンも完備。</p>
       <p class="w-plan-includes" data-ja="予約フォーム / ギャラリー / FAQ / SNS / 動画×2 / Stripe決済 / メルマガ / LINE / 日英 / SEOフル" data-en="Booking / Gallery / FAQ / SNS / Video×2 / Stripe / Newsletter / LINE / JA+EN / Full SEO">予約フォーム / ギャラリー / FAQ / SNS / 動画×2 / Stripe決済 / メルマガ / LINE / 日英 / SEOフル</p>
-      <a href="demo_yoga_lumiere.html" class="w-link" data-magnetic>View Project <span class="arr">→</span></a>
+      <div class="w-links">
+        <a href="works_lumiere.html" class="w-link" data-magnetic>View Case Study <span class="arr">→</span></a>
+        <a href="demo_yoga_lumiere.html" class="w-link w-link-sub" data-magnetic>View Live Demo <span class="arr">→</span></a>
+      </div>
     </div>
   </div>
 
@@ -1322,7 +1390,7 @@ button, input, textarea, select {
 
 <!-- ═══════ FAQ ═══════ -->
 <section class="faq" id="faq">
-  <div class="sec-n" data-parallax="0.15">06</div>
+  <div class="sec-n" data-parallax="0.15">07</div>
   <h2 class="sh r">FAQ</h2>
   <div class="faq-list">
     <div class="faq-item r">
@@ -1372,7 +1440,7 @@ button, input, textarea, select {
 
 <!-- ═══════ CONTACT ═══════ -->
 <section class="contact" id="contact">
-  <div class="sec-n" style="color:#fff;" data-parallax="0.12">07</div>
+  <div class="sec-n" style="color:#fff;" data-parallax="0.12">08</div>
   <h2 class="sh r">Contact</h2>
   <div style="max-width:560px;text-align:center;">
     <h3 class="c-name r" data-ja="Start Your Project" data-en="Start Your Project">Start Your Project</h3>
