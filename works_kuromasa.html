@@ -182,6 +182,30 @@ img { max-width: 100%; display: block; }
 .mag-btn .btn-text { position: relative; z-index: 1; }
 .mag-btn .arr { position: relative; z-index: 1; }
 
+/* === Phase 3: Lucide-icon badges === */
+.cs-badges {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 16px 0 32px;
+}
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border: 1px solid #e5e5e5;
+  border-radius: 4px; background: transparent;
+  font-size: 12px; font-weight: 500; color: #333;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.4s ease, transform 0.4s ease;
+  cursor: none; letter-spacing: 0.04em;
+}
+.badge:hover { background: #000; color: #fff; border-color: #000; }
+.badge-primary { background: #000; color: #fff; border-color: #000; font-weight: 600; }
+.badge-primary:hover { background: #fff; color: #000; }
+.badge-icon { flex-shrink: 0; color: currentColor; }
+.badge[data-fade-in] { opacity: 0; transform: translateY(8px); }
+.badge[data-fade-in].visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .badge { transition: none; }
+  .badge[data-fade-in] { opacity: 1; transform: none; }
+}
+
 /* ══════════════════════════════════════
    HERO (Case Study)
    ══════════════════════════════════════ */
@@ -374,16 +398,31 @@ img { max-width: 100%; display: block; }
   border-color: rgba(255,255,255,0.2);
 }
 
-/* TIMELINE */
+/* TIMELINE — 縦タイムラインUI(Phase 3) */
 .cs-timeline {
   margin-top: 32px; max-width: 720px;
+  position: relative; padding-left: 24px;
 }
+.cs-timeline::before {
+  content: ''; position: absolute;
+  left: 4px; top: 8px; bottom: 8px;
+  width: 1px; background: #e5e5e5;
+}
+.cs-section.dark .cs-timeline::before { background: rgba(255,255,255,0.18); }
 .cs-timeline-item {
   display: grid; grid-template-columns: 140px 1fr;
-  gap: 24px; padding: 20px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  gap: 24px; padding: 12px 0;
+  position: relative;
 }
-.cs-section.dark .cs-timeline-item { border-color: rgba(255,255,255,0.12); }
+.cs-timeline-item::before {
+  content: ''; position: absolute;
+  left: -24px; top: 22px;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: #000;
+  transform: translateX(0);
+  box-shadow: 0 0 0 4px #fff;
+}
+.cs-section.dark .cs-timeline-item::before { background: #fff; box-shadow: 0 0 0 4px var(--accent, #0a0a0a); }
 .cs-timeline-day {
   font-size: 0.78rem; font-weight: 500;
   letter-spacing: 0.12em; text-transform: uppercase;
@@ -391,6 +430,16 @@ img { max-width: 100%; display: block; }
 }
 .cs-timeline-text {
   font-size: 0.95rem; font-weight: 300; line-height: 1.6;
+}
+
+/* === Phase 3: prefers-reduced-motion respect === */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* NEXT NAV */
@@ -533,6 +582,13 @@ img { max-width: 100%; display: block; }
     銀座6丁目の路地裏、看板も出さない8席の鮨屋。<br>
     本物の格を、Webで再現する。
   </p>
+  <div class="cs-badges r" data-delay="2">
+    <span class="badge badge-primary" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg><span class="badge-label">Light</span></span>
+    <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="badge-label">1週間</span></span>
+    <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg><span class="badge-label">SVGフィルタ</span></span>
+    <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg><span class="badge-label">カスタムカーソル</span></span>
+    <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.91a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg><span class="badge-label">パララックス</span></span>
+  </div>
   <div class="cs-hero-image r" data-delay="2">
     <span class="ribbon">Light Plan</span>
     <img src="screenshots/ss_kuromasa.png" alt="鮨 黒政 SUSHI KUROMASA — Demo Site Screenshot"/>
@@ -605,7 +661,7 @@ img { max-width: 100%; display: block; }
         <div class="cs-result-flow">
           <span class="cs-result-before">15件</span>
           <span class="cs-result-arr">→</span>
-          <span class="cs-result-after">月42件</span>
+          <span class="cs-result-after"><span data-count-to="42" data-count-prefix="月" data-count-suffix="件">月42件</span></span>
         </div>
         <span class="cs-result-period">3ヶ月平均</span>
       </div>
@@ -614,7 +670,7 @@ img { max-width: 100%; display: block; }
         <div class="cs-result-flow">
           <span class="cs-result-before">3%</span>
           <span class="cs-result-arr">→</span>
-          <span class="cs-result-after">28%</span>
+          <span class="cs-result-after"><span data-count-to="28" data-count-suffix="%">28%</span></span>
         </div>
         <span class="cs-result-period">対前期比</span>
       </div>
@@ -813,6 +869,46 @@ img { max-width: 100%; display: block; }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
   revealEls.forEach(el => obs.observe(el));
+
+  // Phase 3: badge stagger fade-in
+  const badgeContainerObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const badges = entry.target.querySelectorAll('.badge[data-fade-in]');
+      badges.forEach((b, i) => setTimeout(() => b.classList.add('visible'), i * 60));
+      badgeContainerObs.unobserve(entry.target);
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.cs-badges').forEach(el => badgeContainerObs.observe(el));
+
+  // Phase 3: count-up animation on Result numbers
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const countEls = document.querySelectorAll('[data-count-to]');
+  const countObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      countObs.unobserve(el);
+      const target = parseFloat(el.dataset.countTo);
+      const prefix = el.dataset.countPrefix || '';
+      const suffix = el.dataset.countSuffix || '';
+      if (reducedMotion || isNaN(target)) {
+        el.textContent = prefix + target + suffix;
+        return;
+      }
+      const dur = 1200;
+      const start = performance.now();
+      function tick(now) {
+        const t = Math.min(1, (now - start) / dur);
+        const eased = 1 - Math.pow(1 - t, 3); // easeOutCubic
+        const cur = Math.round(target * eased);
+        el.textContent = prefix + cur + suffix;
+        if (t < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.4 });
+  countEls.forEach(el => countObs.observe(el));
 
   const parallaxEls = document.querySelectorAll('[data-parallax]');
   function applyParallax() {

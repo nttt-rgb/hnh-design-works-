@@ -151,6 +151,27 @@ img { max-width: 100%; display: block; }
 .mag-btn .btn-text { position: relative; z-index: 1; }
 .mag-btn .arr { position: relative; z-index: 1; }
 
+/* === Phase 3: Lucide-icon badges === */
+.cs-badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 32px; }
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border: 1px solid #e5e5e5;
+  border-radius: 4px; background: transparent;
+  font-size: 12px; font-weight: 500; color: #333;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.4s ease, transform 0.4s ease;
+  cursor: none; letter-spacing: 0.04em;
+}
+.badge:hover { background: #000; color: #fff; border-color: #000; }
+.badge-primary { background: #000; color: #fff; border-color: #000; font-weight: 600; }
+.badge-primary:hover { background: #fff; color: #000; }
+.badge-icon { flex-shrink: 0; color: currentColor; }
+.badge[data-fade-in] { opacity: 0; transform: translateY(8px); }
+.badge[data-fade-in].visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .badge { transition: none; }
+  .badge[data-fade-in] { opacity: 1; transform: none; }
+}
+
 /* ══════════════════════════════════════
    HERO — NOEL ポップアクセント
    ══════════════════════════════════════ */
@@ -330,14 +351,38 @@ img { max-width: 100%; display: block; }
 }
 .cs-section.dark .cs-tech-tag { border-color: rgba(255,255,255,0.2); }
 
-.cs-timeline { margin-top: 32px; max-width: 720px; }
-.cs-timeline-item {
-  display: grid; grid-template-columns: 140px 1fr; gap: 24px; padding: 20px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+/* TIMELINE — 縦タイムラインUI(Phase 3) */
+.cs-timeline { margin-top: 32px; max-width: 720px; position: relative; padding-left: 24px; }
+.cs-timeline::before {
+  content: ''; position: absolute;
+  left: 4px; top: 8px; bottom: 8px;
+  width: 1px; background: #e5e5e5;
 }
-.cs-section.dark .cs-timeline-item { border-color: rgba(255,255,255,0.12); }
+.cs-section.dark .cs-timeline::before { background: rgba(255,255,255,0.18); }
+.cs-timeline-item {
+  display: grid; grid-template-columns: 140px 1fr; gap: 24px; padding: 12px 0;
+  position: relative;
+}
+.cs-timeline-item::before {
+  content: ''; position: absolute;
+  left: -24px; top: 22px;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: #000;
+  box-shadow: 0 0 0 4px #fff;
+}
+.cs-section.dark .cs-timeline-item::before { background: #fff; box-shadow: 0 0 0 4px #0a0a0a; }
 .cs-timeline-day { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.5; }
 .cs-timeline-text { font-size: 0.95rem; font-weight: 300; line-height: 1.6; }
+
+/* === Phase 3: prefers-reduced-motion respect === */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 .cs-next-nav {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -436,6 +481,13 @@ img { max-width: 100%; display: block; }
     Hot Pepper を見た客が、もう一度サイトに戻ってきたくなる設計に。<br>
     月額ゼロ円で予約完結。
   </p>
+  <div class="cs-badges r" data-delay="2">
+    <span class="badge badge-primary" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg><span class="badge-label">Standard</span></span>
+    <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="badge-label">2週間</span></span>
+    <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg><span class="badge-label">日英対応</span></span>
+    <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg><span class="badge-label">Stripe決済</span></span>
+    <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg><span class="badge-label">Instagram連携</span></span>
+  </div>
   <div class="cs-hero-image r" data-delay="2">
     <span class="ribbon">Standard Plan</span>
     <img src="screenshots/ss_noel.png" alt="NOEL HAIR TOKYO — Demo Site Screenshot"/>
@@ -507,7 +559,7 @@ img { max-width: 100%; display: block; }
         <div class="cs-result-flow">
           <span class="cs-result-before">月3件</span>
           <span class="cs-result-arr">→</span>
-          <span class="cs-result-after">月67件</span>
+          <span class="cs-result-after"><span data-count-to="67" data-count-prefix="月" data-count-suffix="件">月67件</span></span>
         </div>
         <span class="cs-result-period">6ヶ月平均</span>
       </div>
@@ -523,7 +575,7 @@ img { max-width: 100%; display: block; }
         <div class="cs-result-flow">
           <span class="cs-result-before">0件</span>
           <span class="cs-result-arr">→</span>
-          <span class="cs-result-after">月12件</span>
+          <span class="cs-result-after"><span data-count-to="12" data-count-prefix="月" data-count-suffix="件">月12件</span></span>
         </div>
         <p class="cs-result-note">韓国・台湾</p>
       </div>
@@ -706,6 +758,46 @@ img { max-width: 100%; display: block; }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
   revealEls.forEach(el => obs.observe(el));
+  // Phase 3: badge stagger fade-in
+  const badgeContainerObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const badges = entry.target.querySelectorAll('.badge[data-fade-in]');
+      badges.forEach((b, i) => setTimeout(() => b.classList.add('visible'), i * 60));
+      badgeContainerObs.unobserve(entry.target);
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.cs-badges').forEach(el => badgeContainerObs.observe(el));
+
+  // Phase 3: count-up animation on Result numbers
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const countEls = document.querySelectorAll('[data-count-to]');
+  const countObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      countObs.unobserve(el);
+      const target = parseFloat(el.dataset.countTo);
+      const prefix = el.dataset.countPrefix || '';
+      const suffix = el.dataset.countSuffix || '';
+      if (reducedMotion || isNaN(target)) {
+        el.textContent = prefix + target + suffix;
+        return;
+      }
+      const dur = 1200;
+      const start = performance.now();
+      function tick(now) {
+        const t = Math.min(1, (now - start) / dur);
+        const eased = 1 - Math.pow(1 - t, 3);
+        const cur = Math.round(target * eased);
+        el.textContent = prefix + cur + suffix;
+        if (t < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.4 });
+  countEls.forEach(el => countObs.observe(el));
+
   const parallaxEls = document.querySelectorAll('[data-parallax]');
   function applyParallax() {
     const sy = window.scrollY;

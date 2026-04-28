@@ -690,6 +690,50 @@ button, input, textarea, select {
   opacity: 0.45; margin-bottom: 22px;
   letter-spacing: 0.05em;
 }
+/* === Phase 3: card hover lift + reduced-motion respect === */
+.work-item {
+  transition: transform 0.3s cubic-bezier(0.23,1,0.32,1), box-shadow 0.3s ease;
+  border-radius: 4px;
+}
+.work-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .work-item:hover { transform: none; }
+}
+
+/* === Plan + 納期 + 機能要約バッジ群(Phase 3 — Lucide icons) === */
+.w-badges {
+  display: flex; flex-wrap: wrap; gap: 8px;
+  margin: 0 0 24px;
+}
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border: 1px solid #e5e5e5;
+  border-radius: 4px; background: transparent;
+  font-size: 12px; font-weight: 500; color: #333;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.4s ease, transform 0.4s ease;
+  cursor: none;
+  letter-spacing: 0.04em;
+}
+.badge:hover { background: #000; color: #fff; border-color: #000; }
+.badge-primary { background: #000; color: #fff; border-color: #000; font-weight: 600; }
+.badge-primary:hover { background: #fff; color: #000; }
+.badge-icon { flex-shrink: 0; color: currentColor; }
+.badge[data-fade-in] { opacity: 0; transform: translateY(8px); }
+.badge[data-fade-in].visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .badge { transition: none; }
+  .badge[data-fade-in] { opacity: 1; transform: none; }
+}
+
 .w-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
 .w-tag {
   font-size: 0.55rem; font-weight: 400; letter-spacing: 0.12em;
@@ -1383,7 +1427,13 @@ button, input, textarea, select {
         <p class="w-voice-mini-quote">店の空気が画面から伝わってくる。</p>
         <span class="w-voice-mini-cite">— 鮨 黒政 二代目</span>
       </div>
-      <p class="w-plan-includes" data-ja="1ページ構成 / 問い合わせフォーム / Googleマップ / スマホ対応" data-en="Single page / Contact form / Google Maps / Mobile responsive">1ページ構成 / 問い合わせフォーム / Googleマップ / スマホ対応</p>
+      <div class="w-badges">
+        <span class="badge badge-primary" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 13L2 9z"/><path d="M11 3 8 9l4 13 4-13-3-6"/><path d="M2 9h20"/></svg><span class="badge-label">Light</span></span>
+        <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="badge-label">1週間</span></span>
+        <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/><path d="M20 3v4"/><path d="M22 5h-4"/><path d="M4 17v2"/><path d="M5 18H3"/></svg><span class="badge-label">SVGフィルタ</span></span>
+        <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.037 4.688a.495.495 0 0 1 .651-.651l16 6.5a.5.5 0 0 1-.063.947l-6.124 1.58a2 2 0 0 0-1.438 1.435l-1.579 6.126a.5.5 0 0 1-.947.063z"/></svg><span class="badge-label">カスタムカーソル</span></span>
+        <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.91a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg><span class="badge-label">パララックス</span></span>
+      </div>
       <div class="w-links">
         <a href="works_kuromasa.html" class="w-link" data-magnetic>View Case Study <span class="arr">→</span></a>
         <a href="demo_sushi_kuromasa.html" class="w-link w-link-sub" data-magnetic>View Live Demo <span class="arr">→</span></a>
@@ -1410,7 +1460,13 @@ button, input, textarea, select {
         <p class="w-voice-mini-quote">Hot Pepperをやめる勇気は出ないけど、これがあるだけで気持ちが楽。</p>
         <span class="w-voice-mini-cite">— NOEL HAIR TOKYO 代表</span>
       </div>
-      <p class="w-plan-includes" data-ja="予約フォーム / ギャラリー / FAQ / SNS連携 / 動画 / 日英切り替え / SEO" data-en="Booking form / Gallery / FAQ / SNS / Video / JA+EN / SEO">予約フォーム / ギャラリー / FAQ / SNS連携 / 動画 / 日英切り替え / SEO</p>
+      <div class="w-badges">
+        <span class="badge badge-primary" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/><circle cx="12" cy="8" r="6"/></svg><span class="badge-label">Standard</span></span>
+        <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="badge-label">2週間</span></span>
+        <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></svg><span class="badge-label">日英対応</span></span>
+        <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg><span class="badge-label">Stripe決済</span></span>
+        <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg><span class="badge-label">Instagram連携</span></span>
+      </div>
       <div class="w-links">
         <a href="works_noel.html" class="w-link" data-magnetic>View Case Study <span class="arr">→</span></a>
         <a href="demo_noel_hair.html" class="w-link w-link-sub" data-magnetic>View Live Demo <span class="arr">→</span></a>
@@ -1462,7 +1518,14 @@ button, input, textarea, select {
         <p class="w-voice-mini-quote">Webと現実が一致するって、こんなに大事だったんですね。</p>
         <span class="w-voice-mini-cite">— Yoga Studio Lumière 代表</span>
       </div>
-      <p class="w-plan-includes" data-ja="予約フォーム / ギャラリー / FAQ / SNS / 動画×2 / Stripe決済 / メルマガ / LINE / 日英 / SEOフル" data-en="Booking / Gallery / FAQ / SNS / Video×2 / Stripe / Newsletter / LINE / JA+EN / Full SEO">予約フォーム / ギャラリー / FAQ / SNS / 動画×2 / Stripe決済 / メルマガ / LINE / 日英 / SEOフル</p>
+      <div class="w-badges">
+        <span class="badge badge-primary" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></svg><span class="badge-label">Premium</span></span>
+        <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="badge-label">3週間</span></span>
+        <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg><span class="badge-label">定期課金</span></span>
+        <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span class="badge-label">LINE連携</span></span>
+        <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span class="badge-label">メルマガ</span></span>
+        <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><span class="badge-label">SEOフル</span></span>
+      </div>
       <div class="w-links">
         <a href="works_lumiere.html" class="w-link" data-magnetic>View Case Study <span class="arr">→</span></a>
         <a href="demo_yoga_lumiere.html" class="w-link w-link-sub" data-magnetic>View Live Demo <span class="arr">→</span></a>
@@ -1698,6 +1761,17 @@ const revealObs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 revealEls.forEach(el => revealObs.observe(el));
+
+/* ── BADGE STAGGER FADE-IN (Phase 3) ── */
+const badgeContainerObs = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const badges = entry.target.querySelectorAll('.badge[data-fade-in]');
+    badges.forEach((b, i) => setTimeout(() => b.classList.add('visible'), i * 60));
+    badgeContainerObs.unobserve(entry.target);
+  });
+}, { threshold: 0.3 });
+document.querySelectorAll('.w-badges').forEach(el => badgeContainerObs.observe(el));
 
 /* ── STATEMENT WORD-BY-WORD REVEAL ── */
 const stmtText = document.getElementById('stmtText');

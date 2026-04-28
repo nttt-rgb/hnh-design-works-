@@ -150,6 +150,27 @@ img { max-width: 100%; display: block; }
 .mag-btn .btn-text { position: relative; z-index: 1; }
 .mag-btn .arr { position: relative; z-index: 1; }
 
+/* === Phase 3: Lucide-icon badges === */
+.cs-badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 32px; }
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 12px; border: 1px solid var(--accent-soft);
+  border-radius: 4px; background: transparent;
+  font-size: 12px; font-weight: 500; color: var(--accent);
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, opacity 0.4s ease, transform 0.4s ease;
+  cursor: none; letter-spacing: 0.04em;
+}
+.badge:hover { background: var(--accent); color: var(--bg-soft); border-color: var(--accent); }
+.badge-primary { background: var(--accent); color: var(--bg-soft); border-color: var(--accent); font-weight: 600; }
+.badge-primary:hover { background: var(--bg-soft); color: var(--accent); }
+.badge-icon { flex-shrink: 0; color: currentColor; }
+.badge[data-fade-in] { opacity: 0; transform: translateY(8px); }
+.badge[data-fade-in].visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .badge { transition: none; }
+  .badge[data-fade-in] { opacity: 1; transform: none; }
+}
+
 /* ══════════════════════════════════════
    HERO — Lumière: 呼吸する円
    ══════════════════════════════════════ */
@@ -326,13 +347,36 @@ img { max-width: 100%; display: block; }
   font-weight: 400; color: var(--accent);
 }
 
-.cs-timeline { margin-top: 32px; max-width: 720px; }
+/* TIMELINE — 縦タイムラインUI(Phase 3) */
+.cs-timeline { margin-top: 32px; max-width: 720px; position: relative; padding-left: 24px; }
+.cs-timeline::before {
+  content: ''; position: absolute;
+  left: 4px; top: 8px; bottom: 8px;
+  width: 1px; background: rgba(45,74,62,0.2);
+}
 .cs-timeline-item {
-  display: grid; grid-template-columns: 140px 1fr; gap: 24px; padding: 22px 0;
-  border-bottom: 1px solid rgba(45,74,62,0.15);
+  display: grid; grid-template-columns: 140px 1fr; gap: 24px; padding: 12px 0;
+  position: relative;
+}
+.cs-timeline-item::before {
+  content: ''; position: absolute;
+  left: -24px; top: 22px;
+  width: 9px; height: 9px; border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--bg-soft);
 }
 .cs-timeline-day { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.55; color: var(--accent); }
 .cs-timeline-text { font-size: 0.95rem; font-weight: 300; line-height: 1.7; }
+
+/* === Phase 3: prefers-reduced-motion respect === */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 
 .cs-next-nav {
   display: grid; grid-template-columns: 1fr 1fr;
@@ -430,6 +474,14 @@ img { max-width: 100%; display: block; }
     代官山の隠れ家。¥6,000/回 を成立させたWebの役割。<br>
     言葉ではなく、体験を見せる。
   </p>
+  <div class="cs-badges r" data-delay="2">
+    <span class="badge badge-primary" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M11.562 3.266a.5.5 0 0 1 .876 0L15.39 8.87a1 1 0 0 0 1.516.294L21.183 5.5a.5.5 0 0 1 .798.519l-2.834 10.246a1 1 0 0 1-.956.734H5.81a1 1 0 0 1-.957-.734L2.02 6.02a.5.5 0 0 1 .798-.519l4.276 3.664a1 1 0 0 0 1.516-.294z"/><path d="M5 21h14"/></svg><span class="badge-label">Premium</span></span>
+    <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span class="badge-label">3週間</span></span>
+    <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg><span class="badge-label">定期課金</span></span>
+    <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg><span class="badge-label">LINE連携</span></span>
+    <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span class="badge-label">メルマガ</span></span>
+    <span class="badge" data-fade-in><svg class="badge-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><span class="badge-label">SEOフル</span></span>
+  </div>
   <div class="cs-hero-image r" data-delay="2">
     <span class="ribbon">Premium Plan</span>
     <img src="screenshots/ss_yoga.png" alt="Yoga Studio Lumière — Demo Site Screenshot"/>
@@ -501,7 +553,7 @@ img { max-width: 100%; display: block; }
         <div class="cs-result-flow">
           <span class="cs-result-before">8名</span>
           <span class="cs-result-arr">→</span>
-          <span class="cs-result-after">31名</span>
+          <span class="cs-result-after"><span data-count-to="31" data-count-suffix="名">31名</span></span>
         </div>
         <span class="cs-result-period">4ヶ月時点</span>
       </div>
@@ -510,7 +562,7 @@ img { max-width: 100%; display: block; }
         <div class="cs-result-flow">
           <span class="cs-result-before">¥18,000</span>
           <span class="cs-result-arr">→</span>
-          <span class="cs-result-after">¥126,000</span>
+          <span class="cs-result-after"><span data-count-to="126000" data-count-prefix="¥" data-count-comma="1">¥126,000</span></span>
         </div>
         <p class="cs-result-note">7ヶ月継続</p>
       </div>
@@ -519,7 +571,7 @@ img { max-width: 100%; display: block; }
         <div class="cs-result-flow">
           <span class="cs-result-before">38%</span>
           <span class="cs-result-arr">→</span>
-          <span class="cs-result-after">12%</span>
+          <span class="cs-result-after"><span data-count-to="12" data-count-suffix="%">12%</span></span>
         </div>
         <span class="cs-result-period">対前期比</span>
       </div>
@@ -528,7 +580,7 @@ img { max-width: 100%; display: block; }
         <div class="cs-result-flow">
           <span class="cs-result-before">月45件</span>
           <span class="cs-result-arr">→</span>
-          <span class="cs-result-after">月8件</span>
+          <span class="cs-result-after"><span data-count-to="8" data-count-prefix="月" data-count-suffix="件">月8件</span></span>
         </div>
         <p class="cs-result-note">FAQが効いた</p>
       </div>
@@ -705,6 +757,48 @@ img { max-width: 100%; display: block; }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -80px 0px' });
   revealEls.forEach(el => obs.observe(el));
+  // Phase 3: badge stagger fade-in
+  const badgeContainerObs = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const badges = entry.target.querySelectorAll('.badge[data-fade-in]');
+      badges.forEach((b, i) => setTimeout(() => b.classList.add('visible'), i * 60));
+      badgeContainerObs.unobserve(entry.target);
+    });
+  }, { threshold: 0.3 });
+  document.querySelectorAll('.cs-badges').forEach(el => badgeContainerObs.observe(el));
+
+  // Phase 3: count-up animation on Result numbers
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const countEls = document.querySelectorAll('[data-count-to]');
+  const countObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target;
+      countObs.unobserve(el);
+      const target = parseFloat(el.dataset.countTo);
+      const prefix = el.dataset.countPrefix || '';
+      const suffix = el.dataset.countSuffix || '';
+      if (reducedMotion || isNaN(target)) {
+        el.textContent = prefix + target + suffix;
+        return;
+      }
+      const dur = 1200;
+      const start = performance.now();
+      const useComma = el.dataset.countComma === '1';
+      function tick(now) {
+        const t = Math.min(1, (now - start) / dur);
+        const eased = 1 - Math.pow(1 - t, 3);
+        const cur = Math.round(target * eased);
+        const fmt = useComma ? cur.toLocaleString('en-US') : cur;
+        el.textContent = prefix + fmt + suffix;
+        if (t < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }, { threshold: 0.4 });
+  countEls.forEach(el => countObs.observe(el));
+
   const parallaxEls = document.querySelectorAll('[data-parallax]');
   function applyParallax() {
     const sy = window.scrollY;
